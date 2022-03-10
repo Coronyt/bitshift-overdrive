@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/coy_glance_0.75.wav-0abc8e161b110f88a88a9f2cad35fed5.sample"
+
+[deps]
+
+source_file="res://assets/tracks/coy_glance_0.75.wav"
+dest_files=[ "res://.import/coy_glance_0.75.wav-0abc8e161b110f88a88a9f2cad35fed5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

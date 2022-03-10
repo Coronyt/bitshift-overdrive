@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/catch_the_stratosphere_1.25.wav-a554a31347b950aad1e1b41e8e177f46.sample"
+
+[deps]
+
+source_file="res://assets/tracks/catch_the_stratosphere_1.25.wav"
+dest_files=[ "res://.import/catch_the_stratosphere_1.25.wav-a554a31347b950aad1e1b41e8e177f46.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

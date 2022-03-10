@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/supermassive_spacedive_1.00.wav-2be796835c02a56f130d4efe49689155.sample"
+
+[deps]
+
+source_file="res://assets/tracks/supermassive_spacedive_1.00.wav"
+dest_files=[ "res://.import/supermassive_spacedive_1.00.wav-2be796835c02a56f130d4efe49689155.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

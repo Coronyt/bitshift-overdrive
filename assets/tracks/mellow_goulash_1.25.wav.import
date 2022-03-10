@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mellow_goulash_1.25.wav-62e8b73878d954b24bd1ce35d6c23de4.sample"
+
+[deps]
+
+source_file="res://assets/tracks/mellow_goulash_1.25.wav"
+dest_files=[ "res://.import/mellow_goulash_1.25.wav-62e8b73878d954b24bd1ce35d6c23de4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

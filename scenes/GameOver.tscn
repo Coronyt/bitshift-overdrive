@@ -1,0 +1,96 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/MatchupPro.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/interface/ScorePortal.gd" type="Script" id=2]
+[ext_resource path="res://scripts/interface/RetryPortal.gd" type="Script" id=3]
+[ext_resource path="res://assets/bitshift.tres" type="Theme" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="StyleBoxEmpty" id=18]
+
+[sub_resource type="StyleBoxEmpty" id=19]
+
+[node name="GameOver" type="Control"]
+margin_left = -640.0
+margin_top = -360.0
+margin_right = -600.0
+margin_bottom = -320.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 256.0
+margin_right = 1280.0
+margin_bottom = 320.0
+color = Color( 0.176471, 0.176471, 0.176471, 0.470588 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOverLabel" type="Label" parent="."]
+margin_left = 512.0
+margin_top = 256.0
+margin_right = 768.0
+margin_bottom = 320.0
+custom_fonts/font = SubResource( 1 )
+text = "GAME OVER"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScorePortal" type="Button" parent="."]
+margin_left = 576.0
+margin_top = 416.0
+margin_right = 704.0
+margin_bottom = 448.0
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+text = "CONTINUE"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RetryPortal" type="Button" parent="."]
+margin_left = 576.0
+margin_top = 384.0
+margin_right = 704.0
+margin_bottom = 416.0
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/focus = SubResource( 18 )
+custom_styles/normal = SubResource( 19 )
+text = "RESTART"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="ScorePortal" to="ScorePortal" method="_on_ScorePortal_mouse_entered"]
+[connection signal="pressed" from="ScorePortal" to="ScorePortal" method="_on_ScorePortal_pressed"]
+[connection signal="mouse_entered" from="RetryPortal" to="RetryPortal" method="_on_RetryPortal_mouse_entered"]
+[connection signal="pressed" from="RetryPortal" to="RetryPortal" method="_on_RetryPortal_pressed"]

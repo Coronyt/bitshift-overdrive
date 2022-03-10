@@ -1,0 +1,63 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/sounds/miss.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/sounds/click2.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/sounds/count2.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/sounds/count1.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/sounds/click1.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sounds/hover.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/sounds/score2.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/sounds/score1.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds/track_select.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/sounds/title2.ogg" type="AudioStream" id=10]
+[ext_resource path="res://assets/sounds/title1.ogg" type="AudioStream" id=11]
+[ext_resource path="res://assets/sounds/title3.ogg" type="AudioStream" id=12]
+[ext_resource path="res://assets/sounds/title_track.ogg" type="AudioStream" id=13]
+
+[node name="Sounds" type="Node"]
+
+[node name="click1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="click2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="count1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="count2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -6.0
+
+[node name="miss" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="score1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="score2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -6.0
+
+[node name="track_select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -2.0
+
+[node name="title1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="title2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -4.0
+pitch_scale = 0.75
+
+[node name="title3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -4.0
+pitch_scale = 0.75
+
+[node name="title_track" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )

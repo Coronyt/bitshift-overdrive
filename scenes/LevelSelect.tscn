@@ -1,0 +1,1233 @@
+[gd_scene load_steps=54 format=2]
+
+[ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
+[ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/marker_3.png" type="Texture" id=3]
+[ext_resource path="res://assets/bitshift.tres" type="Theme" id=4]
+[ext_resource path="res://assets/sprites/track_button_2.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/track_button_1.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/track_button_3.png" type="Texture" id=7]
+[ext_resource path="res://assets/vapor/vapor_bg_3.glb" type="PackedScene" id=8]
+[ext_resource path="res://assets/vapor/vapor_bg_2.glb" type="PackedScene" id=9]
+[ext_resource path="res://assets/vapor/vapor_bg_4.glb" type="PackedScene" id=10]
+[ext_resource path="res://assets/vapor/vapor_bg_1.glb" type="PackedScene" id=11]
+[ext_resource path="res://scripts/VaporCam.gd" type="Script" id=12]
+[ext_resource path="res://scenes/CRT.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/MatchupPro.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://scripts/interface/ExitPortal.gd" type="Script" id=15]
+[ext_resource path="res://assets/sprites/track_button_4.png" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/marker_2.png" type="Texture" id=17]
+[ext_resource path="res://scripts/interface/Options.gd" type="Script" id=19]
+[ext_resource path="res://scripts/interface/buttons/FullscreenButton.gd" type="Script" id=20]
+[ext_resource path="res://scripts/interface/buttons/HelpButton.gd" type="Script" id=21]
+[ext_resource path="res://scripts/interface/buttons/ChartButton.gd" type="Script" id=22]
+[ext_resource path="res://assets/sprites/marker_0.png" type="Texture" id=23]
+[ext_resource path="res://scenes/ReleaseLabel.tscn" type="PackedScene" id=24]
+[ext_resource path="res://assets/sprites/marker_4.png" type="Texture" id=25]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 448, 64 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 448, 64 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 448, 64 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 448, 64 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 448, 64 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 448, 64 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 448, 64 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 448, 64 )
+
+[sub_resource type="ButtonGroup" id=10]
+
+[sub_resource type="ButtonGroup" id=11]
+
+[sub_resource type="ButtonGroup" id=12]
+
+[sub_resource type="DynamicFont" id=18]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 14 )
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="Animation" id=30]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("../TrackList:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -500, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("../TrackList:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 32, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("HelpGroup/HelpHub:rect_position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -824, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("HelpGroup/HelpHub:rect_position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( -464, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "from_tut"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("../TrackList:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -500, -0.25, 0, 0.25, 0, 32, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("../TrackList:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 32, -0.25, 0, 0.25, 0, 32, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "to_tut"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("../TrackList:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 32, -0.25, 0, 0.25, 0, -500, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("../TrackList:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 32, -0.25, 0, 0.25, 0, 32, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "tut_down"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("HelpGroup/HelpHub:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -824, -0.25, 0, 0.25, 0, -824, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("HelpGroup/HelpHub:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -1144, -0.25, 0, 0.25, 0, -464, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "tut_up"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("HelpGroup/HelpHub:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -824, -0.25, 0, 0.25, 0, -824, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("HelpGroup/HelpHub:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -464, -0.25, 0, 0.25, 0, -1144, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="DynamicFont" id=34]
+size = 28
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = -1
+font_data = ExtResource( 14 )
+
+[sub_resource type="Animation" id=25]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("../MenuCam:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 640, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("../MenuCam:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1080, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "from_options"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("../MenuCam:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 640, -0.25, 0, 0.25, 0, 640, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("../MenuCam:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1080, -0.25, 0, 0.25, 0, 360, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "to_options"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("../MenuCam:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 640, -0.25, 0, 0.25, 0, 640, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("../MenuCam:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 360, -0.25, 0, 0.25, 0, 1080, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="ProceduralSky" id=23]
+sky_top_color = Color( 0.254902, 0.176471, 1, 1 )
+sky_horizon_color = Color( 0.254902, 0.176471, 1, 1 )
+sky_energy = 0.75
+ground_bottom_color = Color( 0.254902, 0.176471, 1, 1 )
+ground_horizon_color = Color( 0.254902, 0.176471, 1, 1 )
+ground_energy = 0.5
+sun_color = Color( 0.980392, 0.196078, 0.27451, 1 )
+sun_latitude = 0.0
+sun_longitude = 180.0
+sun_energy = 5.0
+
+[sub_resource type="Environment" id=24]
+background_mode = 2
+background_sky = SubResource( 23 )
+background_color = Color( 0.980392, 0.529412, 1, 1 )
+fog_enabled = true
+fog_color = Color( 0.764706, 0.509804, 0, 1 )
+fog_sun_color = Color( 0.764706, 0.509804, 0, 1 )
+fog_sun_amount = 0.25
+fog_depth_begin = 50.0
+fog_depth_end = 300.0
+tonemap_mode = 2
+ss_reflections_enabled = true
+ss_reflections_fade_in = 0.35
+dof_blur_far_enabled = true
+dof_blur_far_distance = 40.0
+dof_blur_far_amount = 0.05
+
+[node name="LevelSelect" type="Control"]
+script = ExtResource( 2 )
+
+[node name="BufferNode" type="Control" parent="."]
+visible = false
+
+[node name="ReleaseLabel" parent="." instance=ExtResource( 24 )]
+
+[node name="TrackList" type="ScrollContainer" parent="."]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 497.0
+margin_bottom = 642.0
+theme = ExtResource( 4 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TrackList" type="VBoxContainer" parent="TrackList"]
+margin_right = 448.0
+margin_bottom = 1084.0
+
+[node name="Track_1" type="Button" parent="TrackList/TrackList"]
+margin_right = 448.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Supermassive Spacedive"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_1"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 17 )
+
+[node name="Track_2" type="Button" parent="TrackList/TrackList"]
+margin_top = 68.0
+margin_right = 448.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 5 )
+text = "Mellow Goulash"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_2"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 3 )
+
+[node name="Track_3" type="Button" parent="TrackList/TrackList"]
+margin_top = 136.0
+margin_right = 448.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 5 )
+text = "Bitshift Baroque"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_3"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 25 )
+
+[node name="Track_4" type="Button" parent="TrackList/TrackList"]
+margin_top = 204.0
+margin_right = 448.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 8 )
+custom_styles/normal = SubResource( 5 )
+text = "A Coy Glance in Winter"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_4"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 3 )
+
+[node name="Track_5" type="Button" parent="TrackList/TrackList"]
+margin_top = 272.0
+margin_right = 448.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+text = "Catch the Stratosphere"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_5"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 25 )
+
+[node name="Track_6" type="Button" parent="TrackList/TrackList"]
+margin_top = 340.0
+margin_right = 448.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+disabled = true
+text = "It's Brighter on the Other Side"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_6"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 23 )
+
+[node name="Track_7" type="Button" parent="TrackList/TrackList"]
+margin_top = 408.0
+margin_right = 448.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+disabled = true
+text = "Breeze in the Blackest Forest"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_7"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 23 )
+
+[node name="Track_8" type="Button" parent="TrackList/TrackList"]
+margin_top = 476.0
+margin_right = 448.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+disabled = true
+text = "Autumn Flutter"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_8"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 23 )
+
+[node name="Track_9" type="Button" parent="TrackList/TrackList"]
+margin_top = 544.0
+margin_right = 448.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+disabled = true
+text = "Glimmer of Aquamarine"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_9"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 23 )
+
+[node name="Track_10" type="Button" parent="TrackList/TrackList"]
+margin_top = 612.0
+margin_right = 448.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+disabled = true
+text = "Shadow Paints the Righteous Path"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_10"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 23 )
+
+[node name="Track_11" type="Button" parent="TrackList/TrackList"]
+margin_top = 680.0
+margin_right = 448.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+disabled = true
+text = "? ? ?"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_11"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 23 )
+
+[node name="Track_12" type="Button" parent="TrackList/TrackList"]
+margin_top = 748.0
+margin_right = 448.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+disabled = true
+text = "? ? ?"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_12"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 23 )
+
+[node name="Track_13" type="Button" parent="TrackList/TrackList"]
+margin_top = 816.0
+margin_right = 448.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+disabled = true
+text = "? ? ?"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_13"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 23 )
+
+[node name="Track_14" type="Button" parent="TrackList/TrackList"]
+margin_top = 884.0
+margin_right = 448.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+disabled = true
+text = "Bitshift Overdrive"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_14"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 23 )
+
+[node name="Track_15" type="Button" parent="TrackList/TrackList"]
+margin_top = 952.0
+margin_right = 448.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+disabled = true
+text = "Mistfall by Moonlight"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_15"]
+position = Vector2( 24, 14 )
+texture = ExtResource( 23 )
+
+[node name="Track_16" type="Button" parent="TrackList/TrackList"]
+margin_top = 1020.0
+margin_right = 448.0
+margin_bottom = 1084.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+disabled = true
+text = "Overdrive Run - All Tracks"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FillerLabel_1" type="Label" parent="TrackList/TrackList"]
+visible = false
+margin_top = 340.0
+margin_right = 448.0
+margin_bottom = 366.0
+theme = ExtResource( 4 )
+text = "- MORE TRACKS COMING SOON -"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeedLabel" type="Label" parent="."]
+margin_left = 848.0
+margin_top = 32.0
+margin_right = 992.0
+margin_bottom = 58.0
+theme = ExtResource( 4 )
+text = "Track Speed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeedButton1" type="CheckBox" parent="SpeedLabel"]
+margin_top = 40.0
+margin_right = 80.0
+margin_bottom = 74.0
+group = SubResource( 10 )
+text = "0.75x"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeedButton2" type="CheckBox" parent="SpeedLabel"]
+margin_top = 88.0
+margin_right = 80.0
+margin_bottom = 122.0
+group = SubResource( 10 )
+text = "1.00x"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeedButton3" type="CheckBox" parent="SpeedLabel"]
+margin_top = 136.0
+margin_right = 80.0
+margin_bottom = 170.0
+group = SubResource( 10 )
+text = "1.25x"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifLabel1" type="Label" parent="."]
+margin_left = 512.0
+margin_top = 32.0
+margin_right = 628.0
+margin_bottom = 58.0
+theme = ExtResource( 4 )
+text = "Difficulty"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifButton0" type="CheckBox" parent="DifLabel1"]
+margin_top = 40.0
+margin_right = 152.0
+margin_bottom = 74.0
+hint_tooltip = "Tracks will have reduced note count.
+Tracks will have increased paddle size.
+Recommended for new and casual players."
+theme = ExtResource( 4 )
+group = SubResource( 11 )
+text = "Hibernate"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifButton1" type="CheckBox" parent="DifLabel1"]
+margin_top = 88.0
+margin_right = 152.0
+margin_bottom = 122.0
+hint_tooltip = "Tracks will have reduced note count.
+Recommended for new and casual players."
+theme = ExtResource( 4 )
+group = SubResource( 11 )
+text = "Underclock"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifButton2" type="CheckBox" parent="DifLabel1"]
+margin_top = 136.0
+margin_right = 142.0
+margin_bottom = 170.0
+hint_tooltip = "Tracks will have standard note count.
+Recommended for experienced players.
+The way it's meant to be played."
+theme = ExtResource( 4 )
+group = SubResource( 11 )
+text = "Overdrive"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifButton3" type="CheckBox" parent="DifLabel1"]
+margin_top = 184.0
+margin_right = 142.0
+margin_bottom = 218.0
+hint_tooltip = "Tracks will have standard note count.
+Tracks will have reduced paddle size.
+Recommended for adept players."
+theme = ExtResource( 4 )
+group = SubResource( 11 )
+text = "Segfault"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifLabel2" type="Label" parent="."]
+margin_left = 680.0
+margin_top = 32.0
+margin_right = 730.0
+margin_bottom = 58.0
+theme = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifButton3" type="CheckBox" parent="DifLabel2"]
+margin_top = 40.0
+margin_right = 104.0
+margin_bottom = 74.0
+hint_tooltip = "An additional difficulty control.
+You are allowed to miss notes.
+The way it's meant to be played."
+theme = ExtResource( 4 )
+group = SubResource( 12 )
+text = "Classic"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifButtonX" type="CheckBox" parent="DifLabel2"]
+visible = false
+margin_top = 88.0
+margin_right = 138.0
+margin_bottom = 122.0
+hint_tooltip = "GENERIC TOOLTIP"
+theme = ExtResource( 4 )
+disabled = true
+group = SubResource( 12 )
+text = "Byte"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifButtonY" type="CheckBox" parent="DifLabel2"]
+visible = false
+margin_top = 136.0
+margin_right = 138.0
+margin_bottom = 170.0
+hint_tooltip = "GENERIC TOOLTIP"
+theme = ExtResource( 4 )
+disabled = true
+group = SubResource( 12 )
+text = "Nybble"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifButton4" type="CheckBox" parent="DifLabel2"]
+margin_top = 88.0
+margin_right = 118.0
+margin_bottom = 122.0
+hint_tooltip = "An additional difficulty control.
+The track ends if you miss a note.
+Recommended for adept players."
+theme = ExtResource( 4 )
+group = SubResource( 12 )
+text = "Ironbit"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsHub" type="ColorRect" parent="."]
+margin_left = 64.0
+margin_top = 784.0
+margin_right = 1216.0
+margin_bottom = 1376.0
+mouse_filter = 2
+color = Color( 0.176471, 0.176471, 0.176471, 0.470588 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsLabel" type="Label" parent="OptionsHub"]
+margin_left = 512.0
+margin_right = 640.0
+margin_bottom = 48.0
+theme = ExtResource( 4 )
+text = "OPTIONS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tutorial" type="Button" parent="."]
+margin_left = 856.0
+margin_top = 496.0
+margin_right = 1002.0
+margin_bottom = 528.0
+theme = ExtResource( 4 )
+custom_fonts/font = SubResource( 18 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+toggle_mode = true
+text = "TUTORIAL"
+align = 2
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TutorialAnim" type="AnimationPlayer" parent="Tutorial"]
+reset_on_save = false
+playback_speed = 2.0
+anims/RESET = SubResource( 30 )
+anims/from_tut = SubResource( 32 )
+anims/to_tut = SubResource( 29 )
+anims/tut_down = SubResource( 31 )
+anims/tut_up = SubResource( 33 )
+
+[node name="HelpGroup" type="Control" parent="Tutorial"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpHub" type="ColorRect" parent="Tutorial/HelpGroup"]
+margin_left = -824.0
+margin_top = -1144.0
+margin_right = -376.0
+margin_bottom = -536.0
+mouse_filter = 2
+color = Color( 0.176471, 0.176471, 0.176471, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpLabel_1" type="RichTextLabel" parent="Tutorial/HelpGroup/HelpHub"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 440.0
+margin_bottom = 592.0
+rect_min_size = Vector2( 420, 575 )
+size_flags_vertical = 4
+theme = ExtResource( 4 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_colors/selection_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 34 )
+bbcode_enabled = true
+bbcode_text = "[fill]In BITSHIFT OVERDRIVE, your mouse controls a puck at the bottom of the screen. A paddle follows the puck. Use the paddle to catch as many falling notes as you can in each track.[/fill]
+
+[fill]You can tinker with the difficulty controls to optimize your experience. By hovering your mouse over each of them, you can view a brief tooltip explanation of each setting.[/fill]
+
+[fill]Each track in the track list will have a white marker in the top left of its icon. The number of notches on this marker denotes the difficulty of the track. The more notches on the marker, the more difficult the track.[/fill]
+
+[fill]Finishing tracks with different combinations of difficulty controls can yield different completion marks. Your completion marks and personal high scores for each track can be viewed on the track select menu.[/fill]"
+text = "In BITSHIFT OVERDRIVE, your mouse controls a puck at the bottom of the screen. A paddle follows the puck. Use the paddle to catch as many falling notes as you can in each track.
+
+You can tinker with the difficulty controls to optimize your experience. By hovering your mouse over each of them, you can view a brief tooltip explanation of each setting.
+
+Each track in the track list will have a white marker in the top left of its icon. The number of notches on this marker denotes the difficulty of the track. The more notches on the marker, the more difficult the track.
+
+Finishing tracks with different combinations of difficulty controls can yield different completion marks. Your completion marks and personal high scores for each track can be viewed on the track select menu."
+fit_content_height = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fullscreen" type="Button" parent="."]
+margin_left = 856.0
+margin_top = 528.0
+margin_right = 1002.0
+margin_bottom = 560.0
+theme = ExtResource( 4 )
+custom_fonts/font = SubResource( 18 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+text = "FULLSCREEN"
+align = 2
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="Button" parent="."]
+margin_left = 904.0
+margin_top = 560.0
+margin_right = 1008.0
+margin_bottom = 592.0
+theme = ExtResource( 4 )
+custom_fonts/font = SubResource( 18 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+disabled = true
+text = "OPTIONS"
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsAnim" type="AnimationPlayer" parent="Options"]
+reset_on_save = false
+anims/RESET = SubResource( 25 )
+anims/from_options = SubResource( 21 )
+anims/to_options = SubResource( 22 )
+
+[node name="BackButton" type="Button" parent="Options"]
+margin_left = 208.0
+margin_top = 768.0
+margin_right = 312.0
+margin_bottom = 800.0
+theme = ExtResource( 4 )
+custom_fonts/font = SubResource( 18 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitPortal" type="Button" parent="."]
+margin_left = 880.0
+margin_top = 592.0
+margin_right = 1008.0
+margin_bottom = 624.0
+theme = ExtResource( 4 )
+custom_fonts/font = SubResource( 18 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+text = "EXIT GAME"
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BitHub" type="ColorRect" parent="."]
+margin_left = 1016.0
+margin_top = 32.0
+margin_right = 1248.0
+margin_bottom = 632.0
+mouse_filter = 2
+color = Color( 0.176471, 0.176471, 0.176471, 0.470588 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BitHubFiller" type="Label" parent="BitHub"]
+margin_left = 8.0
+margin_right = 232.0
+margin_bottom = 121.0
+theme = ExtResource( 4 )
+text = "HIGH SCORES AND
+COMPLETION MARKS
+NOT AVAILABLE
+IN ALPHA BUILD"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VaporCam" type="Camera" parent="."]
+transform = Transform( -1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0, 1, 0 )
+script = ExtResource( 12 )
+speed = -0.15
+
+[node name="VaporSky" type="WorldEnvironment" parent="."]
+environment = SubResource( 24 )
+
+[node name="VaporScape" type="Spatial" parent="."]
+
+[node name="vapor_chunk_1" type="Spatial" parent="VaporScape"]
+
+[node name="vapor_bg_1" parent="VaporScape/vapor_chunk_1" instance=ExtResource( 11 )]
+
+[node name="vapor_bg_2" parent="VaporScape/vapor_chunk_1" instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 20 )
+
+[node name="vapor_bg_3" parent="VaporScape/vapor_chunk_1" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40 )
+
+[node name="vapor_bg_4" parent="VaporScape/vapor_chunk_1" instance=ExtResource( 10 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 60 )
+
+[node name="vapor_chunk_2" type="Spatial" parent="VaporScape"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 80 )
+
+[node name="vapor_bg_1" parent="VaporScape/vapor_chunk_2" instance=ExtResource( 11 )]
+
+[node name="vapor_bg_2" parent="VaporScape/vapor_chunk_2" instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 20 )
+
+[node name="vapor_bg_3" parent="VaporScape/vapor_chunk_2" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40 )
+
+[node name="vapor_bg_4" parent="VaporScape/vapor_chunk_2" instance=ExtResource( 10 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 60 )
+
+[node name="vapor_chunk_3" type="Spatial" parent="VaporScape"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 160 )
+
+[node name="vapor_bg_1" parent="VaporScape/vapor_chunk_3" instance=ExtResource( 11 )]
+
+[node name="vapor_bg_2" parent="VaporScape/vapor_chunk_3" instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 20 )
+
+[node name="vapor_bg_3" parent="VaporScape/vapor_chunk_3" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40 )
+
+[node name="vapor_bg_4" parent="VaporScape/vapor_chunk_3" instance=ExtResource( 10 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 60 )
+
+[node name="vapor_chunk_4" type="Spatial" parent="VaporScape"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 240 )
+
+[node name="vapor_bg_1" parent="VaporScape/vapor_chunk_4" instance=ExtResource( 11 )]
+
+[node name="vapor_bg_2" parent="VaporScape/vapor_chunk_4" instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 20 )
+
+[node name="vapor_bg_3" parent="VaporScape/vapor_chunk_4" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40 )
+
+[node name="vapor_bg_4" parent="VaporScape/vapor_chunk_4" instance=ExtResource( 10 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 60 )
+
+[node name="MenuCam" type="Camera2D" parent="."]
+position = Vector2( 640, 360 )
+current = true
+
+[node name="CRT" parent="." instance=ExtResource( 13 )]
+
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_2" to="TrackList/TrackList/Track_2" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_2" to="TrackList/TrackList/Track_2" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_3" to="TrackList/TrackList/Track_3" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_3" to="TrackList/TrackList/Track_3" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_4" to="TrackList/TrackList/Track_4" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_4" to="TrackList/TrackList/Track_4" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_5" to="TrackList/TrackList/Track_5" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_5" to="TrackList/TrackList/Track_5" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_7" to="TrackList/TrackList/Track_7" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_7" to="TrackList/TrackList/Track_7" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_8" to="TrackList/TrackList/Track_8" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_8" to="TrackList/TrackList/Track_8" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_10" to="TrackList/TrackList/Track_10" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_10" to="TrackList/TrackList/Track_10" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_11" to="TrackList/TrackList/Track_11" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_11" to="TrackList/TrackList/Track_11" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_12" to="TrackList/TrackList/Track_12" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_12" to="TrackList/TrackList/Track_12" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_13" to="TrackList/TrackList/Track_13" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_13" to="TrackList/TrackList/Track_13" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_14" to="TrackList/TrackList/Track_14" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_14" to="TrackList/TrackList/Track_14" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_15" to="TrackList/TrackList/Track_15" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_15" to="TrackList/TrackList/Track_15" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_16" to="TrackList/TrackList/Track_16" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_16" to="TrackList/TrackList/Track_16" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="SpeedLabel/SpeedButton1" to="SpeedLabel/SpeedButton1" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="SpeedLabel/SpeedButton1" to="SpeedLabel/SpeedButton1" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="SpeedLabel/SpeedButton2" to="SpeedLabel/SpeedButton2" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="SpeedLabel/SpeedButton2" to="SpeedLabel/SpeedButton2" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="SpeedLabel/SpeedButton3" to="SpeedLabel/SpeedButton3" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="SpeedLabel/SpeedButton3" to="SpeedLabel/SpeedButton3" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel1/DifButton0" to="DifLabel1/DifButton0" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="DifLabel1/DifButton0" to="DifLabel1/DifButton0" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel1/DifButton1" to="DifLabel1/DifButton1" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="DifLabel1/DifButton1" to="DifLabel1/DifButton1" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel1/DifButton2" to="DifLabel1/DifButton2" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="DifLabel1/DifButton2" to="DifLabel1/DifButton2" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel1/DifButton3" to="DifLabel1/DifButton3" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="DifLabel1/DifButton3" to="DifLabel1/DifButton3" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel2/DifButton3" to="DifLabel2/DifButton3" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="DifLabel2/DifButton3" to="DifLabel2/DifButton3" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel2/DifButtonX" to="DifLabel2/DifButtonX" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="DifLabel2/DifButtonX" to="DifLabel2/DifButtonX" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel2/DifButtonY" to="DifLabel2/DifButtonY" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="DifLabel2/DifButtonY" to="DifLabel2/DifButtonY" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel2/DifButton4" to="DifLabel2/DifButton4" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="DifLabel2/DifButton4" to="DifLabel2/DifButton4" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="Tutorial" to="Tutorial" method="_on_Tutorial_mouse_entered"]
+[connection signal="toggled" from="Tutorial" to="Tutorial" method="_on_Tutorial_toggled"]
+[connection signal="animation_finished" from="Tutorial/TutorialAnim" to="Tutorial" method="_on_TutorialAnim_animation_finished"]
+[connection signal="mouse_entered" from="Fullscreen" to="Fullscreen" method="_on_Fullscreen_mouse_entered"]
+[connection signal="pressed" from="Fullscreen" to="Fullscreen" method="_on_Fullscreen_pressed"]
+[connection signal="mouse_entered" from="Options" to="Options" method="_on_Options_mouse_entered"]
+[connection signal="pressed" from="Options" to="Options" method="_on_Options_pressed"]
+[connection signal="animation_finished" from="Options/OptionsAnim" to="Options" method="_on_OptionsAnim_animation_finished"]
+[connection signal="mouse_entered" from="Options/BackButton" to="Options" method="_on_BackButton_mouse_entered"]
+[connection signal="pressed" from="Options/BackButton" to="Options" method="_on_BackButton_pressed"]
+[connection signal="mouse_entered" from="ExitPortal" to="ExitPortal" method="_on_ExitPortal_mouse_entered"]
+[connection signal="pressed" from="ExitPortal" to="ExitPortal" method="_on_ExitPortal_pressed"]
