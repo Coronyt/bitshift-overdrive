@@ -3,7 +3,6 @@ extends KinematicBody2D
 onready var NoteShatter = preload("res://scenes/objects/NoteShatter.tscn")
 
 func fade():
-	$NoteLight_1.enabled = false
 	$NoteColl.disabled = true
 	$NoteSprite.play("pop_2")
 
