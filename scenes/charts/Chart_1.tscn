@@ -103,6 +103,7 @@ position = Vector2( 640, 44 )
 scale = Vector2( 0.592, 0.092 )
 texture = ExtResource( 18 )
 texture_scale = 1.5
+energy = 0.75
 
 [node name="CountdownTimer" type="Timer" parent="."]
 

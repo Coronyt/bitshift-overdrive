@@ -91,9 +91,16 @@ BPM = 120
 
 [node name="NoteContainer" type="Node2D" parent="."]
 
-[node name="ScoreLight" type="Light2D" parent="NoteContainer"]
+[node name="Light_Score" type="Light2D" parent="NoteContainer"]
 position = Vector2( 640, 92 )
 scale = Vector2( 0.192, 0.0924444 )
+texture = ExtResource( 18 )
+texture_scale = 1.5
+energy = 0.75
+
+[node name="Light_Label" type="Light2D" parent="NoteContainer"]
+position = Vector2( 640, 44 )
+scale = Vector2( 0.592, 0.092 )
 texture = ExtResource( 18 )
 texture_scale = 1.5
 energy = 0.75
