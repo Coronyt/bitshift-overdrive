@@ -1,0 +1,166 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/objects/TrailGroup.tscn" type="PackedScene" id=1]
+
+[node name="RailCanvas" type="Node2D"]
+
+[node name="ChartRail_1" type="ColorRect" parent="."]
+margin_left = 60.0
+margin_right = 68.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_2" type="ColorRect" parent="."]
+margin_left = 124.0
+margin_right = 132.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_3" type="ColorRect" parent="."]
+margin_left = 188.0
+margin_right = 196.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_4" type="ColorRect" parent="."]
+margin_left = 252.0
+margin_right = 260.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_5" type="ColorRect" parent="."]
+margin_left = 316.0
+margin_right = 324.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_6" type="ColorRect" parent="."]
+margin_left = 380.0
+margin_right = 388.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_7" type="ColorRect" parent="."]
+margin_left = 444.0
+margin_top = 144.0
+margin_right = 452.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_8" type="ColorRect" parent="."]
+margin_left = 508.0
+margin_top = 184.0
+margin_right = 516.0
+margin_bottom = 848.0
+rect_pivot_offset = Vector2( 8, 696 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_9" type="ColorRect" parent="."]
+margin_left = 572.0
+margin_top = 192.0
+margin_right = 580.0
+margin_bottom = 848.0
+rect_pivot_offset = Vector2( 8, 696 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_10" type="ColorRect" parent="."]
+margin_left = 636.0
+margin_top = 192.0
+margin_right = 644.0
+margin_bottom = 848.0
+rect_pivot_offset = Vector2( 8, 696 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_11" type="ColorRect" parent="."]
+margin_left = 700.0
+margin_top = 192.0
+margin_right = 708.0
+margin_bottom = 848.0
+rect_pivot_offset = Vector2( 8, 696 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_12" type="ColorRect" parent="."]
+margin_left = 764.0
+margin_top = 184.0
+margin_right = 772.0
+margin_bottom = 848.0
+rect_pivot_offset = Vector2( 8, 696 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_13" type="ColorRect" parent="."]
+margin_left = 828.0
+margin_top = 144.0
+margin_right = 836.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 696 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_14" type="ColorRect" parent="."]
+margin_left = 892.0
+margin_right = 900.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 696 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_15" type="ColorRect" parent="."]
+margin_left = 956.0
+margin_right = 964.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 696 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_16" type="ColorRect" parent="."]
+margin_left = 1020.0
+margin_right = 1028.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 696 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_17" type="ColorRect" parent="."]
+margin_left = 1084.0
+margin_right = 1092.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 696 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_18" type="ColorRect" parent="."]
+margin_left = 1148.0
+margin_right = 1156.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 696 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="ChartRail_19" type="ColorRect" parent="."]
+margin_left = 1212.0
+margin_right = 1220.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 696 )
+color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+
+[node name="TrailGroup_1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 448, 108 )
+
+[node name="TrailGroup_2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, 148 )
+
+[node name="TrailGroup_3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 576, 156 )
+
+[node name="TrailGroup_4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 640, 156 )
+
+[node name="TrailGroup_5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 704, 156 )
+
+[node name="TrailGroup_6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 768, 148 )
+
+[node name="TrailGroup_7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 832, 108 )
