@@ -73,6 +73,10 @@ ss_reflections_fade_in = 0.35
 dof_blur_far_enabled = true
 dof_blur_far_distance = 40.0
 dof_blur_far_amount = 0.05
+dof_blur_near_enabled = true
+dof_blur_near_distance = 500.0
+dof_blur_near_amount = 0.25
+dof_blur_near_quality = 2
 
 [node name="Chart" type="Node2D"]
 script = ExtResource( 16 )
