@@ -38,6 +38,7 @@ texture = ExtResource( 2 )
 shadow_enabled = true
 
 [node name="PaddleBeam_1" type="ColorRect" parent="."]
+visible = false
 margin_left = -28.0
 margin_top = -1280.0
 margin_right = -26.0
@@ -46,6 +47,7 @@ rect_pivot_offset = Vector2( 2, 1424 )
 color = Color( 1, 1, 1, 0.196078 )
 
 [node name="PaddleBeam_2" type="ColorRect" parent="."]
+visible = false
 margin_left = 26.0
 margin_top = -1280.0
 margin_right = 28.0

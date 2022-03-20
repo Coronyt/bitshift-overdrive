@@ -53,10 +53,10 @@ sky_horizon_color = Color( 1, 1, 1, 1 )
 sky_energy = 0.75
 ground_bottom_color = Color( 0.333333, 0.431373, 1, 1 )
 ground_horizon_color = Color( 1, 1, 1, 1 )
-sun_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+sun_color = Color( 0.215686, 0.215686, 0.215686, 1 )
 sun_latitude = 0.0
 sun_longitude = 180.0
-sun_energy = 5.0
+sun_energy = 1.5
 
 [sub_resource type="Environment" id=10]
 background_mode = 2
