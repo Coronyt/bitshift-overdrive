@@ -5,7 +5,7 @@ onready var NoteShatter = preload("res://scenes/objects/NoteShatter.tscn")
 func _physics_process(_delta):
 	for coll in self.get_overlapping_bodies():
 		coll.shatter()
-		coll.get_child(1).set_disabled(true)
+		coll.get_child(3).set_disabled(true)
 		Active.active.erase(coll)
 		Active.score += 50
 		score_flair()

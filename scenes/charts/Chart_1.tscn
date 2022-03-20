@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/sprites/spark.png" type="Texture" id=1]
 [ext_resource path="res://assets/vapor/vapor_bg_2.glb" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://scripts/Paddle.gd" type="Script" id=15]
 [ext_resource path="res://scripts/Chart.gd" type="Script" id=16]
 [ext_resource path="res://scripts/ScreenBar_Top.gd" type="Script" id=17]
+[ext_resource path="res://assets/sprites/light_1.png" type="Texture" id=18]
 [ext_resource path="res://scenes/PauseScreen.tscn" type="PackedScene" id=19]
 
 [sub_resource type="DynamicFont" id=1]
@@ -100,6 +101,13 @@ offset_1 = 1.125
 offset_2 = 650.0
 BPM = 130
 
+[node name="NoteContainer" type="Node2D" parent="."]
+
+[node name="CountdownLight" type="Light2D" parent="NoteContainer"]
+position = Vector2( 640, 35 )
+scale = Vector2( 5, 0.35 )
+texture = ExtResource( 18 )
+
 [node name="CountdownTimer" type="Timer" parent="."]
 
 [node name="CountdownLabel" type="Label" parent="CountdownTimer"]
@@ -110,9 +118,6 @@ margin_bottom = 416.0
 custom_fonts/font = SubResource( 1 )
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ChartTracker" type="KinematicBody2D" parent="."]
 
@@ -167,6 +172,12 @@ script = ExtResource( 13 )
 position = Vector2( 0, -16 )
 shape = SubResource( 6 )
 
+[node name="PaddleLight" type="Light2D" parent="ChartTracker/ChartCamera/Paddle"]
+scale = Vector2( 1, 15 )
+texture = ExtResource( 18 )
+texture_scale = 0.15
+energy = 0.75
+
 [node name="ScoreCounter" parent="ChartTracker/ChartCamera" instance=ExtResource( 11 )]
 
 [node name="GameOver" parent="ChartTracker/ChartCamera" instance=ExtResource( 14 )]
@@ -182,9 +193,22 @@ margin_right = 1280.0
 margin_bottom = 720.0
 mouse_filter = 2
 color = Color( 0, 0, 0, 0 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="VaporLight_1" type="Light2D" parent="ChartTracker"]
+position = Vector2( 2.25, 360 )
+texture = ExtResource( 18 )
+texture_scale = 1.7
+
+[node name="VaporLight_2" type="Light2D" parent="ChartTracker"]
+position = Vector2( 1277.75, 360 )
+texture = ExtResource( 18 )
+texture_scale = 1.7
+
+[node name="VaporLight_3" type="Light2D" parent="ChartTracker"]
+visible = false
+position = Vector2( 640, 360 )
+texture = ExtResource( 18 )
+texture_scale = 0.08
 
 [node name="VaporCam" type="Camera" parent="."]
 transform = Transform( -1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0, 1, 0 )
@@ -253,6 +277,9 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 6
 
 [node name="PauseScreen" parent="." instance=ExtResource( 19 )]
 visible = false
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.27451, 0.27451, 0.27451, 1 )
 
 [node name="CRT" parent="." instance=ExtResource( 8 )]
 

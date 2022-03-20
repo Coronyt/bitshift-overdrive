@@ -27,8 +27,8 @@ func spawn_note(axis):
 	if self.get_parent().cinematic == false:
 		var new_note = note.instance()
 		new_note.global_position = Vector2(axis, self.get_parent().paddle_pos_y - offset_2)
-		new_note.get_child(0).play(Active.chart)
-		self.get_parent().add_child(new_note)
+		new_note.get_child(2).play(Active.chart)
+		self.get_parent().get_child(1).add_child(new_note)
 
 func _ready():
 	fetch_speed()
