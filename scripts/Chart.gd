@@ -65,6 +65,8 @@ func _ready():
 	speed = $ChartCore.BPM * 5
 	if cinematic == false:
 		cursor_to_puck()
+	self.get_child(0).get_child(0).play("drop")
+	self.get_child(1).get_child(0).rise_seq()
 	$CountdownTimer.start()
 
 func _on_Countdown_timeout():
