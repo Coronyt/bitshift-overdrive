@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/objects/TrailGroup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/sprites/light_1.png" type="Texture" id=2]
 
 [node name="RailCanvas" type="Node2D"]
 
@@ -9,42 +10,222 @@ margin_left = 60.0
 margin_right = 68.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_1"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_1"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_1"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_1"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_2" type="ColorRect" parent="."]
 margin_left = 124.0
 margin_right = 132.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_2"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_2"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_2"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_2"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_3" type="ColorRect" parent="."]
 margin_left = 188.0
 margin_right = 196.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_3"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_3"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_3"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_3"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_4" type="ColorRect" parent="."]
 margin_left = 252.0
 margin_right = 260.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_4"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_4"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_4"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_4"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_5" type="ColorRect" parent="."]
 margin_left = 316.0
 margin_right = 324.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_5"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_5"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_5"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_5"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_6" type="ColorRect" parent="."]
 margin_left = 380.0
 margin_right = 388.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_6"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_6"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_6"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_6"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_7" type="ColorRect" parent="."]
 margin_left = 444.0
@@ -52,7 +233,37 @@ margin_top = 144.0
 margin_right = 452.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_7"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_7"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_7"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_7"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_8" type="ColorRect" parent="."]
 margin_left = 508.0
@@ -60,7 +271,37 @@ margin_top = 184.0
 margin_right = 516.0
 margin_bottom = 848.0
 rect_pivot_offset = Vector2( 8, 696 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_8"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_8"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_8"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_8"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_9" type="ColorRect" parent="."]
 margin_left = 572.0
@@ -68,7 +309,37 @@ margin_top = 192.0
 margin_right = 580.0
 margin_bottom = 848.0
 rect_pivot_offset = Vector2( 8, 696 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_9"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_9"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_9"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_9"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_10" type="ColorRect" parent="."]
 margin_left = 636.0
@@ -76,7 +347,37 @@ margin_top = 192.0
 margin_right = 644.0
 margin_bottom = 848.0
 rect_pivot_offset = Vector2( 8, 696 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_10"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_10"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_10"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_10"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_11" type="ColorRect" parent="."]
 margin_left = 700.0
@@ -84,7 +385,37 @@ margin_top = 192.0
 margin_right = 708.0
 margin_bottom = 848.0
 rect_pivot_offset = Vector2( 8, 696 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_11"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_11"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_11"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_11"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_12" type="ColorRect" parent="."]
 margin_left = 764.0
@@ -92,7 +423,37 @@ margin_top = 184.0
 margin_right = 772.0
 margin_bottom = 848.0
 rect_pivot_offset = Vector2( 8, 696 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_12"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_12"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_12"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_12"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_13" type="ColorRect" parent="."]
 margin_left = 828.0
@@ -100,49 +461,259 @@ margin_top = 144.0
 margin_right = 836.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 696 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_13"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_13"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_13"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_13"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_14" type="ColorRect" parent="."]
 margin_left = 892.0
 margin_right = 900.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 696 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_14"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_14"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_14"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_14"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_15" type="ColorRect" parent="."]
 margin_left = 956.0
 margin_right = 964.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 696 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_15"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_15"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_15"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_15"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_16" type="ColorRect" parent="."]
 margin_left = 1020.0
 margin_right = 1028.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 696 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_16"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_16"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_16"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_16"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_17" type="ColorRect" parent="."]
 margin_left = 1084.0
 margin_right = 1092.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 696 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_17"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_17"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_17"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_17"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_18" type="ColorRect" parent="."]
 margin_left = 1148.0
 margin_right = 1156.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 696 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_18"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_18"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_18"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_18"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="ChartRail_19" type="ColorRect" parent="."]
 margin_left = 1212.0
 margin_right = 1220.0
 margin_bottom = 720.0
 rect_pivot_offset = Vector2( 8, 696 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="ChartRail_Border1" type="ColorRect" parent="ChartRail_19"]
+show_behind_parent = true
+margin_left = -4.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="ChartRail_19"]
+show_behind_parent = true
+margin_left = 8.0
+margin_right = 12.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="ChartRail_19"]
+show_behind_parent = true
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 12.0
+rect_pivot_offset = Vector2( 2, 380 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RailLight_Test" type="Light2D" parent="ChartRail_19"]
+position = Vector2( 4, 360 )
+scale = Vector2( 0.0446667, 0.96 )
+texture = ExtResource( 2 )
+texture_scale = 2.5
+energy = 1.5
 
 [node name="TrailGroup_1" parent="." instance=ExtResource( 1 )]
 position = Vector2( 448, 108 )

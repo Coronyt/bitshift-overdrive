@@ -33,8 +33,10 @@ position = Vector2( 0, -16 )
 shape = SubResource( 6 )
 
 [node name="PaddleLight" type="Light2D" parent="."]
-scale = Vector2( 2, 10 )
+position = Vector2( -1.90735e-06, 8.00001 )
+scale = Vector2( 1.70667, 0.995555 )
 texture = ExtResource( 2 )
+texture_scale = 0.15
 shadow_enabled = true
 
 [node name="PaddleBeam_1" type="ColorRect" parent="."]

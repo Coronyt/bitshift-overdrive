@@ -6,18 +6,16 @@
 blend_mode = 1
 
 [sub_resource type="ParticlesMaterial" id=1]
-trail_divisor = 3
 emission_shape = 1
-emission_sphere_radius = 1.0
+emission_sphere_radius = 10.0
 flag_disable_z = true
-direction = Vector3( 0, -1, 0 )
-spread = 90.0
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 1000.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-damping = 100.0
-scale = 0.5
+initial_velocity = 650.0
+initial_velocity_random = 0.5
+angular_velocity = 1000.0
+orbit_velocity = 500.0
+orbit_velocity_random = 1.0
+damping = 250.0
+scale_random = 0.5
 
 [node name="NodeShatter" type="Node2D"]
 
@@ -25,9 +23,10 @@ scale = 0.5
 material = SubResource( 2 )
 scale = Vector2( 0.05, 0.05 )
 emitting = false
-amount = 10
-lifetime = 1.5
+amount = 20
+lifetime = 5.0
 one_shot = true
-speed_scale = 10.0
+speed_scale = 25.0
+explosiveness = 0.25
 process_material = SubResource( 1 )
 texture = ExtResource( 1 )

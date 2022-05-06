@@ -1,10 +1,11 @@
 extends KinematicBody2D
 
 onready var NoteShatter = preload("res://scenes/objects/NoteShatter.tscn")
+export var demo_mode = false
 
 func fade():
 	$NoteColl.disabled = true
-	$NoteSprite.play("pop_2")
+	# $NoteSprite.play("pop_2")
 
 func shatter():
 	var shatter = NoteShatter.instance()
@@ -14,5 +15,6 @@ func shatter():
 	$NoteShader/SSDissolveBurn.play(0.1)
 	
 func _physics_process(_delta):
-	if self.get_parent().get_parent().paused == false:
-		self.move_and_slide(Vector2(0, 1) * self.get_parent().get_parent().speed)
+	if demo_mode == false:
+		if self.get_parent().get_parent().paused == false:
+			self.move_and_slide(Vector2(0, 1) * self.get_parent().get_parent().speed)

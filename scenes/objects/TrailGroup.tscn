@@ -252,13 +252,40 @@ tracks/11/keys = {
 [node name="TrailGroup" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="ChartRail_Border1" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = -8.0
+margin_top = 6.0
+margin_right = 8.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 0.980392 )
+
+[node name="ChartRail_Border2" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = -6.0
+margin_top = -18.0
+margin_right = 6.0
+margin_bottom = 6.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 0.784314 )
+
+[node name="ChartRail_Border3" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = -6.0
+margin_top = -34.0
+margin_right = 6.0
+margin_bottom = -18.0
+rect_pivot_offset = Vector2( 8, 344 )
+color = Color( 0, 0, 0, 0.588235 )
+
 [node name="TrailPart_1" type="ColorRect" parent="."]
 margin_left = -4.0
 margin_top = 20.0
 margin_right = 4.0
 margin_bottom = 28.0
-rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+rect_pivot_offset = Vector2( 20, -56 )
+color = Color( 1, 1, 1, 0.784314 )
 
 [node name="TrailPart_2" type="ColorRect" parent="."]
 margin_left = -4.0
@@ -266,7 +293,7 @@ margin_top = 8.0
 margin_right = 4.0
 margin_bottom = 16.0
 rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.784314 )
 
 [node name="TrailPart_3" type="ColorRect" parent="."]
 margin_left = -2.0
@@ -274,7 +301,7 @@ margin_top = -4.0
 margin_right = 2.0
 margin_bottom = 4.0
 rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.784314 )
 
 [node name="TrailPart_4" type="ColorRect" parent="."]
 margin_left = -2.0
@@ -282,7 +309,7 @@ margin_top = -16.0
 margin_right = 2.0
 margin_bottom = -8.0
 rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.784314 )
 
 [node name="TrailPart_5" type="ColorRect" parent="."]
 margin_left = -2.0
@@ -290,7 +317,7 @@ margin_top = -24.0
 margin_right = 2.0
 margin_bottom = -20.0
 rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.784314 )
 
 [node name="TrailPart_6" type="ColorRect" parent="."]
 margin_left = -2.0
@@ -298,7 +325,7 @@ margin_top = -32.0
 margin_right = 2.0
 margin_bottom = -28.0
 rect_pivot_offset = Vector2( 8, 344 )
-color = Color( 0.392157, 0.392157, 0.392157, 0.196078 )
+color = Color( 1, 1, 1, 0.784314 )
 
 [node name="TrailAnim" type="AnimationPlayer" parent="."]
 reset_on_save = false

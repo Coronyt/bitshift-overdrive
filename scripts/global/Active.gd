@@ -34,3 +34,4 @@ func clear():
 	for a in active:
 		if is_instance_valid(a) == true:
 			a.fade()
+			pass
