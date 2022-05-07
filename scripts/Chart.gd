@@ -64,6 +64,7 @@ func _ready():
 	$VaporCam.speed = 0.015
 	speed = $ChartCore.BPM * 5
 	if cinematic == false:
+		SoundManager.play_click2()
 		cursor_to_puck()
 	self.get_child(0).get_child(0).play("drop")
 	self.get_child(1).get_child(0).rise_seq()
