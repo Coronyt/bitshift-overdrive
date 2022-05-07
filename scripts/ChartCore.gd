@@ -30,7 +30,6 @@ func spawn_note(axis):
 		new_note.global_position = Vector2(axis, self.get_parent().paddle_pos_y - offset_2)
 		# new_note.get_child(1).play(Active.chart)
 		self.get_parent().get_child(1).add_child(new_note)
-		
 		var note_light = NoteLight.instance()
 		new_note.add_child(note_light)
 

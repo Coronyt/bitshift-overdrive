@@ -1,5 +1,7 @@
 extends Node
 
+var chart_name = ""
+
 # Last used modifiers.
 var mod_speed = "SpeedButton2"
 var mod_dif_1 = "DifButton1"
