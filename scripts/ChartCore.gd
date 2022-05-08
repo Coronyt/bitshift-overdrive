@@ -60,3 +60,7 @@ func _physics_process(_delta):
 			elif chart[index][0] == "END":
 				if self.get_parent().cinematic == false:
 					self.get_parent().play_fade_anim()
+		# For the progress bar.
+		var curr_pos = Active.track_ref.get_playback_position()
+		var len_total = Active.track_ref.stream.get_length()
+		Active.progress = curr_pos / len_total

@@ -19,6 +19,7 @@ var active = []
 var speed = 0
 var score = 0
 
+var progress = 0.0
 var track_ref : AudioStreamPlayer = null
 
 func refresh():
