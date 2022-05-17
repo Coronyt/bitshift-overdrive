@@ -3,6 +3,8 @@ extends KinematicBody2D
 onready var NoteShatter = preload("res://scenes/objects/NoteShatter.tscn")
 export var demo_mode = false
 
+# onready var trail = $NoteSprite/TrailEffect
+
 func fade():
 	$NoteColl.disabled = true
 	# $NoteSprite.play("pop_2")

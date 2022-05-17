@@ -443,7 +443,7 @@ margin_top = 554.0
 margin_right = 1280.0
 margin_bottom = 682.0
 custom_fonts/font = SubResource( 21 )
-text = "ALPHA 0.2.0"
+text = "ALPHA 0.3.0"
 align = 1
 valign = 1
 
