@@ -14,3 +14,9 @@ step = 0.001
 texture_under = ExtResource( 1 )
 texture_progress = ExtResource( 2 )
 script = ExtResource( 3 )
+
+[node name="FlairSFX_Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="FlairSFX_Timer" to="." method="_on_FlairSFX_Timer_timeout"]

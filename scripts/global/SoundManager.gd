@@ -103,7 +103,7 @@ func play_title3():
 	for s in sounds:
 		if s.name == "title3":
 			s.play()
-			
+
 func stop_title1():
 	var sounds = Sounds.get_children()
 	for s in sounds:
@@ -115,7 +115,7 @@ func stop_title2():
 	for s in sounds:
 		if s.name == "title2":
 			s.stop()
-			
+
 func stop_title3():
 	var sounds = Sounds.get_children()
 	for s in sounds:
@@ -127,9 +127,21 @@ func play_title_track():
 	for s in sounds:
 		if s.name == "title_track":
 			s.play()
-			
+
 func stop_title_track():
 	var sounds = Sounds.get_children()
 	for s in sounds:
 		if s.name == "title_track":
+			s.stop()
+
+func play_flair1():
+	var sounds = Sounds.get_children()
+	for s in sounds:
+		if s.name == "flair1":
+			s.play()
+
+func stop_flair1():
+	var sounds = Sounds.get_children()
+	for s in sounds:
+		if s.name == "flair1":
 			s.stop()

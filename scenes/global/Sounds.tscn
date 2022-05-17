@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/sounds/miss.wav" type="AudioStream" id=1]
 [ext_resource path="res://assets/sounds/click2.wav" type="AudioStream" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://assets/sounds/title1.ogg" type="AudioStream" id=11]
 [ext_resource path="res://assets/sounds/title3.ogg" type="AudioStream" id=12]
 [ext_resource path="res://assets/sounds/title_track.ogg" type="AudioStream" id=13]
+[ext_resource path="res://assets/sounds/flair1.wav" type="AudioStream" id=14]
 
 [node name="Sounds" type="Node"]
 
@@ -61,3 +62,6 @@ pitch_scale = 0.75
 
 [node name="title_track" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
+
+[node name="flair1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
