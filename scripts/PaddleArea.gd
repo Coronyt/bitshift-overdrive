@@ -1,8 +1,5 @@
 extends Area2D
 
-# onready var NoteShatter = preload("res://scenes/objects/NoteShatter.tscn")
-# onready var ComboTick = preload("res://scenes/objects/ComboTick.tscn")
-
 func _physics_process(_delta):
 	for coll in self.get_overlapping_bodies():
 		coll.shatter()

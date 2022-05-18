@@ -296,6 +296,7 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 6
 visible = false
 
 [node name="Snowfall" type="Particles2D" parent="."]
+visible = false
 position = Vector2( 640, -50 )
 rotation = 1.5708
 amount = 100

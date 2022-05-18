@@ -1,10 +1,119 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/MatchupPro.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/interface/ComboTick.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("ComboLabel:custom_colors/font_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("ComboLabel:custom_colors/font_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("ComboLabel:custom_colors/font_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("ComboLabel:custom_colors/font_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "tick_float"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("ComboLabel:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -40, -0.25, 0, 0.25, 0, -40, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("ComboLabel:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -24, -0.25, 0, 0.25, 0, -144, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("ComboLabel:custom_colors/font_color:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.941176, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("ComboLabel:custom_colors/font_color:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("ComboLabel:custom_colors/font_color:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0.196078, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("ComboLabel:custom_colors/font_color:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
 
 [node name="ComboTick" type="Node2D"]
 script = ExtResource( 2 )
@@ -14,13 +123,21 @@ margin_left = -40.0
 margin_top = -24.0
 margin_right = 40.0
 margin_bottom = 24.0
+custom_colors/font_color = Color( 0.941176, 1, 0.196078, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "[]"
 align = 1
 valign = 1
 
-[node name="ComboTimer" type="Timer" parent="."]
-wait_time = 0.1
+[node name="TickTimer" type="Timer" parent="."]
+wait_time = 0.75
+one_shot = true
 autostart = true
 
-[connection signal="timeout" from="ComboTimer" to="." method="_on_ComboTimer_timeout"]
+[node name="TickAnim" type="AnimationPlayer" parent="."]
+reset_on_save = false
+playback_speed = 1.5
+anims/RESET = SubResource( 4 )
+anims/tick_float = SubResource( 3 )
+
+[connection signal="timeout" from="TickTimer" to="." method="_on_TickTimer_timeout"]

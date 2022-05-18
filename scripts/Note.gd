@@ -4,11 +4,18 @@ onready var NoteShatter = preload("res://scenes/objects/NoteShatter.tscn")
 onready var ComboTick = preload("res://scenes/objects/ComboTick.tscn")
 
 func fade():
-	$NoteColl.disabled = true
+	# $NoteColl.disabled = true
+	pass # Missed note delay currently disabled.
 
 func tick():
 	var tick = ComboTick.instance()
-	tick.global_position = Vector2(self.global_position.x + 20, self.global_position.y)
+	# Alternate combo tick spawns from right to left.
+	if Active.combo_LR == false:
+		tick.global_position = Vector2(self.global_position.x + 97.5, self.global_position.y - 25)
+		Active.combo_LR = true
+	else:
+		tick.global_position = Vector2(self.global_position.x - 97.5, self.global_position.y - 25)
+		Active.combo_LR = false
 	self.get_parent().add_child(tick)
 
 func shatter():
@@ -17,6 +24,7 @@ func shatter():
 	self.get_parent().add_child(shatter)
 	shatter.get_child(0).emitting = true
 	$NoteShader/SSDissolveBurn.play(0.1)
+	Active.combo += 1
 	tick()
 
 func _physics_process(_delta):

@@ -19,6 +19,9 @@ var active = []
 var speed = 0
 var score = 0
 
+var combo = 0
+var combo_LR = false
+
 var progress = 0.0
 var track_ref : AudioStreamPlayer = null
 
@@ -31,10 +34,10 @@ func refresh():
 	active = []
 	speed = 0
 	score = 0
+	combo = 0
 	track_ref = null
 
 func clear():
 	for a in active:
 		if is_instance_valid(a) == true:
 			a.fade()
-			pass
