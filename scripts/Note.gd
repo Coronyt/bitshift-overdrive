@@ -3,9 +3,35 @@ extends KinematicBody2D
 onready var NoteShatter = preload("res://scenes/objects/NoteShatter.tscn")
 onready var ComboTick = preload("res://scenes/objects/ComboTick.tscn")
 
+onready var sfx_timer = self.get_parent().get_parent().get_node(
+	"ChartTracker/ProgressBar/FlairSFX_Timer2")
+onready var anim_timer = self.get_parent().get_parent().get_node(
+	"ChartTracker/ProgressBar/ComboAnimTimer")
+onready var flair_anims = self.get_parent().get_parent().get_node(
+	"ChartTracker/ChartCamera/ScoreCounter/FlairAnims")
+onready var flair_label = self.get_parent().get_parent().get_node(
+	"ChartTracker/ChartCamera/ScoreCounter/FlairAnims/FlairLabel")
+
 func fade():
 	# $NoteColl.disabled = true
 	pass # Missed note delay currently disabled.
+	
+func milestone_check():
+	if Active.combo == 25:
+		return 25
+	if Active.combo == 50:
+		return 50
+	if Active.combo == 100:
+		return 100
+	if Active.combo == 200:
+		return 200
+	if Active.combo == 300:
+		return 300
+	if Active.combo == 400:
+		return 400
+	if Active.combo == 500:
+		return 500
+	return 0
 
 func tick():
 	var tick = ComboTick.instance()
@@ -17,6 +43,12 @@ func tick():
 		tick.global_position = Vector2(self.global_position.x - 97.5, self.global_position.y - 25)
 		Active.combo_LR = false
 	self.get_parent().add_child(tick)
+	var milestone_check_res = milestone_check()
+	if milestone_check_res != 0:
+		flair_label.text = "- " + str(milestone_check_res) + " COMBO! -"
+		flair_anims.play("landmark")
+		sfx_timer.start()
+		anim_timer.start()
 
 func shatter():
 	var shatter = NoteShatter.instance()

@@ -15,8 +15,22 @@ texture_under = ExtResource( 1 )
 texture_progress = ExtResource( 2 )
 script = ExtResource( 3 )
 
-[node name="FlairSFX_Timer" type="Timer" parent="."]
+[node name="FlairSFX_Timer1" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
 
-[connection signal="timeout" from="FlairSFX_Timer" to="." method="_on_FlairSFX_Timer_timeout"]
+[node name="FlairSFX_Timer2" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="ComboAnimTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="ComboCooldownTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="FlairSFX_Timer1" to="." method="_on_FlairSFX_Timer1_timeout"]
+[connection signal="timeout" from="FlairSFX_Timer2" to="." method="_on_FlairSFX_Timer2_timeout"]
+[connection signal="timeout" from="ComboAnimTimer" to="." method="_on_ComboAnimTimer_timeout"]
+[connection signal="timeout" from="ComboCooldownTimer" to="." method="_on_ComboCooldownTimer_timeout"]
