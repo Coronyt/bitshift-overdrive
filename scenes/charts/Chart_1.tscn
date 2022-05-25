@@ -378,8 +378,8 @@ shape = SubResource( 3 )
 [node name="Paddle" parent="ChartTracker/ChartCamera" instance=ExtResource( 1 )]
 
 [node name="ScoreCounter" parent="ChartTracker/ChartCamera" instance=ExtResource( 11 )]
-margin_top = 30.0
-margin_bottom = 70.0001
+margin_top = -150.0
+margin_bottom = -110.0
 
 [node name="Light_Score" type="Light2D" parent="ChartTracker/ChartCamera/ScoreCounter"]
 show_behind_parent = true
