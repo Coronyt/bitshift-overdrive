@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/tracks/mellow_goulash_0.75.wav" type="AudioStream" id=1]
 [ext_resource path="res://assets/tracks/mellow_goulash_1.00.wav" type="AudioStream" id=2]
@@ -15,6 +15,9 @@
 [ext_resource path="res://assets/tracks/catch_the_stratosphere_1.25.wav" type="AudioStream" id=13]
 [ext_resource path="res://assets/tracks/catch_the_stratosphere_0.75.wav" type="AudioStream" id=14]
 [ext_resource path="res://assets/tracks/catch_the_stratosphere_1.00.wav" type="AudioStream" id=15]
+[ext_resource path="res://assets/tracks/on_the_other_side_1.00.wav" type="AudioStream" id=16]
+[ext_resource path="res://assets/tracks/on_the_other_side_0.75.wav" type="AudioStream" id=17]
+[ext_resource path="res://assets/tracks/on_the_other_side_1.25.wav" type="AudioStream" id=18]
 
 [node name="Tracks" type="Node"]
 
@@ -62,3 +65,12 @@ stream = ExtResource( 15 )
 
 [node name="catch_the_stratosphere_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
+
+[node name="on_the_other_side_075" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+
+[node name="on_the_other_side_100" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+
+[node name="on_the_other_side_125" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
