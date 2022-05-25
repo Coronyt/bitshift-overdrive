@@ -8,7 +8,6 @@ func _physics_process(_delta):
 		coll.get_child(0).get_child(0).queue_free() # Deleting outline.
 		coll.get_child(0).get_child(1).emitting = false # Stopping particles.
 		Active.active.erase(coll)
-		Active.score += 50
 		score_flair()
 		self.get_parent().transform.origin.y = 280 # To negate paddle pushing.
 		

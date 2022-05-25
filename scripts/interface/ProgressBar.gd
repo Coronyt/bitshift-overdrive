@@ -7,6 +7,7 @@ var landmark_25per = false
 var landmark_50per = false
 var landmark_75per = false
 
+var milestone = 0
 var milestone_cooldown = false
 
 func _ready():
@@ -36,6 +37,9 @@ func _physics_process(_delta):
 			flair_anims.play("landmark")
 			$FlairSFX_Timer1.start()
 
+func set_milestone(to_milestone):
+	milestone = to_milestone
+
 func _on_FlairAnims_animation_finished(anim_name):
 	if anim_name == "landmark":
 		pass
@@ -44,11 +48,37 @@ func _on_FlairSFX_Timer1_timeout():
 	SoundManager.play_flair1()
 
 func _on_FlairSFX_Timer2_timeout():
-	SoundManager.play_flair1()
+	if milestone == 25:
+		SoundManager.play_combo(1.15)
+	elif milestone == 50:
+		SoundManager.play_combo(1.25)
+	elif milestone == 100:
+		SoundManager.play_combo(1.35)
+	elif milestone == 200:
+		SoundManager.play_combo(1.45)
+	elif milestone == 300:
+		SoundManager.play_combo(1.55)
+	elif milestone == 400:
+		SoundManager.play_combo(1.65)
+	elif milestone == 500:
+		SoundManager.play_combo(1.75)
 
 func _on_ComboAnimTimer_timeout():
 	if milestone_cooldown == false:
-		flair_label.text = "1.15x SCORE!" # TODO.
+		if milestone == 25:
+			flair_label.text = "1.25x SCORE!"
+		elif milestone == 50:
+			flair_label.text = "1.50x SCORE!"
+		elif milestone == 100:
+			flair_label.text = "2.00x SCORE!"
+		elif milestone == 200:
+			flair_label.text = "2.50x SCORE!"
+		elif milestone == 300:
+			flair_label.text = "3.00x SCORE!"
+		elif milestone == 400:
+			flair_label.text = "4.00x SCORE!"
+		elif milestone == 500:
+			flair_label.text = "5.00x SCORE!"
 		flair_anims.play("landmark")
 		milestone_cooldown = true
 		$ComboCooldownTimer.start()

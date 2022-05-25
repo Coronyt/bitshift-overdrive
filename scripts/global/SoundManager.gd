@@ -140,8 +140,9 @@ func play_flair1():
 		if s.name == "flair1":
 			s.play()
 
-func stop_flair1():
+func play_combo(pitch):
 	var sounds = Sounds.get_children()
 	for s in sounds:
-		if s.name == "flair1":
-			s.stop()
+		if s.name == "combo":
+			s.pitch_scale = pitch
+			s.play()

@@ -3,6 +3,8 @@ extends KinematicBody2D
 onready var NoteShatter = preload("res://scenes/objects/NoteShatter.tscn")
 onready var ComboTick = preload("res://scenes/objects/ComboTick.tscn")
 
+onready var prog_bar = self.get_parent().get_parent().get_node(
+	"ChartTracker/ProgressBar")
 onready var sfx_timer = self.get_parent().get_parent().get_node(
 	"ChartTracker/ProgressBar/FlairSFX_Timer2")
 onready var anim_timer = self.get_parent().get_parent().get_node(
@@ -18,18 +20,25 @@ func fade():
 	
 func milestone_check():
 	if Active.combo == 25:
+		Active.last_milestone = 25
 		return 25
 	if Active.combo == 50:
+		Active.last_milestone = 50
 		return 50
 	if Active.combo == 100:
+		Active.last_milestone = 100
 		return 100
 	if Active.combo == 200:
+		Active.last_milestone = 200
 		return 200
 	if Active.combo == 300:
+		Active.last_milestone = 300
 		return 300
 	if Active.combo == 400:
+		Active.last_milestone = 400
 		return 400
 	if Active.combo == 500:
+		Active.last_milestone = 500
 		return 500
 	return 0
 
@@ -49,6 +58,7 @@ func tick():
 		flair_anims.play("landmark")
 		sfx_timer.start()
 		anim_timer.start()
+		prog_bar.set_milestone(milestone_check_res)
 
 func shatter():
 	var shatter = NoteShatter.instance()
@@ -58,6 +68,22 @@ func shatter():
 	$NoteShader/SSDissolveBurn.play(0.1)
 	Active.combo += 1
 	tick()
+	if Active.last_milestone == 0:
+		Active.score += stepify((50 * 1.00), 1)
+	elif Active.last_milestone == 25:
+		Active.score += stepify((50 * 1.25), 1)
+	elif Active.last_milestone == 50:
+		Active.score += stepify((50 * 1.50), 1)
+	elif Active.last_milestone == 100:
+		Active.score += stepify((50 * 2.00), 1)
+	elif Active.last_milestone == 200:
+		Active.score += stepify((50 * 2.50), 1)
+	elif Active.last_milestone == 300:
+		Active.score += stepify((50 * 3.00), 1)
+	elif Active.last_milestone == 400:
+		Active.score += stepify((50 * 4.00), 1)
+	elif Active.last_milestone == 500:
+		Active.score += stepify((50 * 5.00), 1)
 
 func _physics_process(_delta):
 	if self.get_parent().get_parent().paused == false:

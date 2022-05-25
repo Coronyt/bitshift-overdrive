@@ -65,3 +65,6 @@ stream = ExtResource( 13 )
 
 [node name="flair1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
+
+[node name="combo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )

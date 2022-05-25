@@ -5,5 +5,6 @@ func _physics_process(_delta):
 		SoundManager.play_miss()
 		# Active.clear()
 		Active.combo = 0
+		Active.last_milestone = 0
 		coll.queue_free() # Missed note delay currently disabled.
 		self.get_parent().get_parent().get_parent().check_health()
