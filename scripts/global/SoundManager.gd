@@ -9,6 +9,7 @@ var track_dict_075 = {
 	"Track_4" : Tracks.get_child(9),
 	"Track_5" : Tracks.get_child(12),
 	"Track_6" : Tracks.get_child(15),
+	"Track_7" : Tracks.get_child(15), # PLACEHOLDER.
 }
 
 var track_dict_100 = {
@@ -18,6 +19,7 @@ var track_dict_100 = {
 	"Track_4" : Tracks.get_child(10),
 	"Track_5" : Tracks.get_child(13),
 	"Track_6" : Tracks.get_child(16),
+	"Track_7" : Tracks.get_child(16), # PLACEHOLDER.
 }
 
 var track_dict_125 = {
@@ -27,6 +29,7 @@ var track_dict_125 = {
 	"Track_4" : Tracks.get_child(11),
 	"Track_5" : Tracks.get_child(14),
 	"Track_6" : Tracks.get_child(17),
+	"Track_7" : Tracks.get_child(17), # PLACEHOLDER.
 }
 
 func play_click1():

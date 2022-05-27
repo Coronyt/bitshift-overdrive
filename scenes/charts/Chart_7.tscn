@@ -288,15 +288,15 @@ tracks/0/keys = {
 }
 
 [sub_resource type="ProceduralSky" id=9]
-sky_top_color = Color( 0.0392157, 0.0392157, 0.117647, 1 )
-sky_horizon_color = Color( 0.882353, 0.470588, 0.196078, 1 )
-sky_energy = 2.0
-ground_bottom_color = Color( 0.737255, 0.517647, 0, 1 )
-ground_horizon_color = Color( 0.882353, 0.470588, 0.196078, 1 )
-sun_color = Color( 0.94902, 1, 0, 1 )
+sky_top_color = Color( 0.470588, 0.0352941, 0.176471, 1 )
+sky_horizon_color = Color( 0.392157, 0.313726, 0.0392157, 1 )
+sky_energy = 2.5
+ground_bottom_color = Color( 1, 0.529412, 0, 1 )
+ground_horizon_color = Color( 1, 0.529412, 0, 1 )
+sun_color = Color( 1, 0.529412, 0, 1 )
 sun_latitude = 0.0
 sun_longitude = 180.0
-sun_energy = 2.5
+sun_energy = 1.5
 
 [sub_resource type="Environment" id=10]
 background_mode = 2
@@ -326,7 +326,7 @@ cinematic = true
 script = ExtResource( 6 )
 offset_1 = 1.125
 offset_2 = 650.0
-BPM = 130
+BPM = 110
 
 [node name="ScoreDrop" type="AnimationPlayer" parent="ChartCore"]
 reset_on_save = false
