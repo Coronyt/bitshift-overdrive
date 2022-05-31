@@ -30,6 +30,7 @@ shader = SubResource( 10 )
 shader_param/scan_line_count = 90.0
 
 [node name="ShaderLayer" type="CanvasLayer"]
+layer = 2
 
 [node name="Shader" type="TextureRect" parent="."]
 material = SubResource( 11 )
@@ -38,6 +39,3 @@ margin_bottom = 720.0
 mouse_filter = 2
 texture = ExtResource( 1 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}

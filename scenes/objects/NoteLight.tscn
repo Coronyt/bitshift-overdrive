@@ -5,4 +5,3 @@
 [node name="Light2D" type="Light2D"]
 show_behind_parent = true
 texture = ExtResource( 1 )
-energy = 1.5

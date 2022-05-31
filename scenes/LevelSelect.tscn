@@ -1013,6 +1013,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
+disabled = true
 text = "[ cat-eared devil ]"
 script = ExtResource( 22 )
 __meta__ = {
@@ -1023,7 +1024,7 @@ __meta__ = {
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
-[node name="Track_11" type="Button" parent="TrackList/TrackList"]
+[node name="Track_8" type="Button" parent="TrackList/TrackList"]
 margin_top = 476.0
 margin_right = 448.0
 margin_bottom = 540.0
@@ -1041,11 +1042,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_11"]
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_8"]
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
-[node name="Track_17" type="Button" parent="TrackList/TrackList"]
+[node name="Track_9" type="Button" parent="TrackList/TrackList"]
 margin_top = 544.0
 margin_right = 448.0
 margin_bottom = 608.0
@@ -1063,7 +1064,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_17"]
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_9"]
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
@@ -1089,7 +1090,7 @@ __meta__ = {
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
-[node name="Track_9" type="Button" parent="TrackList/TrackList"]
+[node name="Track_11" type="Button" parent="TrackList/TrackList"]
 margin_top = 680.0
 margin_right = 448.0
 margin_bottom = 744.0
@@ -1107,11 +1108,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_9"]
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_11"]
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
-[node name="Track_8" type="Button" parent="TrackList/TrackList"]
+[node name="Track_12" type="Button" parent="TrackList/TrackList"]
 margin_top = 748.0
 margin_right = 448.0
 margin_bottom = 812.0
@@ -1129,7 +1130,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_8"]
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_12"]
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
@@ -1734,16 +1735,16 @@ current = true
 [connection signal="pressed" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_7" to="TrackList/TrackList/Track_7" method="_on_ChartButton_mouse_entered"]
 [connection signal="pressed" from="TrackList/TrackList/Track_7" to="TrackList/TrackList/Track_7" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_11" to="TrackList/TrackList/Track_11" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_11" to="TrackList/TrackList/Track_11" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_17" to="TrackList/TrackList/Track_17" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_17" to="TrackList/TrackList/Track_17" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_10" to="TrackList/TrackList/Track_10" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_10" to="TrackList/TrackList/Track_10" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_8" to="TrackList/TrackList/Track_8" method="_on_ChartButton_mouse_entered"]
 [connection signal="pressed" from="TrackList/TrackList/Track_8" to="TrackList/TrackList/Track_8" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_10" to="TrackList/TrackList/Track_10" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_10" to="TrackList/TrackList/Track_10" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_11" to="TrackList/TrackList/Track_11" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_11" to="TrackList/TrackList/Track_11" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_12" to="TrackList/TrackList/Track_12" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_12" to="TrackList/TrackList/Track_12" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_13" to="TrackList/TrackList/Track_13" method="_on_ChartButton_mouse_entered"]
 [connection signal="pressed" from="TrackList/TrackList/Track_13" to="TrackList/TrackList/Track_13" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_14" to="TrackList/TrackList/Track_14" method="_on_ChartButton_mouse_entered"]

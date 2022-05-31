@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/objects/Paddle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/vapor/vapor_bg_2.glb" type="PackedScene" id=2]
@@ -21,30 +21,8 @@
 [ext_resource path="res://scenes/PauseScreen.tscn" type="PackedScene" id=19]
 
 [sub_resource type="Animation" id=16]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("../ChartTracker/ChartCamera/ScoreCounter:rect_position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("../ChartTracker/ChartCamera/ScoreCounter:rect_position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( -150, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-
-[sub_resource type="Animation" id=17]
 resource_name = "drop"
+length = 4.0
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("../ChartTracker/ChartCamera/ScoreCounter:rect_position:x")
 tracks/0/interp = 1
@@ -329,17 +307,16 @@ BPM = 130
 
 [node name="ScoreDrop" type="AnimationPlayer" parent="ChartCore"]
 reset_on_save = false
-anims/RESET = SubResource( 16 )
-anims/drop = SubResource( 17 )
+anims/drop = SubResource( 16 )
 
 [node name="NoteContainer" type="Node2D" parent="."]
 
 [node name="RailCanvas" parent="NoteContainer" instance=ExtResource( 13 )]
 
 [node name="LightCanvas" type="ColorRect" parent="NoteContainer/RailCanvas"]
+visible = false
 margin_right = 1280.0
 margin_bottom = 720.0
-color = Color( 0.176471, 0.117647, 0, 0.705882 )
 
 [node name="CountdownTimer" type="Timer" parent="."]
 
@@ -385,6 +362,7 @@ margin_top = -150.0
 margin_bottom = -110.0
 
 [node name="Light_Score" type="Light2D" parent="ChartTracker/ChartCamera/ScoreCounter"]
+visible = false
 show_behind_parent = true
 position = Vector2( 0, -296 )
 scale = Vector2( 0.455111, 0.167111 )
@@ -428,7 +406,7 @@ __meta__ = {
 [node name="ProgressBar" parent="ChartTracker" instance=ExtResource( 15 )]
 
 [node name="VaporCam" type="Camera" parent="."]
-transform = Transform( -1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0, 1, 0 )
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 1, 0 )
 script = ExtResource( 7 )
 speed = -0.25
 
