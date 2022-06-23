@@ -379,7 +379,7 @@ centered = false
 [node name="LightCanvas" type="ColorRect" parent="NoteContainer"]
 margin_right = 1280.0
 margin_bottom = 720.0
-color = Color( 0.0392157, 0.117647, 0.215686, 0.588235 )
+color = Color( 0.0392157, 0.117647, 0.215686, 0.568627 )
 
 [node name="CountdownTimer" type="Timer" parent="."]
 
@@ -456,7 +456,6 @@ visible = false
 anims/FadeAnim = SubResource( 8 )
 
 [node name="ColorRect" type="ColorRect" parent="ChartTracker/ChartCamera"]
-visible = false
 margin_left = -640.0
 margin_top = -360.0
 margin_right = 1280.0

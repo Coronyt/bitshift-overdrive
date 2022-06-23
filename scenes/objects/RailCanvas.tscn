@@ -1548,8 +1548,9 @@ anims/rise_3 = SubResource( 4 )
 
 [node name="ChartRail_1" type="ColorRect" parent="."]
 margin_left = 60.0
+margin_top = 800.0
 margin_right = 68.0
-margin_bottom = 719.999
+margin_bottom = 1520.0
 rect_pivot_offset = Vector2( 8, 344 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -1587,8 +1588,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_2" type="ColorRect" parent="."]
 margin_left = 124.0
+margin_top = 800.0
 margin_right = 132.0
-margin_bottom = 719.999
+margin_bottom = 1520.0
 rect_pivot_offset = Vector2( 8, 344 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -1626,8 +1628,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_3" type="ColorRect" parent="."]
 margin_left = 188.0
+margin_top = 800.0
 margin_right = 196.0
-margin_bottom = 719.999
+margin_bottom = 1520.0
 rect_pivot_offset = Vector2( 8, 344 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -1665,8 +1668,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_4" type="ColorRect" parent="."]
 margin_left = 252.0
+margin_top = 800.0
 margin_right = 260.0
-margin_bottom = 719.999
+margin_bottom = 1520.0
 rect_pivot_offset = Vector2( 8, 344 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -1704,8 +1708,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_5" type="ColorRect" parent="."]
 margin_left = 316.0
+margin_top = 800.0
 margin_right = 324.0
-margin_bottom = 719.999
+margin_bottom = 1520.0
 rect_pivot_offset = Vector2( 8, 344 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -1743,8 +1748,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_6" type="ColorRect" parent="."]
 margin_left = 380.0
+margin_top = 800.0
 margin_right = 388.0
-margin_bottom = 720.0
+margin_bottom = 1520.0
 rect_pivot_offset = Vector2( 8, 344 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -1782,9 +1788,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_7" type="ColorRect" parent="."]
 margin_left = 444.0
-margin_top = 194.0
+margin_top = 800.0
 margin_right = 452.0
-margin_bottom = 769.999
+margin_bottom = 1376.0
 rect_pivot_offset = Vector2( 8, 344 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -1822,9 +1828,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_8" type="ColorRect" parent="."]
 margin_left = 508.0
-margin_top = 194.0
+margin_top = 800.0
 margin_right = 516.0
-margin_bottom = 857.999
+margin_bottom = 1464.0
 rect_pivot_offset = Vector2( 8, 696 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -1862,9 +1868,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_9" type="ColorRect" parent="."]
 margin_left = 572.0
-margin_top = 214.0
+margin_top = 800.0
 margin_right = 580.0
-margin_bottom = 869.999
+margin_bottom = 1456.0
 rect_pivot_offset = Vector2( 8, 696 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -1902,9 +1908,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_10" type="ColorRect" parent="."]
 margin_left = 636.0
-margin_top = 214.0
+margin_top = 800.0
 margin_right = 644.0
-margin_bottom = 869.999
+margin_bottom = 1456.0
 rect_pivot_offset = Vector2( 8, 696 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -1942,9 +1948,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_11" type="ColorRect" parent="."]
 margin_left = 700.0
-margin_top = 214.0
+margin_top = 800.0
 margin_right = 708.0
-margin_bottom = 869.999
+margin_bottom = 1456.0
 rect_pivot_offset = Vector2( 8, 696 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -1982,9 +1988,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_12" type="ColorRect" parent="."]
 margin_left = 764.0
-margin_top = 194.0
+margin_top = 800.0
 margin_right = 772.0
-margin_bottom = 857.999
+margin_bottom = 1464.0
 rect_pivot_offset = Vector2( 8, 696 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -2022,9 +2028,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_13" type="ColorRect" parent="."]
 margin_left = 828.0
-margin_top = 194.0
+margin_top = 800.0
 margin_right = 836.0
-margin_bottom = 769.999
+margin_bottom = 1376.0
 rect_pivot_offset = Vector2( 8, 696 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -2062,8 +2068,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_14" type="ColorRect" parent="."]
 margin_left = 892.0
+margin_top = 800.0
 margin_right = 900.0
-margin_bottom = 720.001
+margin_bottom = 1520.0
 rect_pivot_offset = Vector2( 8, 696 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -2101,8 +2108,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_15" type="ColorRect" parent="."]
 margin_left = 956.0
+margin_top = 800.0
 margin_right = 964.0
-margin_bottom = 720.001
+margin_bottom = 1520.0
 rect_pivot_offset = Vector2( 8, 696 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -2140,8 +2148,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_16" type="ColorRect" parent="."]
 margin_left = 1020.0
+margin_top = 800.0
 margin_right = 1028.0
-margin_bottom = 720.001
+margin_bottom = 1520.0
 rect_pivot_offset = Vector2( 8, 696 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -2179,8 +2188,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_17" type="ColorRect" parent="."]
 margin_left = 1084.0
+margin_top = 800.0
 margin_right = 1092.0
-margin_bottom = 720.001
+margin_bottom = 1520.0
 rect_pivot_offset = Vector2( 8, 696 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -2218,8 +2228,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_18" type="ColorRect" parent="."]
 margin_left = 1148.0
+margin_top = 800.0
 margin_right = 1156.0
-margin_bottom = 720.0
+margin_bottom = 1520.0
 rect_pivot_offset = Vector2( 8, 696 )
 color = Color( 1, 1, 1, 0.137255 )
 
@@ -2257,8 +2268,9 @@ position = Vector2( 4, -36 )
 
 [node name="ChartRail_19" type="ColorRect" parent="."]
 margin_left = 1212.0
+margin_top = 800.0
 margin_right = 1220.0
-margin_bottom = 720.0
+margin_bottom = 1520.0
 rect_pivot_offset = Vector2( 8, 696 )
 color = Color( 1, 1, 1, 0.137255 )
 
