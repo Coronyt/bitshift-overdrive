@@ -313,6 +313,7 @@ anims/drop = SubResource( 16 )
 [node name="NoteContainer" type="Node2D" parent="."]
 
 [node name="RailCanvas" parent="NoteContainer" instance=ExtResource( 13 )]
+visible = false
 
 [node name="LightCanvas" type="ColorRect" parent="NoteContainer/RailCanvas"]
 visible = false
@@ -377,6 +378,7 @@ anims/RESET = SubResource( 13 )
 anims/landmark = SubResource( 14 )
 
 [node name="FlairLabel" type="Label" parent="ChartTracker/ChartCamera/ScoreCounter/FlairAnims"]
+visible = false
 margin_left = 448.0
 margin_top = -100.0
 margin_right = 832.0
