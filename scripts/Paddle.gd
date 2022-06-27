@@ -16,11 +16,9 @@ func _ready():
 	if Active.mod_dif_1 == "DifButton0":
 		$PaddleIcon.texture = paddle_XL
 		$PaddleArea/TopColl.scale = Vector2(2, 1)
-		# $PaddlePart.hide()
 	if Active.mod_dif_1 == "DifButton3":
 		$PaddleIcon.texture = paddle_XS
 		$PaddleArea/TopColl.scale = Vector2(0.35, 1)
-		# $PaddlePart.hide()
 	if self.get_parent().get_parent().get_parent().cinematic == false:
 		get_viewport().warp_mouse(Vector2(self.global_position.x, self.global_position.y))
 

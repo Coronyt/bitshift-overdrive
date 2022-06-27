@@ -992,6 +992,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
+disabled = true
 text = "It's Brighter on the Other Side"
 script = ExtResource( 22 )
 __meta__ = {
