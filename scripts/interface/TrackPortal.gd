@@ -19,4 +19,5 @@ func _on_TrackPortal_pressed():
 
 func _on_PortalPeelAnim_animation_finished(anim_name):
 	SoundManager.stop_title2()
+	self.get_parent().load_into_active()
 	get_tree().change_scene(ChartManager.fetch_chart_tscn(Active.chart))

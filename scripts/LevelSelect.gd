@@ -32,7 +32,11 @@ func load_last_modifiers():
 			mod.pressed = true
 
 func load_into_active():
+	var act_chart_bkup_1 = Active.chart
+	var act_chart_bkup_2 = Active.chart_name
 	Active.refresh()
+	Active.chart = act_chart_bkup_1
+	Active.chart_name = act_chart_bkup_2
 	var to_load_speed = $SpeedLabel/SpeedButton1.group.get_pressed_button().name
 	var to_load_dif1 = $DifLabel1/DifButton1.group.get_pressed_button().name
 	var to_load_dif2 = $DifLabel2/DifButton3.group.get_pressed_button().name
