@@ -194,7 +194,6 @@ ss="*res://addons/godot_sprite_shader/ss.gd"
 
 settings/crash_handler/message="BITSHIFT OVERDRIVE has encountered a fatal error."
 settings/fps/force_fps=60
-settings/stdout/print_fps=true
 
 [display]
 
