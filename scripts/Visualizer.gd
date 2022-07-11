@@ -23,8 +23,8 @@ func _draw():
 		var rect_D = Rect2((w * i) + center_ref + 4, HEIGHT - height, w - 8, height)
 		rect_U.position.y = rect_U.position.y + 85
 		rect_D.position.y = (720 / 2) + 25
-		draw_rect(rect_U, Color(1.0, 1.0, 1.0, 0.4))
-		draw_rect(rect_D, Color(1.0, 1.0, 1.0, 0.4))
+		draw_rect(rect_U, Color(1.0, 1.0, 1.0, 0.2))
+		draw_rect(rect_D, Color(1.0, 1.0, 1.0, 0.2))
 		prev_hz = hz
 
 func _process(_delta):
