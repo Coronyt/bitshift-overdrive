@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://scenes/objects/Paddle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/vapor/vapor_bg_2.glb" type="PackedScene" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://assets/para_bgs/Track_6/4.png" type="Texture" id=22]
 [ext_resource path="res://assets/para_bgs/Track_6/3.png" type="Texture" id=23]
 [ext_resource path="res://assets/para_bgs/Track_6/2.png" type="Texture" id=24]
+[ext_resource path="res://scenes/Visualizer.tscn" type="PackedScene" id=25]
 
 [sub_resource type="Animation" id=16]
 resource_name = "drop"
@@ -375,6 +376,8 @@ orig_y = 456
 position = Vector2( 1920, 0 )
 texture = ExtResource( 21 )
 centered = false
+
+[node name="Visualizer" parent="NoteContainer" instance=ExtResource( 25 )]
 
 [node name="LightCanvas" type="ColorRect" parent="NoteContainer"]
 margin_right = 1280.0
