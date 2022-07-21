@@ -12,6 +12,7 @@ func _on_TrackPortal_mouse_entered():
 		SoundManager.play_hover()
 
 func _on_TrackPortal_pressed():
+	SoundManager.track_dict_100[Active.chart].stop()
 	SoundManager.stop_track_select()
 	SoundManager.play_click1()
 	SoundManager.play_title2()

@@ -1,10 +1,67 @@
 extends Button
 
+# TODO - Refactor this code!
+
+func _ready():
+	SoundManager.preview_playing = false
+
 func _on_ChartButton_pressed():
 	SoundManager.play_click1()
+	if SoundManager.preview_playing == true:
+		SoundManager.track_dict_100[Active.chart].stop()
+		SoundManager.preview_playing = false
+	else:
+		fade_out_bgm()
 	Active.chart = self.name
 	Active.chart_name = self.text
+	if SoundManager.preview_playing == false:
+		fade_in_track()
 
 func _on_ChartButton_mouse_entered():
 	if self.disabled == false:
 		SoundManager.play_hover()
+
+func fade_in_bgm():
+	var audio_stream = SoundManager.fetch_audio_stream("track_select")
+	var fade_tween = self.get_parent().get_child(0)
+	audio_stream.play(SoundManager.track_select_last_pos)
+	fade_tween.interpolate_property(audio_stream, 
+		"volume_db", -80, -2, 1, 1, Tween.EASE_IN, 0)
+	fade_tween.start()
+
+func fade_out_bgm():
+	var audio_stream = SoundManager.fetch_audio_stream("track_select")
+	var fade_tween = self.get_parent().get_child(0)
+	SoundManager.track_select_last_pos = audio_stream.get_playback_position()
+	fade_tween.interpolate_property(audio_stream, 
+		"volume_db", -2, -80, 0.50, 1, Tween.EASE_IN, 0)
+	fade_tween.start()
+	audio_stream.stop()
+
+func fade_in_track():
+	SoundManager.preview_playing = true
+	var to_play = SoundManager.track_dict_100[Active.chart]
+	var fade_tween = self.get_parent().get_child(0)
+	fade_tween.interpolate_property(to_play, 
+		"volume_db", -80, -2, 0.50, 1, Tween.EASE_IN, 0)
+	fade_tween.start()
+	to_play.play(35)
+	var preview_timer = self.get_parent().get_child(0).get_child(0)
+	preview_timer.start()
+
+func fade_out_track():
+	SoundManager.preview_playing = false
+	var to_stop = SoundManager.track_dict_100[Active.chart]
+	var fade_tween = self.get_parent().get_child(0)
+	fade_tween.interpolate_property(to_stop, 
+		"volume_db", -2, -80, 1, 1, Tween.EASE_IN, 0)
+	fade_tween.start()
+	var preview_timer = self.get_parent().get_child(0).get_child(1)
+	preview_timer.start()
+
+func _on_PreviewTimer1_timeout():
+	fade_out_track()
+	fade_in_bgm()
+
+func _on_PreviewTimer2_timeout():
+	SoundManager.track_dict_100[Active.chart].stop()

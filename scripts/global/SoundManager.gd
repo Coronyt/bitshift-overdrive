@@ -1,5 +1,8 @@
 extends Node
 
+var preview_playing = false
+var track_select_last_pos = 0.0
+
 const track_tscn = preload("res://scenes/global/Tracks.tscn")
 
 var track_dict_075 = {
@@ -34,6 +37,13 @@ var track_dict_125 = {
 	"Track_7" : Tracks.get_child(17), # PLACEHOLDER.
 	"Track_15" : Tracks.get_child(17), # PLACEHOLDER.
 }
+
+func fetch_audio_stream(target_audio):
+	var sounds = Sounds.get_children()
+	for s in sounds:
+		if s.name == target_audio:
+			return s
+	return null
 
 func play_click1():
 	var sounds = Sounds.get_children()
@@ -87,6 +97,7 @@ func play_track_select():
 	var sounds = Sounds.get_children()
 	for s in sounds:
 		if s.name == "track_select":
+			s.volume_db = -2
 			s.play()
 
 func stop_track_select():

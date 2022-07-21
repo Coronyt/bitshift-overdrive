@@ -877,6 +877,15 @@ scroll_horizontal_enabled = false
 margin_right = 448.0
 margin_bottom = 1084.0
 
+[node name="TrackListTween" type="Tween" parent="TrackList/TrackList"]
+
+[node name="PreviewTimer1" type="Timer" parent="TrackList/TrackList/TrackListTween"]
+wait_time = 10.0
+one_shot = true
+
+[node name="PreviewTimer2" type="Timer" parent="TrackList/TrackList/TrackListTween"]
+one_shot = true
+
 [node name="Track_1" type="Button" parent="TrackList/TrackList"]
 margin_right = 448.0
 margin_bottom = 64.0
@@ -1710,6 +1719,8 @@ current = true
 
 [node name="CRT" parent="." instance=ExtResource( 13 )]
 
+[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer1" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer1_timeout"]
+[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer2" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer2_timeout"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_mouse_entered"]
 [connection signal="pressed" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_2" to="TrackList/TrackList/Track_2" method="_on_ChartButton_mouse_entered"]
