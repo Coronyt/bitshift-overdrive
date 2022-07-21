@@ -11,6 +11,8 @@ var mod_dif_2 = "DifButton3"
 var is_slow = false
 var is_fast = false
 var is_easy = false
+var is_byte = false
+var is_nybl = false
 var is_iron = false
 
 # Active chart parameters.

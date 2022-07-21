@@ -109,7 +109,6 @@ func _input(event):
 			$VaporCam.speed = 0
 			$PauseScreen.show()
 			$ChartTracker/ChartCamera/Paddle.locked = true
-			Active.clear()
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			puck_to_cursor()
 			paused = true

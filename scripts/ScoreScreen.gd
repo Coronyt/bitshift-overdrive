@@ -11,7 +11,13 @@ var dif2_checked = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	Input.set_custom_mouse_cursor(null)
+	var cursor_str_tex = load("res://assets/sprites/cursor.png")
+	var cursor_img_obj  = Image.new()
+	var cursor_img_tex = ImageTexture.new()
+	cursor_img_obj = cursor_str_tex.get_data()
+	cursor_img_obj.lock()
+	cursor_img_tex.create_from_image(cursor_img_obj, 0)
+	Input.set_custom_mouse_cursor(cursor_img_tex)
 	$ScoreScapePulse.play("lower")
 	SoundManager.play_title2()
 
@@ -65,7 +71,17 @@ func _on_ScoreTimer_timeout():
 	elif dif2_checked == false:
 		SoundManager.play_score1()
 		dif2_checked = true
-		if Active.is_iron == true:
+		if Active.is_byte == true:
+			Active.score = int(Active.score * 2.00)
+			var init_label = TextNode.instance()
+			init_label.text = "Byte\n" + "2.00x     " + str(Active.score) + "\n"
+			$ScoreBox.add_child(init_label)
+		elif Active.is_nybl == true:
+			Active.score = int(Active.score * 2.50)
+			var init_label = TextNode.instance()
+			init_label.text = "Nybble\n" + "2.50x     " + str(Active.score) + "\n"
+			$ScoreBox.add_child(init_label)
+		elif Active.is_iron == true:
 			Active.score = int(Active.score * 3.00)
 			var init_label = TextNode.instance()
 			init_label.text = "Ironbit\n" + "3.00x     " + str(Active.score) + "\n"

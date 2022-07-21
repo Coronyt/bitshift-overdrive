@@ -15,8 +15,8 @@ onready var flair_label = self.get_parent().get_parent().get_node(
 	"ChartTracker/ChartCamera/ScoreCounter/FlairAnims/FlairLabel")
 
 func fade():
-	# $NoteColl.disabled = true
-	pass # Missed note delay currently disabled.
+	$NoteColl.disabled = true
+	$NoteSprite.hide()
 	
 func milestone_check():
 	if Active.combo == 25:

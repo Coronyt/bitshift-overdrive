@@ -1365,33 +1365,23 @@ theme = ExtResource( 4 )
 group = SubResource( 12 )
 text = "Classic"
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="DifButtonX" type="CheckBox" parent="DifLabel2"]
-visible = false
 margin_top = 88.0
 margin_right = 138.0
 margin_bottom = 122.0
 hint_tooltip = "GENERIC TOOLTIP"
 theme = ExtResource( 4 )
-disabled = true
 group = SubResource( 12 )
 text = "Byte"
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="DifButtonY" type="CheckBox" parent="DifLabel2"]
-visible = false
 margin_top = 136.0
 margin_right = 138.0
 margin_bottom = 170.0
 hint_tooltip = "GENERIC TOOLTIP"
 theme = ExtResource( 4 )
-disabled = true
 group = SubResource( 12 )
 text = "Nybble"
 script = ExtResource( 1 )
@@ -1400,9 +1390,9 @@ __meta__ = {
 }
 
 [node name="DifButton4" type="CheckBox" parent="DifLabel2"]
-margin_top = 88.0
+margin_top = 184.0
 margin_right = 118.0
-margin_bottom = 122.0
+margin_bottom = 218.0
 hint_tooltip = "An additional difficulty control.
 The track ends if you miss a note.
 Recommended for adept players."

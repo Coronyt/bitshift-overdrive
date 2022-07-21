@@ -57,5 +57,9 @@ func load_into_active():
 		Active.is_easy = false
 	if to_load_dif1 == "DifButton3":
 		Active.is_easy = false
-	if to_load_dif2 == "DifButton4":
+	if to_load_dif2 == "DifButtonX": # Byte
+		Active.is_byte = true
+	if to_load_dif2 == "DifButtonY": # Nybble
+		Active.is_nybl = true
+	if to_load_dif2 == "DifButton4": # Ironbit
 		Active.is_iron = true

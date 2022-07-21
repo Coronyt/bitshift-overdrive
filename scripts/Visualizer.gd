@@ -28,7 +28,8 @@ func _draw():
 		prev_hz = hz
 
 func _process(_delta):
-	update()
+	if self.get_parent().get_parent().paused == false:
+		update()
 
 func _ready():
 	aud_spectrum = AudioServer.get_bus_effect_instance(0,0)
