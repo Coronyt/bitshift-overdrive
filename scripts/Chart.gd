@@ -111,7 +111,7 @@ func _input(event):
 			$ChartTracker/ChartCamera/Paddle.locked = true
 			Active.clear()
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			Input.set_custom_mouse_cursor(null)
+			puck_to_cursor()
 			paused = true
 		else:
 			if cinematic == false:
@@ -131,3 +131,12 @@ func cursor_to_puck():
 	puck_img_tex.create_from_image(puck_img_obj, 0)
 	Input.set_custom_mouse_cursor(puck_img_tex)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
+
+func puck_to_cursor():
+	var cursor_str_tex = load("res://assets/sprites/cursor.png")
+	var cursor_img_obj  = Image.new()
+	var cursor_img_tex = ImageTexture.new()
+	cursor_img_obj = cursor_str_tex.get_data()
+	cursor_img_obj.lock()
+	cursor_img_tex.create_from_image(cursor_img_obj, 0)
+	Input.set_custom_mouse_cursor(cursor_img_tex)
