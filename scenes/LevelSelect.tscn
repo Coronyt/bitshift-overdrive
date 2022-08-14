@@ -1344,7 +1344,7 @@ margin_right = 142.0
 margin_bottom = 218.0
 hint_tooltip = "Tracks will have standard note count.
 Tracks will have reduced paddle size.
-Recommended for adept players."
+Recommended for adept players only."
 theme = ExtResource( 4 )
 group = SubResource( 11 )
 text = "Segfault"
@@ -1367,8 +1367,8 @@ __meta__ = {
 margin_top = 40.0
 margin_right = 104.0
 margin_bottom = 74.0
-hint_tooltip = "An additional difficulty control.
-You are allowed to miss notes.
+hint_tooltip = "You are allowed to miss notes.
+Recommended for new and casual players.
 The way it's meant to be played."
 theme = ExtResource( 4 )
 group = SubResource( 12 )
@@ -1379,7 +1379,9 @@ script = ExtResource( 1 )
 margin_top = 88.0
 margin_right = 138.0
 margin_bottom = 122.0
-hint_tooltip = "GENERIC TOOLTIP"
+hint_tooltip = "You can only miss up to 5 notes.
+Combos restore missing health.
+Recommended for experienced players."
 theme = ExtResource( 4 )
 group = SubResource( 12 )
 text = "Byte"
@@ -1389,7 +1391,9 @@ script = ExtResource( 1 )
 margin_top = 136.0
 margin_right = 138.0
 margin_bottom = 170.0
-hint_tooltip = "GENERIC TOOLTIP"
+hint_tooltip = "You can only miss up to 3 notes.
+There is no way to restore health.
+Recommended for experienced players."
 theme = ExtResource( 4 )
 group = SubResource( 12 )
 text = "Nybble"
@@ -1402,9 +1406,8 @@ __meta__ = {
 margin_top = 184.0
 margin_right = 118.0
 margin_bottom = 218.0
-hint_tooltip = "An additional difficulty control.
-The track ends if you miss a note.
-Recommended for adept players."
+hint_tooltip = "The track ends if you miss a note.
+Recommended for adept players only."
 theme = ExtResource( 4 )
 group = SubResource( 12 )
 text = "Ironbit"
