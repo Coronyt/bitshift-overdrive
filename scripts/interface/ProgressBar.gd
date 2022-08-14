@@ -68,6 +68,8 @@ func _on_FlairSFX_Timer2_timeout():
 		SoundManager.play_combo(1.65)
 	elif milestone == 500:
 		SoundManager.play_combo(1.75)
+	if Active.is_byte and Active.health < 5:
+		Active.health += 1
 
 func _on_ComboAnimTimer_timeout():
 	if milestone_cooldown == false:
