@@ -88,14 +88,21 @@ func _on_Countdown_timeout():
 
 func check_health():
 	if Active.is_iron == true:
-		tracking = false
-		Active.track_ref.stop()
-		SoundManager.play_score1()
-		SoundManager.play_score2()
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		Input.set_custom_mouse_cursor(null)
-		$ChartTracker/ChartCamera/Paddle.locked = true
-		$ChartTracker/ChartCamera/GameOver.show()
+		game_over()
+	if Active.is_byte and Active.health <= 0:
+		game_over()
+	if Active.is_nybl and Active.health <= 0:
+		game_over()
+
+func game_over():
+	tracking = false
+	Active.track_ref.stop()
+	SoundManager.play_score1()
+	SoundManager.play_score2()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Input.set_custom_mouse_cursor(null)
+	$ChartTracker/ChartCamera/Paddle.locked = true
+	$ChartTracker/ChartCamera/GameOver.show()
 
 func play_fade_anim():
 	$ChartTracker/ChartCamera/FadeOut.play("FadeAnim")

@@ -4,7 +4,7 @@ func _physics_process(_delta):
 	for coll in self.get_overlapping_bodies():
 		SoundManager.play_miss()
 		if Active.is_byte or Active.is_nybl:
-			Active.clear()
+			Active.health -= 1
 		Active.combo = 0
 		Active.last_milestone = 0
 		coll.queue_free() # Missed note delay currently disabled.

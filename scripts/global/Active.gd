@@ -25,6 +25,7 @@ var combo = 0
 var combo_LR = false
 var last_milestone = 0
 
+var health = 0
 var progress = 0.0
 var track_ref : AudioStreamPlayer = null
 
@@ -32,16 +33,14 @@ func refresh():
 	is_slow = false
 	is_fast = false
 	is_easy = false
+	is_byte = false
+	is_nybl = false
 	is_iron = false
 	chart = ""
 	active = []
+	health = 0
 	speed = 0
 	score = 0
 	combo = 0
 	last_milestone = 0
 	track_ref = null
-
-func clear():
-	for a in active:
-		if is_instance_valid(a) == true:
-			a.fade()
