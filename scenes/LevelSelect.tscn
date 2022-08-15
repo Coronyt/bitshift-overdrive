@@ -1323,7 +1323,9 @@ theme = ExtResource( 4 )
 group = SubResource( 11 )
 text = "Hibernate"
 script = ExtResource( 1 )
-body = "Tracks will have reduced note count. Tracks will have increased paddle size. Recommended for new and casual players."
+body = "- Tracks will have reduced note count.
+- Tracks will have increased paddle size.
+- Recommended for new and casual players."
 
 [node name="DifButton1" type="CheckBox" parent="DifLabel1"]
 margin_top = 88.0
@@ -1336,7 +1338,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-body = "Tracks will have reduced note count. Recommended for new and casual players."
+body = "- Tracks will have reduced note count.
+- Recommended for new and casual players."
 
 [node name="DifButton2" type="CheckBox" parent="DifLabel1"]
 margin_top = 136.0
@@ -1349,7 +1352,9 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-body = "Tracks will have standard note count. Recommended for experienced players. The way it's meant to be played."
+body = "- Tracks will have standard note count.
+- Recommended for experienced players.
+- The way it's meant to be played."
 
 [node name="DifButton3" type="CheckBox" parent="DifLabel1"]
 margin_top = 184.0
@@ -1362,7 +1367,9 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-body = "Tracks will have standard note count. Tracks will have reduced paddle size. Recommended for adept players only."
+body = "- Tracks will have standard note count.
+- Tracks will have reduced paddle size.
+- Recommended for adept players only."
 
 [node name="DifLabel2" type="Label" parent="."]
 margin_left = 680.0
@@ -1382,7 +1389,8 @@ theme = ExtResource( 4 )
 group = SubResource( 12 )
 text = "Classic"
 script = ExtResource( 1 )
-body = "You are allowed to miss notes. Recommended for new and casual players. The way it's meant to be played."
+body = "- You are allowed to miss notes.
+- Recommended for new and casual players."
 
 [node name="DifButtonX" type="CheckBox" parent="DifLabel2"]
 margin_top = 88.0
@@ -1392,7 +1400,9 @@ theme = ExtResource( 4 )
 group = SubResource( 12 )
 text = "Byte"
 script = ExtResource( 1 )
-body = "You can only miss up to 5 notes. Combos restore missing health. Recommended for experienced players."
+body = "- You can miss up to 5 notes at once.
+- Achieve combos to restore health.
+- The way it's meant to be played."
 
 [node name="DifButtonY" type="CheckBox" parent="DifLabel2"]
 margin_top = 136.0
@@ -1405,7 +1415,9 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-body = "You can only miss up to 3 notes. There is no way to restore health. Recommended for experienced players."
+body = "- You can only miss up to 3 notes.
+- There is no way to restore health.
+- Recommended for experienced players."
 
 [node name="DifButton4" type="CheckBox" parent="DifLabel2"]
 margin_top = 184.0
@@ -1418,7 +1430,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-body = "The track ends if you miss a note. Recommended for adept players only."
+body = "- The track ends if you miss a note.
+- Recommended for adept players only."
 
 [node name="OptionsHub" type="ColorRect" parent="."]
 margin_left = 64.0

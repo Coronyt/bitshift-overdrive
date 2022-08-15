@@ -1,6 +1,6 @@
 extends CheckBox
 
-export var body = ""
+export(String, MULTILINE) var body = ""
 const card = preload("res://scenes/objects/TooltipCard.tscn")
 var this_card
 
