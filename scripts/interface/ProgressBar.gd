@@ -14,10 +14,8 @@ func _ready():
 	Active.progress = 0
 	if Active.is_byte:
 		$HealthBar5.show()
-		print("is_byte")
 	if Active.is_nybl:
 		$HealthBar3.show()
-		print("is_nybl")
 
 func _physics_process(_delta):
 	self.value = Active.progress
