@@ -382,7 +382,7 @@ centered = false
 [node name="LightCanvas" type="ColorRect" parent="NoteContainer"]
 margin_right = 1280.0
 margin_bottom = 720.0
-color = Color( 0.176471, 0, 0.254902, 0.254902 )
+color = Color( 0.254902, 0.196078, 0, 0.254902 )
 
 [node name="CountdownTimer" type="Timer" parent="."]
 
