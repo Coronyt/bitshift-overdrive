@@ -500,7 +500,6 @@ const chart = [
 	# Buffer
 	["REST", 1],
 	["REST", 1],
-	["REST", 2],
 	
 	# End
 	["END"]
