@@ -29,6 +29,8 @@ var health = 0
 var progress = 0.0
 var track_ref : AudioStreamPlayer = null
 
+var diff_desc = ""
+
 func refresh():
 	is_slow = false
 	is_fast = false
@@ -44,3 +46,4 @@ func refresh():
 	combo = 0
 	last_milestone = 0
 	track_ref = null
+	diff_desc = ""

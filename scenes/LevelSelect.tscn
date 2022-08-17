@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://scenes/ReleaseLabel.tscn" type="PackedScene" id=24]
 [ext_resource path="res://assets/sprites/marker_4.png" type="Texture" id=25]
 [ext_resource path="res://scripts/interface/PreviewLabel.gd" type="Script" id=26]
+[ext_resource path="res://assets/sprites/marker_5.png" type="Texture" id=27]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 5 )
@@ -901,6 +902,7 @@ script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+diff_desc = "DIFFICULTY: 1.5 (Basic)"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_1"]
 position = Vector2( 24, 14 )
@@ -922,6 +924,7 @@ script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+diff_desc = "DIFFICULTY: 2.0 (Moderate)"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_2"]
 position = Vector2( 24, 14 )
@@ -943,10 +946,11 @@ script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+diff_desc = "DIFFICULTY: 4.5 (Insane)"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_3"]
 position = Vector2( 24, 14 )
-texture = ExtResource( 25 )
+texture = ExtResource( 27 )
 
 [node name="Track_4" type="Button" parent="TrackList/TrackList"]
 margin_top = 204.0
@@ -964,6 +968,7 @@ script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+diff_desc = "DIFFICULTY: 2.5 (Moderate)"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_4"]
 position = Vector2( 24, 14 )
@@ -985,10 +990,11 @@ script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+diff_desc = "DIFFICULTY: 4.5 (Insane)"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_5"]
 position = Vector2( 24, 14 )
-texture = ExtResource( 25 )
+texture = ExtResource( 27 )
 
 [node name="Track_6" type="Button" parent="TrackList/TrackList"]
 margin_top = 340.0
@@ -1006,10 +1012,11 @@ script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+diff_desc = "DIFFICULTY: 3.5 (Hard)"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_6"]
 position = Vector2( 24, 14 )
-texture = ExtResource( 23 )
+texture = ExtResource( 25 )
 
 [node name="Track_7" type="Button" parent="TrackList/TrackList"]
 margin_top = 408.0
@@ -1497,6 +1504,14 @@ bbcode_text = "[wave amp=25 freq=1][center]-- NO TRACK SELECTED --"
 text = "-- NO TRACK SELECTED --"
 scroll_active = false
 script = ExtResource( 26 )
+
+[node name="DiffDescLabel" type="RichTextLabel" parent="TrackPortal"]
+margin_left = 8.0
+margin_top = 96.0
+margin_right = 320.0
+margin_bottom = 136.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 35 )
 
 [node name="PortalPeelAnim" type="AnimationPlayer" parent="TrackPortal"]
 root_node = NodePath("../../AuxiliaryHub")

@@ -6,6 +6,8 @@ func _ready():
 func _physics_process(_delta):
 	if Active.chart != "":
 		self.disabled = false
+	if Active.diff_desc != "":
+		$DiffDescLabel.text = Active.diff_desc
 
 func _on_TrackPortal_mouse_entered():
 	if self.disabled == false:

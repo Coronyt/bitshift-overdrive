@@ -1,5 +1,7 @@
 extends Button
 
+export(String) var diff_desc
+
 # TODO - Refactor this code!
 
 func _ready():
@@ -14,6 +16,7 @@ func _on_ChartButton_pressed():
 		fade_out_bgm()
 	Active.chart = self.name
 	Active.chart_name = self.text
+	Active.diff_desc = self.diff_desc
 	if SoundManager.preview_playing == false:
 		fade_in_track()
 
