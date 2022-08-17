@@ -2,6 +2,15 @@ extends Button
 
 export(String) var diff_desc
 
+# Base Game Difficulty Ratings:
+# Basic:		0.5 - 1.5
+# Moderate:		2.0 - 3.0
+# Hard:			3.5 - 4.0
+# Insane:		4.5 - 5.0
+
+# For everything else:
+# Sadistic:		5.5+
+
 # TODO - Refactor this code!
 
 func _ready():

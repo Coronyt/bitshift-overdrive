@@ -905,6 +905,7 @@ __meta__ = {
 diff_desc = "DIFFICULTY: 1.5 (Basic)"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_1"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 17 )
 
@@ -927,6 +928,7 @@ __meta__ = {
 diff_desc = "DIFFICULTY: 2.0 (Moderate)"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_2"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 3 )
 
@@ -949,6 +951,7 @@ __meta__ = {
 diff_desc = "DIFFICULTY: 4.5 (Insane)"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_3"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 27 )
 
@@ -971,6 +974,7 @@ __meta__ = {
 diff_desc = "DIFFICULTY: 2.5 (Moderate)"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_4"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 3 )
 
@@ -993,6 +997,7 @@ __meta__ = {
 diff_desc = "DIFFICULTY: 4.5 (Insane)"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_5"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 27 )
 
@@ -1012,9 +1017,10 @@ script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "DIFFICULTY: 3.5 (Hard)"
+diff_desc = "DIFFICULTY: 4.0 (Hard)"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_6"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 25 )
 
@@ -1037,6 +1043,7 @@ __meta__ = {
 }
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_7"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
@@ -1059,6 +1066,7 @@ __meta__ = {
 }
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_8"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
@@ -1081,6 +1089,7 @@ __meta__ = {
 }
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_9"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
@@ -1103,6 +1112,7 @@ __meta__ = {
 }
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_10"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
@@ -1125,6 +1135,7 @@ __meta__ = {
 }
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_11"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
@@ -1147,6 +1158,7 @@ __meta__ = {
 }
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_12"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
@@ -1169,6 +1181,7 @@ __meta__ = {
 }
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_13"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
@@ -1191,6 +1204,7 @@ __meta__ = {
 }
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_14"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
@@ -1213,6 +1227,7 @@ __meta__ = {
 }
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_15"]
+visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
@@ -1520,6 +1535,7 @@ anims/RESET = SubResource( 37 )
 anims/peel = SubResource( 36 )
 
 [node name="Tutorial" type="Button" parent="."]
+visible = false
 margin_left = 848.0
 margin_top = 496.0
 margin_right = 994.0
@@ -1590,9 +1606,9 @@ scroll_active = false
 
 [node name="Fullscreen" type="Button" parent="."]
 margin_left = 848.0
-margin_top = 528.0
+margin_top = 496.0
 margin_right = 994.0
-margin_bottom = 560.0
+margin_bottom = 528.0
 theme = ExtResource( 4 )
 custom_fonts/font = SubResource( 18 )
 custom_styles/hover = SubResource( 13 )
@@ -1606,9 +1622,9 @@ script = ExtResource( 20 )
 
 [node name="Options" type="Button" parent="."]
 margin_left = 896.0
-margin_top = 560.0
+margin_top = 528.0
 margin_right = 1000.0
-margin_bottom = 592.0
+margin_bottom = 560.0
 theme = ExtResource( 4 )
 custom_fonts/font = SubResource( 18 )
 custom_styles/hover = SubResource( 13 )
