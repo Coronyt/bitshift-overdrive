@@ -756,7 +756,7 @@ const chart = [
 	["NOTE", 32, AXIS_10],
 	["NOTE", 32, AXIS_09],
 	
-	# Measure 79
+	# Measure 59
 	["NOTE", 4, AXIS_08],
 	["REST", 8],
 	["NOTE", 4, AXIS_07],
