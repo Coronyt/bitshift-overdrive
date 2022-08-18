@@ -413,7 +413,8 @@ const chart = [
 	["NOTE", 16, AXIS_07],
 	["NOTE", 4, AXIS_08],
 	["REST", 16],
-	["NOTE", 4, AXIS_11],
+	["NOTE", 8, AXIS_11],
+	["REST", 16],
 	["NOTE", 32, AXIS_10],
 	["NOTE", 32, AXIS_09],
 	
@@ -752,7 +753,8 @@ const chart = [
 	["NOTE", 16, AXIS_07],
 	["NOTE", 4, AXIS_08],
 	["REST", 16],
-	["NOTE", 4, AXIS_11],
+	["NOTE", 8, AXIS_11],
+	["REST", 16],
 	["NOTE", 32, AXIS_10],
 	["NOTE", 32, AXIS_09],
 	
