@@ -102,6 +102,7 @@ func game_over():
 	SoundManager.play_score2()
 	$ChartTracker/ChartCamera/Paddle.locked = true
 	$ChartTracker/ChartCamera/GameOver.show()
+	Active.active = []
 
 func play_fade_anim():
 	$ChartTracker/ChartCamera/FadeOut.play("FadeAnim")

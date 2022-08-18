@@ -86,5 +86,7 @@ func shatter():
 		Active.score += stepify((50 * 5.00), 1)
 
 func _physics_process(_delta):
+	if self.get_parent().get_parent().tracking == false:
+		self.queue_free()
 	if self.get_parent().get_parent().paused == false:
 		self.move_and_slide(Vector2(0, 1) * self.get_parent().get_parent().speed)
