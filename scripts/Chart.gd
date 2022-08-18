@@ -96,11 +96,10 @@ func check_health():
 
 func game_over():
 	tracking = false
+	puck_to_cursor()
 	Active.track_ref.stop()
 	SoundManager.play_score1()
 	SoundManager.play_score2()
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	Input.set_custom_mouse_cursor(null)
 	$ChartTracker/ChartCamera/Paddle.locked = true
 	$ChartTracker/ChartCamera/GameOver.show()
 
