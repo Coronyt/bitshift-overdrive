@@ -45,6 +45,8 @@ func fetch_audio_stream(target_audio):
 			return s
 	return null
 
+# TODO - Roll all the below functions into a single function
+
 func play_click1():
 	var sounds = Sounds.get_children()
 	for s in sounds:
