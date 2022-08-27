@@ -1,2 +1,2 @@
-# bitshift-overdrive.godot
+# bitshift-overdrive
 A colorful retro-style rhythm game.
