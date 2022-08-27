@@ -1,2 +1,2 @@
 # bitshift-overdrive
-A colorful retro-style rhythm game.
+A colorful retro rhythm game.
