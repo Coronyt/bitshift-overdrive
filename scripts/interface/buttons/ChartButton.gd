@@ -28,6 +28,10 @@ func _on_ChartButton_pressed():
 	Active.diff_desc = self.diff_desc
 	if SoundManager.preview_playing == false:
 		fade_in_track()
+	for button in self.get_parent().get_children():
+		if button.is_class("Button"):
+			button.pressed = false
+	self.pressed = true
 
 func _on_ChartButton_mouse_entered():
 	if self.disabled == false:
