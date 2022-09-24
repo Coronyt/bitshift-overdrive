@@ -1437,7 +1437,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-body = "- You can only miss up to 3 notes.
+body = "- The track ends after missing 3 notes.
 - There is no way to restore health.
 - Recommended for experienced players."
 
