@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mellow_goulash_1.25.ogg-526fc4f88673ce0bafc7251637820c81.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/mellow_goulash_1.25.ogg"
+dest_files=[ "res://.import/mellow_goulash_1.25.ogg-526fc4f88673ce0bafc7251637820c81.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

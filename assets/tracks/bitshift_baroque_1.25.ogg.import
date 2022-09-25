@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bitshift_baroque_1.25.ogg-ac55b96e14d2f50d4be32f38cabd3fa6.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/bitshift_baroque_1.25.ogg"
+dest_files=[ "res://.import/bitshift_baroque_1.25.ogg-ac55b96e14d2f50d4be32f38cabd3fa6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
