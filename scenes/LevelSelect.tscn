@@ -1417,7 +1417,7 @@ theme = ExtResource( 4 )
 group = SubResource( 12 )
 text = "Classic"
 script = ExtResource( 1 )
-body = "- You are allowed to miss notes.
+body = "- There is no penalty for missing notes.
 - Recommended for new and casual players."
 
 [node name="DifButtonX" type="CheckBox" parent="DifLabel2"]
@@ -1428,7 +1428,7 @@ theme = ExtResource( 4 )
 group = SubResource( 12 )
 text = "Byte"
 script = ExtResource( 1 )
-body = "- You can miss up to 5 notes at once.
+body = "- Start with 5 health. Lose health on miss.
 - Achieve combos to restore health.
 - The way it's meant to be played."
 
@@ -1443,8 +1443,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-body = "- The track ends after missing 3 notes.
-- There is no way to restore health.
+body = "- Start with 3 health. Lose health on miss.
+- Achieve combos to restore health.
 - Recommended for experienced players."
 
 [node name="DifButton4" type="CheckBox" parent="DifLabel2"]
