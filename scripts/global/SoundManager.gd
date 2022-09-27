@@ -13,6 +13,7 @@ var track_dict_075 = {
 	"Track_5" : Tracks.get_child(12),
 	"Track_6" : Tracks.get_child(15),
 	"Track_7" : Tracks.get_child(15), # PLACEHOLDER.
+	"Track_9" : Tracks.get_child(15), # PLACEHOLDER.
 	"Track_15" : Tracks.get_child(15), # PLACEHOLDER.
 }
 
@@ -24,6 +25,7 @@ var track_dict_100 = {
 	"Track_5" : Tracks.get_child(13),
 	"Track_6" : Tracks.get_child(16),
 	"Track_7" : Tracks.get_child(16), # PLACEHOLDER.
+	"Track_9" : Tracks.get_child(16), # PLACEHOLDER.
 	"Track_15" : Tracks.get_child(16), # PLACEHOLDER.
 }
 
@@ -35,6 +37,7 @@ var track_dict_125 = {
 	"Track_5" : Tracks.get_child(14),
 	"Track_6" : Tracks.get_child(17),
 	"Track_7" : Tracks.get_child(17), # PLACEHOLDER.
+	"Track_9" : Tracks.get_child(17), # PLACEHOLDER.
 	"Track_15" : Tracks.get_child(17), # PLACEHOLDER.
 }
 
