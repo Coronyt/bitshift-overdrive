@@ -16,6 +16,6 @@ margin_right = 1280.0
 margin_bottom = 720.0
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
-bbcode_text = "[wave amp=25 freq=1][center]BITSHIFT OVERDRIVE - ALPHA 0.4.1"
-text = "BITSHIFT OVERDRIVE - ALPHA 0.4.1"
+bbcode_text = "[wave amp=25 freq=1][center]BITSHIFT OVERDRIVE - ALPHA 0.4.1.1"
+text = "BITSHIFT OVERDRIVE - ALPHA 0.4.1.1"
 script = ExtResource( 1 )

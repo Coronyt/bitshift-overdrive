@@ -11,5 +11,5 @@ dest_files=[ "res://.import/bitshift_baroque_1.25.ogg-ac55b96e14d2f50d4be32f38ca
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

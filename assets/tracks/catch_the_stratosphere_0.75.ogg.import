@@ -11,5 +11,5 @@ dest_files=[ "res://.import/catch_the_stratosphere_0.75.ogg-853ef82c36b0148fa7c7
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

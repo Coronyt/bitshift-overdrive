@@ -11,5 +11,5 @@ dest_files=[ "res://.import/supermassive_spacedive_1.00.ogg-a3be855319a7c5fc373c
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/mellow_goulash_0.75.ogg-a4629f2b03def0d8ed254f8e2f29
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

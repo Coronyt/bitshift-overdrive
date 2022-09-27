@@ -11,5 +11,5 @@ dest_files=[ "res://.import/coy_glance_1.00.ogg-1f4f53e62a5056cf9ed3c5383a206686
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

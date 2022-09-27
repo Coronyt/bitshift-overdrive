@@ -11,5 +11,5 @@ dest_files=[ "res://.import/on_the_other_side_1.25.ogg-19c1de8583d3e6c973418ad01
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
