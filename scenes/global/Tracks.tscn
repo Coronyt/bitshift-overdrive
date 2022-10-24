@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/tracks/mellow_goulash_1.25.ogg" type="AudioStream" id=1]
 [ext_resource path="res://assets/tracks/coy_glance_1.25.ogg" type="AudioStream" id=2]
@@ -18,6 +18,9 @@
 [ext_resource path="res://assets/tracks/supermassive_spacedive_0.75.ogg" type="AudioStream" id=16]
 [ext_resource path="res://assets/tracks/coy_glance_1.00.ogg" type="AudioStream" id=17]
 [ext_resource path="res://assets/tracks/mellow_goulash_0.75.ogg" type="AudioStream" id=18]
+[ext_resource path="res://assets/tracks/breeze_in_the_blackest_forest_1.00.ogg" type="AudioStream" id=19]
+[ext_resource path="res://assets/tracks/breeze_in_the_blackest_forest_1.25.ogg" type="AudioStream" id=20]
+[ext_resource path="res://assets/tracks/breeze_in_the_blackest_forest_0.75.ogg" type="AudioStream" id=21]
 
 [node name="Tracks" type="Node"]
 
@@ -74,3 +77,12 @@ stream = ExtResource( 11 )
 
 [node name="on_the_other_side_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
+
+[node name="breeze_in_the_blackest_forest_075" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+
+[node name="breeze_in_the_blackest_forest_100" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+
+[node name="breeze_in_the_blackest_forest_125" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )

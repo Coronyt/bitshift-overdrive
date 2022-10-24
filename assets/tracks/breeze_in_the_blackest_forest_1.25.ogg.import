@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/breeze_in_the_blackest_forest_1.25.ogg-b4ed97ee6eca9d8fb2bfc936b62459de.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/breeze_in_the_blackest_forest_1.25.ogg"
+dest_files=[ "res://.import/breeze_in_the_blackest_forest_1.25.ogg-b4ed97ee6eca9d8fb2bfc936b62459de.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
