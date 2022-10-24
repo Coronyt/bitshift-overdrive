@@ -250,7 +250,6 @@ const chart = [
 	["NOTE", 16, AXIS_15],
 	["NOTE", 16, AXIS_13],
 	["NOTE", 16, AXIS_11],
-	["REST", 16],
 	
 	["NOTE", 8, AXIS_15],
 	["NOTE", 16, AXIS_16],
