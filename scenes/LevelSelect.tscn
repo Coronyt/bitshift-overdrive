@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -28,6 +28,19 @@
 [ext_resource path="res://scripts/interface/PreviewLabel.gd" type="Script" id=26]
 [ext_resource path="res://assets/sprites/marker_5.png" type="Texture" id=27]
 
+[sub_resource type="DynamicFont" id=39]
+size = 24
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 14 )
+
+[sub_resource type="StyleBoxFlat" id=38]
+content_margin_left = 1.0
+content_margin_top = 2.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.176471, 0.176471, 0.176471, 0.470588 )
+anti_aliasing = false
+
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 448, 64 )
@@ -50,15 +63,15 @@ region_rect = Rect2( 0, 0, 448, 64 )
 texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 448, 64 )
 
-[sub_resource type="StyleBoxTexture" id=7]
-texture = ExtResource( 16 )
-region_rect = Rect2( 0, 0, 448, 64 )
-
 [sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 448, 64 )
 
 [sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 448, 64 )
+
+[sub_resource type="StyleBoxTexture" id=7]
 texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 448, 64 )
 
@@ -876,7 +889,7 @@ scroll_horizontal_enabled = false
 
 [node name="TrackList" type="VBoxContainer" parent="TrackList"]
 margin_right = 448.0
-margin_bottom = 1084.0
+margin_bottom = 1200.0
 
 [node name="TrackListTween" type="Tween" parent="TrackList/TrackList"]
 
@@ -887,9 +900,23 @@ one_shot = true
 [node name="PreviewTimer2" type="Timer" parent="TrackList/TrackList/TrackListTween"]
 one_shot = true
 
-[node name="Track_1" type="Button" parent="TrackList/TrackList"]
+[node name="SectionLabel_1" type="Label" parent="TrackList/TrackList"]
 margin_right = 448.0
-margin_bottom = 64.0
+margin_bottom = 25.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 39 )
+custom_styles/normal = SubResource( 38 )
+text = "   BASIC"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Track_1" type="Button" parent="TrackList/TrackList"]
+margin_top = 29.0
+margin_right = 448.0
+margin_bottom = 93.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -910,10 +937,24 @@ visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 17 )
 
-[node name="Track_2" type="Button" parent="TrackList/TrackList"]
-margin_top = 68.0
+[node name="SectionLabel_2" type="Label" parent="TrackList/TrackList"]
+margin_top = 97.0
 margin_right = 448.0
-margin_bottom = 132.0
+margin_bottom = 122.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 39 )
+custom_styles/normal = SubResource( 38 )
+text = "   MODERATE"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Track_2" type="Button" parent="TrackList/TrackList"]
+margin_top = 126.0
+margin_right = 448.0
+margin_bottom = 190.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -934,34 +975,10 @@ visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 3 )
 
-[node name="Track_3" type="Button" parent="TrackList/TrackList"]
-margin_top = 136.0
-margin_right = 448.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 448, 64 )
-theme = ExtResource( 4 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 7 )
-custom_styles/normal = SubResource( 5 )
-toggle_mode = true
-text = "Bitshift Baroque"
-script = ExtResource( 22 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-diff_desc = "4.5 (Insane)"
-
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_3"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
-
 [node name="Track_4" type="Button" parent="TrackList/TrackList"]
-margin_top = 204.0
+margin_top = 194.0
 margin_right = 448.0
-margin_bottom = 268.0
+margin_bottom = 258.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -982,10 +999,10 @@ visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 3 )
 
-[node name="Track_5" type="Button" parent="TrackList/TrackList"]
-margin_top = 272.0
+[node name="Track_9" type="Button" parent="TrackList/TrackList"]
+margin_top = 262.0
 margin_right = 448.0
-margin_bottom = 336.0
+margin_bottom = 326.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -993,23 +1010,36 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
-toggle_mode = true
-text = "Catch the Stratosphere"
+text = "Breeze in the Blackest Forest"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "4.5 (Insane)"
+diff_desc = "2.5 (Moderate)"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_5"]
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_9"]
 visible = false
 position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
+texture = ExtResource( 23 )
+
+[node name="SectionLabel_3" type="Label" parent="TrackList/TrackList"]
+margin_top = 330.0
+margin_right = 448.0
+margin_bottom = 355.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 39 )
+custom_styles/normal = SubResource( 38 )
+text = "   HARD"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Track_6" type="Button" parent="TrackList/TrackList"]
-margin_top = 340.0
+margin_top = 359.0
 margin_right = 448.0
-margin_bottom = 404.0
+margin_bottom = 423.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1030,10 +1060,48 @@ visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 25 )
 
-[node name="Track_9" type="Button" parent="TrackList/TrackList"]
-margin_top = 408.0
+[node name="SectionLabel_4" type="Label" parent="TrackList/TrackList"]
+margin_top = 427.0
 margin_right = 448.0
-margin_bottom = 472.0
+margin_bottom = 452.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 39 )
+custom_styles/normal = SubResource( 38 )
+text = "   INSANE"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Track_3" type="Button" parent="TrackList/TrackList"]
+margin_top = 456.0
+margin_right = 448.0
+margin_bottom = 520.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 5 )
+toggle_mode = true
+text = "Bitshift Baroque"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+diff_desc = "4.5 (Insane)"
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_3"]
+visible = false
+position = Vector2( 24, 14 )
+texture = ExtResource( 27 )
+
+[node name="Track_5" type="Button" parent="TrackList/TrackList"]
+margin_top = 524.0
+margin_right = 448.0
+margin_bottom = 588.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1041,22 +1109,23 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
-text = "Breeze in the Blackest Forest"
+toggle_mode = true
+text = "Catch the Stratosphere"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "TODO"
+diff_desc = "4.5 (Insane)"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_9"]
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_5"]
 visible = false
 position = Vector2( 24, 14 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 
 [node name="Track_7" type="Button" parent="TrackList/TrackList"]
-margin_top = 476.0
+margin_top = 592.0
 margin_right = 448.0
-margin_bottom = 540.0
+margin_bottom = 656.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1077,9 +1146,9 @@ position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
 [node name="Track_8" type="Button" parent="TrackList/TrackList"]
-margin_top = 544.0
+margin_top = 660.0
 margin_right = 448.0
-margin_bottom = 608.0
+margin_bottom = 724.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1100,9 +1169,9 @@ position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
 [node name="Track_10" type="Button" parent="TrackList/TrackList"]
-margin_top = 612.0
+margin_top = 728.0
 margin_right = 448.0
-margin_bottom = 676.0
+margin_bottom = 792.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1123,9 +1192,9 @@ position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
 [node name="Track_11" type="Button" parent="TrackList/TrackList"]
-margin_top = 680.0
+margin_top = 796.0
 margin_right = 448.0
-margin_bottom = 744.0
+margin_bottom = 860.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1146,9 +1215,9 @@ position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
 [node name="Track_12" type="Button" parent="TrackList/TrackList"]
-margin_top = 748.0
+margin_top = 864.0
 margin_right = 448.0
-margin_bottom = 812.0
+margin_bottom = 928.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1169,9 +1238,9 @@ position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
 [node name="Track_13" type="Button" parent="TrackList/TrackList"]
-margin_top = 816.0
+margin_top = 932.0
 margin_right = 448.0
-margin_bottom = 880.0
+margin_bottom = 996.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1192,9 +1261,9 @@ position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
 [node name="Track_14" type="Button" parent="TrackList/TrackList"]
-margin_top = 884.0
+margin_top = 1000.0
 margin_right = 448.0
-margin_bottom = 948.0
+margin_bottom = 1064.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1215,9 +1284,9 @@ position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
 [node name="Track_15" type="Button" parent="TrackList/TrackList"]
-margin_top = 952.0
+margin_top = 1068.0
 margin_right = 448.0
-margin_bottom = 1016.0
+margin_bottom = 1132.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1238,9 +1307,9 @@ position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
 [node name="Track_16" type="Button" parent="TrackList/TrackList"]
-margin_top = 1020.0
+margin_top = 1136.0
 margin_right = 448.0
-margin_bottom = 1084.0
+margin_bottom = 1200.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1251,19 +1320,6 @@ custom_styles/normal = SubResource( 5 )
 disabled = true
 text = "Overdrive Run - All Tracks"
 script = ExtResource( 22 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="FillerLabel_1" type="Label" parent="TrackList/TrackList"]
-visible = false
-margin_top = 340.0
-margin_right = 448.0
-margin_bottom = 366.0
-theme = ExtResource( 4 )
-text = "- MORE TRACKS COMING SOON -"
-align = 1
-valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1796,16 +1852,16 @@ current = true
 [connection signal="pressed" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_2" to="TrackList/TrackList/Track_2" method="_on_ChartButton_mouse_entered"]
 [connection signal="pressed" from="TrackList/TrackList/Track_2" to="TrackList/TrackList/Track_2" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_3" to="TrackList/TrackList/Track_3" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_3" to="TrackList/TrackList/Track_3" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_4" to="TrackList/TrackList/Track_4" method="_on_ChartButton_mouse_entered"]
 [connection signal="pressed" from="TrackList/TrackList/Track_4" to="TrackList/TrackList/Track_4" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_5" to="TrackList/TrackList/Track_5" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_5" to="TrackList/TrackList/Track_5" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_mouse_entered"]
 [connection signal="pressed" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_3" to="TrackList/TrackList/Track_3" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_3" to="TrackList/TrackList/Track_3" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_5" to="TrackList/TrackList/Track_5" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_5" to="TrackList/TrackList/Track_5" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_7" to="TrackList/TrackList/Track_7" method="_on_ChartButton_mouse_entered"]
 [connection signal="pressed" from="TrackList/TrackList/Track_7" to="TrackList/TrackList/Track_7" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_8" to="TrackList/TrackList/Track_8" method="_on_ChartButton_mouse_entered"]
