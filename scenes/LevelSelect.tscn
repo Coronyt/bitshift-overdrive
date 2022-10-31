@@ -1492,9 +1492,6 @@ theme = ExtResource( 4 )
 group = SubResource( 11 )
 text = "Underclock"
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 body = "- Tracks will have reduced note count.
 - Recommended for new and casual players."
 
@@ -1510,8 +1507,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 body = "- Tracks will have standard note count.
-- Recommended for experienced players.
-- The way it's meant to be played."
+- Recommended for intermediate players."
 
 [node name="DifButton3" type="CheckBox" parent="DifLabel1"]
 margin_top = 184.0
@@ -1557,9 +1553,9 @@ theme = ExtResource( 4 )
 group = SubResource( 12 )
 text = "Byte"
 script = ExtResource( 1 )
-body = "- Start with 5 health. Lose health on miss.
-- Achieve combos to restore health.
-- The way it's meant to be played."
+body = "- Start track with five energy.
+- Missing notes decreases energy.
+- Achieve combos to restore energy."
 
 [node name="DifButtonY" type="CheckBox" parent="DifLabel2"]
 margin_top = 136.0
@@ -1572,9 +1568,9 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-body = "- Start with 3 health. Lose health on miss.
-- Achieve combos to restore health.
-- Recommended for experienced players."
+body = "- Start track with three energy.
+- Missing notes decreases energy.
+- Achieve combos to restore energy."
 
 [node name="DifButton4" type="CheckBox" parent="DifLabel2"]
 margin_top = 184.0
