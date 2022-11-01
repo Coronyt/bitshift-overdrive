@@ -75,11 +75,11 @@ region_rect = Rect2( 0, 0, 448, 64 )
 texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 448, 64 )
 
-[sub_resource type="StyleBoxTexture" id=8]
+[sub_resource type="StyleBoxTexture" id=9]
 texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 448, 64 )
 
-[sub_resource type="StyleBoxTexture" id=9]
+[sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 448, 64 )
 
@@ -1013,10 +1013,34 @@ visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 3 )
 
-[node name="Track_4" type="Button" parent="TrackList/TrackList"]
+[node name="Track_9" type="Button" parent="TrackList/TrackList"]
 margin_top = 164.0
 margin_right = 448.0
 margin_bottom = 228.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+toggle_mode = true
+text = "Breeze in the Blackest Forest"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+diff_desc = "2.0 (Moderate)"
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_9"]
+visible = false
+position = Vector2( 24, 14 )
+texture = ExtResource( 23 )
+
+[node name="Track_4" type="Button" parent="TrackList/TrackList"]
+margin_top = 232.0
+margin_right = 448.0
+margin_bottom = 296.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1036,30 +1060,6 @@ diff_desc = "2.5 (Moderate)"
 visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 3 )
-
-[node name="Track_9" type="Button" parent="TrackList/TrackList"]
-margin_top = 232.0
-margin_right = 448.0
-margin_bottom = 296.0
-rect_min_size = Vector2( 448, 64 )
-theme = ExtResource( 4 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 5 )
-toggle_mode = true
-text = "Breeze in the Blackest Forest"
-script = ExtResource( 22 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-diff_desc = "2.5 (Moderate)"
-
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_9"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 23 )
 
 [node name="SectionLabel_3" type="Label" parent="TrackList/TrackList"]
 margin_top = 300.0
@@ -1921,10 +1921,10 @@ current = true
 [connection signal="pressed" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_2" to="TrackList/TrackList/Track_2" method="_on_ChartButton_mouse_entered"]
 [connection signal="pressed" from="TrackList/TrackList/Track_2" to="TrackList/TrackList/Track_2" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_4" to="TrackList/TrackList/Track_4" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_4" to="TrackList/TrackList/Track_4" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_mouse_entered"]
 [connection signal="pressed" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_4" to="TrackList/TrackList/Track_4" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_4" to="TrackList/TrackList/Track_4" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_mouse_entered"]
 [connection signal="pressed" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_3" to="TrackList/TrackList/Track_3" method="_on_ChartButton_mouse_entered"]
