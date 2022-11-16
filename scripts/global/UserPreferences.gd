@@ -1,6 +1,6 @@
 extends Node
 
-const PREF_PATH = "res://prefs.cfg"
+const PREF_PATH = "res://config.cfg"
 
 var pref_cfg = ConfigFile.new()
 var prefs = {
@@ -23,4 +23,9 @@ func save_prefs():
 	pref_cfg.save(PREF_PATH)
 
 func load_prefs():
-	pass
+	var load_cfg = pref_cfg.load(PREF_PATH)
+	if load_cfg != OK:
+		print("Failed to retrieve user preferences.")
+		return null
+	for pref_key in prefs.keys():
+		UserPreferences.prefs[pref_key] = load_cfg.get_value("prefs", pref_key, null)
