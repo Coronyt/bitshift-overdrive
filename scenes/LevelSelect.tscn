@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://assets/sprites/marker_4.png" type="Texture" id=25]
 [ext_resource path="res://scripts/interface/PreviewLabel.gd" type="Script" id=26]
 [ext_resource path="res://assets/sprites/marker_5.png" type="Texture" id=27]
+[ext_resource path="res://scripts/interface/buttons/PrefButton.gd" type="Script" id=28]
 
 [sub_resource type="DynamicFont" id=40]
 size = 32
@@ -1432,9 +1433,6 @@ margin_right = 992.0
 margin_bottom = 58.0
 theme = ExtResource( 4 )
 text = "Track Speed"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="SpeedButton1" type="CheckBox" parent="SpeedLabel"]
 margin_top = 40.0
@@ -1467,7 +1465,6 @@ __meta__ = {
 }
 
 [node name="SpeedButton4" type="CheckBox" parent="SpeedLabel"]
-visible = false
 margin_left = 72.0
 margin_top = 64.0
 margin_right = 152.0
@@ -1477,7 +1474,6 @@ text = "0.90x"
 script = ExtResource( 1 )
 
 [node name="SpeedButton5" type="CheckBox" parent="SpeedLabel"]
-visible = false
 margin_left = 72.0
 margin_top = 112.0
 margin_right = 152.0
@@ -1800,15 +1796,25 @@ custom_styles/disabled = SubResource( 16 )
 custom_styles/normal = SubResource( 17 )
 text = "OPTIONS"
 script = ExtResource( 19 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="OptionsAnim" type="AnimationPlayer" parent="Options"]
 reset_on_save = false
 anims/RESET = SubResource( 25 )
 anims/from_options = SubResource( 21 )
 anims/to_options = SubResource( 22 )
+
+[node name="PrefButton1" type="CheckBox" parent="Options"]
+margin_left = -816.0
+margin_top = 320.0
+margin_right = -272.0
+margin_bottom = 354.0
+theme = ExtResource( 4 )
+toggle_mode = false
+group = SubResource( 12 )
+text = "Disable CRT scanlines and curvature"
+script = ExtResource( 28 )
+pref_desc = "Disable CRT scanlines and curvature"
+pref_key = "disable_screen_curve"
 
 [node name="BackButton" type="Button" parent="Options"]
 margin_left = 208.0
@@ -2017,6 +2023,9 @@ current = true
 [connection signal="mouse_entered" from="Options" to="Options" method="_on_Options_mouse_entered"]
 [connection signal="pressed" from="Options" to="Options" method="_on_Options_pressed"]
 [connection signal="animation_finished" from="Options/OptionsAnim" to="Options" method="_on_OptionsAnim_animation_finished"]
+[connection signal="mouse_entered" from="Options/PrefButton1" to="Options/PrefButton1" method="_on_PrefButton1_mouse_entered"]
+[connection signal="pressed" from="Options/PrefButton1" to="Options/PrefButton1" method="_on_PrefButton1_pressed"]
+[connection signal="pressed" from="Options/PrefButton1" to="CRT" method="refresh_CRT"]
 [connection signal="mouse_entered" from="Options/BackButton" to="Options" method="_on_BackButton_mouse_entered"]
 [connection signal="pressed" from="Options/BackButton" to="Options" method="_on_BackButton_pressed"]
 [connection signal="mouse_entered" from="ExitPortal" to="ExitPortal" method="_on_ExitPortal_mouse_entered"]
