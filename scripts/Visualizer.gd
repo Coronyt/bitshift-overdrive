@@ -33,4 +33,6 @@ func _process(_delta):
 			update()
 
 func _ready():
+	if UserPreferences.prefs["disable_visualizer"]:
+		self.queue_free()
 	aud_spectrum = AudioServer.get_bus_effect_instance(0,0)

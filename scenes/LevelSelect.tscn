@@ -1816,6 +1816,19 @@ script = ExtResource( 28 )
 pref_desc = "Disable CRT scanlines and curvature"
 pref_key = "disable_screen_curve"
 
+[node name="PrefButton2" type="CheckBox" parent="Options"]
+margin_left = -816.0
+margin_top = 384.0
+margin_right = -272.0
+margin_bottom = 418.0
+theme = ExtResource( 4 )
+toggle_mode = false
+group = SubResource( 12 )
+text = "Disable audio visualizer"
+script = ExtResource( 28 )
+pref_desc = "Disable audio visualizer"
+pref_key = "disable_visualizer"
+
 [node name="BackButton" type="Button" parent="Options"]
 margin_left = 208.0
 margin_top = 800.0
@@ -2026,6 +2039,8 @@ current = true
 [connection signal="mouse_entered" from="Options/PrefButton1" to="Options/PrefButton1" method="_on_PrefButton1_mouse_entered"]
 [connection signal="pressed" from="Options/PrefButton1" to="Options/PrefButton1" method="_on_PrefButton1_pressed"]
 [connection signal="pressed" from="Options/PrefButton1" to="CRT" method="refresh_CRT"]
+[connection signal="mouse_entered" from="Options/PrefButton2" to="Options/PrefButton2" method="_on_PrefButton1_mouse_entered"]
+[connection signal="pressed" from="Options/PrefButton2" to="Options/PrefButton2" method="_on_PrefButton1_pressed"]
 [connection signal="mouse_entered" from="Options/BackButton" to="Options" method="_on_BackButton_mouse_entered"]
 [connection signal="pressed" from="Options/BackButton" to="Options" method="_on_BackButton_pressed"]
 [connection signal="mouse_entered" from="ExitPortal" to="ExitPortal" method="_on_ExitPortal_mouse_entered"]
