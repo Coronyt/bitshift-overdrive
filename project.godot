@@ -188,6 +188,7 @@ Tracks="*res://scenes/global/Tracks.tscn"
 Sounds="*res://scenes/global/Sounds.tscn"
 ChartManager="*res://scripts/global/ChartManager.gd"
 SoundManager="*res://scripts/global/SoundManager.gd"
+UserPreferences="*res://scripts/global/UserPreferences.gd"
 ss="*res://addons/godot_sprite_shader/ss.gd"
 
 [debug]
