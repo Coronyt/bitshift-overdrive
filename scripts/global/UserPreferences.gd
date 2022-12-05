@@ -27,5 +27,5 @@ func load_prefs():
 	if load_cfg != OK:
 		print("Failed to retrieve user preferences.")
 		return null
-	for pref_key in prefs.keys():
-		UserPreferences.prefs[pref_key] = load_cfg.get_value("prefs", pref_key, null)
+	# for pref_key in prefs.keys():
+		# UserPreferences.prefs[pref_key] = load_cfg.get_value("prefs", pref_key, null)
