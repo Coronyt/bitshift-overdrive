@@ -17,10 +17,10 @@ func _ready():
 	refresh_pref_text()
 
 func _on_PrefButton1_pressed():
-	SoundManager.play_click1()
+	SoundManager.play_sound("click1")
 	UserPreferences.prefs[pref_key] = !UserPreferences.prefs[pref_key]
 	UserPreferences.save_prefs()
 	refresh_pref_text()
 
 func _on_PrefButton1_mouse_entered():
-	SoundManager.play_hover()
+	SoundManager.play_sound("hover")

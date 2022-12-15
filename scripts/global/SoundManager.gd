@@ -51,122 +51,19 @@ func fetch_audio_stream(target_audio):
 			return s
 	return null
 
-# TODO - Roll all the below functions into a single function
-
-func play_click1():
+func play_sound(target_audio):
 	var sounds = Sounds.get_children()
 	for s in sounds:
-		if s.name == "click1":
+		if s.name == target_audio:
+			if s.name == "track_select":
+				s.volume_db = -2
 			s.play()
 
-func play_click2():
+func stop_sound(target_audio):
 	var sounds = Sounds.get_children()
 	for s in sounds:
-		if s.name == "click2":
-			s.play()
-
-func play_count1():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "count1":
-			s.play()
-
-func play_count2():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "count2":
-			s.play()
-
-func play_hover():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "hover":
-			s.play()
-
-func play_miss():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "miss":
-			s.play()
-
-func play_score1():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "score1":
-			s.play()
-
-func play_score2():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "score2":
-			s.play()
-
-func play_track_select():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "track_select":
-			s.volume_db = -2
-			s.play()
-
-func stop_track_select():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "track_select":
+		if s.name == target_audio:
 			s.stop()
-
-func play_title1():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "title1":
-			s.play()
-
-func play_title2():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "title2":
-			s.play()
-
-func play_title3():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "title3":
-			s.play()
-
-func stop_title1():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "title1":
-			s.stop()
-
-func stop_title2():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "title2":
-			s.stop()
-
-func stop_title3():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "title3":
-			s.stop()
-
-func play_title_track():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "title_track":
-			s.play()
-
-func stop_title_track():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "title_track":
-			s.stop()
-
-func play_flair1():
-	var sounds = Sounds.get_children()
-	for s in sounds:
-		if s.name == "flair1":
-			s.play()
 
 func play_combo(pitch):
 	var sounds = Sounds.get_children()

@@ -17,7 +17,7 @@ func _ready():
 	SoundManager.preview_playing = false
 
 func _on_ChartButton_pressed():
-	SoundManager.play_click1()
+	SoundManager.play_sound("click1")
 	if SoundManager.preview_playing == true:
 		SoundManager.track_dict_100[Active.chart].stop()
 		SoundManager.preview_playing = false
@@ -35,7 +35,7 @@ func _on_ChartButton_pressed():
 
 func _on_ChartButton_mouse_entered():
 	if self.disabled == false:
-		SoundManager.play_hover()
+		SoundManager.play_sound("hover")
 
 func fade_in_bgm():
 	var audio_stream = SoundManager.fetch_audio_stream("track_select")

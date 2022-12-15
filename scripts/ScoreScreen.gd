@@ -19,17 +19,17 @@ func _ready():
 	cursor_img_tex.create_from_image(cursor_img_obj, 0)
 	Input.set_custom_mouse_cursor(cursor_img_tex)
 	$ScoreScapePulse.play("lower")
-	SoundManager.play_title2()
+	SoundManager.play_sound("title2")
 
 func _on_ScoreTimer_timeout():
 	if init_checked == false:
-		SoundManager.play_score1()
+		SoundManager.play_sound("score1")
 		init_checked = true
 		var init_label = TextNode.instance()
 		init_label.text = "INITIAL SCORE\n" + str(Active.score) + "\n"
 		$ScoreBox.add_child(init_label)
 	elif speed_checked == false:
-		SoundManager.play_score1()
+		SoundManager.play_sound("score1")
 		speed_checked = true
 		if Active.is_slow == true:
 			Active.score = int(Active.score * 0.75)
@@ -46,7 +46,7 @@ func _on_ScoreTimer_timeout():
 			init_label.text = "Speed 1.00\n" + "1.00x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 	elif dif1_checked == false:
-		SoundManager.play_score1()
+		SoundManager.play_sound("score1")
 		dif1_checked = true
 		if Active.mod_dif_1 == "DifButton0":
 			Active.score = int(Active.score * 0.75)
@@ -69,7 +69,7 @@ func _on_ScoreTimer_timeout():
 			init_label.text = "Segfault\n" + "2.50x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 	elif dif2_checked == false:
-		SoundManager.play_score1()
+		SoundManager.play_sound("score1")
 		dif2_checked = true
 		if Active.is_byte == true:
 			Active.score = int(Active.score * 2.00)
@@ -92,8 +92,8 @@ func _on_ScoreTimer_timeout():
 			init_label.text = "Classic\n" + "1.00x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 	else:
-		SoundManager.play_score1()
-		SoundManager.play_score2()
+		SoundManager.play_sound("score1")
+		SoundManager.play_sound("score2")
 		$ScoreTimer.queue_free()
 		var init_label = TextNode.instance()
 		init_label.text = "\nFINAL SCORE\n" + str(Active.score)
@@ -106,7 +106,7 @@ func _on_ScoreScapePulse_animation_finished(_anim_name):
 	else: # _anim_name == "lower":
 		can_click = true
 		$ScoreTimer.start()
-		SoundManager.stop_title2()
+		SoundManager.stop_sound("title2")
 	
 func _input(event):
 	if can_click == true:

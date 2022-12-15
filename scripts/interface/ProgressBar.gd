@@ -49,7 +49,7 @@ func _on_FlairAnims_animation_finished(anim_name):
 		pass
 
 func _on_FlairSFX_Timer1_timeout():
-	SoundManager.play_flair1()
+	SoundManager.play_sound("flair1")
 
 func _on_FlairSFX_Timer2_timeout():
 	if milestone == 25:

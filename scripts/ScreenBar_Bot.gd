@@ -2,7 +2,7 @@ extends Area2D
 
 func _physics_process(_delta):
 	for coll in self.get_overlapping_bodies():
-		SoundManager.play_miss()
+		SoundManager.play_sound("miss")
 		if Active.is_byte or Active.is_nybl:
 			Active.health -= 1
 		Active.combo = 0

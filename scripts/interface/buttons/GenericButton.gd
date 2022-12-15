@@ -5,10 +5,10 @@ const card = preload("res://scenes/objects/TooltipCard.tscn")
 var this_card
 
 func _on_GenericButton_pressed():
-	SoundManager.play_click1()
+	SoundManager.play_sound("click1")
 
 func _on_GenericButton_mouse_entered():
-	SoundManager.play_hover()
+	SoundManager.play_sound("hover")
 	if self.get_parent().name != "SpeedLabel":
 		if not UserPreferences.prefs["disable_tooltips"]:
 			this_card = card.instance()

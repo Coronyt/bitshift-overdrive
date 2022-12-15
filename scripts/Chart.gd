@@ -67,7 +67,7 @@ func _ready():
 	$VaporCam.speed = 0.015
 	speed = $ChartCore.BPM * 5
 	if cinematic == false:
-		SoundManager.play_click2()
+		SoundManager.play_sound("click2")
 		cursor_to_puck()
 	self.get_child(0).get_child(0).play("drop")
 	self.get_child(1).get_child(0).rise_seq()
@@ -76,13 +76,13 @@ func _ready():
 func _on_Countdown_timeout():
 	if countdown > 0:
 		if cinematic == false:
-			SoundManager.play_count1()
+			SoundManager.play_sound("count1")
 		countdown -= 1
 	else:
 		tracking = true
 		play_track()
 		if cinematic == false:
-			SoundManager.play_count2()
+			SoundManager.play_sound("count2")
 		$VaporCam.speed = cam_cache
 		$CountdownTimer.queue_free()
 
@@ -98,8 +98,8 @@ func game_over():
 	tracking = false
 	puck_to_cursor()
 	Active.track_ref.stop()
-	SoundManager.play_score1()
-	SoundManager.play_score2()
+	SoundManager.play_sound("score1")
+	SoundManager.play_sound("score2")
 	$ChartTracker/ChartCamera/Paddle.locked = true
 	$ChartTracker/ChartCamera/GameOver.show()
 	Active.active = []

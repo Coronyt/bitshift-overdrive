@@ -5,7 +5,7 @@ export var cinematic = false
 
 func _ready():
 	load_last_modifiers()
-	SoundManager.play_track_select()
+	SoundManager.play_sound("track_select")
 	if cinematic == true:
 		for element in self.get_children():
 			if element.name == "VaporCam":
