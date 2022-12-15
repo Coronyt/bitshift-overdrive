@@ -1828,6 +1828,15 @@ script = ExtResource( 28 )
 pref_desc = "Disable audio visualizer"
 pref_key = "disable_visualizer"
 
+[node name="Vol_Master" type="HSlider" parent="Options"]
+margin_left = -800.0
+margin_top = 464.0
+margin_right = -392.0
+margin_bottom = 480.0
+min_value = -30.0
+max_value = 0.0
+tick_count = 15
+
 [node name="BackButton" type="Button" parent="Options"]
 margin_left = 208.0
 margin_top = 800.0

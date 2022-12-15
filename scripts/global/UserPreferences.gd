@@ -9,11 +9,12 @@ var prefs = {
 	"disable_scrolling":		false,
 	"disable_tooltips":			false,
 	"paddle_drag":				0.0,
-	"master_vol":				100.0,
-	"SFX_vol":					100.0,
+	"master_vol":				0.0, # 0.0 to -30.0
+	"SFX_vol":					0.0,
 }
 
 func _ready():
+	# Loading preferences
 	var load_cfg = pref_cfg.load(PREF_PATH)
 	if load_cfg != OK:
 		print("No user preferences detected, generating config.cfg ...")
@@ -21,6 +22,13 @@ func _ready():
 	else:
 		print("User preferences detected, loading from config.cfg ...")
 		load_prefs()
+	# Activating preferences
+	# Volume settings
+	var bus = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_volume_db(bus, UserPreferences.prefs["master_vol"])
+	print("Master bus levels at " + str(AudioServer.get_bus_volume_db(bus)))
+	if UserPreferences.prefs["master_vol"] == -30.0:
+		AudioServer.set_bus_mute(bus, true)
 
 func save_prefs():
 	for pref_key in prefs.keys():
