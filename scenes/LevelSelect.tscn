@@ -1811,10 +1811,10 @@ margin_bottom = 354.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
-text = "Disable CRT scanlines and curvature"
+text = "Disable audio visualizer"
 script = ExtResource( 28 )
-pref_desc = "Disable CRT scanlines and curvature"
-pref_key = "disable_screen_curve"
+pref_desc = "Disable audio visualizer"
+pref_key = "disable_visualizer"
 
 [node name="PrefButton2" type="CheckBox" parent="Options"]
 margin_left = -816.0
@@ -1824,10 +1824,10 @@ margin_bottom = 418.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
-text = "Disable audio visualizer"
+text = "Disable parallax scrolling"
 script = ExtResource( 28 )
-pref_desc = "Disable audio visualizer"
-pref_key = "disable_visualizer"
+pref_desc = "Disable parallax scrolling"
+pref_key = "disable_scrolling"
 
 [node name="PrefButton3" type="CheckBox" parent="Options"]
 margin_left = -816.0
@@ -1837,8 +1837,10 @@ margin_bottom = 482.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
-text = "Disable parallax scrolling"
+text = "Disable difficulty tooltips"
 script = ExtResource( 28 )
+pref_desc = "Disable difficulty tooltips"
+pref_key = "disable_tooltips"
 
 [node name="PrefButton4" type="CheckBox" parent="Options"]
 margin_left = -816.0
@@ -1848,8 +1850,10 @@ margin_bottom = 546.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
-text = "Disable difficulty tooltips"
+text = "Disable CRT screen effects"
 script = ExtResource( 28 )
+pref_desc = "Disable CRT screen effects"
+pref_key = "disable_screen_curve"
 
 [node name="VolSlider1" type="HSlider" parent="Options"]
 margin_left = -800.0
@@ -2115,13 +2119,13 @@ current = true
 [connection signal="animation_finished" from="Options/OptionsAnim" to="Options" method="_on_OptionsAnim_animation_finished"]
 [connection signal="mouse_entered" from="Options/PrefButton1" to="Options/PrefButton1" method="_on_PrefButton1_mouse_entered"]
 [connection signal="pressed" from="Options/PrefButton1" to="Options/PrefButton1" method="_on_PrefButton1_pressed"]
-[connection signal="pressed" from="Options/PrefButton1" to="CRT" method="refresh_CRT"]
 [connection signal="mouse_entered" from="Options/PrefButton2" to="Options/PrefButton2" method="_on_PrefButton1_mouse_entered"]
 [connection signal="pressed" from="Options/PrefButton2" to="Options/PrefButton2" method="_on_PrefButton1_pressed"]
 [connection signal="mouse_entered" from="Options/PrefButton3" to="Options/PrefButton3" method="_on_PrefButton1_mouse_entered"]
 [connection signal="pressed" from="Options/PrefButton3" to="Options/PrefButton3" method="_on_PrefButton1_pressed"]
 [connection signal="mouse_entered" from="Options/PrefButton4" to="Options/PrefButton4" method="_on_PrefButton1_mouse_entered"]
 [connection signal="pressed" from="Options/PrefButton4" to="Options/PrefButton4" method="_on_PrefButton1_pressed"]
+[connection signal="pressed" from="Options/PrefButton4" to="CRT" method="refresh_CRT"]
 [connection signal="value_changed" from="Options/VolSlider1" to="Options/VolSlider1" method="_on_VolSlider1_value_changed"]
 [connection signal="mouse_entered" from="Options/BackButton" to="Options" method="_on_BackButton_mouse_entered"]
 [connection signal="pressed" from="Options/BackButton" to="Options" method="_on_BackButton_pressed"]

@@ -10,7 +10,8 @@ var prefs = {
 	"disable_tooltips":			false,
 	"paddle_drag":				0.0,
 	"master_vol":				0.0, # 0.0 to -30.0
-	"SFX_vol":					0.0,
+	"music_vol":				0.0, # 0.0 to -30.0
+	"SFX_vol":					0.0, # 0.0 to -30.0
 }
 
 func _ready():
