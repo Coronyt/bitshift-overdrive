@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://scripts/interface/PreviewLabel.gd" type="Script" id=26]
 [ext_resource path="res://assets/sprites/marker_5.png" type="Texture" id=27]
 [ext_resource path="res://scripts/interface/buttons/PrefButton.gd" type="Script" id=28]
+[ext_resource path="res://scripts/interface/VolSlider_Master.gd" type="Script" id=29]
 
 [sub_resource type="DynamicFont" id=40]
 size = 32
@@ -1828,14 +1829,82 @@ script = ExtResource( 28 )
 pref_desc = "Disable audio visualizer"
 pref_key = "disable_visualizer"
 
-[node name="Vol_Master" type="HSlider" parent="Options"]
+[node name="PrefButton3" type="CheckBox" parent="Options"]
+margin_left = -816.0
+margin_top = 448.0
+margin_right = -272.0
+margin_bottom = 482.0
+theme = ExtResource( 4 )
+toggle_mode = false
+group = SubResource( 12 )
+text = "Disable parallax scrolling"
+script = ExtResource( 28 )
+
+[node name="PrefButton4" type="CheckBox" parent="Options"]
+margin_left = -816.0
+margin_top = 512.0
+margin_right = -272.0
+margin_bottom = 546.0
+theme = ExtResource( 4 )
+toggle_mode = false
+group = SubResource( 12 )
+text = "Disable difficulty tooltips"
+script = ExtResource( 28 )
+
+[node name="VolSlider1" type="HSlider" parent="Options"]
 margin_left = -800.0
-margin_top = 464.0
+margin_top = 624.0
 margin_right = -392.0
-margin_bottom = 480.0
+margin_bottom = 640.0
 min_value = -30.0
 max_value = 0.0
-tick_count = 15
+step = 3.0
+script = ExtResource( 29 )
+
+[node name="SliderLabel" type="Label" parent="Options/VolSlider1"]
+margin_left = 4.0
+margin_top = -56.0
+margin_right = 174.0
+margin_bottom = -8.0
+theme = ExtResource( 4 )
+text = "Master Volume"
+valign = 1
+
+[node name="VolSlider2" type="HSlider" parent="Options"]
+margin_left = -800.0
+margin_top = 696.0
+margin_right = -392.0
+margin_bottom = 712.0
+min_value = -30.0
+max_value = 0.0
+step = 3.0
+
+[node name="SliderLabel" type="Label" parent="Options/VolSlider2"]
+margin_left = 4.0
+margin_top = -56.0
+margin_right = 174.0
+margin_bottom = -8.0
+theme = ExtResource( 4 )
+text = "Music Volume"
+valign = 1
+
+[node name="VolSlider3" type="HSlider" parent="Options"]
+margin_left = -800.0
+margin_top = 768.0
+margin_right = -392.0
+margin_bottom = 784.0
+min_value = -30.0
+max_value = 0.0
+step = 3.0
+
+[node name="SliderLabel" type="Label" parent="Options/VolSlider3"]
+margin_left = 4.0
+margin_top = -56.0
+margin_right = 174.0
+margin_bottom = -8.0
+theme = ExtResource( 4 )
+text = "SFX Volume"
+valign = 1
 
 [node name="BackButton" type="Button" parent="Options"]
 margin_left = 208.0
@@ -2049,6 +2118,11 @@ current = true
 [connection signal="pressed" from="Options/PrefButton1" to="CRT" method="refresh_CRT"]
 [connection signal="mouse_entered" from="Options/PrefButton2" to="Options/PrefButton2" method="_on_PrefButton1_mouse_entered"]
 [connection signal="pressed" from="Options/PrefButton2" to="Options/PrefButton2" method="_on_PrefButton1_pressed"]
+[connection signal="mouse_entered" from="Options/PrefButton3" to="Options/PrefButton3" method="_on_PrefButton1_mouse_entered"]
+[connection signal="pressed" from="Options/PrefButton3" to="Options/PrefButton3" method="_on_PrefButton1_pressed"]
+[connection signal="mouse_entered" from="Options/PrefButton4" to="Options/PrefButton4" method="_on_PrefButton1_mouse_entered"]
+[connection signal="pressed" from="Options/PrefButton4" to="Options/PrefButton4" method="_on_PrefButton1_pressed"]
+[connection signal="value_changed" from="Options/VolSlider1" to="Options/VolSlider1" method="_on_VolSlider1_value_changed"]
 [connection signal="mouse_entered" from="Options/BackButton" to="Options" method="_on_BackButton_mouse_entered"]
 [connection signal="pressed" from="Options/BackButton" to="Options" method="_on_BackButton_pressed"]
 [connection signal="mouse_entered" from="ExitPortal" to="ExitPortal" method="_on_ExitPortal_mouse_entered"]
