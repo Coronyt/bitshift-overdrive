@@ -1813,7 +1813,7 @@ toggle_mode = false
 group = SubResource( 12 )
 text = "Disable audio visualizer"
 script = ExtResource( 28 )
-pref_desc = "Disable audio visualizer"
+pref_desc = "Audio visualizer"
 pref_key = "disable_visualizer"
 
 [node name="PrefButton2" type="CheckBox" parent="Options"]
@@ -1826,7 +1826,7 @@ toggle_mode = false
 group = SubResource( 12 )
 text = "Disable parallax scrolling"
 script = ExtResource( 28 )
-pref_desc = "Disable parallax scrolling"
+pref_desc = "Parallax scrolling"
 pref_key = "disable_scrolling"
 
 [node name="PrefButton3" type="CheckBox" parent="Options"]
@@ -1839,7 +1839,7 @@ toggle_mode = false
 group = SubResource( 12 )
 text = "Disable difficulty tooltips"
 script = ExtResource( 28 )
-pref_desc = "Disable difficulty tooltips"
+pref_desc = "Difficulty tooltips"
 pref_key = "disable_tooltips"
 
 [node name="PrefButton4" type="CheckBox" parent="Options"]
@@ -1852,7 +1852,7 @@ toggle_mode = false
 group = SubResource( 12 )
 text = "Disable CRT screen effects"
 script = ExtResource( 28 )
-pref_desc = "Disable CRT screen effects"
+pref_desc = "CRT screen effects"
 pref_key = "disable_screen_curve"
 
 [node name="VolSlider1" type="HSlider" parent="Options"]

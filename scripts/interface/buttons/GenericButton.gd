@@ -10,10 +10,12 @@ func _on_GenericButton_pressed():
 func _on_GenericButton_mouse_entered():
 	SoundManager.play_hover()
 	if self.get_parent().name != "SpeedLabel":
-		this_card = card.instance()
-		this_card.header = self.text
-		this_card.body = self.body
-	self.get_parent().get_parent().add_child(this_card)
+		if not UserPreferences.prefs["disable_tooltips"]:
+			this_card = card.instance()
+			this_card.header = self.text
+			this_card.body = self.body
+			self.get_parent().get_parent().add_child(this_card)
 
 func _on_GenericButton_mouse_exited():
-	this_card.queue_free()
+	if not UserPreferences.prefs["disable_tooltips"]:
+		this_card.queue_free()
