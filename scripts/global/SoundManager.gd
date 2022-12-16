@@ -5,44 +5,43 @@ var track_select_last_pos = 0.0
 
 const track_tscn = preload("res://scenes/global/Tracks.tscn")
 
-var track_dict_075 = {
-	"Track_1" : Tracks.get_child(0),
-	"Track_2" : Tracks.get_child(3),
-	"Track_3" : Tracks.get_child(6),
-	"Track_4" : Tracks.get_child(9),
-	"Track_5" : Tracks.get_child(12),
-	"Track_6" : Tracks.get_child(15),
-	"Track_7" : Tracks.get_child(15), # PLACEHOLDER.
-	"Track_8" : Tracks.get_child(15), # PLACEHOLDER.
-	"Track_9" : Tracks.get_child(18),
-	"Track_15" : Tracks.get_child(15), # PLACEHOLDER.
-}
+var track_dict_075
+var track_dict_100
+var track_dict_125
 
-var track_dict_100 = {
-	"Track_1" : Tracks.get_child(1),
-	"Track_2" : Tracks.get_child(4),
-	"Track_3" : Tracks.get_child(7),
-	"Track_4" : Tracks.get_child(10),
-	"Track_5" : Tracks.get_child(13),
-	"Track_6" : Tracks.get_child(16),
-	"Track_7" : Tracks.get_child(16), # PLACEHOLDER.
-	"Track_8" : Tracks.get_child(16), # PLACEHOLDER.
-	"Track_9" : Tracks.get_child(19),
-	"Track_15" : Tracks.get_child(16), # PLACEHOLDER.
-}
+func _ready():
+	var tracks = Tracks.get_children()
+	track_dict_075 = {
+		"spacedive" : fetch_track("supermassive_spacedive_075"),
+		"breezy" : fetch_track("breeze_in_the_blackest_forest_075"),
+		"feelingcoy" : fetch_track("coy_glance_075"),
+		"brightside" : fetch_track("on_the_other_side_075"),
+		"bachjam" : fetch_track("bitshift_baroque_075"),
+		"stratofly" : fetch_track("catch_the_stratosphere_075"),
+	}
+	track_dict_100 = {
+		"spacedive" : fetch_track("supermassive_spacedive_100"),
+		"breezy" : fetch_track("breeze_in_the_blackest_forest_100"),
+		"feelingcoy" : fetch_track("coy_glance_100"),
+		"brightside" : fetch_track("on_the_other_side_100"),
+		"bachjam" : fetch_track("bitshift_baroque_100"),
+		"stratofly" : fetch_track("catch_the_stratosphere_100"),
+	}
+	track_dict_125 = {
+		"spacedive" : fetch_track("supermassive_spacedive_125"),
+		"breezy" : fetch_track("breeze_in_the_blackest_forest_125"),
+		"feelingcoy" : fetch_track("coy_glance_125"),
+		"brightside" : fetch_track("on_the_other_side_125"),
+		"bachjam" : fetch_track("bitshift_baroque_125"),
+		"stratofly" : fetch_track("catch_the_stratosphere_125"),
+	}
 
-var track_dict_125 = {
-	"Track_1" : Tracks.get_child(2),
-	"Track_2" : Tracks.get_child(5),
-	"Track_3" : Tracks.get_child(8),
-	"Track_4" : Tracks.get_child(11),
-	"Track_5" : Tracks.get_child(14),
-	"Track_6" : Tracks.get_child(17),
-	"Track_7" : Tracks.get_child(17), # PLACEHOLDER.
-	"Track_8" : Tracks.get_child(17), # PLACEHOLDER.
-	"Track_9" : Tracks.get_child(20),
-	"Track_15" : Tracks.get_child(17), # PLACEHOLDER.
-}
+func fetch_track(target_audio):
+	var tracks = Tracks.get_children()
+	for t in tracks:
+		if t.name == target_audio:
+			return t
+	return null
 
 func fetch_audio_stream(target_audio):
 	var sounds = Sounds.get_children()

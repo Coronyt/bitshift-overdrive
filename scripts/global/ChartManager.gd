@@ -1,64 +1,44 @@
 extends Node
 
-const chart_1 = preload("res://scripts/charts/Chart_1.gd")
-const chart_2 = preload("res://scripts/charts/Chart_2.gd")
-const chart_3 = preload("res://scripts/charts/Chart_3.gd")
-const chart_4 = preload("res://scripts/charts/Chart_4.gd")
-const chart_5 = preload("res://scripts/charts/Chart_5.gd")
-const chart_6 = preload("res://scripts/charts/Chart_6.gd")
-const chart_7 = preload("res://scripts/charts/Chart_7.gd")
-const chart_8 = preload("res://scripts/charts/Chart_8.gd")
-const chart_9 = preload("res://scripts/charts/Chart_9.gd")
-const chart_15 = preload("res://scripts/charts/Chart_15.gd")
+const spacedive = preload("res://scripts/charts/spacedive.gd")
+const breezy = preload("res://scripts/charts/breezy.gd")
+const feelingcoy = preload("res://scripts/charts/feelingcoy.gd")
+const brightside = preload("res://scripts/charts/brightside.gd")
+const bachjam = preload("res://scripts/charts/bachjam.gd")
+const stratofly = preload("res://scripts/charts/stratofly.gd")
 
-const chart_1_easy = preload("res://scripts/charts/Chart_1_Easy.gd")
-const chart_2_easy = preload("res://scripts/charts/Chart_2_Easy.gd")
-const chart_3_easy = preload("res://scripts/charts/Chart_3_Easy.gd")
-const chart_4_easy = preload("res://scripts/charts/Chart_4_Easy.gd")
-const chart_5_easy = preload("res://scripts/charts/Chart_5_Easy.gd")
-const chart_6_easy = preload("res://scripts/charts/Chart_6_Easy.gd")
-const chart_7_easy = preload("res://scripts/charts/Chart_7_Easy.gd")
-const chart_8_easy = preload("res://scripts/charts/Chart_8_Easy.gd")
-const chart_9_easy = preload("res://scripts/charts/Chart_9_Easy.gd")
-const chart_15_easy = preload("res://scripts/charts/Chart_15_Easy.gd")
+const spacedive_uc = preload("res://scripts/charts/spacedive_uc.gd")
+const breezy_uc = preload("res://scripts/charts/breezy_uc.gd")
+const feelingcoy_uc = preload("res://scripts/charts/feelingcoy_uc.gd")
+const brightside_uc = preload("res://scripts/charts/brightside_uc.gd")
+const bachjam_uc = preload("res://scripts/charts/bachjam_uc.gd")
+const stratofly_uc = preload("res://scripts/charts/stratofly_uc.gd")
 
 var chart_dict = {
-	"Track_1" : chart_1,
-	"Track_2" : chart_2,
-	"Track_3" : chart_3,
-	"Track_4" : chart_4,
-	"Track_5" : chart_5,
-	"Track_6" : chart_6,
-	"Track_7" : chart_7,
-	"Track_8" : chart_8,
-	"Track_9" : chart_9,
-	"Track_15" : chart_15,
+	"spacedive" : spacedive,
+	"breezy" : breezy,
+	"feelingcoy" : feelingcoy,
+	"brightside" : brightside,
+	"bachjam" : bachjam,
+	"stratofly" : stratofly,
 }
 
 var chart_easy_dict = {
-	"Track_1" : chart_1_easy,
-	"Track_2" : chart_2_easy,
-	"Track_3" : chart_3_easy,
-	"Track_4" : chart_4_easy,
-	"Track_5" : chart_5_easy,
-	"Track_6" : chart_6_easy,
-	"Track_7" : chart_7_easy,
-	"Track_8" : chart_8_easy,
-	"Track_9" : chart_9_easy,
-	"Track_15" : chart_15_easy,
+	"spacedive" : spacedive_uc,
+	"breezy" : breezy_uc,
+	"feelingcoy" : feelingcoy_uc,
+	"brightside" : brightside_uc,
+	"bachjam" : bachjam_uc,
+	"stratofly" : stratofly,
 }
 
 var chart_tscn_dict = {
-	"Track_1" : "res://scenes/charts/Chart_1.tscn",
-	"Track_2" : "res://scenes/charts/Chart_2.tscn",
-	"Track_3" : "res://scenes/charts/Chart_3.tscn",
-	"Track_4" : "res://scenes/charts/Chart_4.tscn",
-	"Track_5" : "res://scenes/charts/Chart_5.tscn",
-	"Track_6" : "res://scenes/charts/Chart_6.tscn",
-	"Track_7" : "res://scenes/charts/Chart_7.tscn",
-	"Track_8" : "res://scenes/charts/Chart_8.tscn",
-	"Track_9" : "res://scenes/charts/Chart_9.tscn",
-	"Track_15" : "res://scenes/charts/Chart_15.tscn",
+	"spacedive" : "res://scenes/charts/spacedive.tscn",
+	"breezy" : "res://scenes/charts/breezy.tscn",
+	"feelingcoy" : "res://scenes/charts/feelingcoy.tscn",
+	"brightside" : "res://scenes/charts/brightside.tscn",
+	"bachjam" : "res://scenes/charts/bachjam.tscn",
+	"stratofly" : "res://scenes/charts/stratofly.tscn",
 }
 
 func fetch_chart(chart_ID):

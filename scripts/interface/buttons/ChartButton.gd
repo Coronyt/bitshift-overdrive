@@ -1,6 +1,7 @@
 extends Button
 
 export(String) var diff_desc
+export(String) var chart_key
 
 # Base Game Difficulty Ratings:
 # Basic:		0.5 - 1.5
@@ -10,8 +11,6 @@ export(String) var diff_desc
 
 # For everything else:
 # Sadistic:		5.5+
-
-# TODO - Refactor this code!
 
 func _ready():
 	SoundManager.preview_playing = false
@@ -23,7 +22,7 @@ func _on_ChartButton_pressed():
 		SoundManager.preview_playing = false
 	else:
 		fade_out_bgm()
-	Active.chart = self.name
+	Active.chart = self.chart_key
 	Active.chart_name = self.text
 	Active.diff_desc = self.diff_desc
 	if SoundManager.preview_playing == false:
