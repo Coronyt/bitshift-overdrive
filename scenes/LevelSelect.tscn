@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://assets/sprites/marker_5.png" type="Texture" id=27]
 [ext_resource path="res://scripts/interface/buttons/PrefButton.gd" type="Script" id=28]
 [ext_resource path="res://scripts/interface/VolSlider_Master.gd" type="Script" id=29]
+[ext_resource path="res://scripts/interface/GenericSlider.gd" type="Script" id=30]
 
 [sub_resource type="DynamicFont" id=40]
 size = 32
@@ -1629,6 +1630,8 @@ margin_bottom = 712.0
 min_value = -30.0
 max_value = 0.0
 step = 3.0
+script = ExtResource( 30 )
+pref_key = "music_vol"
 
 [node name="SliderLabel" type="Label" parent="Options/VolSlider2"]
 margin_left = 4.0
@@ -1647,6 +1650,8 @@ margin_bottom = 784.0
 min_value = -30.0
 max_value = 0.0
 step = 3.0
+script = ExtResource( 30 )
+pref_key = "SFX_vol"
 
 [node name="SliderLabel" type="Label" parent="Options/VolSlider3"]
 margin_left = 4.0
@@ -1854,6 +1859,8 @@ current = true
 [connection signal="pressed" from="Options/PrefButton4" to="Options/PrefButton4" method="_on_PrefButton1_pressed"]
 [connection signal="pressed" from="Options/PrefButton4" to="CRT" method="refresh_CRT"]
 [connection signal="value_changed" from="Options/VolSlider1" to="Options/VolSlider1" method="_on_VolSlider1_value_changed"]
+[connection signal="value_changed" from="Options/VolSlider2" to="Options/VolSlider2" method="adjust_vol"]
+[connection signal="value_changed" from="Options/VolSlider3" to="Options/VolSlider3" method="adjust_vol"]
 [connection signal="mouse_entered" from="Options/BackButton" to="Options" method="_on_BackButton_mouse_entered"]
 [connection signal="pressed" from="Options/BackButton" to="Options" method="_on_BackButton_pressed"]
 [connection signal="mouse_entered" from="ExitPortal" to="ExitPortal" method="_on_ExitPortal_mouse_entered"]

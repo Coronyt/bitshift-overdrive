@@ -5,6 +5,7 @@ func _on_Options_pressed():
 	$OptionsAnim.play("to_options")
 
 func _on_BackButton_pressed():
+	UserPreferences.save_prefs()
 	SoundManager.play_sound("click1")
 	$OptionsAnim.play("from_options")
 

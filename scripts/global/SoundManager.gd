@@ -54,6 +54,10 @@ func play_sound(target_audio):
 	var sounds = Sounds.get_children()
 	for s in sounds:
 		if s.name == target_audio:
+			s.volume_db = UserPreferences.prefs["SFX_vol"]
+			# Exceptions (BGMs)
+			if s.name == "title_track":
+				s.volume_db = 0
 			if s.name == "track_select":
 				s.volume_db = -2
 			s.play()
@@ -68,5 +72,6 @@ func play_combo(pitch):
 	var sounds = Sounds.get_children()
 	for s in sounds:
 		if s.name == "combo":
+			s.volume_db = UserPreferences.prefs["SFX_vol"]
 			s.pitch_scale = pitch
 			s.play()
