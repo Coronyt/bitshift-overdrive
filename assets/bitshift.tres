@@ -1,6 +1,9 @@
-[gd_resource type="Theme" load_steps=11 format=2]
+[gd_resource type="Theme" load_steps=17 format=2]
 
 [ext_resource path="res://assets/MatchupPro.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/sprites/slider_bar.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/slider_tick_2.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/slider_tick_1.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -13,6 +16,17 @@ font_data = ExtResource( 1 )
 [sub_resource type="StreamTexture" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 160, 16 )
+margin_left = 50.0
+margin_right = 80.0
+margin_bottom = 149.0
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.0196078, 0, 0.352941, 1 )
@@ -190,13 +204,13 @@ HScrollBar/styles/scroll = null
 HScrollBar/styles/scroll_focus = null
 HSeparator/constants/separation = 4
 HSeparator/styles/separator = null
-HSlider/icons/grabber = null
+HSlider/icons/grabber = ExtResource( 4 )
 HSlider/icons/grabber_disabled = null
-HSlider/icons/grabber_highlight = null
+HSlider/icons/grabber_highlight = ExtResource( 3 )
 HSlider/icons/tick = null
-HSlider/styles/grabber_area = null
-HSlider/styles/grabber_area_highlight = null
-HSlider/styles/slider = null
+HSlider/styles/grabber_area = SubResource( 11 )
+HSlider/styles/grabber_area_highlight = SubResource( 12 )
+HSlider/styles/slider = SubResource( 10 )
 HSplitContainer/constants/autohide = 1
 HSplitContainer/constants/separation = 12
 HSplitContainer/icons/grabber = null
