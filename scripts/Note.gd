@@ -31,15 +31,6 @@ func milestone_check():
 	if Active.combo == 200:
 		Active.last_milestone = 200
 		return 200
-	if Active.combo == 300:
-		Active.last_milestone = 300
-		return 300
-	if Active.combo == 400:
-		Active.last_milestone = 400
-		return 400
-	if Active.combo == 500:
-		Active.last_milestone = 500
-		return 500
 	return 0
 
 func tick():
@@ -78,12 +69,6 @@ func shatter():
 		Active.score += stepify((50 * 2.00), 1)
 	elif Active.last_milestone == 200:
 		Active.score += stepify((50 * 2.50), 1)
-	elif Active.last_milestone == 300:
-		Active.score += stepify((50 * 3.00), 1)
-	elif Active.last_milestone == 400:
-		Active.score += stepify((50 * 4.00), 1)
-	elif Active.last_milestone == 500:
-		Active.score += stepify((50 * 5.00), 1)
 
 func _physics_process(_delta):
 	if self.get_parent().get_parent().tracking == false:

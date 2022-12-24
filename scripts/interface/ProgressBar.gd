@@ -60,12 +60,6 @@ func _on_FlairSFX_Timer2_timeout():
 		SoundManager.play_combo(1.35)
 	elif milestone == 200:
 		SoundManager.play_combo(1.45)
-	elif milestone == 300:
-		SoundManager.play_combo(1.55)
-	elif milestone == 400:
-		SoundManager.play_combo(1.65)
-	elif milestone == 500:
-		SoundManager.play_combo(1.75)
 	if Active.is_byte and Active.health < 5:
 		Active.health += 1
 	elif Active.is_nybl and Active.health < 3:
@@ -81,12 +75,6 @@ func _on_ComboAnimTimer_timeout():
 			flair_label.text = "2.00x SCORE!"
 		elif milestone == 200:
 			flair_label.text = "2.50x SCORE!"
-		elif milestone == 300:
-			flair_label.text = "3.00x SCORE!"
-		elif milestone == 400:
-			flair_label.text = "4.00x SCORE!"
-		elif milestone == 500:
-			flair_label.text = "5.00x SCORE!"
 		flair_anims.play("landmark")
 		milestone_cooldown = true
 		$ComboCooldownTimer.start()
