@@ -1175,9 +1175,9 @@ __meta__ = {
 }
 
 [node name="SpeedLabel" type="Label" parent="."]
-margin_left = 848.0
+margin_left = 824.0
 margin_top = 32.0
-margin_right = 992.0
+margin_right = 968.0
 margin_bottom = 58.0
 theme = ExtResource( 4 )
 
@@ -1287,9 +1287,6 @@ margin_top = 32.0
 margin_right = 730.0
 margin_bottom = 58.0
 theme = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="DifButton3" type="CheckBox" parent="DifLabel2"]
 margin_top = 40.0
