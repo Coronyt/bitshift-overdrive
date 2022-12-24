@@ -68,13 +68,13 @@ func _on_FlairSFX_Timer2_timeout():
 func _on_ComboAnimTimer_timeout():
 	if milestone_cooldown == false:
 		if milestone == 25:
-			flair_label.text = "1.25x SCORE!"
+			flair_label.text = "- 2x SCORE! -"
 		elif milestone == 50:
-			flair_label.text = "1.50x SCORE!"
+			flair_label.text = "- 4x SCORE! -"
 		elif milestone == 100:
-			flair_label.text = "2.00x SCORE!"
+			flair_label.text = "- 8x SCORE! -"
 		elif milestone == 200:
-			flair_label.text = "2.50x SCORE!"
+			flair_label.text = "- 16x SCORE! -"
 		flair_anims.play("landmark")
 		milestone_cooldown = true
 		$ComboCooldownTimer.start()

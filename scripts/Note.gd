@@ -45,7 +45,10 @@ func tick():
 	self.get_parent().add_child(tick)
 	var milestone_check_res = milestone_check()
 	if milestone_check_res != 0:
-		flair_label.text = "- " + str(milestone_check_res) + " COMBO! -"
+		if milestone_check_res != 200:
+			flair_label.text = "- " + str(milestone_check_res) + " COMBO! -"
+		else:
+			flair_label.text = "- MAX COMBO! -"
 		flair_anims.play("landmark")
 		sfx_timer.start()
 		anim_timer.start()
@@ -60,15 +63,15 @@ func shatter():
 	Active.combo += 1
 	tick()
 	if Active.last_milestone == 0:
-		Active.score += stepify((50 * 1.00), 1)
+		Active.score += (50 * 1)
 	elif Active.last_milestone == 25:
-		Active.score += stepify((50 * 1.25), 1)
+		Active.score += (50 * 2)
 	elif Active.last_milestone == 50:
-		Active.score += stepify((50 * 1.50), 1)
+		Active.score += (50 * 4)
 	elif Active.last_milestone == 100:
-		Active.score += stepify((50 * 2.00), 1)
+		Active.score += (50 * 8)
 	elif Active.last_milestone == 200:
-		Active.score += stepify((50 * 2.50), 1)
+		Active.score += (50 * 16)
 
 func _physics_process(_delta):
 	if self.get_parent().get_parent().tracking == false:

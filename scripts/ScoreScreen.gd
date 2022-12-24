@@ -32,64 +32,65 @@ func _on_ScoreTimer_timeout():
 		SoundManager.play_sound("score1")
 		speed_checked = true
 		if Active.is_slow == true:
-			Active.score = int(Active.score * 0.75)
+			Active.score = int(Active.score * 1)
 			var init_label = TextNode.instance()
-			init_label.text = "Speed 0.75\n" + "0.75x     " + str(Active.score) + "\n"
+			init_label.text = "Speed 75%\n" + "1x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 		elif Active.is_fast == true:
-			Active.score = int(Active.score * 2.00)
+			Active.score = int(Active.score * 4)
 			var init_label = TextNode.instance()
-			init_label.text = "Speed 1.25\n" + "2.00x     " + str(Active.score) + "\n"
+			init_label.text = "Speed 125%\n" + "4x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 		else:
+			Active.score = int(Active.score * 1)
 			var init_label = TextNode.instance()
-			init_label.text = "Speed 1.00\n" + "1.00x     " + str(Active.score) + "\n"
+			init_label.text = "Speed 100%\n" + "1x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 	elif dif1_checked == false:
 		SoundManager.play_sound("score1")
 		dif1_checked = true
 		if Active.mod_dif_1 == "DifButton0":
-			Active.score = int(Active.score * 0.75)
+			Active.score = int(Active.score * 1)
 			var init_label = TextNode.instance()
-			init_label.text = "Hibernate\n" + "0.75x     " + str(Active.score) + "\n"
+			init_label.text = "Hibernate\n" + "1x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 		elif Active.mod_dif_1 == "DifButton1":
-			Active.score = int(Active.score * 1.00)
+			Active.score = int(Active.score * 1)
 			var init_label = TextNode.instance()
-			init_label.text = "Underclock\n" + "1.00x     " + str(Active.score) + "\n"
+			init_label.text = "Underclock\n" + "1x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 		elif Active.mod_dif_1 == "DifButton2":
-			Active.score = int(Active.score * 1.75)
+			Active.score = int(Active.score * 2)
 			var init_label = TextNode.instance()
-			init_label.text = "Overdrive\n" + "1.75x     " + str(Active.score) + "\n"
+			init_label.text = "Overdrive\n" + "2x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 		elif Active.mod_dif_1 == "DifButton3":
-			Active.score = int(Active.score * 2.50)
+			Active.score = int(Active.score * 4)
 			var init_label = TextNode.instance()
-			init_label.text = "Segfault\n" + "2.50x     " + str(Active.score) + "\n"
+			init_label.text = "Segfault\n" + "4x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 	elif dif2_checked == false:
 		SoundManager.play_sound("score1")
 		dif2_checked = true
 		if Active.is_byte == true:
-			Active.score = int(Active.score * 2.00)
+			Active.score = int(Active.score * 2)
 			var init_label = TextNode.instance()
-			init_label.text = "Byte\n" + "2.00x     " + str(Active.score) + "\n"
+			init_label.text = "Byte\n" + "2x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 		elif Active.is_nybl == true:
-			Active.score = int(Active.score * 2.50)
+			Active.score = int(Active.score * 4)
 			var init_label = TextNode.instance()
-			init_label.text = "Nybble\n" + "2.50x     " + str(Active.score) + "\n"
+			init_label.text = "Nybble\n" + "4x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 		elif Active.is_iron == true:
-			Active.score = int(Active.score * 3.00)
+			Active.score = int(Active.score * 8)
 			var init_label = TextNode.instance()
-			init_label.text = "Ironbit\n" + "3.00x     " + str(Active.score) + "\n"
+			init_label.text = "Ironbit\n" + "8x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 		else:
-			Active.score = int(Active.score * 1.00)
+			Active.score = int(Active.score * 1)
 			var init_label = TextNode.instance()
-			init_label.text = "Classic\n" + "1.00x     " + str(Active.score) + "\n"
+			init_label.text = "Classic\n" + "1x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 	else:
 		SoundManager.play_sound("score1")
