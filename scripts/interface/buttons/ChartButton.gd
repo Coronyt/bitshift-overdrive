@@ -1,8 +1,5 @@
 extends Button
 
-onready var options_timer = self.get_parent().get_parent().get_parent().get_node(
-	"Options/OptionsTimer")
-
 export(String) var diff_desc
 export(String) var chart_key
 
@@ -19,9 +16,6 @@ func _ready():
 	SoundManager.preview_playing = false
 
 func _on_ChartButton_pressed():
-	if SoundManager.preview_playing:
-		if !options_timer.is_stopped():
-			options_timer.start()
 	self.get_parent().get_parent().get_parent().preview_playing = true
 	SoundManager.play_sound("click1")
 	if SoundManager.preview_playing:

@@ -1532,10 +1532,6 @@ custom_styles/normal = SubResource( 17 )
 text = "OPTIONS"
 script = ExtResource( 19 )
 
-[node name="OptionsTimer" type="Timer" parent="Options"]
-wait_time = 10.0
-one_shot = true
-
 [node name="OptionsAnim" type="AnimationPlayer" parent="Options"]
 reset_on_save = false
 anims/RESET = SubResource( 25 )
@@ -1839,7 +1835,6 @@ current = true
 [connection signal="pressed" from="Fullscreen" to="Fullscreen" method="_on_Fullscreen_pressed"]
 [connection signal="mouse_entered" from="Options" to="Options" method="_on_Options_mouse_entered"]
 [connection signal="pressed" from="Options" to="Options" method="_on_Options_pressed"]
-[connection signal="timeout" from="Options/OptionsTimer" to="Options" method="_on_OptionsTimer_timeout"]
 [connection signal="animation_finished" from="Options/OptionsAnim" to="Options" method="_on_OptionsAnim_animation_finished"]
 [connection signal="mouse_entered" from="Options/PrefButton1" to="Options/PrefButton1" method="_on_PrefButton1_mouse_entered"]
 [connection signal="pressed" from="Options/PrefButton1" to="Options/PrefButton1" method="_on_PrefButton1_pressed"]
