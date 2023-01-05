@@ -30,4 +30,5 @@ func _on_BackButton_mouse_entered():
 
 func _on_OptionsTimer_timeout():
 	this_card.queue_free()
+	this_card = null
 	$OptionsAnim.play("to_options")
