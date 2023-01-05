@@ -2,6 +2,7 @@ extends Control
 
 const cinematic_label = preload("res://scenes/cinematic/LabelTitle.tscn")
 export var cinematic = false
+var preview_playing = false
 
 func _ready():
 	load_last_modifiers()

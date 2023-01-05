@@ -57,9 +57,9 @@ func play_sound(target_audio):
 			s.volume_db = UserPreferences.prefs["SFX_vol"]
 			# Exceptions (BGMs)
 			if s.name == "title_track":
-				s.volume_db = 0
+				s.volume_db = UserPreferences.prefs["music_vol"]
 			if s.name == "track_select":
-				s.volume_db = -2
+				s.volume_db = UserPreferences.prefs["music_vol"] - 2
 			s.play()
 
 func stop_sound(target_audio):
