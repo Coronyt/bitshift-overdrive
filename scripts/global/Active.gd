@@ -3,9 +3,9 @@ extends Node
 var chart_name = ""
 
 # Last used modifiers.
-var mod_speed = "SpeedButton2"
-var mod_dif_1 = "DifButton1"
-var mod_dif_2 = "DifButton3"
+var mod_dif_1 = ""
+var mod_dif_2 = ""
+var mod_speed = ""
 
 # Currently active modifiers.
 var is_slow = false
@@ -30,6 +30,13 @@ var progress = 0.0
 var track_ref : AudioStreamPlayer = null
 
 var diff_desc = ""
+
+func _ready():
+	mod_dif_1 = UserPreferences.prefs["diff_1"]
+	mod_dif_2 = UserPreferences.prefs["diff_2"]
+	mod_speed = UserPreferences.prefs["speed"]
+	if UserPreferences.prefs["full"]:
+		OS.window_fullscreen = true
 
 func refresh():
 	is_slow = false

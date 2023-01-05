@@ -12,6 +12,10 @@ var prefs = {
 	"master_vol":				0.0, # 0.0 to -30.0
 	"music_vol":				0.0, # 0.0 to -30.0
 	"SFX_vol":					0.0, # 0.0 to -30.0
+	"diff_1":					"DifButton1",
+	"diff_2":					"DifButton3",
+	"speed":					"SpeedButton2",
+	"full":						false,
 }
 
 func _ready():
