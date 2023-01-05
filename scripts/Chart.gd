@@ -3,6 +3,8 @@ extends Node2D
 const cinematic_label = preload("res://scenes/cinematic/LabelOST.tscn")
 export var cinematic = false
 
+onready var combo_spin = self.get_node("ChartTracker/ChartCamera/ComboLabel/ComboSpin")
+
 var countdown = 3
 var tracking = false
 
@@ -87,6 +89,8 @@ func _on_Countdown_timeout():
 		$CountdownTimer.queue_free()
 
 func check_health():
+	if Active.last_milestone != 0:
+		combo_spin.play("spin")
 	if Active.is_iron == true:
 		game_over()
 	if Active.is_byte and Active.health <= 0:

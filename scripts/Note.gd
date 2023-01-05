@@ -14,6 +14,9 @@ onready var flair_anims = self.get_parent().get_parent().get_node(
 onready var flair_label = self.get_parent().get_parent().get_node(
 	"ChartTracker/ChartCamera/ScoreCounter/FlairAnims/FlairLabel")
 
+onready var combo_spin = self.get_parent().get_parent().get_node(
+	"ChartTracker/ChartCamera/ComboLabel/ComboSpin")
+
 func fade():
 	$NoteColl.disabled = true
 	$NoteSprite.hide()
@@ -46,8 +49,10 @@ func tick():
 	var milestone_check_res = milestone_check()
 	if milestone_check_res != 0:
 		if milestone_check_res != 200:
+			combo_spin.play("spin")
 			flair_label.text = "- " + str(milestone_check_res) + " COMBO! -"
 		else:
+			combo_spin.play("spin")
 			flair_label.text = "- MAX COMBO! -"
 		flair_anims.play("landmark")
 		sfx_timer.start()

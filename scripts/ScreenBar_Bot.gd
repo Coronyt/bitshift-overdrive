@@ -5,7 +5,7 @@ func _physics_process(_delta):
 		SoundManager.play_sound("miss")
 		if Active.is_byte or Active.is_nybl:
 			Active.health -= 1
+		self.get_parent().get_parent().get_parent().check_health()
 		Active.combo = 0
 		Active.last_milestone = 0
-		coll.queue_free() # Missed note delay currently disabled.
-		self.get_parent().get_parent().get_parent().check_health()
+		coll.queue_free() # Missed note delay currently disabled
