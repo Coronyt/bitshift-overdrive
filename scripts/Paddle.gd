@@ -13,10 +13,10 @@ func _ready():
 		offset = offset * (float(1920) / OS.get_screen_size().x)
 	else:
 		offset = offset * (float(1920) / get_viewport_rect().size.x)
-	if Active.mod_dif_1 == "DifButton0":
+	if Active.mod_dif_1 == "hibernate":
 		$PaddleIcon.texture = paddle_XL
 		$PaddleArea/TopColl.scale = Vector2(2, 1)
-	if Active.mod_dif_1 == "DifButton3":
+	if Active.mod_dif_1 == "segfault":
 		$PaddleIcon.texture = paddle_XS
 		$PaddleArea/TopColl.scale = Vector2(0.35, 1)
 	if self.get_parent().get_parent().get_parent().cinematic == false:

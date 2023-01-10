@@ -1182,44 +1182,49 @@ margin_bottom = 58.0001
 theme = ExtResource( 4 )
 text = "Track Speed"
 
-[node name="SpeedButton1" type="CheckBox" parent="SpeedLabel"]
+[node name="speed_075" type="CheckBox" parent="SpeedLabel"]
 margin_top = 40.0
 margin_right = 80.0
 margin_bottom = 74.0
+shortcut_in_tooltip = false
 group = SubResource( 10 )
 text = "Speed 75%"
 script = ExtResource( 1 )
 
-[node name="SpeedButton2" type="CheckBox" parent="SpeedLabel"]
-margin_top = 112.0
-margin_right = 80.0
-margin_bottom = 146.0
-group = SubResource( 10 )
-text = "Speed 100%"
-script = ExtResource( 1 )
-
-[node name="SpeedButton3" type="CheckBox" parent="SpeedLabel"]
-margin_top = 184.0
-margin_right = 80.0
-margin_bottom = 218.0
-group = SubResource( 10 )
-text = "Speed 125%"
-script = ExtResource( 1 )
-
-[node name="SpeedButton4" type="CheckBox" parent="SpeedLabel"]
+[node name="speed_090" type="CheckBox" parent="SpeedLabel"]
 margin_top = 76.0
-margin_right = 80.0
+margin_right = 136.0
 margin_bottom = 110.0
+shortcut_in_tooltip = false
 group = SubResource( 10 )
 text = "Speed 90%"
 script = ExtResource( 1 )
 
-[node name="SpeedButton5" type="CheckBox" parent="SpeedLabel"]
-margin_top = 148.0
+[node name="speed_100" type="CheckBox" parent="SpeedLabel"]
+margin_top = 112.0
 margin_right = 80.0
+margin_bottom = 146.0
+shortcut_in_tooltip = false
+group = SubResource( 10 )
+text = "Speed 100%"
+script = ExtResource( 1 )
+
+[node name="speed_110" type="CheckBox" parent="SpeedLabel"]
+margin_top = 148.0
+margin_right = 148.0
 margin_bottom = 182.0
+shortcut_in_tooltip = false
 group = SubResource( 10 )
 text = "Speed 110%"
+script = ExtResource( 1 )
+
+[node name="speed_125" type="CheckBox" parent="SpeedLabel"]
+margin_top = 184.0
+margin_right = 80.0
+margin_bottom = 218.0
+shortcut_in_tooltip = false
+group = SubResource( 10 )
+text = "Speed 125%"
 script = ExtResource( 1 )
 
 [node name="DifLabel1" type="Label" parent="."]
@@ -1230,11 +1235,12 @@ margin_bottom = 58.0
 theme = ExtResource( 4 )
 text = "Difficulty"
 
-[node name="DifButton0" type="CheckBox" parent="DifLabel1"]
+[node name="hibernate" type="CheckBox" parent="DifLabel1"]
 margin_top = 40.0
 margin_right = 152.0
 margin_bottom = 74.0
 theme = ExtResource( 4 )
+shortcut_in_tooltip = false
 group = SubResource( 11 )
 text = "Hibernate"
 script = ExtResource( 1 )
@@ -1242,22 +1248,24 @@ body = "- Tracks will have reduced note count.
 - Tracks will have increased paddle size.
 - Recommended for new and casual players."
 
-[node name="DifButton1" type="CheckBox" parent="DifLabel1"]
+[node name="underclock" type="CheckBox" parent="DifLabel1"]
 margin_top = 88.0
 margin_right = 152.0
 margin_bottom = 122.0
 theme = ExtResource( 4 )
+shortcut_in_tooltip = false
 group = SubResource( 11 )
 text = "Underclock"
 script = ExtResource( 1 )
 body = "- Tracks will have reduced note count.
 - Recommended for new and casual players."
 
-[node name="DifButton2" type="CheckBox" parent="DifLabel1"]
+[node name="overdrive" type="CheckBox" parent="DifLabel1"]
 margin_top = 136.0
 margin_right = 142.0
 margin_bottom = 170.0
 theme = ExtResource( 4 )
+shortcut_in_tooltip = false
 group = SubResource( 11 )
 text = "Overdrive"
 script = ExtResource( 1 )
@@ -1267,11 +1275,12 @@ __meta__ = {
 body = "- Tracks will have standard note count.
 - Recommended for intermediate players."
 
-[node name="DifButton3" type="CheckBox" parent="DifLabel1"]
+[node name="segfault" type="CheckBox" parent="DifLabel1"]
 margin_top = 184.0
 margin_right = 142.0
 margin_bottom = 218.0
 theme = ExtResource( 4 )
+shortcut_in_tooltip = false
 group = SubResource( 11 )
 text = "Segfault"
 script = ExtResource( 1 )
@@ -1289,11 +1298,12 @@ margin_right = 730.0
 margin_bottom = 58.0
 theme = ExtResource( 4 )
 
-[node name="DifButton3" type="CheckBox" parent="DifLabel2"]
+[node name="classic" type="CheckBox" parent="DifLabel2"]
 margin_top = 40.0
 margin_right = 104.0
 margin_bottom = 74.0
 theme = ExtResource( 4 )
+shortcut_in_tooltip = false
 group = SubResource( 12 )
 text = "Classic"
 script = ExtResource( 1 )
@@ -1301,11 +1311,12 @@ body = "- You will never fail in Classic mode.
 - There is no penalty for missing notes.
 - Recommended for new and casual players."
 
-[node name="DifButtonX" type="CheckBox" parent="DifLabel2"]
+[node name="byte" type="CheckBox" parent="DifLabel2"]
 margin_top = 88.0
 margin_right = 138.0
 margin_bottom = 122.0
 theme = ExtResource( 4 )
+shortcut_in_tooltip = false
 group = SubResource( 12 )
 text = "Byte"
 script = ExtResource( 1 )
@@ -1313,11 +1324,12 @@ body = "- Start track with five energy.
 - Missing notes decreases energy.
 - Achieve combos to restore energy."
 
-[node name="DifButtonY" type="CheckBox" parent="DifLabel2"]
+[node name="nybble" type="CheckBox" parent="DifLabel2"]
 margin_top = 136.0
 margin_right = 138.0
 margin_bottom = 170.0
 theme = ExtResource( 4 )
+shortcut_in_tooltip = false
 group = SubResource( 12 )
 text = "Nybble"
 script = ExtResource( 1 )
@@ -1328,11 +1340,12 @@ body = "- Start track with three energy.
 - Missing notes decreases energy.
 - Achieve combos to restore energy."
 
-[node name="DifButton4" type="CheckBox" parent="DifLabel2"]
+[node name="ironbit" type="CheckBox" parent="DifLabel2"]
 margin_top = 184.0
 margin_right = 118.0
 margin_bottom = 218.0
 theme = ExtResource( 4 )
+shortcut_in_tooltip = false
 group = SubResource( 12 )
 text = "Ironbit"
 script = ExtResource( 1 )
@@ -1791,40 +1804,40 @@ current = true
 [connection signal="pressed" from="TrackList/TrackList/Track_D2" to="TrackList/TrackList/Track_D2" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_S1" to="TrackList/TrackList/Track_S1" method="_on_ChartButton_mouse_entered"]
 [connection signal="pressed" from="TrackList/TrackList/Track_S1" to="TrackList/TrackList/Track_S1" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="SpeedLabel/SpeedButton1" to="SpeedLabel/SpeedButton1" method="_on_GenericButton_mouse_entered"]
-[connection signal="pressed" from="SpeedLabel/SpeedButton1" to="SpeedLabel/SpeedButton1" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="SpeedLabel/SpeedButton2" to="SpeedLabel/SpeedButton2" method="_on_GenericButton_mouse_entered"]
-[connection signal="pressed" from="SpeedLabel/SpeedButton2" to="SpeedLabel/SpeedButton2" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="SpeedLabel/SpeedButton3" to="SpeedLabel/SpeedButton3" method="_on_GenericButton_mouse_entered"]
-[connection signal="pressed" from="SpeedLabel/SpeedButton3" to="SpeedLabel/SpeedButton3" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="SpeedLabel/SpeedButton4" to="SpeedLabel/SpeedButton4" method="_on_GenericButton_mouse_entered"]
-[connection signal="pressed" from="SpeedLabel/SpeedButton4" to="SpeedLabel/SpeedButton4" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="SpeedLabel/SpeedButton5" to="SpeedLabel/SpeedButton5" method="_on_GenericButton_mouse_entered"]
-[connection signal="pressed" from="SpeedLabel/SpeedButton5" to="SpeedLabel/SpeedButton5" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="DifLabel1/DifButton0" to="DifLabel1/DifButton0" method="_on_GenericButton_mouse_entered"]
-[connection signal="mouse_exited" from="DifLabel1/DifButton0" to="DifLabel1/DifButton0" method="_on_GenericButton_mouse_exited"]
-[connection signal="pressed" from="DifLabel1/DifButton0" to="DifLabel1/DifButton0" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="DifLabel1/DifButton1" to="DifLabel1/DifButton1" method="_on_GenericButton_mouse_entered"]
-[connection signal="mouse_exited" from="DifLabel1/DifButton1" to="DifLabel1/DifButton1" method="_on_GenericButton_mouse_exited"]
-[connection signal="pressed" from="DifLabel1/DifButton1" to="DifLabel1/DifButton1" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="DifLabel1/DifButton2" to="DifLabel1/DifButton2" method="_on_GenericButton_mouse_entered"]
-[connection signal="mouse_exited" from="DifLabel1/DifButton2" to="DifLabel1/DifButton2" method="_on_GenericButton_mouse_exited"]
-[connection signal="pressed" from="DifLabel1/DifButton2" to="DifLabel1/DifButton2" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="DifLabel1/DifButton3" to="DifLabel1/DifButton3" method="_on_GenericButton_mouse_entered"]
-[connection signal="mouse_exited" from="DifLabel1/DifButton3" to="DifLabel1/DifButton3" method="_on_GenericButton_mouse_exited"]
-[connection signal="pressed" from="DifLabel1/DifButton3" to="DifLabel1/DifButton3" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="DifLabel2/DifButton3" to="DifLabel2/DifButton3" method="_on_GenericButton_mouse_entered"]
-[connection signal="mouse_exited" from="DifLabel2/DifButton3" to="DifLabel2/DifButton3" method="_on_GenericButton_mouse_exited"]
-[connection signal="pressed" from="DifLabel2/DifButton3" to="DifLabel2/DifButton3" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="DifLabel2/DifButtonX" to="DifLabel2/DifButtonX" method="_on_GenericButton_mouse_entered"]
-[connection signal="mouse_exited" from="DifLabel2/DifButtonX" to="DifLabel2/DifButtonX" method="_on_GenericButton_mouse_exited"]
-[connection signal="pressed" from="DifLabel2/DifButtonX" to="DifLabel2/DifButtonX" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="DifLabel2/DifButtonY" to="DifLabel2/DifButtonY" method="_on_GenericButton_mouse_entered"]
-[connection signal="mouse_exited" from="DifLabel2/DifButtonY" to="DifLabel2/DifButtonY" method="_on_GenericButton_mouse_exited"]
-[connection signal="pressed" from="DifLabel2/DifButtonY" to="DifLabel2/DifButtonY" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="DifLabel2/DifButton4" to="DifLabel2/DifButton4" method="_on_GenericButton_mouse_entered"]
-[connection signal="mouse_exited" from="DifLabel2/DifButton4" to="DifLabel2/DifButton4" method="_on_GenericButton_mouse_exited"]
-[connection signal="pressed" from="DifLabel2/DifButton4" to="DifLabel2/DifButton4" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="SpeedLabel/speed_075" to="SpeedLabel/speed_075" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="SpeedLabel/speed_075" to="SpeedLabel/speed_075" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="SpeedLabel/speed_100" to="SpeedLabel/speed_100" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="SpeedLabel/speed_100" to="SpeedLabel/speed_100" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="SpeedLabel/speed_110" to="SpeedLabel/speed_110" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="SpeedLabel/speed_110" to="SpeedLabel/speed_110" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="SpeedLabel/speed_125" to="SpeedLabel/speed_125" method="_on_GenericButton_mouse_entered"]
+[connection signal="pressed" from="SpeedLabel/speed_125" to="SpeedLabel/speed_125" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel1/hibernate" to="DifLabel1/hibernate" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="DifLabel1/hibernate" to="DifLabel1/hibernate" method="_on_GenericButton_mouse_exited"]
+[connection signal="pressed" from="DifLabel1/hibernate" to="DifLabel1/hibernate" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_mouse_exited"]
+[connection signal="pressed" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel1/overdrive" to="DifLabel1/overdrive" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="DifLabel1/overdrive" to="DifLabel1/overdrive" method="_on_GenericButton_mouse_exited"]
+[connection signal="pressed" from="DifLabel1/overdrive" to="DifLabel1/overdrive" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel1/segfault" to="DifLabel1/segfault" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="DifLabel1/segfault" to="DifLabel1/segfault" method="_on_GenericButton_mouse_exited"]
+[connection signal="pressed" from="DifLabel1/segfault" to="DifLabel1/segfault" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel2/classic" to="DifLabel2/classic" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="DifLabel2/classic" to="DifLabel2/classic" method="_on_GenericButton_mouse_exited"]
+[connection signal="pressed" from="DifLabel2/classic" to="DifLabel2/classic" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel2/byte" to="DifLabel2/byte" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="DifLabel2/byte" to="DifLabel2/byte" method="_on_GenericButton_mouse_exited"]
+[connection signal="pressed" from="DifLabel2/byte" to="DifLabel2/byte" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel2/nybble" to="DifLabel2/nybble" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="DifLabel2/nybble" to="DifLabel2/nybble" method="_on_GenericButton_mouse_exited"]
+[connection signal="pressed" from="DifLabel2/nybble" to="DifLabel2/nybble" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_mouse_exited"]
+[connection signal="pressed" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_pressed"]
 [connection signal="mouse_entered" from="TrackPortal" to="TrackPortal" method="_on_TrackPortal_mouse_entered"]
 [connection signal="pressed" from="TrackPortal" to="TrackPortal" method="_on_TrackPortal_pressed"]
 [connection signal="animation_finished" from="TrackPortal/PortalPeelAnim" to="TrackPortal" method="_on_PortalPeelAnim_animation_finished"]

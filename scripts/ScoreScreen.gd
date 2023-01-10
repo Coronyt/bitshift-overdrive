@@ -31,22 +31,22 @@ func _on_ScoreTimer_timeout():
 	elif dif1_checked == false:
 		SoundManager.play_sound("score1")
 		dif1_checked = true
-		if Active.mod_dif_1 == "DifButton0":
+		if Active.mod_dif_1 == "hibernate":
 			Active.score = int(Active.score * 1)
 			var init_label = TextNode.instance()
 			init_label.text = "Hibernate\n" + "1x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
-		elif Active.mod_dif_1 == "DifButton1":
+		elif Active.mod_dif_1 == "underclock":
 			Active.score = int(Active.score * 1)
 			var init_label = TextNode.instance()
 			init_label.text = "Underclock\n" + "1x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
-		elif Active.mod_dif_1 == "DifButton2":
+		elif Active.mod_dif_1 == "overdrive":
 			Active.score = int(Active.score * 2)
 			var init_label = TextNode.instance()
 			init_label.text = "Overdrive\n" + "2x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
-		elif Active.mod_dif_1 == "DifButton3":
+		elif Active.mod_dif_1 == "segfault":
 			Active.score = int(Active.score * 4)
 			var init_label = TextNode.instance()
 			init_label.text = "Segfault\n" + "4x     " + str(Active.score) + "\n"

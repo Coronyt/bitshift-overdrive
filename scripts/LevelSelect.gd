@@ -38,29 +38,29 @@ func load_into_active():
 	Active.refresh()
 	Active.chart = act_chart_bkup_1
 	Active.chart_name = act_chart_bkup_2
-	var to_load_speed = $SpeedLabel/SpeedButton1.group.get_pressed_button().name
-	var to_load_dif1 = $DifLabel1/DifButton1.group.get_pressed_button().name
-	var to_load_dif2 = $DifLabel2/DifButton3.group.get_pressed_button().name
+	var to_load_speed = $SpeedLabel/speed_100.group.get_pressed_button().name
+	var to_load_dif1 = $DifLabel1/underclock.group.get_pressed_button().name
+	var to_load_dif2 = $DifLabel2/classic.group.get_pressed_button().name
 	# Storing last used modifiers.
 	Active.mod_speed = to_load_speed
 	Active.mod_dif_1 = to_load_dif1
 	Active.mod_dif_2 = to_load_dif2
 	Active.speed = to_load_speed
-	if to_load_speed == "SpeedButton1":
+	if to_load_speed == "speed_075":
 		Active.is_slow = true
-	if to_load_speed == "SpeedButton3":
+	if to_load_speed == "speed_125":
 		Active.is_fast = true
-	if to_load_dif1 == "DifButton0":
+	if to_load_dif1 == "hibernate":
 		Active.is_easy = true
-	if to_load_dif1 == "DifButton1":
+	if to_load_dif1 == "underclock":
 		Active.is_easy = true
-	if to_load_dif1 == "DifButton2":
+	if to_load_dif1 == "overdrive":
 		Active.is_easy = false
-	if to_load_dif1 == "DifButton3":
+	if to_load_dif1 == "segfault":
 		Active.is_easy = false
-	if to_load_dif2 == "DifButtonX": # Byte
+	if to_load_dif2 == "byte":
 		Active.is_byte = true
-	if to_load_dif2 == "DifButtonY": # Nybble
+	if to_load_dif2 == "nybble":
 		Active.is_nybl = true
-	if to_load_dif2 == "DifButton4": # Ironbit
+	if to_load_dif2 == "ironbit":
 		Active.is_iron = true
