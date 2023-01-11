@@ -3,4 +3,4 @@ OpenGL ES 3.0 Renderer: NVIDIA GeForce GTX 1080/PCIe/SSE2
 Async. shader compilation: OFF
  
 User preferences detected, loading from config.cfg ...
-Master bus levels at 0
+Master bus levels at -5

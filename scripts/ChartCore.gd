@@ -17,10 +17,10 @@ var last_note = 0.0
 var curr_note = 0
 
 func fetch_speed():
-	if Active.speed == "SpeedButton1":
+	if Active.speed == "speed_075":
 		speed_mult_1 = 0.75
 		speed_mult_2 = 1.25
-	if Active.speed == "SpeedButton3":
+	if Active.speed == "speed_125":
 		speed_mult_1 = 1.25
 		speed_mult_2 = 0.75
 
