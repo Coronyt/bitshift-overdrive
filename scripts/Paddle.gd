@@ -13,7 +13,7 @@ func _ready():
 		offset = offset * (float(1920) / OS.get_screen_size().x)
 	else:
 		offset = offset * (float(1920) / get_viewport_rect().size.x)
-	if Active.mod_dif_1 == "hibernate":
+	if Active.mod_dif_1 == "underclock":
 		$PaddleIcon.texture = paddle_XL
 		$PaddleArea/TopColl.scale = Vector2(2, 1)
 	if Active.mod_dif_1 == "segfault":

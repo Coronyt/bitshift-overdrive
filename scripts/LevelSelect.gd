@@ -48,13 +48,17 @@ func load_into_active():
 	Active.speed = to_load_speed
 	if to_load_speed == "speed_075":
 		Active.is_slow = true
+	if to_load_speed == "speed_090":
+		pass
+	if to_load_speed == "speed_110":
+		pass
 	if to_load_speed == "speed_125":
 		Active.is_fast = true
 	if to_load_dif1 == "hibernate":
 		# Active.is_easy = true
-		pass
+		pass # Currently disabled
 	if to_load_dif1 == "underclock":
-		Active.is_easy = true
+		Active.is_easy = false
 	if to_load_dif1 == "overdrive":
 		Active.is_easy = false
 	if to_load_dif1 == "segfault":

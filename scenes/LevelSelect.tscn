@@ -1235,50 +1235,34 @@ margin_bottom = 58.0
 theme = ExtResource( 4 )
 text = "Difficulty"
 
-[node name="hibernate" type="CheckBox" parent="DifLabel1"]
+[node name="underclock" type="CheckBox" parent="DifLabel1"]
 margin_top = 40.0
 margin_right = 152.0
 margin_bottom = 74.0
 theme = ExtResource( 4 )
 shortcut_in_tooltip = false
 group = SubResource( 11 )
-text = "Hibernate"
-script = ExtResource( 1 )
-body = "- Tracks will have reduced note count.
-- Tracks will have increased paddle size.
-- Recommended for new and casual players."
-
-[node name="underclock" type="CheckBox" parent="DifLabel1"]
-margin_top = 88.0
-margin_right = 152.0
-margin_bottom = 122.0
-theme = ExtResource( 4 )
-shortcut_in_tooltip = false
-group = SubResource( 11 )
 text = "Underclock"
 script = ExtResource( 1 )
-body = "- Tracks will have reduced note count.
+body = "- Tracks will have increased paddle size.
 - Recommended for new and casual players."
 
 [node name="overdrive" type="CheckBox" parent="DifLabel1"]
-margin_top = 136.0
+margin_top = 88.0
 margin_right = 142.0
-margin_bottom = 170.0
+margin_bottom = 122.0
 theme = ExtResource( 4 )
 shortcut_in_tooltip = false
 group = SubResource( 11 )
 text = "Overdrive"
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-body = "- Tracks will have standard note count.
+body = "- Tracks will have standard paddle size.
 - Recommended for intermediate players."
 
 [node name="segfault" type="CheckBox" parent="DifLabel1"]
-margin_top = 184.0
+margin_top = 136.0
 margin_right = 142.0
-margin_bottom = 218.0
+margin_bottom = 170.0
 theme = ExtResource( 4 )
 shortcut_in_tooltip = false
 group = SubResource( 11 )
@@ -1287,8 +1271,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-body = "- Tracks will have standard note count.
-- Tracks will have reduced paddle size.
+body = "- Tracks will have reduced paddle size.
 - Recommended for adept players only."
 
 [node name="DifLabel2" type="Label" parent="."]
@@ -1312,9 +1295,9 @@ body = "- You will never fail in Classic mode.
 - Recommended for new and casual players."
 
 [node name="byte" type="CheckBox" parent="DifLabel2"]
-margin_top = 88.0
+margin_top = 80.0
 margin_right = 138.0
-margin_bottom = 122.0
+margin_bottom = 114.0
 theme = ExtResource( 4 )
 shortcut_in_tooltip = false
 group = SubResource( 12 )
@@ -1325,25 +1308,22 @@ body = "- Start track with five energy.
 - Achieve combos to restore energy."
 
 [node name="nybble" type="CheckBox" parent="DifLabel2"]
-margin_top = 136.0
+margin_top = 120.0
 margin_right = 138.0
-margin_bottom = 170.0
+margin_bottom = 154.0
 theme = ExtResource( 4 )
 shortcut_in_tooltip = false
 group = SubResource( 12 )
 text = "Nybble"
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 body = "- Start track with three energy.
 - Missing notes decreases energy.
 - Achieve combos to restore energy."
 
 [node name="ironbit" type="CheckBox" parent="DifLabel2"]
-margin_top = 184.0
+margin_top = 160.0
 margin_right = 118.0
-margin_bottom = 218.0
+margin_bottom = 194.0
 theme = ExtResource( 4 )
 shortcut_in_tooltip = false
 group = SubResource( 12 )
@@ -1814,9 +1794,6 @@ current = true
 [connection signal="pressed" from="SpeedLabel/speed_110" to="SpeedLabel/speed_110" method="_on_GenericButton_pressed"]
 [connection signal="mouse_entered" from="SpeedLabel/speed_125" to="SpeedLabel/speed_125" method="_on_GenericButton_mouse_entered"]
 [connection signal="pressed" from="SpeedLabel/speed_125" to="SpeedLabel/speed_125" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="DifLabel1/hibernate" to="DifLabel1/hibernate" method="_on_GenericButton_mouse_entered"]
-[connection signal="mouse_exited" from="DifLabel1/hibernate" to="DifLabel1/hibernate" method="_on_GenericButton_mouse_exited"]
-[connection signal="pressed" from="DifLabel1/hibernate" to="DifLabel1/hibernate" method="_on_GenericButton_pressed"]
 [connection signal="mouse_entered" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_pressed"]
