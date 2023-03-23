@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/coy_glance_110.ogg-8ba2246c48df7f6f961f8e37f877a87f.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/coy_glance_110.ogg"
+dest_files=[ "res://.import/coy_glance_110.ogg-8ba2246c48df7f6f961f8e37f877a87f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

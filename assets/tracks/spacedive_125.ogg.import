@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/spacedive_125.ogg-3897f39a3cd56a48abf2ad3830805070.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/spacedive_125.ogg"
+dest_files=[ "res://.import/spacedive_125.ogg-3897f39a3cd56a48abf2ad3830805070.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

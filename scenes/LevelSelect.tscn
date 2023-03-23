@@ -1006,7 +1006,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 diff_desc = "2.0 (Moderate)"
-chart_key = "breezy"
+chart_key = "breeze"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_B1"]
 visible = false
@@ -1031,7 +1031,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 diff_desc = "2.5 (Moderate)"
-chart_key = "feelingcoy"
+chart_key = "coy_glance"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_B2"]
 visible = false
@@ -1070,7 +1070,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 diff_desc = "4.0 (Hard)"
-chart_key = "brightside"
+chart_key = "brighter"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_C1"]
 visible = false
@@ -1109,7 +1109,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 diff_desc = "4.5 (Insane)"
-chart_key = "bachjam"
+chart_key = "baroque"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_D1"]
 visible = false
@@ -1134,7 +1134,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 diff_desc = "4.5 (Insane)"
-chart_key = "stratofly"
+chart_key = "strato"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_D2"]
 visible = false

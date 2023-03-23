@@ -1,14 +1,6 @@
-Godot Engine v3.5.1.stable.official.6fed1ffa3 - https://godotengine.org
+Godot Engine v3.5.2.stable.official.170ba337a - https://godotengine.org
 OpenGL ES 3.0 Renderer: NVIDIA GeForce GTX 1080/PCIe/SSE2
 Async. shader compilation: OFF
  
 User preferences detected, loading from config.cfg ...
-Master bus levels at -30
-ERROR: (Node not found: "ScoreTimer" (relative to "/root/ScoreScreen").)
-   at: get_node (scene/main/node.cpp:1465) - Method failed. Returning: nullptr
-ERROR: (Node not found: "ScoreTimer" (relative to "/root/ScoreScreen").)
-   at: get_node (scene/main/node.cpp:1465) - Method failed. Returning: nullptr
-ERROR: (Node not found: "ScoreTimer" (relative to "/root/ScoreScreen").)
-   at: get_node (scene/main/node.cpp:1465) - Method failed. Returning: nullptr
-ERROR: (Node not found: "ScoreTimer" (relative to "/root/ScoreScreen").)
-   at: get_node (scene/main/node.cpp:1465) - Method failed. Returning: nullptr
+Master bus levels at -3

@@ -6,34 +6,52 @@ var track_select_last_pos = 0.0
 const track_tscn = preload("res://scenes/global/Tracks.tscn")
 
 var track_dict_075
+var track_dict_090
 var track_dict_100
+var track_dict_110
 var track_dict_125
 
 func _ready():
 	var tracks = Tracks.get_children()
 	track_dict_075 = {
-		"spacedive" : fetch_track("supermassive_spacedive_075"),
-		"breezy" : fetch_track("breeze_in_the_blackest_forest_075"),
-		"feelingcoy" : fetch_track("coy_glance_075"),
-		"brightside" : fetch_track("on_the_other_side_075"),
-		"bachjam" : fetch_track("bitshift_baroque_075"),
-		"stratofly" : fetch_track("catch_the_stratosphere_075"),
+		"spacedive" : fetch_track("spacedive_075"),
+		"breeze" : fetch_track("breeze_075"),
+		"coy_glance" : fetch_track("coy_glance_075"),
+		"brighter" : fetch_track("brighter_075"),
+		"baroque" : fetch_track("baroque_075"),
+		"strato" : fetch_track("strato_075"),
+	}
+	track_dict_090 = {
+		"spacedive" : fetch_track("spacedive_090"),
+		"breeze" : fetch_track("breeze_090"),
+		"coy_glance" : fetch_track("coy_glance_090"),
+		"brighter" : fetch_track("brighter_090"),
+		"baroque" : fetch_track("baroque_090"),
+		"strato" : fetch_track("strato_090"),
 	}
 	track_dict_100 = {
-		"spacedive" : fetch_track("supermassive_spacedive_100"),
-		"breezy" : fetch_track("breeze_in_the_blackest_forest_100"),
-		"feelingcoy" : fetch_track("coy_glance_100"),
-		"brightside" : fetch_track("on_the_other_side_100"),
-		"bachjam" : fetch_track("bitshift_baroque_100"),
-		"stratofly" : fetch_track("catch_the_stratosphere_100"),
+		"spacedive" : fetch_track("spacedive_100"),
+		"breeze" : fetch_track("breeze_100"),
+		"coy_glance" : fetch_track("coy_glance_100"),
+		"brighter" : fetch_track("brighter_100"),
+		"baroque" : fetch_track("baroque_100"),
+		"strato" : fetch_track("strato_100"),
+	}
+	track_dict_110 = {
+		"spacedive" : fetch_track("spacedive_110"),
+		"breeze" : fetch_track("breeze_110"),
+		"coy_glance" : fetch_track("coy_glance_110"),
+		"brighter" : fetch_track("brighter_110"),
+		"baroque" : fetch_track("baroque_110"),
+		"strato" : fetch_track("strato_110"),
 	}
 	track_dict_125 = {
-		"spacedive" : fetch_track("supermassive_spacedive_125"),
-		"breezy" : fetch_track("breeze_in_the_blackest_forest_125"),
-		"feelingcoy" : fetch_track("coy_glance_125"),
-		"brightside" : fetch_track("on_the_other_side_125"),
-		"bachjam" : fetch_track("bitshift_baroque_125"),
-		"stratofly" : fetch_track("catch_the_stratosphere_125"),
+		"spacedive" : fetch_track("spacedive_075"),
+		"breeze" : fetch_track("breeze_075"),
+		"coy_glance" : fetch_track("coy_glance_075"),
+		"brighter" : fetch_track("brighter_075"),
+		"baroque" : fetch_track("baroque_075"),
+		"strato" : fetch_track("strato_075"),
 	}
 
 func fetch_track(target_audio):

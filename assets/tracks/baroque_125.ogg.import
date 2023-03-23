@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/baroque_125.ogg-6484fa3403a5df2e0eaac49893c63ca5.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/baroque_125.ogg"
+dest_files=[ "res://.import/baroque_125.ogg-6484fa3403a5df2e0eaac49893c63ca5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

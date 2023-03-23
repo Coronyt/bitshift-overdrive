@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/brighter_090.ogg-2d23e56142be24b5a138b2c2d25d8df6.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/brighter_090.ogg"
+dest_files=[ "res://.import/brighter_090.ogg-2d23e56142be24b5a138b2c2d25d8df6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
