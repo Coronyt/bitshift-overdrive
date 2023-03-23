@@ -47,13 +47,13 @@ func load_into_active():
 	Active.mod_dif_2 = to_load_dif2
 	Active.speed = to_load_speed
 	if to_load_speed == "speed_075":
-		Active.is_slow = true
+		Active.is_075 = true
 	if to_load_speed == "speed_090":
-		pass
+		Active.is_090 = true
 	if to_load_speed == "speed_110":
-		pass
+		Active.is_110 = true
 	if to_load_speed == "speed_125":
-		Active.is_fast = true
+		Active.is_125 = true
 	if to_load_dif1 == "hibernate":
 		# Active.is_easy = true
 		pass # Currently disabled

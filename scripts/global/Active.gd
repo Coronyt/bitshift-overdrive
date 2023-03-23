@@ -8,8 +8,10 @@ var mod_dif_2 = ""
 var mod_speed = ""
 
 # Currently active modifiers.
-var is_slow = false
-var is_fast = false
+var is_075 = false
+var is_090 = false
+var is_110 = false
+var is_125 = false
 var is_easy = false
 var is_byte = false
 var is_nybl = false
@@ -39,8 +41,10 @@ func _ready():
 		OS.window_fullscreen = true
 
 func refresh():
-	is_slow = false
-	is_fast = false
+	is_075 = false
+	is_090 = false
+	is_110 = false
+	is_125 = false
 	is_easy = false
 	is_byte = false
 	is_nybl = false

@@ -1,49 +1,34 @@
 extends Node
 
 const spacedive = preload("res://scripts/charts/spacedive.gd")
-const breezy = preload("res://scripts/charts/breezy.gd")
-const feelingcoy = preload("res://scripts/charts/feelingcoy.gd")
-const brightside = preload("res://scripts/charts/brightside.gd")
-const bachjam = preload("res://scripts/charts/bachjam.gd")
-const stratofly = preload("res://scripts/charts/stratofly.gd")
-
-const spacedive_uc = preload("res://scripts/charts/spacedive_uc.gd")
-const breezy_uc = preload("res://scripts/charts/breezy_uc.gd")
-const feelingcoy_uc = preload("res://scripts/charts/feelingcoy_uc.gd")
-const brightside_uc = preload("res://scripts/charts/brightside_uc.gd")
-const bachjam_uc = preload("res://scripts/charts/bachjam_uc.gd")
-const stratofly_uc = preload("res://scripts/charts/stratofly_uc.gd")
+const breeze = preload("res://scripts/charts/breeze.gd")
+const coy_glance = preload("res://scripts/charts/coy_glance.gd")
+const brighter = preload("res://scripts/charts/brighter.gd")
+const baroque = preload("res://scripts/charts/baroque.gd")
+const strato = preload("res://scripts/charts/strato.gd")
 
 var chart_dict = {
 	"spacedive" : spacedive,
-	"breezy" : breezy,
-	"feelingcoy" : feelingcoy,
-	"brightside" : brightside,
-	"bachjam" : bachjam,
-	"stratofly" : stratofly,
-}
-
-var chart_easy_dict = {
-	"spacedive" : spacedive_uc,
-	"breezy" : breezy_uc,
-	"feelingcoy" : feelingcoy_uc,
-	"brightside" : brightside_uc,
-	"bachjam" : bachjam_uc,
-	"stratofly" : stratofly,
+	"breeze" : breeze,
+	"coy_glance" : coy_glance,
+	"brighter" : brighter,
+	"baroque" : baroque,
+	"strato" : strato,
 }
 
 var chart_tscn_dict = {
 	"spacedive" : "res://scenes/charts/spacedive.tscn",
-	"breezy" : "res://scenes/charts/breezy.tscn",
-	"feelingcoy" : "res://scenes/charts/feelingcoy.tscn",
-	"brightside" : "res://scenes/charts/brightside.tscn",
-	"bachjam" : "res://scenes/charts/bachjam.tscn",
-	"stratofly" : "res://scenes/charts/stratofly.tscn",
+	"breeze" : "res://scenes/charts/breeze.tscn",
+	"coy_glance" : "res://scenes/charts/coy_glance.tscn",
+	"brighter" : "res://scenes/charts/brighter.tscn",
+	"baroque" : "res://scenes/charts/baroque.tscn",
+	"strato" : "res://scenes/charts/strato.tscn",
 }
 
 func fetch_chart(chart_ID):
 	if Active.is_easy == true:
-		return chart_easy_dict[chart_ID].chart
+		# return chart_easy_dict[chart_ID].chart
+		pass
 	return chart_dict[chart_ID].chart
 	
 func fetch_chart_tscn(chart_tscn_ID):

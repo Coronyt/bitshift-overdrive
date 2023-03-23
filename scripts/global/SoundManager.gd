@@ -46,12 +46,12 @@ func _ready():
 		"strato" : fetch_track("strato_110"),
 	}
 	track_dict_125 = {
-		"spacedive" : fetch_track("spacedive_075"),
-		"breeze" : fetch_track("breeze_075"),
-		"coy_glance" : fetch_track("coy_glance_075"),
-		"brighter" : fetch_track("brighter_075"),
-		"baroque" : fetch_track("baroque_075"),
-		"strato" : fetch_track("strato_075"),
+		"spacedive" : fetch_track("spacedive_125"),
+		"breeze" : fetch_track("breeze_125"),
+		"coy_glance" : fetch_track("coy_glance_125"),
+		"brighter" : fetch_track("brighter_125"),
+		"baroque" : fetch_track("baroque_125"),
+		"strato" : fetch_track("strato_125"),
 	}
 
 func fetch_track(target_audio):
