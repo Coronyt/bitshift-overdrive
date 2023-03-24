@@ -1290,8 +1290,8 @@ shortcut_in_tooltip = false
 group = SubResource( 12 )
 text = "Classic"
 script = ExtResource( 1 )
-body = "- You will never fail in Classic mode.
-- There is no penalty for missing notes.
+body = "- There is no penalty for missing notes.
+- You cannot fail a track in Classic mode.
 - Recommended for new and casual players."
 
 [node name="byte" type="CheckBox" parent="DifLabel2"]
@@ -1690,12 +1690,9 @@ theme = ExtResource( 4 )
 text = "HIGH SCORES AND
 COMPLETION MARKS
 NOT AVAILABLE
-IN ALPHA BUILD"
+IN THIS BUILD"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VaporCam" type="Camera" parent="."]
 transform = Transform( -1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0, 1, 0 )
