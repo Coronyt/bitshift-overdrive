@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/tracks/baroque_075.ogg" type="AudioStream" id=1]
 [ext_resource path="res://assets/tracks/spacedive_125.ogg" type="AudioStream" id=2]
@@ -18,14 +18,32 @@
 [ext_resource path="res://assets/tracks/baroque_125.ogg" type="AudioStream" id=16]
 [ext_resource path="res://assets/tracks/strato_075.ogg" type="AudioStream" id=17]
 [ext_resource path="res://assets/tracks/strato_125.ogg" type="AudioStream" id=18]
+[ext_resource path="res://assets/tracks/spacedive_090.ogg" type="AudioStream" id=19]
+[ext_resource path="res://assets/tracks/spacedive_110.ogg" type="AudioStream" id=20]
+[ext_resource path="res://assets/tracks/strato_110.ogg" type="AudioStream" id=21]
+[ext_resource path="res://assets/tracks/baroque_110.ogg" type="AudioStream" id=22]
+[ext_resource path="res://assets/tracks/baroque_090.ogg" type="AudioStream" id=23]
+[ext_resource path="res://assets/tracks/coy_glance_090.ogg" type="AudioStream" id=24]
+[ext_resource path="res://assets/tracks/strato_090.ogg" type="AudioStream" id=25]
+[ext_resource path="res://assets/tracks/brighter_090.ogg" type="AudioStream" id=26]
+[ext_resource path="res://assets/tracks/coy_glance_110.ogg" type="AudioStream" id=27]
+[ext_resource path="res://assets/tracks/brighter_110.ogg" type="AudioStream" id=28]
+[ext_resource path="res://assets/tracks/breeze_090.ogg" type="AudioStream" id=29]
+[ext_resource path="res://assets/tracks/breeze_110.ogg" type="AudioStream" id=30]
 
 [node name="Tracks" type="Node"]
 
 [node name="spacedive_075" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 
+[node name="spacedive_090" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+
 [node name="spacedive_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+
+[node name="spacedive_110" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
 
 [node name="spacedive_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
@@ -33,8 +51,14 @@ stream = ExtResource( 2 )
 [node name="baroque_075" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 
+[node name="baroque_090" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+
 [node name="baroque_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+
+[node name="baroque_110" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
 
 [node name="baroque_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
@@ -42,8 +66,14 @@ stream = ExtResource( 16 )
 [node name="coy_glance_075" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
 
+[node name="coy_glance_090" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+
 [node name="coy_glance_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+
+[node name="coy_glance_110" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 27 )
 
 [node name="coy_glance_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
@@ -51,8 +81,14 @@ stream = ExtResource( 11 )
 [node name="strato_075" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 17 )
 
+[node name="strato_090" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+
 [node name="strato_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
+
+[node name="strato_110" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
 
 [node name="strato_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 18 )
@@ -60,8 +96,14 @@ stream = ExtResource( 18 )
 [node name="brighter_075" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 
+[node name="brighter_090" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 26 )
+
 [node name="brighter_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+
+[node name="brighter_110" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
 
 [node name="brighter_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
@@ -69,8 +111,14 @@ stream = ExtResource( 15 )
 [node name="breeze_075" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
 
+[node name="breeze_090" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 29 )
+
 [node name="breeze_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
+
+[node name="breeze_110" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 30 )
 
 [node name="breeze_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )

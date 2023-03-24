@@ -75,11 +75,11 @@ func stop_track():
 	if Active.speed == "speed_075":
 		SoundManager.track_dict_075[Active.chart].stop()
 	if Active.speed == "speed_090":
-		SoundManager.track_dict_075[Active.chart].stop()
+		SoundManager.track_dict_090[Active.chart].stop()
 	if Active.speed == "speed_100":
 		SoundManager.track_dict_100[Active.chart].stop()
 	if Active.speed == "speed_110":
-		SoundManager.track_dict_075[Active.chart].stop()
+		SoundManager.track_dict_110[Active.chart].stop()
 	if Active.speed == "speed_125":
 		SoundManager.track_dict_125[Active.chart].stop()
 

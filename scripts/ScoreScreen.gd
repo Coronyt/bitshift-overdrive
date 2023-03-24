@@ -77,12 +77,22 @@ func _on_ScoreTimer_timeout():
 	elif speed_checked == false:
 		SoundManager.play_sound("score1")
 		speed_checked = true
-		if Active.is_slow == true:
+		if Active.is_075 == true:
 			Active.score = int(Active.score * 1)
 			var init_label = TextNode.instance()
 			init_label.text = "Speed 75%\n" + "1x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
-		elif Active.is_fast == true:
+		elif Active.is_090 == true:
+			Active.score = int(Active.score * 1)
+			var init_label = TextNode.instance()
+			init_label.text = "Speed 90%\n" + "1x     " + str(Active.score) + "\n"
+			$ScoreBox.add_child(init_label)
+		elif Active.is_110 == true:
+			Active.score = int(Active.score * 2)
+			var init_label = TextNode.instance()
+			init_label.text = "Speed 110%\n" + "2x     " + str(Active.score) + "\n"
+			$ScoreBox.add_child(init_label)
+		elif Active.is_125 == true:
 			Active.score = int(Active.score * 4)
 			var init_label = TextNode.instance()
 			init_label.text = "Speed 125%\n" + "4x     " + str(Active.score) + "\n"

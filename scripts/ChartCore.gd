@@ -20,6 +20,12 @@ func fetch_speed():
 	if Active.speed == "speed_075":
 		speed_mult_1 = 0.75
 		speed_mult_2 = 1.25
+	if Active.speed == "speed_090":
+		speed_mult_1 = 0.90
+		speed_mult_2 = 1.10
+	if Active.speed == "speed_110":
+		speed_mult_1 = 1.10
+		speed_mult_2 = 0.90
 	if Active.speed == "speed_125":
 		speed_mult_1 = 1.25
 		speed_mult_2 = 0.75
