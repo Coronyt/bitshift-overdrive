@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://assets/tracks/baroque_075.ogg" type="AudioStream" id=1]
 [ext_resource path="res://assets/tracks/spacedive_125.ogg" type="AudioStream" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://assets/tracks/brighter_110.ogg" type="AudioStream" id=28]
 [ext_resource path="res://assets/tracks/breeze_090.ogg" type="AudioStream" id=29]
 [ext_resource path="res://assets/tracks/breeze_110.ogg" type="AudioStream" id=30]
+[ext_resource path="res://assets/tracks/devilcat_100.ogg" type="AudioStream" id=31]
 
 [node name="Tracks" type="Node"]
 
@@ -122,3 +123,6 @@ stream = ExtResource( 30 )
 
 [node name="breeze_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+
+[node name="devilcat_100" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )

@@ -6,6 +6,7 @@ const coy_glance = preload("res://scripts/charts/coy_glance.gd")
 const brighter = preload("res://scripts/charts/brighter.gd")
 const baroque = preload("res://scripts/charts/baroque.gd")
 const strato = preload("res://scripts/charts/strato.gd")
+const devilcat = preload("res://scripts/charts/devilcat.gd")
 
 var chart_dict = {
 	"spacedive" : spacedive,
@@ -14,6 +15,7 @@ var chart_dict = {
 	"brighter" : brighter,
 	"baroque" : baroque,
 	"strato" : strato,
+	"devilcat" : devilcat,
 }
 
 var chart_tscn_dict = {
@@ -23,6 +25,7 @@ var chart_tscn_dict = {
 	"brighter" : "res://scenes/charts/brighter.tscn",
 	"baroque" : "res://scenes/charts/baroque.tscn",
 	"strato" : "res://scenes/charts/strato.tscn",
+	"devilcat" : "res://scenes/charts/devilcat.tscn",
 }
 
 func fetch_chart(chart_ID):
