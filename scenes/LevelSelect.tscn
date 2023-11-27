@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -30,31 +30,6 @@
 [ext_resource path="res://scripts/interface/buttons/PrefButton.gd" type="Script" id=28]
 [ext_resource path="res://scripts/interface/VolSlider_Master.gd" type="Script" id=29]
 [ext_resource path="res://scripts/interface/GenericSlider.gd" type="Script" id=30]
-
-[sub_resource type="DynamicFont" id=40]
-size = 32
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 14 )
-
-[sub_resource type="DynamicFont" id=41]
-size = 4
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 14 )
-
-[sub_resource type="DynamicFont" id=39]
-size = 24
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 14 )
-
-[sub_resource type="StyleBoxFlat" id=38]
-content_margin_left = 1.0
-content_margin_top = 2.0
-content_margin_bottom = 4.0
-bg_color = Color( 0.176471, 0.176471, 0.176471, 0.470588 )
-anti_aliasing = false
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 7 )
@@ -900,7 +875,7 @@ scroll_horizontal_enabled = false
 
 [node name="TrackList" type="VBoxContainer" parent="TrackList"]
 margin_right = 448.0
-margin_bottom = 723.0
+margin_bottom = 608.0
 
 [node name="TrackListTween" type="Tween" parent="TrackList/TrackList"]
 
@@ -911,48 +886,9 @@ one_shot = true
 [node name="PreviewTimer2" type="Timer" parent="TrackList/TrackList/TrackListTween"]
 one_shot = true
 
-[node name="SectionHeader" type="Label" parent="TrackList/TrackList"]
+[node name="Track_1" type="Button" parent="TrackList/TrackList"]
 margin_right = 448.0
-margin_bottom = 26.0
-theme = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 40 )
-text = "Track Select"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="BufferLabel_1" type="Label" parent="TrackList/TrackList"]
-margin_top = 30.0
-margin_right = 448.0
-margin_bottom = 34.0
-theme = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 41 )
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="SectionLabel_1" type="Label" parent="TrackList/TrackList"]
-margin_top = 38.0
-margin_right = 448.0
-margin_bottom = 63.0
-theme = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 39 )
-custom_styles/normal = SubResource( 38 )
-text = "   BASIC"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Track_A1" type="Button" parent="TrackList/TrackList"]
-margin_top = 67.0
-margin_right = 448.0
-margin_bottom = 131.0
+margin_bottom = 64.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -969,29 +905,15 @@ __meta__ = {
 diff_desc = "1.5 (Basic)"
 chart_key = "spacedive"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_A1"]
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_1"]
 visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 17 )
 
-[node name="SectionLabel_2" type="Label" parent="TrackList/TrackList"]
-margin_top = 135.0
+[node name="Track_2" type="Button" parent="TrackList/TrackList"]
+margin_top = 68.0
 margin_right = 448.0
-margin_bottom = 160.0
-theme = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 39 )
-custom_styles/normal = SubResource( 38 )
-text = "   MODERATE"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Track_B1" type="Button" parent="TrackList/TrackList"]
-margin_top = 164.0
-margin_right = 448.0
-margin_bottom = 228.0
+margin_bottom = 132.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1008,54 +930,15 @@ __meta__ = {
 diff_desc = "2.0 (Moderate)"
 chart_key = "breeze"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_B1"]
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_2"]
 visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 23 )
 
-[node name="Track_B2" type="Button" parent="TrackList/TrackList"]
-margin_top = 232.0
+[node name="Track_3" type="Button" parent="TrackList/TrackList"]
+margin_top = 136.0
 margin_right = 448.0
-margin_bottom = 296.0
-rect_min_size = Vector2( 448, 64 )
-theme = ExtResource( 4 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 8 )
-custom_styles/normal = SubResource( 5 )
-toggle_mode = true
-text = "A Coy Glance in Winter"
-script = ExtResource( 22 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-diff_desc = "2.5 (Moderate)"
-chart_key = "coy_glance"
-
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_B2"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 3 )
-
-[node name="SectionLabel_3" type="Label" parent="TrackList/TrackList"]
-margin_top = 300.0
-margin_right = 448.0
-margin_bottom = 325.0
-theme = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 39 )
-custom_styles/normal = SubResource( 38 )
-text = "   HARD"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Track_C1" type="Button" parent="TrackList/TrackList"]
-margin_top = 329.0
-margin_right = 448.0
-margin_bottom = 393.0
+margin_bottom = 200.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1072,15 +955,40 @@ __meta__ = {
 diff_desc = "4.0 (Hard)"
 chart_key = "brighter"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_C1"]
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_3"]
 visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 25 )
 
-[node name="Track_C2" type="Button" parent="TrackList/TrackList"]
-margin_top = 397.0
+[node name="Track_4" type="Button" parent="TrackList/TrackList"]
+margin_top = 204.0
 margin_right = 448.0
-margin_bottom = 461.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 8 )
+custom_styles/normal = SubResource( 5 )
+toggle_mode = true
+text = "A Coy Glance in Winter"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+diff_desc = "2.5 (Moderate)"
+chart_key = "coy_glance"
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_4"]
+visible = false
+position = Vector2( 24, 14 )
+texture = ExtResource( 3 )
+
+[node name="Track_5" type="Button" parent="TrackList/TrackList"]
+margin_top = 272.0
+margin_right = 448.0
+margin_bottom = 336.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1094,29 +1002,15 @@ script = ExtResource( 22 )
 diff_desc = "4.0 (Hard)"
 chart_key = "devilcat"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_C2"]
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_5"]
 visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 25 )
 
-[node name="SectionLabel_4" type="Label" parent="TrackList/TrackList"]
-margin_top = 465.0
+[node name="Track_6" type="Button" parent="TrackList/TrackList"]
+margin_top = 340.0
 margin_right = 448.0
-margin_bottom = 490.0
-theme = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 39 )
-custom_styles/normal = SubResource( 38 )
-text = "   INSANE"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Track_D1" type="Button" parent="TrackList/TrackList"]
-margin_top = 494.0
-margin_right = 448.0
-margin_bottom = 558.0
+margin_bottom = 404.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1133,15 +1027,15 @@ __meta__ = {
 diff_desc = "4.5 (Insane)"
 chart_key = "baroque"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_D1"]
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_6"]
 visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 27 )
 
-[node name="Track_D2" type="Button" parent="TrackList/TrackList"]
-margin_top = 562.0
+[node name="Track_7" type="Button" parent="TrackList/TrackList"]
+margin_top = 408.0
 margin_right = 448.0
-margin_bottom = 626.0
+margin_bottom = 472.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1158,29 +1052,15 @@ __meta__ = {
 diff_desc = "4.5 (Insane)"
 chart_key = "strato"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_D2"]
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_7"]
 visible = false
 position = Vector2( 24, 14 )
 texture = ExtResource( 27 )
 
-[node name="SectionLabel_5" type="Label" parent="TrackList/TrackList"]
-margin_top = 630.0
+[node name="Track_8" type="Button" parent="TrackList/TrackList"]
+margin_top = 476.0
 margin_right = 448.0
-margin_bottom = 655.0
-theme = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 39 )
-custom_styles/normal = SubResource( 38 )
-text = "   SPECIAL"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Track_S1" type="Button" parent="TrackList/TrackList"]
-margin_top = 659.0
-margin_right = 448.0
-margin_bottom = 723.0
+margin_bottom = 540.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -1188,13 +1068,44 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
-disabled = true
 toggle_mode = true
-text = "Overdrive Run - All Tracks"
+text = "Mistfall by Moonlight"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+diff_desc = "2.5 (Moderate)"
+chart_key = "coy_glance"
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_8"]
+visible = false
+position = Vector2( 24, 14 )
+texture = ExtResource( 27 )
+
+[node name="Track_9" type="Button" parent="TrackList/TrackList"]
+margin_top = 544.0
+margin_right = 448.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+toggle_mode = true
+text = "Scarlet Serenade"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+diff_desc = "4.0 (Hard)"
+chart_key = "coy_glance"
+
+[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_9"]
+visible = false
+position = Vector2( 24, 14 )
+texture = ExtResource( 27 )
 
 [node name="SpeedLabel" type="Label" parent="."]
 margin_left = 812.0
@@ -1203,16 +1114,6 @@ margin_right = 966.0
 margin_bottom = 58.0001
 theme = ExtResource( 4 )
 text = "Track Speed"
-
-[node name="speed_075" type="CheckBox" parent="SpeedLabel"]
-visible = false
-margin_top = 40.0
-margin_right = 80.0
-margin_bottom = 74.0
-shortcut_in_tooltip = false
-group = SubResource( 10 )
-text = "Speed 75%"
-script = ExtResource( 1 )
 
 [node name="speed_090" type="CheckBox" parent="SpeedLabel"]
 margin_top = 40.0
@@ -1239,16 +1140,6 @@ margin_bottom = 170.0
 shortcut_in_tooltip = false
 group = SubResource( 10 )
 text = "Faster"
-script = ExtResource( 1 )
-
-[node name="speed_125" type="CheckBox" parent="SpeedLabel"]
-visible = false
-margin_top = 184.0
-margin_right = 80.0
-margin_bottom = 218.0
-shortcut_in_tooltip = false
-group = SubResource( 10 )
-text = "Speed 125%"
 script = ExtResource( 1 )
 
 [node name="DifLabel1" type="Label" parent="."]
@@ -1318,36 +1209,23 @@ body = "- There is no penalty for missing notes.
 - You cannot fail a track in Classic mode.
 - Recommended for new and casual players."
 
-[node name="byte" type="CheckBox" parent="DifLabel2"]
-margin_top = 80.0
+[node name="arcade" type="CheckBox" parent="DifLabel2"]
+margin_top = 88.0
 margin_right = 138.0
-margin_bottom = 114.0
+margin_bottom = 122.0
 theme = ExtResource( 4 )
 shortcut_in_tooltip = false
 group = SubResource( 12 )
-text = "Byte"
+text = "Arcade"
 script = ExtResource( 1 )
 body = "- Start track with five energy.
 - Missing notes decreases energy.
 - Achieve combos to restore energy."
 
-[node name="nybble" type="CheckBox" parent="DifLabel2"]
-margin_top = 120.0
-margin_right = 138.0
-margin_bottom = 154.0
-theme = ExtResource( 4 )
-shortcut_in_tooltip = false
-group = SubResource( 12 )
-text = "Nybble"
-script = ExtResource( 1 )
-body = "- Start track with three energy.
-- Missing notes decreases energy.
-- Achieve combos to restore energy."
-
 [node name="ironbit" type="CheckBox" parent="DifLabel2"]
-margin_top = 160.0
+margin_top = 136.0
 margin_right = 118.0
-margin_bottom = 194.0
+margin_bottom = 170.0
 theme = ExtResource( 4 )
 shortcut_in_tooltip = false
 group = SubResource( 12 )
@@ -1789,34 +1667,32 @@ current = true
 
 [node name="CRT" parent="." instance=ExtResource( 13 )]
 
-[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer1" to="TrackList/TrackList/Track_A1" method="_on_PreviewTimer1_timeout"]
-[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer2" to="TrackList/TrackList/Track_A1" method="_on_PreviewTimer2_timeout"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_A1" to="TrackList/TrackList/Track_A1" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_A1" to="TrackList/TrackList/Track_A1" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_B1" to="TrackList/TrackList/Track_B1" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_B1" to="TrackList/TrackList/Track_B1" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_B2" to="TrackList/TrackList/Track_B2" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_B2" to="TrackList/TrackList/Track_B2" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_C1" to="TrackList/TrackList/Track_C1" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_C1" to="TrackList/TrackList/Track_C1" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_C2" to="TrackList/TrackList/Track_C2" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_C2" to="TrackList/TrackList/Track_C2" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_D1" to="TrackList/TrackList/Track_D1" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_D1" to="TrackList/TrackList/Track_D1" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_D2" to="TrackList/TrackList/Track_D2" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_D2" to="TrackList/TrackList/Track_D2" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_S1" to="TrackList/TrackList/Track_S1" method="_on_ChartButton_mouse_entered"]
-[connection signal="pressed" from="TrackList/TrackList/Track_S1" to="TrackList/TrackList/Track_S1" method="_on_ChartButton_pressed"]
-[connection signal="mouse_entered" from="SpeedLabel/speed_075" to="SpeedLabel/speed_075" method="_on_GenericButton_mouse_entered"]
-[connection signal="pressed" from="SpeedLabel/speed_075" to="SpeedLabel/speed_075" method="_on_GenericButton_pressed"]
+[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer1" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer1_timeout"]
+[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer2" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer2_timeout"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_2" to="TrackList/TrackList/Track_2" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_2" to="TrackList/TrackList/Track_2" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_3" to="TrackList/TrackList/Track_3" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_3" to="TrackList/TrackList/Track_3" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_4" to="TrackList/TrackList/Track_4" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_4" to="TrackList/TrackList/Track_4" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_5" to="TrackList/TrackList/Track_5" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_5" to="TrackList/TrackList/Track_5" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_7" to="TrackList/TrackList/Track_7" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_7" to="TrackList/TrackList/Track_7" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_8" to="TrackList/TrackList/Track_8" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_8" to="TrackList/TrackList/Track_8" method="_on_ChartButton_pressed"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_mouse_entered"]
+[connection signal="pressed" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_mouse_entered"]
 [connection signal="pressed" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_pressed"]
 [connection signal="mouse_entered" from="SpeedLabel/speed_100" to="SpeedLabel/speed_100" method="_on_GenericButton_mouse_entered"]
 [connection signal="pressed" from="SpeedLabel/speed_100" to="SpeedLabel/speed_100" method="_on_GenericButton_pressed"]
 [connection signal="mouse_entered" from="SpeedLabel/speed_110" to="SpeedLabel/speed_110" method="_on_GenericButton_mouse_entered"]
 [connection signal="pressed" from="SpeedLabel/speed_110" to="SpeedLabel/speed_110" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="SpeedLabel/speed_125" to="SpeedLabel/speed_125" method="_on_GenericButton_mouse_entered"]
-[connection signal="pressed" from="SpeedLabel/speed_125" to="SpeedLabel/speed_125" method="_on_GenericButton_pressed"]
 [connection signal="mouse_entered" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_pressed"]
@@ -1829,12 +1705,9 @@ current = true
 [connection signal="mouse_entered" from="DifLabel2/classic" to="DifLabel2/classic" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="DifLabel2/classic" to="DifLabel2/classic" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="DifLabel2/classic" to="DifLabel2/classic" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="DifLabel2/byte" to="DifLabel2/byte" method="_on_GenericButton_mouse_entered"]
-[connection signal="mouse_exited" from="DifLabel2/byte" to="DifLabel2/byte" method="_on_GenericButton_mouse_exited"]
-[connection signal="pressed" from="DifLabel2/byte" to="DifLabel2/byte" method="_on_GenericButton_pressed"]
-[connection signal="mouse_entered" from="DifLabel2/nybble" to="DifLabel2/nybble" method="_on_GenericButton_mouse_entered"]
-[connection signal="mouse_exited" from="DifLabel2/nybble" to="DifLabel2/nybble" method="_on_GenericButton_mouse_exited"]
-[connection signal="pressed" from="DifLabel2/nybble" to="DifLabel2/nybble" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel2/arcade" to="DifLabel2/arcade" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="DifLabel2/arcade" to="DifLabel2/arcade" method="_on_GenericButton_mouse_exited"]
+[connection signal="pressed" from="DifLabel2/arcade" to="DifLabel2/arcade" method="_on_GenericButton_pressed"]
 [connection signal="mouse_entered" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_pressed"]
