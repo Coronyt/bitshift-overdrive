@@ -1075,7 +1075,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 diff_desc = "2.5 (Moderate)"
-chart_key = "coy_glance"
+chart_key = "moonlight"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_8"]
 visible = false
@@ -1100,7 +1100,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 diff_desc = "4.0 (Hard)"
-chart_key = "coy_glance"
+chart_key = "scarlet"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_9"]
 visible = false

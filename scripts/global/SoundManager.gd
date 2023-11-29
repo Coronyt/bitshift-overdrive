@@ -37,6 +37,8 @@ func _ready():
 		"baroque" : fetch_track("baroque_100"),
 		"strato" : fetch_track("strato_100"),
 		"devilcat" : fetch_track("devilcat_100"),
+		"moonlight" : fetch_track("moonlight_100"),
+		"scarlet" : fetch_track("scarlet_100"),
 	}
 	track_dict_110 = {
 		"spacedive" : fetch_track("spacedive_110"),

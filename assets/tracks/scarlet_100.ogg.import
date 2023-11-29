@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/scarlet_100.ogg-67031d4563ede3e8ae143296e673dc37.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/scarlet_100.ogg"
+dest_files=[ "res://.import/scarlet_100.ogg-67031d4563ede3e8ae143296e673dc37.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
