@@ -57,7 +57,7 @@ func _on_ScoreTimer_timeout():
 		if Active.is_byte == true:
 			Active.score = int(Active.score * 2)
 			var init_label = TextNode.instance()
-			init_label.text = "Byte\n" + "2x     " + str(Active.score) + "\n"
+			init_label.text = "Arcade\n" + "2x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 		elif Active.is_nybl == true:
 			Active.score = int(Active.score * 4)

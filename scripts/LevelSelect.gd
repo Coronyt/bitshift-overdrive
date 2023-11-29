@@ -63,7 +63,7 @@ func load_into_active():
 		Active.is_easy = false
 	if to_load_dif1 == "segfault":
 		Active.is_easy = false
-	if to_load_dif2 == "byte":
+	if to_load_dif2 == "arcade":
 		Active.is_byte = true
 	if to_load_dif2 == "nybble":
 		Active.is_nybl = true
