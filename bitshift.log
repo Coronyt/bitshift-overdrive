@@ -4,3 +4,11 @@ Async. shader compilation: OFF
  
 User preferences detected, loading from config.cfg ...
 Master bus levels at -28
+ERROR: (Node not found: "ScoreTimer" (relative to "/root/ScoreScreen").)
+   at: get_node (scene/main/node.cpp:1476) - Method failed. Returning: nullptr
+ERROR: (Node not found: "ScoreTimer" (relative to "/root/ScoreScreen").)
+   at: get_node (scene/main/node.cpp:1476) - Method failed. Returning: nullptr
+ERROR: (Node not found: "ScoreTimer" (relative to "/root/ScoreScreen").)
+   at: get_node (scene/main/node.cpp:1476) - Method failed. Returning: nullptr
+ERROR: (Node not found: "ScoreTimer" (relative to "/root/ScoreScreen").)
+   at: get_node (scene/main/node.cpp:1476) - Method failed. Returning: nullptr
