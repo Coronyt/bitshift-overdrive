@@ -997,15 +997,18 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "[ cat-eared devil ]"
+text = "Mistfall by Moonlight"
 script = ExtResource( 22 )
-diff_desc = "4.0 (Hard)"
-chart_key = "devilcat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+diff_desc = "2.5 (Moderate)"
+chart_key = "moonlight"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_5"]
 visible = false
 position = Vector2( 24, 14 )
-texture = ExtResource( 25 )
+texture = ExtResource( 27 )
 
 [node name="Track_6" type="Button" parent="TrackList/TrackList"]
 margin_top = 340.0
@@ -1044,13 +1047,13 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "Catch the Stratosphere"
+text = "Scarlet Serenade"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "4.5 (Insane)"
-chart_key = "strato"
+diff_desc = "4.0 (Hard)"
+chart_key = "scarlet"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_7"]
 visible = false
@@ -1069,18 +1072,15 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "Mistfall by Moonlight"
+text = "[ cat-eared devil ]"
 script = ExtResource( 22 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-diff_desc = "2.5 (Moderate)"
-chart_key = "moonlight"
+diff_desc = "4.0 (Hard)"
+chart_key = "devilcat"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_8"]
 visible = false
 position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
+texture = ExtResource( 25 )
 
 [node name="Track_9" type="Button" parent="TrackList/TrackList"]
 margin_top = 544.0
@@ -1094,13 +1094,13 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "Scarlet Serenade"
+text = "Catch the Stratosphere"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "4.0 (Hard)"
-chart_key = "scarlet"
+diff_desc = "4.5 (Insane)"
+chart_key = "strato"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_9"]
 visible = false
