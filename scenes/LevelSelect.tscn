@@ -952,7 +952,7 @@ script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "4.0 (Hard)"
+diff_desc = "3.5 (Hard)"
 chart_key = "brighter"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_3"]
@@ -1002,7 +1002,7 @@ script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "2.5 (Moderate)"
+diff_desc = "2.0 (Moderate)"
 chart_key = "moonlight"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_5"]

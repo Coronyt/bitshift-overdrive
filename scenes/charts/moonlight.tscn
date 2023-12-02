@@ -376,9 +376,9 @@ script = ExtResource( 16 )
 
 [node name="ChartCore" type="Node" parent="."]
 script = ExtResource( 6 )
-offset_1 = 1.125
+offset_1 = 1.45
 offset_2 = 650.0
-BPM = 130
+BPM = 95
 
 [node name="ScoreDrop" type="AnimationPlayer" parent="ChartCore"]
 reset_on_save = false
