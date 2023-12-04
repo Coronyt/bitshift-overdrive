@@ -1052,7 +1052,7 @@ script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "4.0 (Hard)"
+diff_desc = "4.5 (Insane)"
 chart_key = "scarlet"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_7"]
