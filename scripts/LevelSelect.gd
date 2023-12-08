@@ -1,10 +1,13 @@
 extends Control
 
+const SCORE_PATH = "res://player/scoresheet.bso"
+
 const cinematic_label = preload("res://scenes/cinematic/LabelTitle.tscn")
 export var cinematic = false
 var preview_playing = false
 
 func _ready():
+	save_scores()
 	load_last_modifiers()
 	SoundManager.play_sound("track_select")
 	if cinematic == true:
@@ -46,17 +49,10 @@ func load_into_active():
 	Active.mod_dif_1 = to_load_dif1
 	Active.mod_dif_2 = to_load_dif2
 	Active.speed = to_load_speed
-	if to_load_speed == "speed_075":
-		Active.is_075 = true
 	if to_load_speed == "speed_090":
 		Active.is_090 = true
 	if to_load_speed == "speed_110":
 		Active.is_110 = true
-	if to_load_speed == "speed_125":
-		Active.is_125 = true
-	if to_load_dif1 == "hibernate":
-		# Active.is_easy = true
-		pass # Currently disabled
 	if to_load_dif1 == "underclock":
 		Active.is_easy = false
 	if to_load_dif1 == "overdrive":
@@ -65,7 +61,19 @@ func load_into_active():
 		Active.is_easy = false
 	if to_load_dif2 == "arcade":
 		Active.is_byte = true
-	if to_load_dif2 == "nybble":
-		Active.is_nybl = true
 	if to_load_dif2 == "ironbit":
 		Active.is_iron = true
+
+func save_scores():
+	var new_scoresheet = File.new()
+	new_scoresheet.open(SCORE_PATH, File.WRITE)
+	new_scoresheet.store_line(var2str(ScoreManager.score_dict["baroque"]))
+	new_scoresheet.store_line(var2str(ScoreManager.score_dict["breeze"]))
+	new_scoresheet.store_line(var2str(ScoreManager.score_dict["brighter"]))
+	new_scoresheet.store_line(var2str(ScoreManager.score_dict["coy_glance"]))
+	new_scoresheet.store_line(var2str(ScoreManager.score_dict["devilcat"]))
+	new_scoresheet.store_line(var2str(ScoreManager.score_dict["moonlight"]))
+	new_scoresheet.store_line(var2str(ScoreManager.score_dict["scarlet"]))
+	new_scoresheet.store_line(var2str(ScoreManager.score_dict["spacedive"]))
+	new_scoresheet.store_line(var2str(ScoreManager.score_dict["strato"]))
+	new_scoresheet.close()

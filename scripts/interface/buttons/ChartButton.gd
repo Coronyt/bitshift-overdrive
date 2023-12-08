@@ -3,6 +3,8 @@ extends Button
 export(String) var diff_desc
 export(String) var chart_key
 
+signal new_active_track
+
 # Base Game Difficulty Ratings:
 # Basic:		0.5 - 1.5
 # Moderate:		2.0 - 3.0
@@ -31,6 +33,7 @@ func _on_ChartButton_pressed():
 	for button in self.get_parent().get_children():
 		if button.is_class("Button"):
 			button.pressed = false
+	emit_signal("new_active_track")
 	self.pressed = true
 
 func _on_ChartButton_mouse_entered():

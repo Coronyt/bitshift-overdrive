@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://scripts/interface/buttons/PrefButton.gd" type="Script" id=28]
 [ext_resource path="res://scripts/interface/VolSlider_Master.gd" type="Script" id=29]
 [ext_resource path="res://scripts/interface/GenericSlider.gd" type="Script" id=30]
+[ext_resource path="res://scripts/GameHub.gd" type="Script" id=31]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 7 )
@@ -1244,6 +1245,7 @@ margin_right = 1248.0
 margin_bottom = 424.0
 mouse_filter = 2
 color = Color( 0.176471, 0.176471, 0.176471, 0.470588 )
+script = ExtResource( 31 )
 
 [node name="TrophyCase" type="ColorRect" parent="GameHub"]
 margin_top = 400.0
@@ -1761,22 +1763,31 @@ current = true
 [connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer1" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer1_timeout"]
 [connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer2" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer2_timeout"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_mouse_entered"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_1" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_2" to="TrackList/TrackList/Track_2" method="_on_ChartButton_mouse_entered"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_2" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_2" to="TrackList/TrackList/Track_2" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_3" to="TrackList/TrackList/Track_3" method="_on_ChartButton_mouse_entered"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_3" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_3" to="TrackList/TrackList/Track_3" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_4" to="TrackList/TrackList/Track_4" method="_on_ChartButton_mouse_entered"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_4" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_4" to="TrackList/TrackList/Track_4" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_5" to="TrackList/TrackList/Track_5" method="_on_ChartButton_mouse_entered"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_5" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_5" to="TrackList/TrackList/Track_5" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_mouse_entered"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_6" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_6" to="TrackList/TrackList/Track_6" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_7" to="TrackList/TrackList/Track_7" method="_on_ChartButton_mouse_entered"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_7" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_7" to="TrackList/TrackList/Track_7" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_8" to="TrackList/TrackList/Track_8" method="_on_ChartButton_mouse_entered"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_8" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_8" to="TrackList/TrackList/Track_8" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_mouse_entered"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_9" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_pressed"]
 [connection signal="mouse_entered" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_mouse_entered"]
 [connection signal="pressed" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_pressed"]
