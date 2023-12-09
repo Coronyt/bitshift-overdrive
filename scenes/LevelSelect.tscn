@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -32,6 +32,10 @@
 [ext_resource path="res://scripts/interface/GenericSlider.gd" type="Script" id=30]
 [ext_resource path="res://scripts/GameHub.gd" type="Script" id=31]
 [ext_resource path="res://assets/sprites/trophy_0.png" type="Texture" id=32]
+[ext_resource path="res://assets/sprites/trophy_1.png" type="Texture" id=34]
+[ext_resource path="res://addons/godot_sprite_shader/src/core/SShaderContainer.gd" type="Script" id=35]
+[ext_resource path="res://scripts/interface/Trophy.gd" type="Script" id=36]
+[ext_resource path="res://addons/godot_sprite_shader/src/sshader/SSShiny.gd" type="Script" id=37]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 7 )
@@ -1266,23 +1270,108 @@ align = 1
 
 [node name="Trophy1" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 40, 96 )
-texture = ExtResource( 32 )
+texture = ExtResource( 34 )
+script = ExtResource( 36 )
+
+[node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy1"]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="TrophyTimer2" type="Timer" parent="GameHub/TrophyCase/Trophy1"]
+wait_time = 0.25
+one_shot = true
+
+[node name="TrophyShader" type="Node" parent="GameHub/TrophyCase/Trophy1"]
+script = ExtResource( 35 )
+node_path = NodePath("..")
+
+[node name="SSShinyFx" type="Node" parent="GameHub/TrophyCase/Trophy1/TrophyShader"]
+script = ExtResource( 37 )
 
 [node name="Trophy2" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 116, 96 )
 texture = ExtResource( 32 )
+script = ExtResource( 36 )
+
+[node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy2"]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="TrophyTimer2" type="Timer" parent="GameHub/TrophyCase/Trophy2"]
+wait_time = 0.25
+one_shot = true
+
+[node name="TrophyShader" type="Node" parent="GameHub/TrophyCase/Trophy2"]
+script = ExtResource( 35 )
+node_path = NodePath("..")
+
+[node name="SSShinyFx" type="Node" parent="GameHub/TrophyCase/Trophy2/TrophyShader"]
+script = ExtResource( 37 )
 
 [node name="Trophy3" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 192, 96 )
 texture = ExtResource( 32 )
+script = ExtResource( 36 )
+
+[node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy3"]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="TrophyTimer2" type="Timer" parent="GameHub/TrophyCase/Trophy3"]
+wait_time = 0.25
+one_shot = true
+
+[node name="TrophyShader" type="Node" parent="GameHub/TrophyCase/Trophy3"]
+script = ExtResource( 35 )
+node_path = NodePath("..")
+
+[node name="SSShinyFx" type="Node" parent="GameHub/TrophyCase/Trophy3/TrophyShader"]
+script = ExtResource( 37 )
 
 [node name="Trophy4" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 76, 140 )
 texture = ExtResource( 32 )
+script = ExtResource( 36 )
+
+[node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy4"]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="TrophyTimer2" type="Timer" parent="GameHub/TrophyCase/Trophy4"]
+wait_time = 0.25
+one_shot = true
+
+[node name="TrophyShader" type="Node" parent="GameHub/TrophyCase/Trophy4"]
+script = ExtResource( 35 )
+node_path = NodePath("..")
+
+[node name="SSShinyFx" type="Node" parent="GameHub/TrophyCase/Trophy4/TrophyShader"]
+script = ExtResource( 37 )
 
 [node name="Trophy5" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 156, 140 )
 texture = ExtResource( 32 )
+script = ExtResource( 36 )
+
+[node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy5"]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="TrophyTimer2" type="Timer" parent="GameHub/TrophyCase/Trophy5"]
+wait_time = 0.25
+one_shot = true
+
+[node name="TrophyShader" type="Node" parent="GameHub/TrophyCase/Trophy5"]
+script = ExtResource( 35 )
+node_path = NodePath("..")
+
+[node name="SSShinyFx" type="Node" parent="GameHub/TrophyCase/Trophy5/TrophyShader"]
+script = ExtResource( 37 )
 
 [node name="HubLabel" type="Label" parent="GameHub"]
 margin_left = 8.0
@@ -1780,7 +1869,6 @@ position = Vector2( 640, 360 )
 current = true
 
 [node name="CRT" parent="." instance=ExtResource( 13 )]
-visible = false
 
 [connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer1" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer1_timeout"]
 [connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer2" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer2_timeout"]
@@ -1835,6 +1923,16 @@ visible = false
 [connection signal="mouse_entered" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_pressed"]
+[connection signal="timeout" from="GameHub/TrophyCase/Trophy1/TrophyTimer1" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyTimer1_timeout"]
+[connection signal="timeout" from="GameHub/TrophyCase/Trophy1/TrophyTimer2" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyTimer2_timeout"]
+[connection signal="timeout" from="GameHub/TrophyCase/Trophy2/TrophyTimer1" to="GameHub/TrophyCase/Trophy2" method="_on_TrophyTimer1_timeout"]
+[connection signal="timeout" from="GameHub/TrophyCase/Trophy2/TrophyTimer2" to="GameHub/TrophyCase/Trophy2" method="_on_TrophyTimer2_timeout"]
+[connection signal="timeout" from="GameHub/TrophyCase/Trophy3/TrophyTimer1" to="GameHub/TrophyCase/Trophy3" method="_on_TrophyTimer1_timeout"]
+[connection signal="timeout" from="GameHub/TrophyCase/Trophy3/TrophyTimer2" to="GameHub/TrophyCase/Trophy3" method="_on_TrophyTimer2_timeout"]
+[connection signal="timeout" from="GameHub/TrophyCase/Trophy4/TrophyTimer1" to="GameHub/TrophyCase/Trophy4" method="_on_TrophyTimer1_timeout"]
+[connection signal="timeout" from="GameHub/TrophyCase/Trophy4/TrophyTimer2" to="GameHub/TrophyCase/Trophy4" method="_on_TrophyTimer2_timeout"]
+[connection signal="timeout" from="GameHub/TrophyCase/Trophy5/TrophyTimer1" to="GameHub/TrophyCase/Trophy5" method="_on_TrophyTimer1_timeout"]
+[connection signal="timeout" from="GameHub/TrophyCase/Trophy5/TrophyTimer2" to="GameHub/TrophyCase/Trophy5" method="_on_TrophyTimer2_timeout"]
 [connection signal="mouse_entered" from="TrackPortal" to="TrackPortal" method="_on_TrackPortal_mouse_entered"]
 [connection signal="pressed" from="TrackPortal" to="TrackPortal" method="_on_TrackPortal_pressed"]
 [connection signal="animation_finished" from="TrackPortal/PortalPeelAnim" to="TrackPortal" method="_on_PortalPeelAnim_animation_finished"]
