@@ -19,13 +19,25 @@ var trophy_dict = {
 	"moonlight" : 	[0, 0, 0, 0, 0],
 }
 
+var trophy_queues = {
+	"spacedive" : 	[],
+	"breeze" : 		[],
+	"coy_glance" : 	[],
+	"brighter" : 	[],
+	"baroque" : 	[],
+	"strato" : 		[],
+	"devilcat" : 	[],
+	"scarlet" : 	[],
+	"moonlight" : 	[],
+}
+
 func award_trophy_1():
 	# Trophy Criteria:
 	# Complete track with any difficulty settings
 	if trophy_dict[Active.chart][0] == 0:
 		# Awarding trophies
 		trophy_dict[Active.chart][0] = 1
-		print("awarded trophy 1")
+		trophy_queues[Active.chart].append(1)
 	else: pass
 
 func award_trophy_2():
@@ -37,7 +49,7 @@ func award_trophy_2():
 			# Awarding trophies
 			trophy_dict[Active.chart][0] = 1
 			trophy_dict[Active.chart][1] = 1
-			print("awarded trophy 1 + 2")
+			trophy_queues[Active.chart].append(2)
 	else: pass
 
 func award_trophy_3():
@@ -50,7 +62,7 @@ func award_trophy_3():
 			trophy_dict[Active.chart][0] = 1
 			trophy_dict[Active.chart][1] = 1
 			trophy_dict[Active.chart][2] = 1
-			print("awarded trophy 1 + 2 + 3")
+			trophy_queues[Active.chart].append(3)
 	else: pass
 
 func award_trophy_4():
@@ -63,7 +75,7 @@ func award_trophy_4():
 			trophy_dict[Active.chart][0] = 1
 			trophy_dict[Active.chart][1] = 1
 			trophy_dict[Active.chart][3] = 1
-			print("awarded trophy 1 + 2 + 4")
+			trophy_queues[Active.chart].append(4)
 	else: pass
 
 func award_trophy_5():
@@ -77,6 +89,6 @@ func award_trophy_5():
 			trophy_dict[Active.chart][2] = 1
 			trophy_dict[Active.chart][3] = 1
 			trophy_dict[Active.chart][4] = 1
-			print("awarded trophy 1 + 2 + 3 + 4 + 5")
+			trophy_queues[Active.chart].append(5)
 		pass
 	else: pass

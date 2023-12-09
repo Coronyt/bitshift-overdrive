@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=82 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -32,10 +32,14 @@
 [ext_resource path="res://scripts/interface/GenericSlider.gd" type="Script" id=30]
 [ext_resource path="res://scripts/GameHub.gd" type="Script" id=31]
 [ext_resource path="res://assets/sprites/trophy_0.png" type="Texture" id=32]
+[ext_resource path="res://assets/sprites/trophy_2.png" type="Texture" id=33]
 [ext_resource path="res://assets/sprites/trophy_1.png" type="Texture" id=34]
 [ext_resource path="res://addons/godot_sprite_shader/src/core/SShaderContainer.gd" type="Script" id=35]
 [ext_resource path="res://scripts/interface/Trophy.gd" type="Script" id=36]
 [ext_resource path="res://addons/godot_sprite_shader/src/sshader/SSShiny.gd" type="Script" id=37]
+[ext_resource path="res://assets/sprites/trophy_3.png" type="Texture" id=38]
+[ext_resource path="res://assets/sprites/trophy_4.png" type="Texture" id=39]
+[ext_resource path="res://assets/sprites/trophy_5.png" type="Texture" id=40]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 7 )
@@ -72,6 +76,466 @@ region_rect = Rect2( 0, 0, 448, 64 )
 [sub_resource type="ButtonGroup" id=11]
 
 [sub_resource type="ButtonGroup" id=12]
+
+[sub_resource type="Animation" id=38]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Trophy1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 360, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TrophyAnim1/Trophy1Dupe:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TrophyAnim1/Trophy1Dupe:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TrophyAnim1/Trophy1Dupe:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("TrophyAnim1/Trophy1Dupe:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 720, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=39]
+resource_name = "award"
+tracks/0/type = "value"
+tracks/0/path = NodePath("TrophyAnim1/Trophy1Dupe:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TrophyAnim1/Trophy1Dupe:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TrophyAnim1/Trophy1Dupe:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TrophyAnim1/Trophy1Dupe:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 720, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+
+[sub_resource type="Animation" id=40]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TrophyAnim2/Trophy2Dupe:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TrophyAnim2/Trophy2Dupe:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TrophyAnim2/Trophy2Dupe:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TrophyAnim2/Trophy2Dupe:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 720, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=41]
+resource_name = "award"
+tracks/0/type = "value"
+tracks/0/path = NodePath("TrophyAnim2/Trophy2Dupe:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TrophyAnim2/Trophy2Dupe:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TrophyAnim2/Trophy2Dupe:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TrophyAnim2/Trophy2Dupe:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 720, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+
+[sub_resource type="Animation" id=42]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TrophyCase/TrophyAnim3/Trophy3Dupe:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TrophyCase/TrophyAnim3/Trophy3Dupe:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TrophyCase/TrophyAnim3/Trophy3Dupe:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TrophyCase/TrophyAnim3/Trophy3Dupe:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 720, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=43]
+resource_name = "award"
+tracks/0/type = "value"
+tracks/0/path = NodePath("TrophyCase/TrophyAnim3/Trophy3Dupe:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TrophyCase/TrophyAnim3/Trophy3Dupe:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TrophyCase/TrophyAnim3/Trophy3Dupe:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TrophyCase/TrophyAnim3/Trophy3Dupe:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 720, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+
+[sub_resource type="Animation" id=44]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TrophyAnim4/Trophy4Dupe:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TrophyAnim4/Trophy4Dupe:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TrophyAnim4/Trophy4Dupe:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TrophyAnim4/Trophy4Dupe:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 720, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=45]
+resource_name = "award"
+tracks/0/type = "value"
+tracks/0/path = NodePath("TrophyAnim4/Trophy4Dupe:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TrophyAnim4/Trophy4Dupe:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TrophyAnim4/Trophy4Dupe:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TrophyAnim4/Trophy4Dupe:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 720, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+
+[sub_resource type="Animation" id=46]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TrophyAnim5/Trophy5Dupe:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TrophyAnim5/Trophy5Dupe:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TrophyAnim5/Trophy5Dupe:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TrophyAnim5/Trophy5Dupe:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 720, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=47]
+resource_name = "award"
+tracks/0/type = "value"
+tracks/0/path = NodePath("TrophyAnim5/Trophy5Dupe:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TrophyAnim5/Trophy5Dupe:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TrophyAnim5/Trophy5Dupe:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TrophyAnim5/Trophy5Dupe:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 720, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1 )
+}
 
 [sub_resource type="DynamicFont" id=18]
 size = 32
@@ -1270,7 +1734,8 @@ align = 1
 
 [node name="Trophy1" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 40, 96 )
-texture = ExtResource( 34 )
+rotation = 6.28319
+texture = ExtResource( 32 )
 script = ExtResource( 36 )
 
 [node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy1"]
@@ -1372,6 +1837,62 @@ node_path = NodePath("..")
 
 [node name="SSShinyFx" type="Node" parent="GameHub/TrophyCase/Trophy5/TrophyShader"]
 script = ExtResource( 37 )
+
+[node name="TrophyAnim1" type="AnimationPlayer" parent="GameHub/TrophyCase"]
+reset_on_save = false
+anims/RESET = SubResource( 38 )
+anims/award = SubResource( 39 )
+
+[node name="Trophy1Dupe" type="Sprite" parent="GameHub/TrophyCase/TrophyAnim1"]
+visible = false
+position = Vector2( 1056, 528 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 34 )
+
+[node name="TrophyAnim2" type="AnimationPlayer" parent="GameHub/TrophyCase"]
+reset_on_save = false
+anims/RESET = SubResource( 40 )
+anims/award = SubResource( 41 )
+
+[node name="Trophy2Dupe" type="Sprite" parent="GameHub/TrophyCase/TrophyAnim2"]
+visible = false
+position = Vector2( 1132, 528 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 33 )
+
+[node name="TrophyAnim3" type="AnimationPlayer" parent="GameHub/TrophyCase"]
+root_node = NodePath("../..")
+reset_on_save = false
+anims/RESET = SubResource( 42 )
+anims/award = SubResource( 43 )
+
+[node name="Trophy3Dupe" type="Sprite" parent="GameHub/TrophyCase/TrophyAnim3"]
+visible = false
+position = Vector2( 1208, 528 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 38 )
+
+[node name="TrophyAnim4" type="AnimationPlayer" parent="GameHub/TrophyCase"]
+reset_on_save = false
+anims/RESET = SubResource( 44 )
+anims/award = SubResource( 45 )
+
+[node name="Trophy4Dupe" type="Sprite" parent="GameHub/TrophyCase/TrophyAnim4"]
+visible = false
+position = Vector2( 1092, 572 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 39 )
+
+[node name="TrophyAnim5" type="AnimationPlayer" parent="GameHub/TrophyCase"]
+reset_on_save = false
+anims/RESET = SubResource( 46 )
+anims/award = SubResource( 47 )
+
+[node name="Trophy5Dupe" type="Sprite" parent="GameHub/TrophyCase/TrophyAnim5"]
+visible = false
+position = Vector2( 1172, 572 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 40 )
 
 [node name="HubLabel" type="Label" parent="GameHub"]
 margin_left = 8.0
@@ -1933,6 +2454,11 @@ current = true
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy4/TrophyTimer2" to="GameHub/TrophyCase/Trophy4" method="_on_TrophyTimer2_timeout"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy5/TrophyTimer1" to="GameHub/TrophyCase/Trophy5" method="_on_TrophyTimer1_timeout"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy5/TrophyTimer2" to="GameHub/TrophyCase/Trophy5" method="_on_TrophyTimer2_timeout"]
+[connection signal="animation_finished" from="GameHub/TrophyCase/TrophyAnim1" to="GameHub" method="_on_TrophyAnim1_animation_finished"]
+[connection signal="animation_finished" from="GameHub/TrophyCase/TrophyAnim2" to="GameHub" method="_on_TrophyAnim2_animation_finished"]
+[connection signal="animation_finished" from="GameHub/TrophyCase/TrophyAnim3" to="GameHub" method="_on_TrophyAnim3_animation_finished"]
+[connection signal="animation_finished" from="GameHub/TrophyCase/TrophyAnim4" to="GameHub" method="_on_TrophyAnim4_animation_finished"]
+[connection signal="animation_finished" from="GameHub/TrophyCase/TrophyAnim5" to="GameHub" method="_on_TrophyAnim5_animation_finished"]
 [connection signal="mouse_entered" from="TrackPortal" to="TrackPortal" method="_on_TrackPortal_mouse_entered"]
 [connection signal="pressed" from="TrackPortal" to="TrackPortal" method="_on_TrackPortal_pressed"]
 [connection signal="animation_finished" from="TrackPortal/PortalPeelAnim" to="TrackPortal" method="_on_PortalPeelAnim_animation_finished"]

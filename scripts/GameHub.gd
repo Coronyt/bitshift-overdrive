@@ -21,17 +21,60 @@ func _on_new_active_track():
 
 func display_trophies():
 	if TrophyManager.trophy_dict[Active.chart][0] == 1:
-		$TrophyCase/Trophy1.texture = trophy_1_sprite
+		if TrophyManager.trophy_queues[Active.chart].has(1):
+			$TrophyCase/TrophyAnim1.play("award")
+			TrophyManager.trophy_queues[Active.chart].remove(0)
+		else:
+			$TrophyCase/Trophy1.texture = trophy_1_sprite
 	else: $TrophyCase/Trophy1.texture = trophy_0_sprite
 	if TrophyManager.trophy_dict[Active.chart][1] == 1:
-		$TrophyCase/Trophy2.texture = trophy_2_sprite
+		if TrophyManager.trophy_queues[Active.chart].has(2):
+			$TrophyCase/TrophyAnim2.play("award")
+			TrophyManager.trophy_queues[Active.chart].remove(0)
+		else:
+			$TrophyCase/Trophy2.texture = trophy_2_sprite
 	else: $TrophyCase/Trophy2.texture = trophy_0_sprite
 	if TrophyManager.trophy_dict[Active.chart][2] == 1:
-		$TrophyCase/Trophy3.texture = trophy_3_sprite
+		if TrophyManager.trophy_queues[Active.chart].has(3):
+			$TrophyCase/TrophyAnim3.play("award")
+			TrophyManager.trophy_queues[Active.chart].remove(0)
+		else:
+			$TrophyCase/Trophy3.texture = trophy_3_sprite
 	else: $TrophyCase/Trophy3.texture = trophy_0_sprite
 	if TrophyManager.trophy_dict[Active.chart][3] == 1:
-		$TrophyCase/Trophy4.texture = trophy_4_sprite
+		if TrophyManager.trophy_queues[Active.chart].has(4):
+			$TrophyCase/TrophyAnim4.play("award")
+			TrophyManager.trophy_queues[Active.chart].remove(0)
+		else:
+			$TrophyCase/Trophy4.texture = trophy_4_sprite
 	else: $TrophyCase/Trophy4.texture = trophy_0_sprite
 	if TrophyManager.trophy_dict[Active.chart][4] == 1:
-		$TrophyCase/Trophy5.texture = trophy_5_sprite
+		if TrophyManager.trophy_queues[Active.chart].has(5):
+			$TrophyCase/TrophyAnim5.play("award")
+			TrophyManager.trophy_queues[Active.chart].remove(0)
+		else:
+			$TrophyCase/Trophy5.texture = trophy_5_sprite
 	else: $TrophyCase/Trophy5.texture = trophy_0_sprite
+
+func _on_TrophyAnim1_animation_finished(anim_name):
+	# Note for future self:
+		# This function should be the only one that plays a sound
+		# Since it is the only one guaranteed to be earned every time
+	$TrophyCase/Trophy1.texture = trophy_1_sprite
+	$TrophyCase/TrophyAnim1/Trophy1Dupe.hide()
+
+func _on_TrophyAnim2_animation_finished(anim_name):
+	$TrophyCase/Trophy2.texture = trophy_2_sprite
+	$TrophyCase/TrophyAnim2/Trophy2Dupe.hide()
+
+func _on_TrophyAnim3_animation_finished(anim_name):
+	$TrophyCase/Trophy3.texture = trophy_3_sprite
+	$TrophyCase/TrophyAnim3/Trophy3Dupe.hide()
+
+func _on_TrophyAnim4_animation_finished(anim_name):
+	$TrophyCase/Trophy4.texture = trophy_4_sprite
+	$TrophyCase/TrophyAnim4/Trophy4Dupe.hide()
+
+func _on_TrophyAnim5_animation_finished(anim_name):
+	$TrophyCase/Trophy5.texture = trophy_5_sprite
+	$TrophyCase/TrophyAnim5/Trophy5Dupe.hide()
