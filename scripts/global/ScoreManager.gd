@@ -1,18 +1,5 @@
 extends Node
 
-# when the game opens:
-	# TODO
-		# will look for save
-			# if none, do nothing
-				# scores will default to 0 for all
-			# if found, load into score manager ...
-	
-# when the game exits:
-	# TODO
-		# will save high score data ...
-			# either by overwriting existing
-			# or by creating a new file
-
 func update_score(track_key, new_score):
 	# Adding the current score to the list
 	score_dict[track_key].append(new_score)

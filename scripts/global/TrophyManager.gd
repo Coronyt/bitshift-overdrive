@@ -1,16 +1,82 @@
 extends Node
 
+func award_trophies():
+	award_trophy_1()
+	award_trophy_2()
+	award_trophy_3()
+	award_trophy_4()
+	award_trophy_5()
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var trophy_dict = {
+	"spacedive" : 	[0, 0, 0, 0, 0],
+	"breeze" : 		[0, 0, 0, 0, 0],
+	"coy_glance" : 	[0, 0, 0, 0, 0],
+	"brighter" : 	[0, 0, 0, 0, 0],
+	"baroque" : 	[0, 0, 0, 0, 0],
+	"strato" : 		[0, 0, 0, 0, 0],
+	"devilcat" : 	[0, 0, 0, 0, 0],
+	"scarlet" : 	[0, 0, 0, 0, 0],
+	"moonlight" : 	[0, 0, 0, 0, 0],
+}
 
+func award_trophy_1():
+	# Trophy Criteria:
+	# Complete track with any difficulty settings
+	if trophy_dict[Active.chart][0] == 0:
+		# Awarding trophies
+		trophy_dict[Active.chart][0] = 1
+		print("awarded trophy 1")
+	else: pass
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func award_trophy_2():
+	# Trophy Criteria:
+	# Complete track on at least arcade mode
+	if trophy_dict[Active.chart][1] == 0:
+		# Check active chart parameters
+		if Active.mod_dif_2 == "arcade":
+			# Awarding trophies
+			trophy_dict[Active.chart][0] = 1
+			trophy_dict[Active.chart][1] = 1
+			print("awarded trophy 1 + 2")
+	else: pass
 
+func award_trophy_3():
+	# Trophy Criteria:
+	# Complete track on ironbit mode
+	if trophy_dict[Active.chart][2] == 0:
+		# Check active chart parameters
+		if Active.mod_dif_2 == "ironbit":
+			# Awarding trophies
+			trophy_dict[Active.chart][0] = 1
+			trophy_dict[Active.chart][1] = 1
+			trophy_dict[Active.chart][2] = 1
+			print("awarded trophy 1 + 2 + 3")
+	else: pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func award_trophy_4():
+	# Trophy Criteria:
+	# Complete track on arcade, and on at least overdrive and at least on speed 100%
+	if trophy_dict[Active.chart][3] == 0:
+		# Check active chart parameters
+		if (Active.mod_dif_2 == "arcade") and (Active.mod_dif_1 == "overdrive"
+		or Active.mod_dif_1 == "segfault") and (Active.mod_speed != "speed_090"):
+			trophy_dict[Active.chart][0] = 1
+			trophy_dict[Active.chart][1] = 1
+			trophy_dict[Active.chart][3] = 1
+			print("awarded trophy 1 + 2 + 4")
+	else: pass
+
+func award_trophy_5():
+	# Trophy Criteria:
+	# Complete track on ironbit, and on at least overdrive and at least on speed 100%
+	if trophy_dict[Active.chart][4] == 0:
+		if (Active.mod_dif_2 == "ironbit") and (Active.mod_dif_1 == "overdrive"
+		or Active.mod_dif_1 == "segfault") and (Active.mod_speed != "speed_090"):
+			trophy_dict[Active.chart][0] = 1
+			trophy_dict[Active.chart][1] = 1
+			trophy_dict[Active.chart][2] = 1
+			trophy_dict[Active.chart][3] = 1
+			trophy_dict[Active.chart][4] = 1
+			print("awarded trophy 1 + 2 + 3 + 4 + 5")
+		pass
+	else: pass

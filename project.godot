@@ -188,8 +188,9 @@ Active="*res://scripts/global/Active.gd"
 Tracks="*res://scenes/global/Tracks.tscn"
 Sounds="*res://scenes/global/Sounds.tscn"
 ChartManager="*res://scripts/global/ChartManager.gd"
-SoundManager="*res://scripts/global/SoundManager.gd"
 ScoreManager="*res://scripts/global/ScoreManager.gd"
+SoundManager="*res://scripts/global/SoundManager.gd"
+TrophyManager="*res://scripts/global/TrophyManager.gd"
 ss="*res://addons/godot_sprite_shader/ss.gd"
 
 [debug]

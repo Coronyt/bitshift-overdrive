@@ -1,6 +1,7 @@
 extends Control
 
 const SCORE_PATH = "res://player/scoresheet.bso"
+const TROPHY_PATH = "res://player/trophycase.bso"
 
 const cinematic_label = preload("res://scenes/cinematic/LabelTitle.tscn")
 export var cinematic = false
@@ -8,6 +9,7 @@ var preview_playing = false
 
 func _ready():
 	save_scores()
+	save_trophies()
 	load_last_modifiers()
 	SoundManager.play_sound("track_select")
 	if cinematic == true:
@@ -77,3 +79,17 @@ func save_scores():
 	new_scoresheet.store_line(var2str(ScoreManager.score_dict["spacedive"]))
 	new_scoresheet.store_line(var2str(ScoreManager.score_dict["strato"]))
 	new_scoresheet.close()
+
+func save_trophies():
+	var new_trophycase = File.new()
+	new_trophycase.open(TROPHY_PATH, File.WRITE)
+	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["baroque"]))
+	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["breeze"]))
+	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["brighter"]))
+	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["coy_glance"]))
+	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["devilcat"]))
+	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["moonlight"]))
+	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["scarlet"]))
+	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["spacedive"]))
+	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["strato"]))
+	new_trophycase.close()

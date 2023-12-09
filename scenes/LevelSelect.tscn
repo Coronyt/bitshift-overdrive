@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://scripts/interface/VolSlider_Master.gd" type="Script" id=29]
 [ext_resource path="res://scripts/interface/GenericSlider.gd" type="Script" id=30]
 [ext_resource path="res://scripts/GameHub.gd" type="Script" id=31]
+[ext_resource path="res://assets/sprites/trophy_0.png" type="Texture" id=32]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 7 )
@@ -1263,6 +1264,26 @@ theme = ExtResource( 4 )
 text = "TROPHY CASE:"
 align = 1
 
+[node name="Trophy1" type="Sprite" parent="GameHub/TrophyCase"]
+position = Vector2( 40, 96 )
+texture = ExtResource( 32 )
+
+[node name="Trophy2" type="Sprite" parent="GameHub/TrophyCase"]
+position = Vector2( 116, 96 )
+texture = ExtResource( 32 )
+
+[node name="Trophy3" type="Sprite" parent="GameHub/TrophyCase"]
+position = Vector2( 192, 96 )
+texture = ExtResource( 32 )
+
+[node name="Trophy4" type="Sprite" parent="GameHub/TrophyCase"]
+position = Vector2( 76, 140 )
+texture = ExtResource( 32 )
+
+[node name="Trophy5" type="Sprite" parent="GameHub/TrophyCase"]
+position = Vector2( 156, 140 )
+texture = ExtResource( 32 )
+
 [node name="HubLabel" type="Label" parent="GameHub"]
 margin_left = 8.0
 margin_top = 24.0
@@ -1759,6 +1780,7 @@ position = Vector2( 640, 360 )
 current = true
 
 [node name="CRT" parent="." instance=ExtResource( 13 )]
+visible = false
 
 [connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer1" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer1_timeout"]
 [connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer2" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer2_timeout"]

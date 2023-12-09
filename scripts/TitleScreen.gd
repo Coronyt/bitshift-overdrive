@@ -1,9 +1,11 @@
 extends Control
 
 const SCORE_PATH = "res://player/scoresheet.bso"
+const TROPHY_PATH = "res://player/trophycase.bso"
 
 func _ready():
 	load_scores()
+	load_trophies()
 	$CRT/Shader.hide()
 	$FadeAnim.play("fade_in")
 	SoundManager.play_sound("title1")
@@ -36,7 +38,6 @@ func load_scores():
 	var scoresheet = File.new()
 	var error = scoresheet.open(SCORE_PATH, File.READ)
 	if not error == OK:
-		# print("No scoresheet found")
 		scoresheet.close()
 	else:
 		ScoreManager.score_dict["baroque"] = str2var(scoresheet.get_line())
@@ -49,3 +50,20 @@ func load_scores():
 		ScoreManager.score_dict["spacedive"] = str2var(scoresheet.get_line())
 		ScoreManager.score_dict["strato"] = str2var(scoresheet.get_line())
 		scoresheet.close()
+
+func load_trophies():
+	var trophycase = File.new()
+	var error = trophycase.open(TROPHY_PATH, File.READ)
+	if not error == OK:
+		trophycase.close()
+	else:
+		TrophyManager.trophy_dict["baroque"] = str2var(trophycase.get_line())
+		TrophyManager.trophy_dict["breeze"] = str2var(trophycase.get_line())
+		TrophyManager.trophy_dict["brighter"] = str2var(trophycase.get_line())
+		TrophyManager.trophy_dict["coy_glance"] = str2var(trophycase.get_line())
+		TrophyManager.trophy_dict["devilcat"] = str2var(trophycase.get_line())
+		TrophyManager.trophy_dict["moonlight"] = str2var(trophycase.get_line())
+		TrophyManager.trophy_dict["scarlet"] = str2var(trophycase.get_line())
+		TrophyManager.trophy_dict["spacedive"] = str2var(trophycase.get_line())
+		TrophyManager.trophy_dict["strato"] = str2var(trophycase.get_line())
+		trophycase.close()

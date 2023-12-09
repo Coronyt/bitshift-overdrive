@@ -106,6 +106,7 @@ func _on_ScoreTimer_timeout():
 		SoundManager.play_sound("score1")
 		SoundManager.play_sound("score2")
 		$ScoreTimer.queue_free()
+		TrophyManager.award_trophies()
 		var init_label = TextNode.instance()
 		ScoreManager.update_score(Active.chart, Active.score)
 		init_label.text = "\nFINAL SCORE\n" + str(Active.score)
