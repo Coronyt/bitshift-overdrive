@@ -25,11 +25,13 @@ func _on_ChartButton_pressed():
 		SoundManager.preview_playing = false
 	else:
 		fade_out_bgm()
+		self.get_parent().get_child(1).start()
 	Active.chart = self.chart_key
 	Active.chart_name = self.text
 	Active.diff_desc = self.diff_desc
 	if !SoundManager.preview_playing:
-		fade_in_track()
+		if TrophyManager.trophy_queues[Active.chart].size() == 0:
+			fade_in_track()
 	for button in self.get_parent().get_children():
 		if button.is_class("Button"):
 			button.pressed = false

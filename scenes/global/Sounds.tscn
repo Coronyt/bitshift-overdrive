@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/sounds/miss.wav" type="AudioStream" id=1]
 [ext_resource path="res://assets/sounds/click2.wav" type="AudioStream" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://assets/sounds/title3.ogg" type="AudioStream" id=12]
 [ext_resource path="res://assets/sounds/title_track.ogg" type="AudioStream" id=13]
 [ext_resource path="res://assets/sounds/flair1.wav" type="AudioStream" id=14]
+[ext_resource path="res://assets/sounds/trophy2.wav" type="AudioStream" id=15]
 
 [node name="Sounds" type="Node"]
 
@@ -70,3 +71,6 @@ volume_db = -2.0
 [node name="combo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
 volume_db = -2.0
+
+[node name="trophy2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )

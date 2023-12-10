@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=83 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -40,6 +40,7 @@
 [ext_resource path="res://assets/sprites/trophy_3.png" type="Texture" id=38]
 [ext_resource path="res://assets/sprites/trophy_4.png" type="Texture" id=39]
 [ext_resource path="res://assets/sprites/trophy_5.png" type="Texture" id=40]
+[ext_resource path="res://scripts/interface/TrackListTimer.gd" type="Script" id=41]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 7 )
@@ -1360,6 +1361,11 @@ one_shot = true
 [node name="PreviewTimer2" type="Timer" parent="TrackList/TrackList/TrackListTween"]
 one_shot = true
 
+[node name="TrackListTimer" type="Timer" parent="TrackList/TrackList"]
+wait_time = 2.0
+one_shot = true
+script = ExtResource( 41 )
+
 [node name="Track_1" type="Button" parent="TrackList/TrackList"]
 margin_right = 448.0
 margin_bottom = 64.0
@@ -2397,6 +2403,7 @@ current = true
 
 [connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer1" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer1_timeout"]
 [connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer2" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer2_timeout"]
+[connection signal="timeout" from="TrackList/TrackList/TrackListTimer" to="TrackList/TrackList/TrackListTimer" method="_on_TrackListTimer_timeout"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_1" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_pressed"]
