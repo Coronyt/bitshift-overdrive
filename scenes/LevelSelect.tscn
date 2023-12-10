@@ -224,6 +224,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=41]
 resource_name = "award"
+length = 1.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("TrophyAnim2/Trophy2Dupe:visible")
 tracks/0/interp = 1
@@ -244,7 +245,7 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.1, 1 )
+"times": PoolRealArray( 0.1, 1.2 )
 }
 tracks/2/type = "bezier"
 tracks/2/path = NodePath("TrophyAnim2/Trophy2Dupe:scale:y")
@@ -254,7 +255,7 @@ tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
 "points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.1, 1 )
+"times": PoolRealArray( 0.1, 1.2 )
 }
 tracks/3/type = "bezier"
 tracks/3/path = NodePath("TrophyAnim2/Trophy2Dupe:rotation_degrees")
@@ -264,7 +265,7 @@ tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 720, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.1, 1 )
+"times": PoolRealArray( 0.1, 1.2 )
 }
 
 [sub_resource type="Animation" id=42]
@@ -314,6 +315,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=43]
 resource_name = "award"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("TrophyCase/TrophyAnim3/Trophy3Dupe:visible")
 tracks/0/interp = 1
@@ -334,7 +336,7 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.1, 1 )
+"times": PoolRealArray( 0.1, 1.5 )
 }
 tracks/2/type = "bezier"
 tracks/2/path = NodePath("TrophyCase/TrophyAnim3/Trophy3Dupe:scale:y")
@@ -344,7 +346,7 @@ tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
 "points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.1, 1 )
+"times": PoolRealArray( 0.1, 1.5 )
 }
 tracks/3/type = "bezier"
 tracks/3/path = NodePath("TrophyCase/TrophyAnim3/Trophy3Dupe:rotation_degrees")
@@ -354,7 +356,7 @@ tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 720, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.1, 1 )
+"times": PoolRealArray( 0.1, 1.5 )
 }
 
 [sub_resource type="Animation" id=44]
@@ -404,6 +406,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=45]
 resource_name = "award"
+length = 1.75
 tracks/0/type = "value"
 tracks/0/path = NodePath("TrophyAnim4/Trophy4Dupe:visible")
 tracks/0/interp = 1
@@ -424,7 +427,7 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.1, 1 )
+"times": PoolRealArray( 0.1, 1.7 )
 }
 tracks/2/type = "bezier"
 tracks/2/path = NodePath("TrophyAnim4/Trophy4Dupe:scale:y")
@@ -434,7 +437,7 @@ tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
 "points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.1, 1 )
+"times": PoolRealArray( 0.1, 1.7 )
 }
 tracks/3/type = "bezier"
 tracks/3/path = NodePath("TrophyAnim4/Trophy4Dupe:rotation_degrees")
@@ -444,7 +447,7 @@ tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 720, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.1, 1 )
+"times": PoolRealArray( 0.1, 1.7 )
 }
 
 [sub_resource type="Animation" id=46]
@@ -494,6 +497,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=47]
 resource_name = "award"
+length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("TrophyAnim5/Trophy5Dupe:visible")
 tracks/0/interp = 1
@@ -514,7 +518,7 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.1, 1 )
+"times": PoolRealArray( 0.1, 2 )
 }
 tracks/2/type = "bezier"
 tracks/2/path = NodePath("TrophyAnim5/Trophy5Dupe:scale:y")
@@ -524,7 +528,7 @@ tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
 "points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.1, 1 )
+"times": PoolRealArray( 0.1, 2 )
 }
 tracks/3/type = "bezier"
 tracks/3/path = NodePath("TrophyAnim5/Trophy5Dupe:rotation_degrees")
@@ -534,7 +538,7 @@ tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 720, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.1, 1 )
+"times": PoolRealArray( 0.1, 2 )
 }
 
 [sub_resource type="DynamicFont" id=18]
