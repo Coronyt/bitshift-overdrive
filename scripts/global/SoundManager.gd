@@ -28,6 +28,9 @@ func _ready():
 		"brighter" : fetch_track("brighter_090"),
 		"baroque" : fetch_track("baroque_090"),
 		"strato" : fetch_track("strato_090"),
+		"devilcat" : fetch_track("devilcat_090"),
+		"moonlight" : fetch_track("moonlight_090"),
+		"scarlet" : fetch_track("scarlet_090"),
 	}
 	track_dict_100 = {
 		"spacedive" : fetch_track("spacedive_100"),
@@ -47,6 +50,9 @@ func _ready():
 		"brighter" : fetch_track("brighter_110"),
 		"baroque" : fetch_track("baroque_110"),
 		"strato" : fetch_track("strato_110"),
+		"devilcat" : fetch_track("devilcat_110"),
+		"moonlight" : fetch_track("moonlight_110"),
+		"scarlet" : fetch_track("scarlet_110"),
 	}
 	track_dict_125 = {
 		"spacedive" : fetch_track("spacedive_125"),

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/moonlight_090.ogg-bd4d980276bdc16ce209f7493a0639f2.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/moonlight_090.ogg"
+dest_files=[ "res://.import/moonlight_090.ogg-bd4d980276bdc16ce209f7493a0639f2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
