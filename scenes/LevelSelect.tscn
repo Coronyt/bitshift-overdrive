@@ -154,7 +154,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.1, 1 )
 }
 tracks/2/type = "bezier"
@@ -164,7 +164,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.1, 1 )
 }
 tracks/3/type = "bezier"
@@ -245,7 +245,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.1, 1.2 )
 }
 tracks/2/type = "bezier"
@@ -255,7 +255,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.1, 1.2 )
 }
 tracks/3/type = "bezier"
@@ -336,7 +336,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.1, 1.5 )
 }
 tracks/2/type = "bezier"
@@ -346,7 +346,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.1, 1.5 )
 }
 tracks/3/type = "bezier"
@@ -427,7 +427,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.1, 1.7 )
 }
 tracks/2/type = "bezier"
@@ -437,7 +437,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.1, 1.7 )
 }
 tracks/3/type = "bezier"
@@ -518,7 +518,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.1, 2 )
 }
 tracks/2/type = "bezier"
@@ -528,7 +528,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.1, 2 )
 }
 tracks/3/type = "bezier"
@@ -1745,6 +1745,7 @@ align = 1
 [node name="Trophy1" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 40, 96 )
 rotation = 6.28319
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 32 )
 script = ExtResource( 36 )
 
@@ -1766,6 +1767,7 @@ script = ExtResource( 37 )
 
 [node name="Trophy2" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 116, 96 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 32 )
 script = ExtResource( 36 )
 
@@ -1787,6 +1789,7 @@ script = ExtResource( 37 )
 
 [node name="Trophy3" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 192, 96 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 32 )
 script = ExtResource( 36 )
 
@@ -1807,7 +1810,8 @@ node_path = NodePath("..")
 script = ExtResource( 37 )
 
 [node name="Trophy4" type="Sprite" parent="GameHub/TrophyCase"]
-position = Vector2( 76, 140 )
+position = Vector2( 78, 140 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 32 )
 script = ExtResource( 36 )
 
@@ -1828,7 +1832,8 @@ node_path = NodePath("..")
 script = ExtResource( 37 )
 
 [node name="Trophy5" type="Sprite" parent="GameHub/TrophyCase"]
-position = Vector2( 156, 140 )
+position = Vector2( 154, 140 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 32 )
 script = ExtResource( 36 )
 
@@ -1889,7 +1894,7 @@ anims/award = SubResource( 45 )
 
 [node name="Trophy4Dupe" type="Sprite" parent="GameHub/TrophyCase/TrophyAnim4"]
 visible = false
-position = Vector2( 1092, 572 )
+position = Vector2( 1094, 572 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 39 )
 
@@ -1900,7 +1905,7 @@ anims/award = SubResource( 47 )
 
 [node name="Trophy5Dupe" type="Sprite" parent="GameHub/TrophyCase/TrophyAnim5"]
 visible = false
-position = Vector2( 1172, 572 )
+position = Vector2( 1170, 572 )
 scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 40 )
 
