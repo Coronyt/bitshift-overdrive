@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=2]
+[gd_scene load_steps=87 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -77,6 +77,8 @@ region_rect = Rect2( 0, 0, 448, 64 )
 [sub_resource type="ButtonGroup" id=11]
 
 [sub_resource type="ButtonGroup" id=12]
+
+[sub_resource type="RectangleShape2D" id=52]
 
 [sub_resource type="Animation" id=38]
 length = 0.001
@@ -3021,6 +3023,8 @@ rotation = 6.28319
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 32 )
 script = ExtResource( 36 )
+trophy_name = "Bronze Trophy"
+trophy_desc = "- Complete a track on any difficulty."
 
 [node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy1"]
 wait_time = 3.0
@@ -3038,11 +3042,19 @@ node_path = NodePath("..")
 [node name="SSShinyFx" type="Node" parent="GameHub/TrophyCase/Trophy1/TrophyShader"]
 script = ExtResource( 37 )
 
+[node name="TrophyArea" type="Area2D" parent="GameHub/TrophyCase/Trophy1"]
+
+[node name="TrophyColl" type="CollisionShape2D" parent="GameHub/TrophyCase/Trophy1/TrophyArea"]
+scale = Vector2( 3, 3 )
+shape = SubResource( 52 )
+
 [node name="Trophy2" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 116, 96 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 32 )
 script = ExtResource( 36 )
+trophy_name = "Silver Trophy"
+trophy_desc = "- Complete a track on Arcade mode."
 
 [node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy2"]
 wait_time = 3.0
@@ -3060,11 +3072,19 @@ node_path = NodePath("..")
 [node name="SSShinyFx" type="Node" parent="GameHub/TrophyCase/Trophy2/TrophyShader"]
 script = ExtResource( 37 )
 
+[node name="TrophyArea" type="Area2D" parent="GameHub/TrophyCase/Trophy2"]
+
+[node name="TrophyColl" type="CollisionShape2D" parent="GameHub/TrophyCase/Trophy2/TrophyArea"]
+scale = Vector2( 3, 3 )
+shape = SubResource( 52 )
+
 [node name="Trophy3" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 192, 96 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 32 )
 script = ExtResource( 36 )
+trophy_name = "Gold Trophy"
+trophy_desc = "- Complete a track on Ironbit mode."
 
 [node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy3"]
 wait_time = 3.0
@@ -3082,11 +3102,19 @@ node_path = NodePath("..")
 [node name="SSShinyFx" type="Node" parent="GameHub/TrophyCase/Trophy3/TrophyShader"]
 script = ExtResource( 37 )
 
+[node name="TrophyArea" type="Area2D" parent="GameHub/TrophyCase/Trophy3"]
+
+[node name="TrophyColl" type="CollisionShape2D" parent="GameHub/TrophyCase/Trophy3/TrophyArea"]
+scale = Vector2( 3, 3 )
+shape = SubResource( 52 )
+
 [node name="Trophy4" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 78, 140 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 32 )
 script = ExtResource( 36 )
+trophy_name = "Diamond Trophy"
+trophy_desc = "- Complete a track on Arcade w/ Overdrive."
 
 [node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy4"]
 wait_time = 3.0
@@ -3104,11 +3132,19 @@ node_path = NodePath("..")
 [node name="SSShinyFx" type="Node" parent="GameHub/TrophyCase/Trophy4/TrophyShader"]
 script = ExtResource( 37 )
 
+[node name="TrophyArea" type="Area2D" parent="GameHub/TrophyCase/Trophy4"]
+
+[node name="TrophyColl" type="CollisionShape2D" parent="GameHub/TrophyCase/Trophy4/TrophyArea"]
+scale = Vector2( 3, 3 )
+shape = SubResource( 52 )
+
 [node name="Trophy5" type="Sprite" parent="GameHub/TrophyCase"]
 position = Vector2( 154, 140 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 32 )
 script = ExtResource( 36 )
+trophy_name = "Bizarre Trophy"
+trophy_desc = "- Complete a track on Ironbit w/ Overdrive."
 
 [node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy5"]
 wait_time = 3.0
@@ -3125,6 +3161,12 @@ node_path = NodePath("..")
 
 [node name="SSShinyFx" type="Node" parent="GameHub/TrophyCase/Trophy5/TrophyShader"]
 script = ExtResource( 37 )
+
+[node name="TrophyArea" type="Area2D" parent="GameHub/TrophyCase/Trophy5"]
+
+[node name="TrophyColl" type="CollisionShape2D" parent="GameHub/TrophyCase/Trophy5/TrophyArea"]
+scale = Vector2( 3, 3 )
+shape = SubResource( 52 )
 
 [node name="TrophyAnim1" type="AnimationPlayer" parent="GameHub/TrophyCase"]
 reset_on_save = false
@@ -3191,18 +3233,7 @@ theme = ExtResource( 4 )
 text = "HIGH SCORES:"
 align = 1
 
-[node name="ScoreLabel1" type="Label" parent="GameHub"]
-margin_left = 8.0
-margin_top = 60.0
-margin_right = 232.0
-margin_bottom = 89.9991
-theme = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, -1.09175e-09 )
-custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
-text = "0"
-align = 1
-
-[node name="ScoreLabel2" type="Label" parent="GameHub"]
+[node name="ScoreLabel9" type="Label" parent="GameHub"]
 margin_left = 8.0
 margin_top = 60.0
 margin_right = 232.0
@@ -3213,33 +3244,22 @@ custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
-[node name="ScoreLabel3" type="Label" parent="GameHub"]
+[node name="ScoreLabel8" type="Label" parent="GameHub"]
 margin_left = 8.0
 margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 89.9999
+margin_bottom = 90.0
 theme = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 0 )
+custom_colors/font_color = Color( 1, 1, 1, -1.09175e-09 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
-[node name="ScoreLabel4" type="Label" parent="GameHub"]
+[node name="ScoreLabel7" type="Label" parent="GameHub"]
 margin_left = 8.0
 margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 90.0005
-theme = ExtResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 0 )
-custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
-text = "0"
-align = 1
-
-[node name="ScoreLabel5" type="Label" parent="GameHub"]
-margin_left = 8.0
-margin_top = 60.0
-margin_right = 232.0
-margin_bottom = 89.9991
+margin_bottom = 90.0008
 theme = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 0 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
@@ -3257,18 +3277,40 @@ custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
-[node name="ScoreLabel7" type="Label" parent="GameHub"]
+[node name="ScoreLabel5" type="Label" parent="GameHub"]
 margin_left = 8.0
 margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 90.0008
+margin_bottom = 89.9991
 theme = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 0 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
-[node name="ScoreLabel8" type="Label" parent="GameHub"]
+[node name="ScoreLabel4" type="Label" parent="GameHub"]
+margin_left = 8.0
+margin_top = 60.0
+margin_right = 232.0
+margin_bottom = 90.0005
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 0 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
+text = "0"
+align = 1
+
+[node name="ScoreLabel3" type="Label" parent="GameHub"]
+margin_left = 8.0
+margin_top = 60.0
+margin_right = 232.0
+margin_bottom = 89.9999
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 0 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
+text = "0"
+align = 1
+
+[node name="ScoreLabel2" type="Label" parent="GameHub"]
 margin_left = 8.0
 margin_top = 60.0
 margin_right = 232.0
@@ -3279,11 +3321,11 @@ custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
-[node name="ScoreLabel9" type="Label" parent="GameHub"]
+[node name="ScoreLabel1" type="Label" parent="GameHub"]
 margin_left = 8.0
 margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 90.0
+margin_bottom = 89.9991
 theme = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, -1.09175e-09 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
@@ -3799,14 +3841,24 @@ current = true
 [connection signal="trophy_anims_finished" from="GameHub" to="TrackList/TrackList/Track_1" method="_on_GameHub_trophy_anims_finished"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy1/TrophyTimer1" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyTimer1_timeout"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy1/TrophyTimer2" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyTimer2_timeout"]
+[connection signal="mouse_entered" from="GameHub/TrophyCase/Trophy1/TrophyArea" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyArea_mouse_entered"]
+[connection signal="mouse_exited" from="GameHub/TrophyCase/Trophy1/TrophyArea" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyArea_mouse_exited"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy2/TrophyTimer1" to="GameHub/TrophyCase/Trophy2" method="_on_TrophyTimer1_timeout"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy2/TrophyTimer2" to="GameHub/TrophyCase/Trophy2" method="_on_TrophyTimer2_timeout"]
+[connection signal="mouse_entered" from="GameHub/TrophyCase/Trophy2/TrophyArea" to="GameHub/TrophyCase/Trophy2" method="_on_TrophyArea_mouse_entered"]
+[connection signal="mouse_exited" from="GameHub/TrophyCase/Trophy2/TrophyArea" to="GameHub/TrophyCase/Trophy2" method="_on_TrophyArea_mouse_exited"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy3/TrophyTimer1" to="GameHub/TrophyCase/Trophy3" method="_on_TrophyTimer1_timeout"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy3/TrophyTimer2" to="GameHub/TrophyCase/Trophy3" method="_on_TrophyTimer2_timeout"]
+[connection signal="mouse_entered" from="GameHub/TrophyCase/Trophy3/TrophyArea" to="GameHub/TrophyCase/Trophy3" method="_on_TrophyArea_mouse_entered"]
+[connection signal="mouse_exited" from="GameHub/TrophyCase/Trophy3/TrophyArea" to="GameHub/TrophyCase/Trophy3" method="_on_TrophyArea_mouse_exited"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy4/TrophyTimer1" to="GameHub/TrophyCase/Trophy4" method="_on_TrophyTimer1_timeout"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy4/TrophyTimer2" to="GameHub/TrophyCase/Trophy4" method="_on_TrophyTimer2_timeout"]
+[connection signal="mouse_entered" from="GameHub/TrophyCase/Trophy4/TrophyArea" to="GameHub/TrophyCase/Trophy4" method="_on_TrophyArea_mouse_entered"]
+[connection signal="mouse_exited" from="GameHub/TrophyCase/Trophy4/TrophyArea" to="GameHub/TrophyCase/Trophy4" method="_on_TrophyArea_mouse_exited"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy5/TrophyTimer1" to="GameHub/TrophyCase/Trophy5" method="_on_TrophyTimer1_timeout"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy5/TrophyTimer2" to="GameHub/TrophyCase/Trophy5" method="_on_TrophyTimer2_timeout"]
+[connection signal="mouse_entered" from="GameHub/TrophyCase/Trophy5/TrophyArea" to="GameHub/TrophyCase/Trophy5" method="_on_TrophyArea_mouse_entered"]
+[connection signal="mouse_exited" from="GameHub/TrophyCase/Trophy5/TrophyArea" to="GameHub/TrophyCase/Trophy5" method="_on_TrophyArea_mouse_exited"]
 [connection signal="animation_finished" from="GameHub/TrophyCase/TrophyAnim1" to="GameHub" method="_on_TrophyAnim1_animation_finished"]
 [connection signal="animation_finished" from="GameHub/TrophyCase/TrophyAnim2" to="GameHub" method="_on_TrophyAnim2_animation_finished"]
 [connection signal="animation_finished" from="GameHub/TrophyCase/TrophyAnim3" to="GameHub" method="_on_TrophyAnim3_animation_finished"]
