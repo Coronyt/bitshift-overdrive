@@ -11,5 +11,5 @@ dest_files=[ "res://.import/devilcat_100.ogg-97e6088a5626cca9f7db25395c525081.og
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

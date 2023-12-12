@@ -52,7 +52,7 @@ region_rect = Rect2( 0, 0, 448, 64 )
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
-[sub_resource type="StyleBoxTexture" id=4]
+[sub_resource type="StyleBoxTexture" id=9]
 texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 448, 64 )
 
@@ -60,7 +60,7 @@ region_rect = Rect2( 0, 0, 448, 64 )
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 448, 64 )
 
-[sub_resource type="StyleBoxTexture" id=9]
+[sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 448, 64 )
 
@@ -2649,21 +2649,21 @@ theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 4 )
+custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "Supermassive Spacedive"
+text = "Breeze in the Blackest Forest"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "1.5 (Basic)"
-chart_key = "spacedive"
+diff_desc = "Basic"
+chart_key = "breeze"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_1"]
 visible = false
 position = Vector2( 24, 14 )
-texture = ExtResource( 17 )
+texture = ExtResource( 23 )
 
 [node name="Track_2" type="Button" parent="TrackList/TrackList"]
 margin_top = 68.0
@@ -2677,18 +2677,18 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "Breeze in the Blackest Forest"
+text = "Mistfall by Moonlight"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "2.0 (Moderate)"
-chart_key = "breeze"
+diff_desc = "Basic"
+chart_key = "moonlight"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_2"]
 visible = false
 position = Vector2( 24, 14 )
-texture = ExtResource( 23 )
+texture = ExtResource( 27 )
 
 [node name="Track_3" type="Button" parent="TrackList/TrackList"]
 margin_top = 136.0
@@ -2699,21 +2699,21 @@ theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 9 )
+custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "It's Brighter on the Other Side"
+text = "Supermassive Spacedive"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "3.5 (Hard)"
-chart_key = "brighter"
+diff_desc = "Moderate"
+chart_key = "spacedive"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_3"]
 visible = false
 position = Vector2( 24, 14 )
-texture = ExtResource( 25 )
+texture = ExtResource( 17 )
 
 [node name="Track_4" type="Button" parent="TrackList/TrackList"]
 margin_top = 204.0
@@ -2732,7 +2732,7 @@ script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "2.5 (Moderate)"
+diff_desc = "Moderate"
 chart_key = "coy_glance"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_4"]
@@ -2752,18 +2752,18 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "Mistfall by Moonlight"
+text = "It's Brighter on the Other Side"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "2.0 (Moderate)"
-chart_key = "moonlight"
+diff_desc = "Advanced"
+chart_key = "brighter"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_5"]
 visible = false
 position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
+texture = ExtResource( 25 )
 
 [node name="Track_6" type="Button" parent="TrackList/TrackList"]
 margin_top = 340.0
@@ -2774,16 +2774,16 @@ theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 7 )
+custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "Bitshift Baroque"
+text = "Scarlet Serenade"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "4.5 (Insane)"
-chart_key = "baroque"
+diff_desc = "Insane"
+chart_key = "scarlet"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_6"]
 visible = false
@@ -2802,18 +2802,15 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "Scarlet Serenade"
+text = "[ cat-eared devil ]"
 script = ExtResource( 22 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-diff_desc = "4.5 (Insane)"
-chart_key = "scarlet"
+diff_desc = "Insane"
+chart_key = "devilcat"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_7"]
 visible = false
 position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
+texture = ExtResource( 25 )
 
 [node name="Track_8" type="Button" parent="TrackList/TrackList"]
 margin_top = 476.0
@@ -2824,18 +2821,21 @@ theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 9 )
+custom_styles/disabled = SubResource( 7 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "[ cat-eared devil ]"
+text = "Bitshift Baroque"
 script = ExtResource( 22 )
-diff_desc = "4.0 (Hard)"
-chart_key = "devilcat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+diff_desc = "Sadistic"
+chart_key = "baroque"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_8"]
 visible = false
 position = Vector2( 24, 14 )
-texture = ExtResource( 25 )
+texture = ExtResource( 27 )
 
 [node name="Track_9" type="Button" parent="TrackList/TrackList"]
 margin_top = 544.0
@@ -2854,7 +2854,7 @@ script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-diff_desc = "4.5 (Insane)"
+diff_desc = "Sadistic"
 chart_key = "strato"
 
 [node name="marker" type="Sprite" parent="TrackList/TrackList/Track_9"]
@@ -3784,8 +3784,8 @@ current = true
 
 [node name="CRT" parent="." instance=ExtResource( 13 )]
 
-[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer1" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer1_timeout"]
-[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer2" to="TrackList/TrackList/Track_1" method="_on_PreviewTimer2_timeout"]
+[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer1" to="TrackList/TrackList/Track_3" method="_on_PreviewTimer1_timeout"]
+[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer2" to="TrackList/TrackList/Track_3" method="_on_PreviewTimer2_timeout"]
 [connection signal="timeout" from="TrackList/TrackList/TrackListTimer" to="TrackList/TrackList/TrackListTimer" method="_on_TrackListTimer_timeout"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_1" to="TrackList/TrackList/Track_1" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_1" to="GameHub" method="_on_new_active_track"]
@@ -3838,7 +3838,7 @@ current = true
 [connection signal="mouse_entered" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_pressed"]
-[connection signal="trophy_anims_finished" from="GameHub" to="TrackList/TrackList/Track_1" method="_on_GameHub_trophy_anims_finished"]
+[connection signal="trophy_anims_finished" from="GameHub" to="TrackList/TrackList/Track_3" method="_on_GameHub_trophy_anims_finished"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy1/TrophyTimer1" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyTimer1_timeout"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy1/TrophyTimer2" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyTimer2_timeout"]
 [connection signal="mouse_entered" from="GameHub/TrophyCase/Trophy1/TrophyArea" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyArea_mouse_entered"]

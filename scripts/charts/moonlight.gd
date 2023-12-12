@@ -916,9 +916,9 @@ const chart = [
 	["REST", 8],
 	
 	# Buffer
-	["REST", 1],
-	["REST", 1],
-	["REST", 1],
+	# ["REST", 1],
+	# ["REST", 1],
+	# ["REST", 1],
 	["REST", 1],
 	
 	# End
