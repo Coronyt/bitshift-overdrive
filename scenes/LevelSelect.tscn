@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -1809,6 +1809,12 @@ tracks/89/keys = {
 "times": PoolRealArray( 0, 0.5 )
 }
 
+[sub_resource type="DynamicFont" id=51]
+size = 24
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 14 )
+
 [sub_resource type="DynamicFont" id=18]
 size = 32
 outline_size = 2
@@ -3308,6 +3314,46 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CreditsLabel1" type="Label" parent="OptionsHub"]
+margin_left = 992.0
+margin_top = 56.0
+margin_right = 1120.0
+margin_bottom = 104.0
+theme = ExtResource( 4 )
+text = "CREDITS"
+align = 2
+valign = 1
+
+[node name="CreditsLabel2" type="Label" parent="OptionsHub"]
+margin_left = 768.0
+margin_top = 106.0
+margin_right = 1120.0
+margin_bottom = 154.0
+theme = ExtResource( 4 )
+text = "
+\"BITSHIFT OVERDRIVE\"
+created by Coronyt"
+align = 2
+valign = 1
+
+[node name="CreditsLabel3" type="Label" parent="OptionsHub"]
+margin_left = 768.0
+margin_top = 216.0
+margin_right = 1120.0
+margin_bottom = 367.0
+theme = ExtResource( 4 )
+custom_fonts/font = SubResource( 51 )
+text = "
+ASSETS USED:
+
+\"C-64\" font by Jamie Cross
+\"Matchup Pro\" font by somepx
+
+Trophy sprites by Kanomwan
+Parallax backgrounds by RauszyK"
+align = 2
+valign = 1
 
 [node name="AuxiliaryHub" type="ColorRect" parent="."]
 margin_left = 504.0
