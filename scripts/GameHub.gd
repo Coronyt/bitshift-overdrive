@@ -24,6 +24,9 @@ func _on_new_active_track():
 	$TrophyCase/Trophy3/TrophyShader/SSShinyFx._set_active(false)
 	$TrophyCase/Trophy4/TrophyShader/SSShinyFx._set_active(false)
 	$TrophyCase/Trophy5/TrophyShader/SSShinyFx._set_active(false)
+	if $ScoreAnims.is_playing():
+		$ScoreAnims.stop()
+	$ScoreAnims.play("show_scores")
 	display_trophies()
 
 func display_trophies():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
@@ -540,6 +540,1273 @@ tracks/3/enabled = true
 tracks/3/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 720, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.1, 2 )
+}
+
+[sub_resource type="Animation" id=50]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("ScoreLabel1:custom_colors/font_outline_modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("ScoreLabel1:custom_colors/font_outline_modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("ScoreLabel1:custom_colors/font_outline_modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("ScoreLabel1:custom_colors/font_outline_modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("ScoreLabel2:custom_colors/font_outline_modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("ScoreLabel2:custom_colors/font_outline_modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("ScoreLabel2:custom_colors/font_outline_modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("ScoreLabel2:custom_colors/font_outline_modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("ScoreLabel3:custom_colors/font_outline_modulate:r")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("ScoreLabel3:custom_colors/font_outline_modulate:g")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("ScoreLabel3:custom_colors/font_outline_modulate:b")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("ScoreLabel3:custom_colors/font_outline_modulate:a")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("ScoreLabel4:custom_colors/font_outline_modulate:r")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("ScoreLabel4:custom_colors/font_outline_modulate:g")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("ScoreLabel4:custom_colors/font_outline_modulate:b")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/15/type = "bezier"
+tracks/15/path = NodePath("ScoreLabel4:custom_colors/font_outline_modulate:a")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("ScoreLabel5:custom_colors/font_outline_modulate:r")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/17/type = "bezier"
+tracks/17/path = NodePath("ScoreLabel5:custom_colors/font_outline_modulate:g")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/18/type = "bezier"
+tracks/18/path = NodePath("ScoreLabel5:custom_colors/font_outline_modulate:b")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/19/type = "bezier"
+tracks/19/path = NodePath("ScoreLabel5:custom_colors/font_outline_modulate:a")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/20/type = "bezier"
+tracks/20/path = NodePath("ScoreLabel6:custom_colors/font_outline_modulate:r")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/21/type = "bezier"
+tracks/21/path = NodePath("ScoreLabel6:custom_colors/font_outline_modulate:g")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/22/type = "bezier"
+tracks/22/path = NodePath("ScoreLabel6:custom_colors/font_outline_modulate:b")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/23/type = "bezier"
+tracks/23/path = NodePath("ScoreLabel6:custom_colors/font_outline_modulate:a")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/24/type = "bezier"
+tracks/24/path = NodePath("ScoreLabel7:custom_colors/font_outline_modulate:r")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/25/type = "bezier"
+tracks/25/path = NodePath("ScoreLabel7:custom_colors/font_outline_modulate:g")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/26/type = "bezier"
+tracks/26/path = NodePath("ScoreLabel7:custom_colors/font_outline_modulate:b")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/27/type = "bezier"
+tracks/27/path = NodePath("ScoreLabel7:custom_colors/font_outline_modulate:a")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/28/type = "bezier"
+tracks/28/path = NodePath("ScoreLabel8:custom_colors/font_outline_modulate:r")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/29/type = "bezier"
+tracks/29/path = NodePath("ScoreLabel8:custom_colors/font_outline_modulate:g")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/30/type = "bezier"
+tracks/30/path = NodePath("ScoreLabel8:custom_colors/font_outline_modulate:b")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/31/type = "bezier"
+tracks/31/path = NodePath("ScoreLabel8:custom_colors/font_outline_modulate:a")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/32/type = "bezier"
+tracks/32/path = NodePath("ScoreLabel9:custom_colors/font_outline_modulate:r")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/33/type = "bezier"
+tracks/33/path = NodePath("ScoreLabel9:custom_colors/font_outline_modulate:g")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/34/type = "bezier"
+tracks/34/path = NodePath("ScoreLabel9:custom_colors/font_outline_modulate:b")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/35/type = "bezier"
+tracks/35/path = NodePath("ScoreLabel9:custom_colors/font_outline_modulate:a")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=49]
+resource_name = "show_scores"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("ScoreLabel1:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 8, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("ScoreLabel1:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 60, -0.25, 0, 0.25, 0, 72, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("ScoreLabel2:rect_position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 8, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("ScoreLabel2:rect_position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 60, -0.25, 0, 0.25, 0, 104, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("ScoreLabel3:rect_position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 8, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("ScoreLabel3:rect_position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 60, -0.25, 0, 0.25, 0, 136, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("ScoreLabel4:rect_position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 8, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("ScoreLabel4:rect_position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 60, -0.25, 0, 0.25, 0, 168, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("ScoreLabel5:rect_position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 8, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("ScoreLabel5:rect_position:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 60, -0.25, 0, 0.25, 0, 200, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("ScoreLabel6:rect_position:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 8, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("ScoreLabel6:rect_position:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 60, -0.25, 0, 0.25, 0, 232, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("ScoreLabel7:rect_position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 8, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("ScoreLabel7:rect_position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( 60, -0.25, 0, 0.25, 0, 264, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("ScoreLabel8:rect_position:x")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 8, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/15/type = "bezier"
+tracks/15/path = NodePath("ScoreLabel8:rect_position:y")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"points": PoolRealArray( 60, -0.25, 0, 0.25, 0, 296, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("ScoreLabel9:rect_position:x")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 8, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/17/type = "bezier"
+tracks/17/path = NodePath("ScoreLabel9:rect_position:y")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"points": PoolRealArray( 60, -0.25, 0, 0.25, 0, 328, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/18/type = "bezier"
+tracks/18/path = NodePath("ScoreLabel1:custom_colors/font_color:r")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/19/type = "bezier"
+tracks/19/path = NodePath("ScoreLabel1:custom_colors/font_color:g")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/20/type = "bezier"
+tracks/20/path = NodePath("ScoreLabel1:custom_colors/font_color:b")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/21/type = "bezier"
+tracks/21/path = NodePath("ScoreLabel1:custom_colors/font_color:a")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/22/type = "bezier"
+tracks/22/path = NodePath("ScoreLabel2:custom_colors/font_color:r")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/23/type = "bezier"
+tracks/23/path = NodePath("ScoreLabel2:custom_colors/font_color:g")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/24/type = "bezier"
+tracks/24/path = NodePath("ScoreLabel2:custom_colors/font_color:b")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/25/type = "bezier"
+tracks/25/path = NodePath("ScoreLabel2:custom_colors/font_color:a")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/26/type = "bezier"
+tracks/26/path = NodePath("ScoreLabel3:custom_colors/font_color:r")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/27/type = "bezier"
+tracks/27/path = NodePath("ScoreLabel3:custom_colors/font_color:g")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/28/type = "bezier"
+tracks/28/path = NodePath("ScoreLabel3:custom_colors/font_color:b")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/29/type = "bezier"
+tracks/29/path = NodePath("ScoreLabel3:custom_colors/font_color:a")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/30/type = "bezier"
+tracks/30/path = NodePath("ScoreLabel4:custom_colors/font_color:r")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/31/type = "bezier"
+tracks/31/path = NodePath("ScoreLabel4:custom_colors/font_color:g")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/32/type = "bezier"
+tracks/32/path = NodePath("ScoreLabel4:custom_colors/font_color:b")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/33/type = "bezier"
+tracks/33/path = NodePath("ScoreLabel4:custom_colors/font_color:a")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/34/type = "bezier"
+tracks/34/path = NodePath("ScoreLabel5:custom_colors/font_color:r")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/35/type = "bezier"
+tracks/35/path = NodePath("ScoreLabel5:custom_colors/font_color:g")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/36/type = "bezier"
+tracks/36/path = NodePath("ScoreLabel5:custom_colors/font_color:b")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/37/type = "bezier"
+tracks/37/path = NodePath("ScoreLabel5:custom_colors/font_color:a")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/38/type = "bezier"
+tracks/38/path = NodePath("ScoreLabel6:custom_colors/font_color:r")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/39/type = "bezier"
+tracks/39/path = NodePath("ScoreLabel6:custom_colors/font_color:g")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/40/type = "bezier"
+tracks/40/path = NodePath("ScoreLabel6:custom_colors/font_color:b")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/41/type = "bezier"
+tracks/41/path = NodePath("ScoreLabel6:custom_colors/font_color:a")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/42/type = "bezier"
+tracks/42/path = NodePath("ScoreLabel7:custom_colors/font_color:r")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/43/type = "bezier"
+tracks/43/path = NodePath("ScoreLabel7:custom_colors/font_color:g")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/44/type = "bezier"
+tracks/44/path = NodePath("ScoreLabel7:custom_colors/font_color:b")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/45/type = "bezier"
+tracks/45/path = NodePath("ScoreLabel7:custom_colors/font_color:a")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/46/type = "bezier"
+tracks/46/path = NodePath("ScoreLabel8:custom_colors/font_color:r")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/47/type = "bezier"
+tracks/47/path = NodePath("ScoreLabel8:custom_colors/font_color:g")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/48/type = "bezier"
+tracks/48/path = NodePath("ScoreLabel8:custom_colors/font_color:b")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/49/type = "bezier"
+tracks/49/path = NodePath("ScoreLabel8:custom_colors/font_color:a")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/50/type = "bezier"
+tracks/50/path = NodePath("ScoreLabel9:custom_colors/font_color:r")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/51/type = "bezier"
+tracks/51/path = NodePath("ScoreLabel9:custom_colors/font_color:g")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/52/type = "bezier"
+tracks/52/path = NodePath("ScoreLabel9:custom_colors/font_color:b")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/53/type = "bezier"
+tracks/53/path = NodePath("ScoreLabel9:custom_colors/font_color:a")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.79397e-07, 0.5 )
+}
+tracks/54/type = "bezier"
+tracks/54/path = NodePath("ScoreLabel1:custom_colors/font_outline_modulate:r")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/55/type = "bezier"
+tracks/55/path = NodePath("ScoreLabel1:custom_colors/font_outline_modulate:g")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/56/type = "bezier"
+tracks/56/path = NodePath("ScoreLabel1:custom_colors/font_outline_modulate:b")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/57/type = "bezier"
+tracks/57/path = NodePath("ScoreLabel1:custom_colors/font_outline_modulate:a")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/58/type = "bezier"
+tracks/58/path = NodePath("ScoreLabel2:custom_colors/font_outline_modulate:r")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/59/type = "bezier"
+tracks/59/path = NodePath("ScoreLabel2:custom_colors/font_outline_modulate:g")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/60/type = "bezier"
+tracks/60/path = NodePath("ScoreLabel2:custom_colors/font_outline_modulate:b")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/61/type = "bezier"
+tracks/61/path = NodePath("ScoreLabel2:custom_colors/font_outline_modulate:a")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/62/type = "bezier"
+tracks/62/path = NodePath("ScoreLabel3:custom_colors/font_outline_modulate:r")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/63/type = "bezier"
+tracks/63/path = NodePath("ScoreLabel3:custom_colors/font_outline_modulate:g")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/64/type = "bezier"
+tracks/64/path = NodePath("ScoreLabel3:custom_colors/font_outline_modulate:b")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/65/type = "bezier"
+tracks/65/path = NodePath("ScoreLabel3:custom_colors/font_outline_modulate:a")
+tracks/65/interp = 1
+tracks/65/loop_wrap = true
+tracks/65/imported = false
+tracks/65/enabled = true
+tracks/65/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/66/type = "bezier"
+tracks/66/path = NodePath("ScoreLabel4:custom_colors/font_outline_modulate:r")
+tracks/66/interp = 1
+tracks/66/loop_wrap = true
+tracks/66/imported = false
+tracks/66/enabled = true
+tracks/66/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/67/type = "bezier"
+tracks/67/path = NodePath("ScoreLabel4:custom_colors/font_outline_modulate:g")
+tracks/67/interp = 1
+tracks/67/loop_wrap = true
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/68/type = "bezier"
+tracks/68/path = NodePath("ScoreLabel4:custom_colors/font_outline_modulate:b")
+tracks/68/interp = 1
+tracks/68/loop_wrap = true
+tracks/68/imported = false
+tracks/68/enabled = true
+tracks/68/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/69/type = "bezier"
+tracks/69/path = NodePath("ScoreLabel4:custom_colors/font_outline_modulate:a")
+tracks/69/interp = 1
+tracks/69/loop_wrap = true
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/70/type = "bezier"
+tracks/70/path = NodePath("ScoreLabel5:custom_colors/font_outline_modulate:r")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/71/type = "bezier"
+tracks/71/path = NodePath("ScoreLabel5:custom_colors/font_outline_modulate:g")
+tracks/71/interp = 1
+tracks/71/loop_wrap = true
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/72/type = "bezier"
+tracks/72/path = NodePath("ScoreLabel5:custom_colors/font_outline_modulate:b")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/73/type = "bezier"
+tracks/73/path = NodePath("ScoreLabel5:custom_colors/font_outline_modulate:a")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/74/type = "bezier"
+tracks/74/path = NodePath("ScoreLabel6:custom_colors/font_outline_modulate:r")
+tracks/74/interp = 1
+tracks/74/loop_wrap = true
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/75/type = "bezier"
+tracks/75/path = NodePath("ScoreLabel6:custom_colors/font_outline_modulate:g")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/76/type = "bezier"
+tracks/76/path = NodePath("ScoreLabel6:custom_colors/font_outline_modulate:b")
+tracks/76/interp = 1
+tracks/76/loop_wrap = true
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/77/type = "bezier"
+tracks/77/path = NodePath("ScoreLabel6:custom_colors/font_outline_modulate:a")
+tracks/77/interp = 1
+tracks/77/loop_wrap = true
+tracks/77/imported = false
+tracks/77/enabled = true
+tracks/77/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/78/type = "bezier"
+tracks/78/path = NodePath("ScoreLabel7:custom_colors/font_outline_modulate:r")
+tracks/78/interp = 1
+tracks/78/loop_wrap = true
+tracks/78/imported = false
+tracks/78/enabled = true
+tracks/78/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/79/type = "bezier"
+tracks/79/path = NodePath("ScoreLabel7:custom_colors/font_outline_modulate:g")
+tracks/79/interp = 1
+tracks/79/loop_wrap = true
+tracks/79/imported = false
+tracks/79/enabled = true
+tracks/79/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/80/type = "bezier"
+tracks/80/path = NodePath("ScoreLabel7:custom_colors/font_outline_modulate:b")
+tracks/80/interp = 1
+tracks/80/loop_wrap = true
+tracks/80/imported = false
+tracks/80/enabled = true
+tracks/80/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/81/type = "bezier"
+tracks/81/path = NodePath("ScoreLabel7:custom_colors/font_outline_modulate:a")
+tracks/81/interp = 1
+tracks/81/loop_wrap = true
+tracks/81/imported = false
+tracks/81/enabled = true
+tracks/81/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/82/type = "bezier"
+tracks/82/path = NodePath("ScoreLabel8:custom_colors/font_outline_modulate:r")
+tracks/82/interp = 1
+tracks/82/loop_wrap = true
+tracks/82/imported = false
+tracks/82/enabled = true
+tracks/82/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/83/type = "bezier"
+tracks/83/path = NodePath("ScoreLabel8:custom_colors/font_outline_modulate:g")
+tracks/83/interp = 1
+tracks/83/loop_wrap = true
+tracks/83/imported = false
+tracks/83/enabled = true
+tracks/83/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/84/type = "bezier"
+tracks/84/path = NodePath("ScoreLabel8:custom_colors/font_outline_modulate:b")
+tracks/84/interp = 1
+tracks/84/loop_wrap = true
+tracks/84/imported = false
+tracks/84/enabled = true
+tracks/84/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/85/type = "bezier"
+tracks/85/path = NodePath("ScoreLabel8:custom_colors/font_outline_modulate:a")
+tracks/85/interp = 1
+tracks/85/loop_wrap = true
+tracks/85/imported = false
+tracks/85/enabled = true
+tracks/85/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/86/type = "bezier"
+tracks/86/path = NodePath("ScoreLabel9:custom_colors/font_outline_modulate:r")
+tracks/86/interp = 1
+tracks/86/loop_wrap = true
+tracks/86/imported = false
+tracks/86/enabled = true
+tracks/86/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/87/type = "bezier"
+tracks/87/path = NodePath("ScoreLabel9:custom_colors/font_outline_modulate:g")
+tracks/87/interp = 1
+tracks/87/loop_wrap = true
+tracks/87/imported = false
+tracks/87/enabled = true
+tracks/87/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/88/type = "bezier"
+tracks/88/path = NodePath("ScoreLabel9:custom_colors/font_outline_modulate:b")
+tracks/88/interp = 1
+tracks/88/loop_wrap = true
+tracks/88/imported = false
+tracks/88/enabled = true
+tracks/88/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/89/type = "bezier"
+tracks/89/path = NodePath("ScoreLabel9:custom_colors/font_outline_modulate:a")
+tracks/89/interp = 1
+tracks/89/loop_wrap = true
+tracks/89/imported = false
+tracks/89/enabled = true
+tracks/89/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
 }
 
 [sub_resource type="DynamicFont" id=18]
@@ -1920,84 +3187,107 @@ align = 1
 
 [node name="ScoreLabel1" type="Label" parent="GameHub"]
 margin_left = 8.0
-margin_top = 72.0
+margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 102.0
+margin_bottom = 89.9991
 theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, -1.09175e-09 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
 [node name="ScoreLabel2" type="Label" parent="GameHub"]
 margin_left = 8.0
-margin_top = 104.0
+margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 134.0
+margin_bottom = 90.0
 theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, -1.09175e-09 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
 [node name="ScoreLabel3" type="Label" parent="GameHub"]
 margin_left = 8.0
-margin_top = 136.0
+margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 166.0
+margin_bottom = 89.9999
 theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 0 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
 [node name="ScoreLabel4" type="Label" parent="GameHub"]
 margin_left = 8.0
-margin_top = 168.0
+margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 198.0
+margin_bottom = 90.0005
 theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 0 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
 [node name="ScoreLabel5" type="Label" parent="GameHub"]
 margin_left = 8.0
-margin_top = 200.0
+margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 230.0
+margin_bottom = 89.9991
 theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 0 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
 [node name="ScoreLabel6" type="Label" parent="GameHub"]
 margin_left = 8.0
-margin_top = 232.0
+margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 262.0
+margin_bottom = 89.9997
 theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 0 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
 [node name="ScoreLabel7" type="Label" parent="GameHub"]
 margin_left = 8.0
-margin_top = 264.0
+margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 294.0
+margin_bottom = 90.0008
 theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 0 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
 [node name="ScoreLabel8" type="Label" parent="GameHub"]
 margin_left = 8.0
-margin_top = 296.0
+margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 326.0
+margin_bottom = 90.0
 theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, -1.09175e-09 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
 
 [node name="ScoreLabel9" type="Label" parent="GameHub"]
 margin_left = 8.0
-margin_top = 328.0
+margin_top = 60.0
 margin_right = 232.0
-margin_bottom = 358.0
+margin_bottom = 90.0
 theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, -1.09175e-09 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 0 )
 text = "0"
 align = 1
+
+[node name="ScoreAnims" type="AnimationPlayer" parent="GameHub"]
+reset_on_save = false
+anims/RESET = SubResource( 50 )
+anims/show_scores = SubResource( 49 )
 
 [node name="OptionsHub" type="ColorRect" parent="."]
 margin_left = 64.0
