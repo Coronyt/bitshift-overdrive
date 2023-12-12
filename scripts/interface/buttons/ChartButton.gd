@@ -25,7 +25,7 @@ func _on_ChartButton_pressed():
 		SoundManager.preview_playing = false
 	else:
 		fade_out_bgm()
-		self.get_parent().get_child(1).start()
+		# self.get_parent().get_child(1).start()
 	Active.chart = self.chart_key
 	Active.chart_name = self.text
 	Active.diff_desc = self.diff_desc
@@ -69,6 +69,11 @@ func fade_in_track():
 	fade_tween.start()
 	to_play.play(35)
 	var preview_timer = self.get_parent().get_child(0).get_child(0)
+	# this is the problem ... this is getting called and starting the timer
+		# the timer is starting BEFORE the next chart is selected ()
+		# and the conditional in the timeout function isn't catching it cause the timeout is after trophy anims
+		# i think the trophy signal should stop and reset this timer if possible
+			# that should solve the fade-in delay bug
 	preview_timer.start()
 
 func fade_out_track():
@@ -83,7 +88,16 @@ func fade_out_track():
 
 func _on_PreviewTimer1_timeout():
 	fade_out_track()
-	fade_in_bgm()
+	# testing with the below conditional
+		# okay so it seems like ... the fade-in delay problem ONLY happens when
+			# i click from one track to another (i.e. preview is already playing and is muted for trophy anims)
+	if TrophyManager.trophy_queues[Active.chart].size() == 0:
+		fade_in_bgm()
 
 func _on_PreviewTimer2_timeout():
 	SoundManager.track_dict_100[Active.chart].stop()
+
+func _on_GameHub_trophy_anims_finished():
+	var preview_timer = self.get_parent().get_child(0).get_child(0)
+	fade_in_bgm()
+	preview_timer.stop()

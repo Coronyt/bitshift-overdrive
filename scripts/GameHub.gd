@@ -1,5 +1,7 @@
 extends ColorRect
 
+signal trophy_anims_finished
+
 onready var trophy_0_sprite = preload("res://assets/sprites/trophy_0.stex")
 onready var trophy_1_sprite = preload("res://assets/sprites/trophy_1.stex")
 onready var trophy_2_sprite = preload("res://assets/sprites/trophy_2.stex")
@@ -68,14 +70,14 @@ func display_trophies():
 	self.get_parent().save_trophies()
 
 func _on_TrophyAnim1_animation_finished(anim_name):
-	# Note for future self:
-		# This function should be the only one that plays a sound
-		# Since it is the only one guaranteed to be earned every time
 	$TrophyCase/Trophy1.texture = trophy_1_sprite
 	$TrophyCase/TrophyAnim1/Trophy1Dupe.hide()
 	SoundManager.play_sound("trophy2")
 	if TrophyManager.trophy_queues[Active.chart].size() == 1:
 		SoundManager.play_sound("trophy3")
+		# emit signal here to fade in BGM
+		# remember to delete tracktimer if i end up not needing it
+		emit_signal("trophy_anims_finished")
 	TrophyManager.trophy_queues[Active.chart].remove(0)
 
 func _on_TrophyAnim2_animation_finished(anim_name):
@@ -84,6 +86,7 @@ func _on_TrophyAnim2_animation_finished(anim_name):
 	SoundManager.play_sound("trophy2")
 	if TrophyManager.trophy_queues[Active.chart].size() == 1:
 		SoundManager.play_sound("trophy3")
+		emit_signal("trophy_anims_finished")
 	TrophyManager.trophy_queues[Active.chart].remove(0)
 
 func _on_TrophyAnim3_animation_finished(anim_name):
@@ -92,6 +95,7 @@ func _on_TrophyAnim3_animation_finished(anim_name):
 	SoundManager.play_sound("trophy2")
 	if TrophyManager.trophy_queues[Active.chart].size() == 1:
 		SoundManager.play_sound("trophy3")
+		emit_signal("trophy_anims_finished")
 	TrophyManager.trophy_queues[Active.chart].remove(0)
 
 func _on_TrophyAnim4_animation_finished(anim_name):
@@ -100,6 +104,7 @@ func _on_TrophyAnim4_animation_finished(anim_name):
 	SoundManager.play_sound("trophy2")
 	if TrophyManager.trophy_queues[Active.chart].size() == 1:
 		SoundManager.play_sound("trophy3")
+		emit_signal("trophy_anims_finished")
 	TrophyManager.trophy_queues[Active.chart].remove(0)
 
 func _on_TrophyAnim5_animation_finished(anim_name):
@@ -108,4 +113,5 @@ func _on_TrophyAnim5_animation_finished(anim_name):
 	SoundManager.play_sound("trophy2")
 	if TrophyManager.trophy_queues[Active.chart].size() == 1:
 		SoundManager.play_sound("trophy3")
+		emit_signal("trophy_anims_finished")
 	TrophyManager.trophy_queues[Active.chart].remove(0)

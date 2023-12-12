@@ -2460,6 +2460,7 @@ current = true
 [connection signal="mouse_entered" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_pressed"]
+[connection signal="trophy_anims_finished" from="GameHub" to="TrackList/TrackList/Track_1" method="_on_GameHub_trophy_anims_finished"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy1/TrophyTimer1" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyTimer1_timeout"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy1/TrophyTimer2" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyTimer2_timeout"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy2/TrophyTimer1" to="GameHub/TrophyCase/Trophy2" method="_on_TrophyTimer1_timeout"]
