@@ -109,7 +109,12 @@ func _on_ScoreTimer_timeout():
 		TrophyManager.award_trophies()
 		var init_label = TextNode.instance()
 		ScoreManager.update_score(Active.chart, Active.score)
-		init_label.text = "\nFINAL SCORE\n" + str(Active.score)
+		if ScoreManager.score_dict[Active.chart][8] == Active.score:
+			init_label.text = "HIGH SCORE\n" + str(Active.score)
+			SoundManager.play_sound("trophy3")
+			init_label.flash()
+		else:
+			init_label.text = "\nFINAL SCORE\n" + str(Active.score)
 		$ScoreBox.add_child(init_label)
 		$ScorePortal.show()
 

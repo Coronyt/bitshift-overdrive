@@ -5,17 +5,17 @@ export(String) var chart_key
 
 signal new_active_track
 
-# Base Game Difficulty Ratings:
+# Difficulty Ratings:
 # Basic:		0.5 - 1.5
 # Moderate:		2.0 - 3.0
-# Hard:			3.5 - 4.0
+# Advanced:		3.5 - 4.0
 # Insane:		4.5 - 5.0
-
-# For everything else:
 # Sadistic:		5.5+
 
 func _ready():
 	SoundManager.preview_playing = false
+	if TrophyManager.trophy_queues[chart_key].size() > 0:
+		$NoticeAnim.play("notice")
 
 func _on_ChartButton_pressed():
 	self.get_parent().get_parent().get_parent().preview_playing = true
@@ -32,6 +32,9 @@ func _on_ChartButton_pressed():
 	if !SoundManager.preview_playing:
 		if TrophyManager.trophy_queues[Active.chart].size() == 0:
 			fade_in_track()
+		else:
+			$NoticeAnim.stop()
+			$NoticeAnim.seek(0, true)
 	for button in self.get_parent().get_children():
 		if button.is_class("Button"):
 			button.pressed = false
@@ -101,3 +104,6 @@ func _on_GameHub_trophy_anims_finished():
 	var preview_timer = self.get_parent().get_child(0).get_child(0)
 	fade_in_bgm()
 	preview_timer.stop()
+
+func _on_NoticeAnim_animation_finished(anim_name):
+	$NoticeAnim.play("notice")

@@ -32,6 +32,7 @@ func _on_new_active_track():
 func display_trophies():
 	if TrophyManager.trophy_dict[Active.chart][0] == 1:
 		if TrophyManager.trophy_queues[Active.chart].has(1):
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			$TrophyCase/Trophy1.texture = trophy_0_sprite
 			$TrophyCase/TrophyAnim1.play("award")
 			# TrophyManager.trophy_queues[Active.chart].remove(0)
@@ -40,6 +41,7 @@ func display_trophies():
 	else: $TrophyCase/Trophy1.texture = trophy_0_sprite
 	if TrophyManager.trophy_dict[Active.chart][1] == 1:
 		if TrophyManager.trophy_queues[Active.chart].has(2):
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			$TrophyCase/Trophy2.texture = trophy_0_sprite
 			$TrophyCase/TrophyAnim2.play("award")
 			# TrophyManager.trophy_queues[Active.chart].remove(0)
@@ -48,6 +50,7 @@ func display_trophies():
 	else: $TrophyCase/Trophy2.texture = trophy_0_sprite
 	if TrophyManager.trophy_dict[Active.chart][2] == 1:
 		if TrophyManager.trophy_queues[Active.chart].has(3):
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			$TrophyCase/Trophy3.texture = trophy_0_sprite
 			$TrophyCase/TrophyAnim3.play("award")
 			# TrophyManager.trophy_queues[Active.chart].remove(0)
@@ -56,6 +59,7 @@ func display_trophies():
 	else: $TrophyCase/Trophy3.texture = trophy_0_sprite
 	if TrophyManager.trophy_dict[Active.chart][3] == 1:
 		if TrophyManager.trophy_queues[Active.chart].has(4):
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			$TrophyCase/Trophy4.texture = trophy_0_sprite
 			$TrophyCase/TrophyAnim4.play("award")
 			# TrophyManager.trophy_queues[Active.chart].remove(0)
@@ -64,6 +68,7 @@ func display_trophies():
 	else: $TrophyCase/Trophy4.texture = trophy_0_sprite
 	if TrophyManager.trophy_dict[Active.chart][4] == 1:
 		if TrophyManager.trophy_queues[Active.chart].has(5):
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			$TrophyCase/Trophy5.texture = trophy_0_sprite
 			$TrophyCase/TrophyAnim5.play("award")
 			# TrophyManager.trophy_queues[Active.chart].remove(0)
@@ -81,7 +86,9 @@ func _on_TrophyAnim1_animation_finished(anim_name):
 		# emit signal here to fade in BGM
 		# remember to delete tracktimer if i end up not needing it
 		emit_signal("trophy_anims_finished")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	TrophyManager.trophy_queues[Active.chart].remove(0)
+	self.get_parent().save_trophies()
 
 func _on_TrophyAnim2_animation_finished(anim_name):
 	$TrophyCase/Trophy2.texture = trophy_2_sprite
@@ -90,7 +97,9 @@ func _on_TrophyAnim2_animation_finished(anim_name):
 	if TrophyManager.trophy_queues[Active.chart].size() == 1:
 		SoundManager.play_sound("trophy3")
 		emit_signal("trophy_anims_finished")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	TrophyManager.trophy_queues[Active.chart].remove(0)
+	self.get_parent().save_trophies()
 
 func _on_TrophyAnim3_animation_finished(anim_name):
 	$TrophyCase/Trophy3.texture = trophy_3_sprite
@@ -99,7 +108,9 @@ func _on_TrophyAnim3_animation_finished(anim_name):
 	if TrophyManager.trophy_queues[Active.chart].size() == 1:
 		SoundManager.play_sound("trophy3")
 		emit_signal("trophy_anims_finished")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	TrophyManager.trophy_queues[Active.chart].remove(0)
+	self.get_parent().save_trophies()
 
 func _on_TrophyAnim4_animation_finished(anim_name):
 	$TrophyCase/Trophy4.texture = trophy_4_sprite
@@ -108,7 +119,9 @@ func _on_TrophyAnim4_animation_finished(anim_name):
 	if TrophyManager.trophy_queues[Active.chart].size() == 1:
 		SoundManager.play_sound("trophy3")
 		emit_signal("trophy_anims_finished")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	TrophyManager.trophy_queues[Active.chart].remove(0)
+	self.get_parent().save_trophies()
 
 func _on_TrophyAnim5_animation_finished(anim_name):
 	$TrophyCase/Trophy5.texture = trophy_5_sprite
@@ -117,4 +130,6 @@ func _on_TrophyAnim5_animation_finished(anim_name):
 	if TrophyManager.trophy_queues[Active.chart].size() == 1:
 		SoundManager.play_sound("trophy3")
 		emit_signal("trophy_anims_finished")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	TrophyManager.trophy_queues[Active.chart].remove(0)
+	self.get_parent().save_trophies()
