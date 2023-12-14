@@ -111,7 +111,7 @@ func _on_ScoreTimer_timeout():
 		ScoreManager.update_score(Active.chart, Active.score)
 		if ScoreManager.score_dict[Active.chart][8] == Active.score:
 			init_label.text = "HIGH SCORE\n" + str(Active.score)
-			SoundManager.play_sound("trophy3")
+			SoundManager.play_sound("trophy1")
 			init_label.flash()
 		else:
 			init_label.text = "\nFINAL SCORE\n" + str(Active.score)
