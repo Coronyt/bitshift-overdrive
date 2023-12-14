@@ -3718,6 +3718,7 @@ shortcut_in_tooltip = false
 group = SubResource( 10 )
 text = "Slower"
 script = ExtResource( 1 )
+body = "- The track will play at 90 percent speed."
 
 [node name="speed_100" type="CheckBox" parent="SpeedLabel"]
 margin_top = 88.0
@@ -3727,6 +3728,7 @@ shortcut_in_tooltip = false
 group = SubResource( 10 )
 text = "Normal"
 script = ExtResource( 1 )
+body = "- The track will play at 100 percent speed."
 
 [node name="speed_110" type="CheckBox" parent="SpeedLabel"]
 margin_top = 136.0
@@ -3736,6 +3738,7 @@ shortcut_in_tooltip = false
 group = SubResource( 10 )
 text = "Faster"
 script = ExtResource( 1 )
+body = "- The track will play at 110 percent speed."
 
 [node name="DifLabel1" type="Label" parent="."]
 margin_left = 512.0
@@ -4664,10 +4667,13 @@ current = true
 [connection signal="pressed" from="TrackList/TrackList/Track_9" to="TrackList/TrackList/Track_9" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_9/NoticeAnim" to="TrackList/TrackList/Track_9" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_pressed"]
 [connection signal="mouse_entered" from="SpeedLabel/speed_100" to="SpeedLabel/speed_100" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="SpeedLabel/speed_100" to="SpeedLabel/speed_100" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="SpeedLabel/speed_100" to="SpeedLabel/speed_100" method="_on_GenericButton_pressed"]
 [connection signal="mouse_entered" from="SpeedLabel/speed_110" to="SpeedLabel/speed_110" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="SpeedLabel/speed_110" to="SpeedLabel/speed_110" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="SpeedLabel/speed_110" to="SpeedLabel/speed_110" method="_on_GenericButton_pressed"]
 [connection signal="mouse_entered" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_mouse_exited"]
