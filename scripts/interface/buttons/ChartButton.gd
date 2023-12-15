@@ -7,9 +7,9 @@ signal new_active_track
 
 # Difficulty Ratings:
 # Basic:		0.5 - 1.5
-# Moderate:		2.0 - 3.0
+# Basic+:		2.0 - 3.0
 # Advanced:		3.5 - 4.0
-# Insane:		4.5 - 5.0
+# Advanced+:	4.5 - 5.0
 # Sadistic:		5.5+
 
 func _ready():
