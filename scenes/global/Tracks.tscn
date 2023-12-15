@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://assets/tracks/baroque_075.ogg" type="AudioStream" id=1]
 [ext_resource path="res://assets/tracks/spacedive_125.ogg" type="AudioStream" id=2]
@@ -39,6 +39,9 @@
 [ext_resource path="res://assets/tracks/scarlet_090.ogg" type="AudioStream" id=37]
 [ext_resource path="res://assets/tracks/devilcat_090.ogg" type="AudioStream" id=38]
 [ext_resource path="res://assets/tracks/devilcat_110.ogg" type="AudioStream" id=39]
+[ext_resource path="res://assets/tracks/musashi_100.ogg" type="AudioStream" id=40]
+[ext_resource path="res://assets/tracks/musashi_090.ogg" type="AudioStream" id=41]
+[ext_resource path="res://assets/tracks/musashi_110.ogg" type="AudioStream" id=42]
 
 [node name="Tracks" type="Node"]
 
@@ -158,3 +161,12 @@ stream = ExtResource( 32 )
 
 [node name="scarlet_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 35 )
+
+[node name="musashi_090" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 41 )
+
+[node name="musashi_100" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 40 )
+
+[node name="musashi_110" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 42 )

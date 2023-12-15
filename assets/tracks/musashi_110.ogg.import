@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/musashi_110.ogg-caadd16d60b5c3f61a01990fab1526b6.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/musashi_110.ogg"
+dest_files=[ "res://.import/musashi_110.ogg-caadd16d60b5c3f61a01990fab1526b6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

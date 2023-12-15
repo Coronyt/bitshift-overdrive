@@ -17,6 +17,7 @@ var trophy_dict = {
 	"devilcat" : 	[0, 0, 0, 0, 0],
 	"scarlet" : 	[0, 0, 0, 0, 0],
 	"moonlight" : 	[0, 0, 0, 0, 0],
+	"musashi" : 	[0, 0, 0, 0, 0],
 }
 
 var trophy_queues = {
@@ -29,6 +30,7 @@ var trophy_queues = {
 	"devilcat" : 	[],
 	"scarlet" : 	[],
 	"moonlight" : 	[],
+	"musashi" : 	[],
 }
 
 func award_trophy_1():

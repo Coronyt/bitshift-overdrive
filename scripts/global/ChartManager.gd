@@ -9,6 +9,7 @@ const strato = preload("res://scripts/charts/strato.gd")
 const devilcat = preload("res://scripts/charts/devilcat.gd")
 const scarlet = preload("res://scripts/charts/scarlet.gd")
 const moonlight = preload("res://scripts/charts/moonlight.gd")
+const musashi = preload("res://scripts/charts/musashi.gd")
 
 var chart_dict = {
 	"spacedive" : spacedive,
@@ -20,6 +21,7 @@ var chart_dict = {
 	"devilcat" : devilcat,
 	"scarlet" : scarlet,
 	"moonlight" : moonlight,
+	"musashi" : musashi,
 }
 
 var chart_tscn_dict = {
@@ -32,6 +34,7 @@ var chart_tscn_dict = {
 	"devilcat" : "res://scenes/charts/devilcat.tscn",
 	"scarlet" : "res://scenes/charts/scarlet.tscn",
 	"moonlight" : "res://scenes/charts/moonlight.tscn",
+	"musashi" : "res://scenes/charts/musashi.tscn",
 }
 
 func fetch_chart(chart_ID):
