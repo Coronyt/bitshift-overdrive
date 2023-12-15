@@ -164,9 +164,12 @@ stream = ExtResource( 35 )
 
 [node name="musashi_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 41 )
+volume_db = 8.0
 
 [node name="musashi_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 40 )
+volume_db = 8.0
 
 [node name="musashi_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 42 )
+volume_db = 8.0

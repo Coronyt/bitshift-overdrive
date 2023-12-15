@@ -376,9 +376,9 @@ script = ExtResource( 16 )
 
 [node name="ChartCore" type="Node" parent="."]
 script = ExtResource( 6 )
-offset_1 = 1.125
+offset_1 = 1.25
 offset_2 = 650.0
-BPM = 130
+BPM = 110
 
 [node name="ScoreDrop" type="AnimationPlayer" parent="ChartCore"]
 reset_on_save = false
@@ -451,7 +451,7 @@ centered = false
 [node name="LightCanvas" type="ColorRect" parent="NoteContainer"]
 margin_right = 1280.0
 margin_bottom = 720.0
-color = Color( 0.352941, 0.0392157, 0.0392157, 0.117647 )
+color = Color( 0.0784314, 0.0392157, 0.235294, 0.117647 )
 
 [node name="CountdownTimer" type="Timer" parent="."]
 
