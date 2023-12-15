@@ -5,8 +5,12 @@ export(String) var pref_key
 
 func refresh_pref_text():
 	var checkbox = "OFF"
+	if self.pref_key == "disable_visualizer":
+		checkbox = "OFF (Default)"
 	if not UserPreferences.prefs[pref_key]:
-		checkbox = "ON (Default)"
+		if self.pref_key != "disable_visualizer":
+			checkbox = "ON (Default)"
+		else: checkbox = "ON"
 	self.text = pref_desc + " : " + checkbox
 
 func _ready():

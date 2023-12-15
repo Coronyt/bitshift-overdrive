@@ -4224,15 +4224,12 @@ valign = 1
 
 [node name="CreditsLabel3" type="Label" parent="OptionsHub"]
 margin_left = 768.0
-margin_top = 216.0
+margin_top = 200.0
 margin_right = 1120.0
-margin_bottom = 367.0
+margin_bottom = 351.0
 theme = ExtResource( 4 )
 custom_fonts/font = SubResource( 51 )
-text = "
-ASSETS USED:
-
-\"C-64\" font by Jamie Cross
+text = "\"C-64\" font by Jamie Cross
 \"Matchup Pro\" font by somepx
 
 Trophy sprites by Kanomwan
@@ -4418,22 +4415,22 @@ anims/to_options = SubResource( 22 )
 
 [node name="PrefButton1" type="CheckBox" parent="Options"]
 margin_left = -816.0
-margin_top = 320.0
+margin_top = 328.0
 margin_right = -272.0
-margin_bottom = 354.0
+margin_bottom = 362.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
-text = "Audio visualizer"
+text = "CRT screen effects"
 script = ExtResource( 28 )
-pref_desc = "Audio visualizer"
-pref_key = "disable_visualizer"
+pref_desc = "CRT screen effects"
+pref_key = "disable_screen_curve"
 
 [node name="PrefButton2" type="CheckBox" parent="Options"]
 margin_left = -816.0
-margin_top = 384.0
+margin_top = 368.0
 margin_right = -272.0
-margin_bottom = 418.0
+margin_bottom = 402.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
@@ -4444,18 +4441,31 @@ pref_key = "disable_scrolling"
 
 [node name="PrefButton3" type="CheckBox" parent="Options"]
 margin_left = -816.0
+margin_top = 408.0
+margin_right = -272.0
+margin_bottom = 442.0
+theme = ExtResource( 4 )
+toggle_mode = false
+group = SubResource( 12 )
+text = "Combo streak SFX"
+script = ExtResource( 28 )
+pref_desc = "Combo streak SFX"
+pref_key = "disable_combo_SFX"
+
+[node name="PrefButton4" type="CheckBox" parent="Options"]
+margin_left = -816.0
 margin_top = 448.0
 margin_right = -272.0
 margin_bottom = 482.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
-text = "Difficulty tooltips"
+text = "Tooltips in menu"
 script = ExtResource( 28 )
-pref_desc = "Difficulty tooltips"
+pref_desc = "Tooltips in menu"
 pref_key = "disable_tooltips"
 
-[node name="PrefButton4" type="CheckBox" parent="Options"]
+[node name="PrefButton5" type="CheckBox" parent="Options"]
 margin_left = -816.0
 margin_top = 512.0
 margin_right = -272.0
@@ -4463,10 +4473,10 @@ margin_bottom = 546.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
-text = "CRT screen effects"
+text = "Audio visualizer"
 script = ExtResource( 28 )
-pref_desc = "CRT screen effects"
-pref_key = "disable_screen_curve"
+pref_desc = "Audio visualizer"
+pref_key = "disable_visualizer"
 
 [node name="VolSlider1" type="HSlider" parent="Options"]
 margin_left = -800.0
@@ -4732,13 +4742,16 @@ current = true
 [connection signal="animation_finished" from="Options/OptionsAnim" to="Options" method="_on_OptionsAnim_animation_finished"]
 [connection signal="mouse_entered" from="Options/PrefButton1" to="Options/PrefButton1" method="_on_PrefButton1_mouse_entered"]
 [connection signal="pressed" from="Options/PrefButton1" to="Options/PrefButton1" method="_on_PrefButton1_pressed"]
+[connection signal="pressed" from="Options/PrefButton1" to="CRT" method="refresh_CRT"]
 [connection signal="mouse_entered" from="Options/PrefButton2" to="Options/PrefButton2" method="_on_PrefButton1_mouse_entered"]
 [connection signal="pressed" from="Options/PrefButton2" to="Options/PrefButton2" method="_on_PrefButton1_pressed"]
 [connection signal="mouse_entered" from="Options/PrefButton3" to="Options/PrefButton3" method="_on_PrefButton1_mouse_entered"]
+[connection signal="pressed" from="Options/PrefButton3" to="CRT" method="refresh_CRT"]
 [connection signal="pressed" from="Options/PrefButton3" to="Options/PrefButton3" method="_on_PrefButton1_pressed"]
 [connection signal="mouse_entered" from="Options/PrefButton4" to="Options/PrefButton4" method="_on_PrefButton1_mouse_entered"]
 [connection signal="pressed" from="Options/PrefButton4" to="Options/PrefButton4" method="_on_PrefButton1_pressed"]
-[connection signal="pressed" from="Options/PrefButton4" to="CRT" method="refresh_CRT"]
+[connection signal="mouse_entered" from="Options/PrefButton5" to="Options/PrefButton5" method="_on_PrefButton1_mouse_entered"]
+[connection signal="pressed" from="Options/PrefButton5" to="Options/PrefButton5" method="_on_PrefButton1_pressed"]
 [connection signal="value_changed" from="Options/VolSlider1" to="Options/VolSlider1" method="_on_VolSlider1_value_changed"]
 [connection signal="value_changed" from="Options/VolSlider2" to="Options/VolSlider2" method="adjust_vol"]
 [connection signal="value_changed" from="Options/VolSlider3" to="Options/VolSlider3" method="adjust_vol"]
