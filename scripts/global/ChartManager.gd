@@ -10,6 +10,7 @@ const devilcat = preload("res://scripts/charts/devilcat.gd")
 const scarlet = preload("res://scripts/charts/scarlet.gd")
 const moonlight = preload("res://scripts/charts/moonlight.gd")
 const musashi = preload("res://scripts/charts/musashi.gd")
+const isle = preload("res://scripts/charts/isle.gd")
 
 var chart_dict = {
 	"spacedive" : spacedive,
@@ -22,6 +23,7 @@ var chart_dict = {
 	"scarlet" : scarlet,
 	"moonlight" : moonlight,
 	"musashi" : musashi,
+	"isle" : isle,
 }
 
 var chart_tscn_dict = {
@@ -35,6 +37,7 @@ var chart_tscn_dict = {
 	"scarlet" : "res://scenes/charts/scarlet.tscn",
 	"moonlight" : "res://scenes/charts/moonlight.tscn",
 	"musashi" : "res://scenes/charts/musashi.tscn",
+	"isle" : "res://scenes/charts/isle.tscn",
 }
 
 func fetch_chart(chart_ID):

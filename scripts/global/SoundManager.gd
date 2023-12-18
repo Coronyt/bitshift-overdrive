@@ -32,6 +32,7 @@ func _ready():
 		"moonlight" : fetch_track("moonlight_090"),
 		"scarlet" : fetch_track("scarlet_090"),
 		"musashi" : fetch_track("musashi_090"),
+		"isle" : fetch_track("isle_090"),
 	}
 	track_dict_100 = {
 		"spacedive" : fetch_track("spacedive_100"),
@@ -44,6 +45,7 @@ func _ready():
 		"moonlight" : fetch_track("moonlight_100"),
 		"scarlet" : fetch_track("scarlet_100"),
 		"musashi" : fetch_track("musashi_100"),
+		"isle" : fetch_track("isle_100"),
 	}
 	track_dict_110 = {
 		"spacedive" : fetch_track("spacedive_110"),
@@ -56,6 +58,7 @@ func _ready():
 		"moonlight" : fetch_track("moonlight_110"),
 		"scarlet" : fetch_track("scarlet_110"),
 		"musashi" : fetch_track("musashi_110"),
+		"isle" : fetch_track("isle_110"),
 	}
 	track_dict_125 = {
 		"spacedive" : fetch_track("spacedive_125"),

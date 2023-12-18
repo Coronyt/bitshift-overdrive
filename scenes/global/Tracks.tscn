@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://assets/tracks/baroque_075.ogg" type="AudioStream" id=1]
 [ext_resource path="res://assets/tracks/spacedive_125.ogg" type="AudioStream" id=2]
@@ -42,6 +42,9 @@
 [ext_resource path="res://assets/tracks/musashi_100.ogg" type="AudioStream" id=40]
 [ext_resource path="res://assets/tracks/musashi_090.ogg" type="AudioStream" id=41]
 [ext_resource path="res://assets/tracks/musashi_110.ogg" type="AudioStream" id=42]
+[ext_resource path="res://assets/tracks/isle_090.ogg" type="AudioStream" id=43]
+[ext_resource path="res://assets/tracks/isle_100.ogg" type="AudioStream" id=44]
+[ext_resource path="res://assets/tracks/isle_110.ogg" type="AudioStream" id=45]
 
 [node name="Tracks" type="Node"]
 
@@ -164,12 +167,18 @@ stream = ExtResource( 35 )
 
 [node name="musashi_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 41 )
-volume_db = 8.0
 
 [node name="musashi_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 40 )
-volume_db = 8.0
 
 [node name="musashi_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 42 )
-volume_db = 8.0
+
+[node name="isle_090" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 43 )
+
+[node name="isle_100" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 44 )
+
+[node name="isle_110" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 45 )

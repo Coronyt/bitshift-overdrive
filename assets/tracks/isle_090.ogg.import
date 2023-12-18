@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/isle_090.ogg-b7ef7d405b28379f3a2fdf16c7b3361a.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/isle_090.ogg"
+dest_files=[ "res://.import/isle_090.ogg-b7ef7d405b28379f3a2fdf16c7b3361a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

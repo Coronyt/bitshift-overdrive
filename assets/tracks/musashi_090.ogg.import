@@ -11,5 +11,5 @@ dest_files=[ "res://.import/musashi_090.ogg-56a9ae75793f2d094b23c3a60e4e513e.ogg
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
