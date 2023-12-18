@@ -5,8 +5,8 @@ func _on_Options_pressed():
 	if !self.get_parent().preview_playing:
 		$OptionsAnim.play("to_options")
 	else:
-		self.get_parent().get_node("TrackList/TrackList/Track_1").fade_out_track()
-		self.get_parent().get_node("TrackList/TrackList/Track_1").fade_in_bgm()
+		self.get_parent().get_node("TrackList/TrackList/Track_01").fade_out_track()
+		self.get_parent().get_node("TrackList/TrackList/Track_01").fade_in_bgm()
 		$OptionsAnim.play("to_options")
 
 func _on_BackButton_pressed():

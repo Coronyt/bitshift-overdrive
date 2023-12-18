@@ -5,22 +5,12 @@ var track_select_last_pos = 0.0
 
 const track_tscn = preload("res://scenes/global/Tracks.tscn")
 
-var track_dict_075
 var track_dict_090
 var track_dict_100
 var track_dict_110
-var track_dict_125
 
 func _ready():
 	var tracks = Tracks.get_children()
-	track_dict_075 = {
-		"spacedive" : fetch_track("spacedive_075"),
-		"breeze" : fetch_track("breeze_075"),
-		"coy_glance" : fetch_track("coy_glance_075"),
-		"brighter" : fetch_track("brighter_075"),
-		"baroque" : fetch_track("baroque_075"),
-		"strato" : fetch_track("strato_075"),
-	}
 	track_dict_090 = {
 		"spacedive" : fetch_track("spacedive_090"),
 		"breeze" : fetch_track("breeze_090"),
@@ -33,6 +23,8 @@ func _ready():
 		"scarlet" : fetch_track("scarlet_090"),
 		"musashi" : fetch_track("musashi_090"),
 		"isle" : fetch_track("isle_090"),
+		"kraken" : fetch_track("kraken_090"),
+		"cirrus" : fetch_track("cirrus_090"),
 	}
 	track_dict_100 = {
 		"spacedive" : fetch_track("spacedive_100"),
@@ -46,6 +38,8 @@ func _ready():
 		"scarlet" : fetch_track("scarlet_100"),
 		"musashi" : fetch_track("musashi_100"),
 		"isle" : fetch_track("isle_100"),
+		"kraken" : fetch_track("kraken_100"),
+		"cirrus" : fetch_track("cirrus_100"),
 	}
 	track_dict_110 = {
 		"spacedive" : fetch_track("spacedive_110"),
@@ -59,14 +53,8 @@ func _ready():
 		"scarlet" : fetch_track("scarlet_110"),
 		"musashi" : fetch_track("musashi_110"),
 		"isle" : fetch_track("isle_110"),
-	}
-	track_dict_125 = {
-		"spacedive" : fetch_track("spacedive_125"),
-		"breeze" : fetch_track("breeze_125"),
-		"coy_glance" : fetch_track("coy_glance_125"),
-		"brighter" : fetch_track("brighter_125"),
-		"baroque" : fetch_track("baroque_125"),
-		"strato" : fetch_track("strato_125"),
+		"kraken" : fetch_track("kraken_110"),
+		"cirrus" : fetch_track("cirrus_110"),
 	}
 
 func fetch_track(target_audio):

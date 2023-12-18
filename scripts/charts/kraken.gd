@@ -1,6 +1,6 @@
 extends Node
 
-# Track: Isle of Clouds
+# Track: Voyage of the Kraken
 
 const AXIS_01 = 0064
 const AXIS_02 = 0128
