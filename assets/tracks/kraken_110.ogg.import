@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/kraken_110.ogg-a2c540a42ad601c1b264d5bab85c3a1a.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/kraken_110.ogg"
+dest_files=[ "res://.import/kraken_110.ogg-a2c540a42ad601c1b264d5bab85c3a1a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
