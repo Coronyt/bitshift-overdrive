@@ -283,6 +283,250 @@ const chart = [
 	["NOTE", 8, AXIS_01],
 	
 	# Measure 19
+	["NOTE", 8, AXIS_12],
+	["REST", 16],
+	["NOTE", 4, AXIS_11],
+	["REST", 16],
+	
+	["REST", 8],
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_13],
+	["NOTE", 8, AXIS_14],
+	["NOTE", 8, AXIS_13],
+	
+	["NOTE", 8, AXIS_12],
+	["REST", 16],
+	["NOTE", 4, AXIS_11],
+	["REST", 16],
+	
+	["REST", 8],
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_13],
+	["NOTE", 8, AXIS_14],
+	["NOTE", 8, AXIS_13],
+	
+	# Measure 21
+	["NOTE", 8, AXIS_15],
+	["REST", 16],
+	["NOTE", 8, AXIS_11],
+	["REST", 16],
+	["NOTE", 8, AXIS_15],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 8, AXIS_11],
+	["NOTE", 8, AXIS_11],
+	["REST", 16],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_12],
+	
+	["NOTE", 4, AXIS_13],
+	["REST", 16],
+	["NOTE", 16, AXIS_10],
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_13],
+	["NOTE", 8, AXIS_12],
+	["REST", 16],
+	["NOTE", 8, AXIS_10],
+	["REST", 16],
+	["NOTE", 8, AXIS_11],
+	
+	# Measure 23
+	["NOTE", 8, AXIS_15],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_15],
+	
+	["REST", 16],
+	["REST", 16],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_11],
+	
+	["NOTE", 8, AXIS_15],
+	["REST", 16],
+	["NOTE", 16, AXIS_15],
+	
+	["REST", 16],
+	["REST", 16],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_11],
+	
+	["NOTE", 8, AXIS_15],
+	["NOTE", 16, AXIS_10],
+	["NOTE", 16, AXIS_15],
+	
+	["REST", 16],
+	["REST", 16],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_10],
+	
+	["NOTE", 8, AXIS_14],
+	["NOTE", 16, AXIS_13],
+	["NOTE", 16, AXIS_12],
+	
+	["REST", 16],
+	["NOTE", 16, AXIS_08],
+	["NOTE", 16, AXIS_10],
+	["NOTE", 16, AXIS_12],
+	
+	# Measure 25
+	["REST", 16],
+	["NOTE", 16, AXIS_13],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_13],
+	
+	["REST", 16],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_13],
+	
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_10],
+	["NOTE", 16, AXIS_09],
+	["NOTE", 16, AXIS_08],
+	
+	["REST", 16],
+	["NOTE", 8, AXIS_09],
+	["REST", 16],
+	
+	["NOTE", 16, AXIS_09],
+	["NOTE", 16, AXIS_08],
+	["NOTE", 16, AXIS_07],
+	["NOTE", 16, AXIS_06],
+	
+	["REST", 8],
+	["NOTE", 16, AXIS_05],
+	["NOTE", 16, AXIS_06],
+	
+	["NOTE", 16, AXIS_07],
+	["NOTE", 16, AXIS_06],
+	["NOTE", 16, AXIS_04],
+	["NOTE", 16, AXIS_02],
+	
+	["REST", 8],
+	["NOTE", 16, AXIS_03],
+	["NOTE", 16, AXIS_05],
+	
+	# Measure 27
+	["NOTE", 8, AXIS_15],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_15],
+	
+	["NOTE", 8, AXIS_15],
+	["NOTE", 8, AXIS_11],
+	
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_10],
+	
+	["NOTE", 8, AXIS_11],
+	["NOTE", 8, AXIS_08],
+	
+	["NOTE", 8, AXIS_15],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_15],
+	
+	["NOTE", 8, AXIS_15],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_16],
+	
+	["NOTE", 16, AXIS_17],
+	["NOTE", 16, AXIS_16],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_14],
+	
+	["NOTE", 4, AXIS_13],
+	
+	# Measure 29
+	["NOTE", 8, AXIS_14],
+	["NOTE", 16, AXIS_14],
+	["NOTE", 16, AXIS_14],
+	
+	["NOTE", 8, AXIS_14],
+	["NOTE", 8, AXIS_11],
+	
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_10],
+	
+	["NOTE", 8, AXIS_11],
+	["NOTE", 16, AXIS_07],
+	["NOTE", 16, AXIS_08],
+	
+	["NOTE", 8, AXIS_09],
+	["NOTE", 8, AXIS_10],
+	["NOTE", 16, AXIS_08],
+	["NOTE", 16, AXIS_06],
+	["NOTE", 8, AXIS_04],
+	
+	["NOTE", 8, AXIS_03],
+	["NOTE", 16, AXIS_03],
+	["NOTE", 16, AXIS_04],
+	
+	["NOTE", 8, AXIS_03],
+	["NOTE", 8, AXIS_01],
+	
+	# Measure 31
+	["NOTE", 8, AXIS_15],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_15],
+	
+	["NOTE", 8, AXIS_15],
+	["NOTE", 8, AXIS_11],
+	
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_10],
+	
+	["NOTE", 8, AXIS_11],
+	["NOTE", 8, AXIS_08],
+	
+	["NOTE", 8, AXIS_15],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_15],
+	
+	["NOTE", 8, AXIS_15],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_16],
+	
+	["NOTE", 16, AXIS_17],
+	["NOTE", 16, AXIS_16],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_14],
+	
+	["NOTE", 4, AXIS_13],
+	
+	# Measure 33
+	["NOTE", 8, AXIS_14],
+	["NOTE", 16, AXIS_14],
+	["NOTE", 16, AXIS_14],
+	
+	["NOTE", 8, AXIS_14],
+	["NOTE", 8, AXIS_11],
+	
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_10],
+	
+	["NOTE", 8, AXIS_11],
+	["NOTE", 16, AXIS_07],
+	["NOTE", 16, AXIS_08],
+	
+	["NOTE", 8, AXIS_09],
+	["NOTE", 8, AXIS_10],
+	["NOTE", 16, AXIS_08],
+	["NOTE", 16, AXIS_06],
+	["NOTE", 8, AXIS_04],
+	
+	["NOTE", 8, AXIS_03],
+	["NOTE", 16, AXIS_03],
+	["NOTE", 16, AXIS_04],
+	
+	["NOTE", 8, AXIS_03],
+	["NOTE", 8, AXIS_01],
+	
+	# Measure 35
 	
 	# Buffer
 	["REST", 1],
