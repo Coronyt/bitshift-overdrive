@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://assets/tracks/baroque_075.ogg" type="AudioStream" id=1]
 [ext_resource path="res://assets/tracks/spacedive_125.ogg" type="AudioStream" id=2]
@@ -48,6 +48,9 @@
 [ext_resource path="res://assets/tracks/kraken_090.ogg" type="AudioStream" id=46]
 [ext_resource path="res://assets/tracks/kraken_110.ogg" type="AudioStream" id=47]
 [ext_resource path="res://assets/tracks/kraken_100.ogg" type="AudioStream" id=48]
+[ext_resource path="res://assets/tracks/cirrus_090.ogg" type="AudioStream" id=49]
+[ext_resource path="res://assets/tracks/cirrus_100.ogg" type="AudioStream" id=50]
+[ext_resource path="res://assets/tracks/cirrus_110.ogg" type="AudioStream" id=51]
 
 [node name="Tracks" type="Node"]
 
@@ -195,5 +198,11 @@ stream = ExtResource( 48 )
 [node name="kraken_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 47 )
 
+[node name="cirrus_090" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 49 )
+
 [node name="cirrus_100" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
+stream = ExtResource( 50 )
+
+[node name="cirrus_110" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 51 )

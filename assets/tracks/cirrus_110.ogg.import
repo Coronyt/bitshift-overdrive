@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cirrus_110.ogg-d3e16e752a42813dec650da141283d97.oggstr"
+
+[deps]
+
+source_file="res://assets/tracks/cirrus_110.ogg"
+dest_files=[ "res://.import/cirrus_110.ogg-d3e16e752a42813dec650da141283d97.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
