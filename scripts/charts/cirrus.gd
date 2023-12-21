@@ -465,6 +465,63 @@ const chart = [
 	["NOTE", 16, AXIS_15],
 	["NOTE", 8, AXIS_14],
 	["NOTE", 8, AXIS_13],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 8, AXIS_11],
+	["NOTE", 16, AXIS_10],
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_13],
+	
+	# Measure 38
+	["NOTE", 16, AXIS_14],
+	["NOTE", 16, AXIS_14],
+	["NOTE", 16, AXIS_13],
+	["NOTE", 16, AXIS_13],
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_09],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 4, AXIS_15],
+	["NOTE", 32, AXIS_15],
+	["NOTE", 32, AXIS_16],
+	["NOTE", 8, AXIS_17],
+	
+	# Measure 39
+	["NOTE", 16, AXIS_16],
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_12],
+	
+	["NOTE", 16, AXIS_15],
+	["NOTE", 16, AXIS_14],
+	["NOTE", 16, AXIS_11],
+	
+	["NOTE", 16, AXIS_14],
+	["NOTE", 16, AXIS_13],
+	["NOTE", 16, AXIS_10],
+	
+	["NOTE", 16, AXIS_13],
+	["NOTE", 16, AXIS_12],
+	["NOTE", 16, AXIS_09],
+	
+	["NOTE", 32, AXIS_11],
+	["NOTE", 32, AXIS_12],
+	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_08],
+	["NOTE", 16, AXIS_11],
+	
+	# Measure 40
+	["NOTE", 16, AXIS_09],
+	["NOTE", 16, AXIS_07],
+	["NOTE", 8, AXIS_04],
+	["REST", 2],
+	["REST", 16],
+	["NOTE", 32, AXIS_05],
+	["NOTE", 32, AXIS_04],
+	["NOTE", 16, AXIS_03],
+	["NOTE", 16, AXIS_02],
+	
+	# Measure 41
 	
 	# Buffer
 	["REST", 1],
