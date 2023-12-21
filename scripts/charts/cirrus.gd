@@ -301,6 +301,7 @@ const chart = [
 	["NOTE", 16, AXIS_10],
 	["NOTE", 8, AXIS_11],
 	["NOTE", 16, AXIS_12],
+	["REST", 16],
 	["NOTE", 32, AXIS_09],
 	["NOTE", 32, AXIS_11],
 	["REST", 16],
@@ -379,9 +380,11 @@ const chart = [
 	["NOTE", 8, AXIS_12],
 	["NOTE", 16, AXIS_11],
 	["NOTE", 8, AXIS_12],
+	["NOTE", 8, AXIS_11],
 	["NOTE", 8, AXIS_10],
 	["NOTE", 8, AXIS_08],
 	["NOTE", 8, AXIS_07],
+	["NOTE", 8, AXIS_06],
 	
 	# Measure 32
 	["NOTE", 16, AXIS_05],

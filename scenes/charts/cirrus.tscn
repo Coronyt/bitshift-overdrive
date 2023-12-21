@@ -376,7 +376,7 @@ script = ExtResource( 16 )
 
 [node name="ChartCore" type="Node" parent="."]
 script = ExtResource( 6 )
-offset_1 = 1.25
+offset_1 = 1.225
 offset_2 = 650.0
 BPM = 115
 
