@@ -313,6 +313,38 @@ const chart = [
 	["NOTE", 32, AXIS_07],
 	
 	# Measure 27
+	["NOTE", 8, AXIS_06],
+	["NOTE", 16, AXIS_02],
+	["NOTE", 16, AXIS_05],
+	
+	["NOTE", 8, AXIS_04],
+	["NOTE", 16, AXIS_02],
+	["NOTE", 8, AXIS_03],
+	
+	["NOTE", 8, AXIS_04],
+	["NOTE", 8, AXIS_09],
+	
+	["NOTE", 16, AXIS_09],
+	["NOTE", 8, AXIS_10],
+	
+	# Measure 28
+	["NOTE", 16, AXIS_09],
+	["NOTE", 16, AXIS_09],
+	["NOTE", 32, AXIS_11],
+	["NOTE", 32, AXIS_13],
+	["NOTE", 8, AXIS_12],
+	["NOTE", 8, AXIS_09],
+	["NOTE", 8, AXIS_06],
+	["NOTE", 32, AXIS_04],
+	["NOTE", 32, AXIS_05],
+	["NOTE", 8, AXIS_06],
+	["REST", 16],
+	["NOTE", 32, AXIS_01],
+	["NOTE", 32, AXIS_02],
+	["NOTE", 16, AXIS_03],
+	["NOTE", 16, AXIS_03],
+	
+	# Measure 29
 	
 	# Buffer
 	["REST", 1],
