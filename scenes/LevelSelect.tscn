@@ -1,8 +1,8 @@
-[gd_scene load_steps=118 format=2]
+[gd_scene load_steps=113 format=2]
 
 [ext_resource path="res://scripts/interface/buttons/GenericButton.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=2]
-[ext_resource path="res://assets/sprites/marker_3.png" type="Texture" id=3]
+[ext_resource path="res://scripts/interface/buttons/LockedButton.gd" type="Script" id=3]
 [ext_resource path="res://assets/bitshift.tres" type="Theme" id=4]
 [ext_resource path="res://assets/sprites/track_button_2.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/track_button_1.png" type="Texture" id=6]
@@ -16,17 +16,13 @@
 [ext_resource path="res://assets/MatchupPro.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://scripts/interface/ExitPortal.gd" type="Script" id=15]
 [ext_resource path="res://assets/sprites/track_button_4.png" type="Texture" id=16]
-[ext_resource path="res://assets/sprites/marker_2.png" type="Texture" id=17]
 [ext_resource path="res://scripts/interface/TrackPortal.gd" type="Script" id=18]
 [ext_resource path="res://scripts/interface/Options.gd" type="Script" id=19]
 [ext_resource path="res://scripts/interface/buttons/FullscreenButton.gd" type="Script" id=20]
 [ext_resource path="res://scripts/interface/buttons/HelpButton.gd" type="Script" id=21]
 [ext_resource path="res://scripts/interface/buttons/ChartButton.gd" type="Script" id=22]
-[ext_resource path="res://assets/sprites/marker_0.png" type="Texture" id=23]
 [ext_resource path="res://scenes/ReleaseLabel.tscn" type="PackedScene" id=24]
-[ext_resource path="res://assets/sprites/marker_4.png" type="Texture" id=25]
 [ext_resource path="res://scripts/interface/PreviewLabel.gd" type="Script" id=26]
-[ext_resource path="res://assets/sprites/marker_5.png" type="Texture" id=27]
 [ext_resource path="res://scripts/interface/buttons/PrefButton.gd" type="Script" id=28]
 [ext_resource path="res://scripts/interface/VolSlider_Master.gd" type="Script" id=29]
 [ext_resource path="res://scripts/interface/GenericSlider.gd" type="Script" id=30]
@@ -41,8 +37,6 @@
 [ext_resource path="res://assets/sprites/trophy_4.png" type="Texture" id=39]
 [ext_resource path="res://assets/sprites/trophy_5.png" type="Texture" id=40]
 [ext_resource path="res://scripts/interface/TrackListTimer.gd" type="Script" id=41]
-[ext_resource path="res://addons/godot_sprite_shader/assets/noise/noise0.png" type="Texture" id=42]
-[ext_resource path="res://addons/godot_sprite_shader/assets/shader/holographic.shader" type="Shader" id=43]
 [ext_resource path="res://assets/c-64.ttf" type="DynamicFontData" id=44]
 
 [sub_resource type="StyleBoxTexture" id=1]
@@ -63,14 +57,6 @@ region_rect = Rect2( 0, 0, 448, 64 )
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 448, 64 )
 modulate_color = Color( 1, 1, 1, 0.784314 )
-
-[sub_resource type="ShaderMaterial" id=53]
-shader = ExtResource( 43 )
-shader_param/hologram_value = 0.75
-shader_param/hologram_noise_x = 10.0
-shader_param/hologram_speed = 1.0
-shader_param/tint_color = Color( 0, 0.65, 1, 1 )
-shader_param/noise_tex = ExtResource( 42 )
 
 [sub_resource type="Animation" id=63]
 length = 0.001
@@ -1216,6 +1202,10 @@ tracks/3/keys = {
 }
 
 [sub_resource type="ButtonGroup" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=82]
+
+[sub_resource type="StyleBoxEmpty" id=81]
 
 [sub_resource type="ButtonGroup" id=11]
 
@@ -3809,12 +3799,6 @@ __meta__ = {
 diff_desc = "Basic"
 chart_key = "breeze"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_01"]
-visible = false
-material = SubResource( 53 )
-position = Vector2( 24, 14 )
-texture = ExtResource( 23 )
-
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_01"]
 reset_on_save = false
 anims/RESET = SubResource( 63 )
@@ -3839,11 +3823,6 @@ __meta__ = {
 }
 diff_desc = "Basic"
 chart_key = "moonlight"
-
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_02"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_02"]
 reset_on_save = false
@@ -3870,11 +3849,6 @@ __meta__ = {
 diff_desc = "? ? ?"
 chart_key = "isle"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_11"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
-
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_11"]
 reset_on_save = false
 anims/RESET = SubResource( 75 )
@@ -3899,11 +3873,6 @@ __meta__ = {
 }
 diff_desc = "? ? ?"
 chart_key = "kraken"
-
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_12"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_12"]
 reset_on_save = false
@@ -3930,11 +3899,6 @@ __meta__ = {
 diff_desc = "? ? ?"
 chart_key = "cirrus"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_13"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
-
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_13"]
 reset_on_save = false
 anims/RESET = SubResource( 79 )
@@ -3959,11 +3923,6 @@ __meta__ = {
 }
 diff_desc = "Basic+"
 chart_key = "spacedive"
-
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_03"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 17 )
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_03"]
 reset_on_save = false
@@ -3990,11 +3949,6 @@ __meta__ = {
 diff_desc = "Basic+"
 chart_key = "coy_glance"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_04"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 3 )
-
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_04"]
 reset_on_save = false
 anims/RESET = SubResource( 66 )
@@ -4019,11 +3973,6 @@ __meta__ = {
 }
 diff_desc = "Advanced"
 chart_key = "musashi"
-
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_05"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_05"]
 reset_on_save = false
@@ -4050,11 +3999,6 @@ __meta__ = {
 diff_desc = "Advanced"
 chart_key = "brighter"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_06"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 25 )
-
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_06"]
 reset_on_save = false
 anims/RESET = SubResource( 67 )
@@ -4080,11 +4024,6 @@ __meta__ = {
 diff_desc = "Advanced+"
 chart_key = "scarlet"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_07"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
-
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_07"]
 reset_on_save = false
 anims/RESET = SubResource( 68 )
@@ -4106,11 +4045,6 @@ text = "[ cat-eared devil ]"
 script = ExtResource( 22 )
 diff_desc = "Advanced+"
 chart_key = "devilcat"
-
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_08"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 25 )
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_08"]
 reset_on_save = false
@@ -4137,11 +4071,6 @@ __meta__ = {
 diff_desc = "Sadistic"
 chart_key = "baroque"
 
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_09"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
-
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_09"]
 reset_on_save = false
 anims/RESET = SubResource( 70 )
@@ -4166,11 +4095,6 @@ __meta__ = {
 }
 diff_desc = "Sadistic"
 chart_key = "strato"
-
-[node name="marker" type="Sprite" parent="TrackList/TrackList/Track_10"]
-visible = false
-position = Vector2( 24, 14 )
-texture = ExtResource( 27 )
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_10"]
 reset_on_save = false
@@ -4206,6 +4130,7 @@ script = ExtResource( 1 )
 body = "- The track will play at 100 percent speed."
 
 [node name="speed_110" type="CheckBox" parent="SpeedLabel"]
+visible = false
 margin_top = 136.0
 margin_right = 148.0
 margin_bottom = 170.0
@@ -4213,6 +4138,20 @@ shortcut_in_tooltip = false
 group = SubResource( 10 )
 text = "Faster"
 script = ExtResource( 1 )
+body = "- The track will play at 110 percent speed."
+
+[node name="locked" type="Button" parent="SpeedLabel"]
+margin_left = 20.0
+margin_top = 136.0
+margin_right = 106.0
+margin_bottom = 170.0
+custom_styles/focus = SubResource( 82 )
+custom_styles/disabled = SubResource( 81 )
+disabled = true
+shortcut_in_tooltip = false
+text = "Faster"
+align = 0
+script = ExtResource( 3 )
 body = "- The track will play at 110 percent speed."
 
 [node name="DifLabel1" type="Label" parent="."]
@@ -4248,6 +4187,7 @@ body = "- Tracks will have standard paddle size.
 - Recommended for intermediate players."
 
 [node name="segfault" type="CheckBox" parent="DifLabel1"]
+visible = false
 margin_top = 136.0
 margin_right = 142.0
 margin_bottom = 170.0
@@ -4256,9 +4196,6 @@ shortcut_in_tooltip = false
 group = SubResource( 11 )
 text = "Segfault"
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 body = "- Tracks will have reduced paddle size.
 - Recommended for adept players only."
 
@@ -4296,6 +4233,7 @@ body = "- Start track with five energy.
 - Achieve combos to restore energy."
 
 [node name="ironbit" type="CheckBox" parent="DifLabel2"]
+visible = false
 margin_top = 136.0
 margin_right = 118.0
 margin_bottom = 170.0
@@ -4304,9 +4242,22 @@ shortcut_in_tooltip = false
 group = SubResource( 12 )
 text = "Ironbit"
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+body = "- The track ends if you miss a note.
+- Recommended for adept players only."
+
+[node name="locked" type="Button" parent="DifLabel2"]
+margin_left = 20.0
+margin_top = 136.0
+margin_right = 116.0
+margin_bottom = 170.0
+theme = ExtResource( 4 )
+custom_styles/focus = SubResource( 82 )
+custom_styles/disabled = SubResource( 81 )
+disabled = true
+shortcut_in_tooltip = false
+text = "Ironbit"
+align = 0
+script = ExtResource( 3 )
 body = "- The track ends if you miss a note.
 - Recommended for adept players only."
 
@@ -5177,6 +5128,9 @@ visible = false
 [connection signal="mouse_entered" from="SpeedLabel/speed_110" to="SpeedLabel/speed_110" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="SpeedLabel/speed_110" to="SpeedLabel/speed_110" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="SpeedLabel/speed_110" to="SpeedLabel/speed_110" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="SpeedLabel/locked" to="SpeedLabel/locked" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="SpeedLabel/locked" to="SpeedLabel/locked" method="_on_GenericButton_mouse_exited"]
+[connection signal="pressed" from="SpeedLabel/locked" to="SpeedLabel/locked" method="_on_GenericButton_pressed"]
 [connection signal="mouse_entered" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="DifLabel1/underclock" to="DifLabel1/underclock" method="_on_GenericButton_pressed"]
@@ -5195,6 +5149,9 @@ visible = false
 [connection signal="mouse_entered" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="DifLabel2/ironbit" to="DifLabel2/ironbit" method="_on_GenericButton_pressed"]
+[connection signal="mouse_entered" from="DifLabel2/locked" to="DifLabel2/locked" method="_on_GenericButton_mouse_entered"]
+[connection signal="mouse_exited" from="DifLabel2/locked" to="DifLabel2/locked" method="_on_GenericButton_mouse_exited"]
+[connection signal="pressed" from="DifLabel2/locked" to="DifLabel2/locked" method="_on_GenericButton_pressed"]
 [connection signal="trophy_anims_finished" from="GameHub" to="TrackList/TrackList/Track_03" method="_on_GameHub_trophy_anims_finished"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy1/TrophyTimer1" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyTimer1_timeout"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy1/TrophyTimer2" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyTimer2_timeout"]

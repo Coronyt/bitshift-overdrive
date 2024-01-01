@@ -39,6 +39,13 @@ var trophy_queues = {
 	"cirrus" : 		[],
 }
 
+func sum_trophies():
+	var trophy_sum = 0
+	for t_array in trophy_dict.values():
+		for t in t_array:
+			trophy_sum += t
+	return trophy_sum
+
 func award_trophy_1():
 	# Trophy Criteria:
 	# Complete track with any difficulty settings

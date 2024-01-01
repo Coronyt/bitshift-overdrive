@@ -1,4 +1,4 @@
-extends CheckBox
+extends Button
 
 export(String, MULTILINE) var body = ""
 const card = preload("res://scenes/objects/TooltipCard.tscn")
@@ -7,10 +7,10 @@ var this_card
 func _ready():
 	if self.text == "Faster":
 		if TrophyManager.sum_trophies() >= 5:
-			self.show()
+			self.hide()
 	if self.text == "Ironbit":
 		if TrophyManager.sum_trophies() >= 10:
-			self.show()
+			self.hide()
 
 func _on_GenericButton_pressed():
 	SoundManager.play_sound("click1")
