@@ -942,6 +942,7 @@ const chart = [
 	["NOTE", 16, AXIS_10],
 	["NOTE", 16, AXIS_12],
 	["NOTE", 16, AXIS_11],
+	["NOTE", 16, AXIS_11],
 	["NOTE", 16, AXIS_08],
 	["NOTE", 16, AXIS_11],
 	["NOTE", 16, AXIS_12],
@@ -1062,7 +1063,7 @@ const chart = [
 	
 	# Measure 95
 	["NOTE", 16, AXIS_13],
-	["NOTE", 8, AXIS_09],
+	["REST", 8],
 	["NOTE", 8, AXIS_13],
 	["NOTE", 8, AXIS_15],
 	["NOTE", 4, AXIS_12],
