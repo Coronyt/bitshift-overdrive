@@ -95,7 +95,9 @@ func _on_PreviewTimer1_timeout():
 		# okay so it seems like ... the fade-in delay problem ONLY happens when
 			# i click from one track to another (i.e. preview is already playing and is muted for trophy anims)
 	if TrophyManager.trophy_queues[Active.chart].size() == 0:
-		fade_in_bgm()
+		# make sure below conditional doesn't break anything
+		if self.get_parent().get_parent().get_parent().preview_playing:
+			fade_in_bgm()
 
 func _on_PreviewTimer2_timeout():
 	SoundManager.track_dict_100[Active.chart].stop()

@@ -1,7 +1,7 @@
 extends Control
 
-const SCORE_PATH = "res://player/scoresheet.bso"
-const TROPHY_PATH = "res://player/trophycase.bso"
+const SCORE_PATH = "res://data1.bso"
+const TROPHY_PATH = "res://data2.bso"
 
 const cinematic_label = preload("res://scenes/cinematic/LabelTitle.tscn")
 export var cinematic = false

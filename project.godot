@@ -277,7 +277,6 @@ pause={
 
 [logging]
 
-file_logging/enable_file_logging=true
 file_logging/log_path="res://bitshift.log"
 file_logging/max_log_files=1
 
