@@ -30,6 +30,11 @@ func _on_new_active_track():
 	display_trophies()
 
 func display_trophies():
+	$TrophyCase/Trophy1.texture = trophy_0_sprite
+	$TrophyCase/Trophy2.texture = trophy_0_sprite
+	$TrophyCase/Trophy3.texture = trophy_0_sprite
+	$TrophyCase/Trophy4.texture = trophy_0_sprite
+	$TrophyCase/Trophy5.texture = trophy_0_sprite
 	if TrophyManager.trophy_dict[Active.chart][0] == 1:
 		if TrophyManager.trophy_queues[Active.chart].has(1):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -46,12 +51,15 @@ func display_trophies():
 			$TrophyCase/TrophyAnim2.play("award")
 			# TrophyManager.trophy_queues[Active.chart].remove(0)
 		else:
-			$TrophyCase/Trophy2.texture = trophy_2_sprite
+			if TrophyManager.trophy_queues[Active.chart].has(3):
+				pass # so that this doesn't show up when awarding gold trophy
+			else: $TrophyCase/Trophy2.texture = trophy_2_sprite
 	else: $TrophyCase/Trophy2.texture = trophy_0_sprite
 	if TrophyManager.trophy_dict[Active.chart][2] == 1:
 		if TrophyManager.trophy_queues[Active.chart].has(3):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			$TrophyCase/Trophy3.texture = trophy_0_sprite
+			$TrophyCase/TrophyAnim2.play("award") # awarding silver and gold
 			$TrophyCase/TrophyAnim3.play("award")
 			# TrophyManager.trophy_queues[Active.chart].remove(0)
 		else:

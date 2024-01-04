@@ -277,8 +277,8 @@ pause={
 
 [logging]
 
-file_logging/log_path="res://bitshift.log"
-file_logging/max_log_files=1
+file_logging/enable_file_logging.pc=false
+file_logging/max_log_files=0
 
 [physics]
 
