@@ -4,6 +4,7 @@ const SCORE_PATH = "res://data1.bso"
 const TROPHY_PATH = "res://data2.bso"
 
 func _ready():
+	Engine.set_target_fps(60)
 	load_scores()
 	load_trophies()
 	$CRT/Shader.hide()
