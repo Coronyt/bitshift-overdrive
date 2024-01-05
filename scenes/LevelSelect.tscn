@@ -58,6 +58,93 @@ texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 448, 64 )
 modulate_color = Color( 1, 1, 1, 0.784314 )
 
+[sub_resource type="Animation" id=77]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:modulate:b")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:modulate:r")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=78]
+resource_name = "notice"
+length = 0.6
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.941176, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.196078, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+
 [sub_resource type="Animation" id=63]
 length = 0.001
 tracks/0/type = "bezier"
@@ -232,7 +319,11 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.3, 0.6 )
 }
 
-[sub_resource type="Animation" id=75]
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 448, 64 )
+
+[sub_resource type="Animation" id=66]
 length = 0.001
 tracks/0/type = "bezier"
 tracks/0/path = NodePath(".:modulate:a")
@@ -275,181 +366,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=76]
-resource_name = "notice"
-length = 0.6
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:modulate:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.941176, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:modulate:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath(".:modulate:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.196078, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath(".:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-
-[sub_resource type="Animation" id=77]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:modulate:b")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath(".:modulate:g")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath(".:modulate:r")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-
-[sub_resource type="Animation" id=78]
-resource_name = "notice"
-length = 0.6
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:modulate:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.941176, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:modulate:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath(".:modulate:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.196078, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath(".:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-
-[sub_resource type="Animation" id=79]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:modulate:b")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath(".:modulate:g")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath(".:modulate:r")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-
-[sub_resource type="Animation" id=80]
+[sub_resource type="Animation" id=57]
 resource_name = "notice"
 length = 0.6
 tracks/0/type = "bezier"
@@ -584,11 +501,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.3, 0.6 )
 }
 
-[sub_resource type="StyleBoxTexture" id=8]
-texture = ExtResource( 16 )
-region_rect = Rect2( 0, 0, 448, 64 )
-
-[sub_resource type="Animation" id=66]
+[sub_resource type="Animation" id=75]
 length = 0.001
 tracks/0/type = "bezier"
 tracks/0/path = NodePath(".:modulate:a")
@@ -631,94 +544,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=57]
-resource_name = "notice"
-length = 0.6
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:modulate:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.941176, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:modulate:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath(".:modulate:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.196078, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath(".:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-
-[sub_resource type="Animation" id=72]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:modulate:b")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath(".:modulate:g")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath(".:modulate:r")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-
-[sub_resource type="Animation" id=73]
+[sub_resource type="Animation" id=76]
 resource_name = "notice"
 length = 0.6
 tracks/0/type = "bezier"
@@ -1023,6 +849,180 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.3, 0.6 )
 }
 
+[sub_resource type="Animation" id=72]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:modulate:b")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:modulate:r")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=73]
+resource_name = "notice"
+length = 0.6
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.941176, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.196078, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+
+[sub_resource type="Animation" id=71]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:modulate:b")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:modulate:r")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=62]
+resource_name = "notice"
+length = 0.6
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.941176, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.196078, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+
 [sub_resource type="StyleBoxTexture" id=7]
 texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 448, 64 )
@@ -1114,7 +1114,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.3, 0.6 )
 }
 
-[sub_resource type="Animation" id=71]
+[sub_resource type="Animation" id=79]
 length = 0.001
 tracks/0/type = "bezier"
 tracks/0/path = NodePath(".:modulate:a")
@@ -1157,7 +1157,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=62]
+[sub_resource type="Animation" id=80]
 resource_name = "notice"
 length = 0.6
 tracks/0/type = "bezier"
@@ -3791,6 +3791,32 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
+text = "Last Voyage of the Kraken"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+diff_desc = "Basic"
+chart_key = "kraken"
+timestamp = 5
+
+[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_01"]
+reset_on_save = false
+anims/RESET = SubResource( 77 )
+anims/notice = SubResource( 78 )
+
+[node name="Track_02" type="Button" parent="TrackList/TrackList"]
+margin_top = 68.0
+margin_right = 448.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+toggle_mode = true
 text = "Breeze in the Blackest Forest"
 script = ExtResource( 22 )
 __meta__ = {
@@ -3800,15 +3826,15 @@ diff_desc = "Basic"
 chart_key = "breeze"
 timestamp = 60
 
-[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_01"]
+[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_02"]
 reset_on_save = false
 anims/RESET = SubResource( 63 )
 anims/notice = SubResource( 54 )
 
-[node name="Track_02" type="Button" parent="TrackList/TrackList"]
-margin_top = 68.0
+[node name="Track_03" type="Button" parent="TrackList/TrackList"]
+margin_top = 136.0
 margin_right = 448.0
-margin_bottom = 132.0
+margin_bottom = 200.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -3826,119 +3852,15 @@ diff_desc = "Basic"
 chart_key = "moonlight"
 timestamp = 34
 
-[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_02"]
+[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_03"]
 reset_on_save = false
 anims/RESET = SubResource( 64 )
 anims/notice = SubResource( 55 )
 
-[node name="Track_11" type="Button" parent="TrackList/TrackList"]
-margin_top = 136.0
-margin_right = 448.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 448, 64 )
-theme = ExtResource( 4 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 5 )
-toggle_mode = true
-text = "Isle of Clouds"
-script = ExtResource( 22 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-diff_desc = "? ? ?"
-chart_key = "isle"
-timestamp = 31
-
-[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_11"]
-reset_on_save = false
-anims/RESET = SubResource( 75 )
-anims/notice = SubResource( 76 )
-
-[node name="Track_12" type="Button" parent="TrackList/TrackList"]
+[node name="Track_04" type="Button" parent="TrackList/TrackList"]
 margin_top = 204.0
 margin_right = 448.0
 margin_bottom = 268.0
-rect_min_size = Vector2( 448, 64 )
-theme = ExtResource( 4 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 5 )
-toggle_mode = true
-text = "Voyage of the Kraken"
-script = ExtResource( 22 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-diff_desc = "? ? ?"
-chart_key = "kraken"
-timestamp = 5
-
-[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_12"]
-reset_on_save = false
-anims/RESET = SubResource( 77 )
-anims/notice = SubResource( 78 )
-
-[node name="Track_13" type="Button" parent="TrackList/TrackList"]
-margin_top = 272.0
-margin_right = 448.0
-margin_bottom = 336.0
-rect_min_size = Vector2( 448, 64 )
-theme = ExtResource( 4 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 5 )
-toggle_mode = true
-text = "Cirrus Streaks"
-script = ExtResource( 22 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-diff_desc = "? ? ?"
-chart_key = "cirrus"
-timestamp = 50
-
-[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_13"]
-reset_on_save = false
-anims/RESET = SubResource( 79 )
-anims/notice = SubResource( 80 )
-
-[node name="Track_03" type="Button" parent="TrackList/TrackList"]
-margin_top = 340.0
-margin_right = 448.0
-margin_bottom = 404.0
-rect_min_size = Vector2( 448, 64 )
-theme = ExtResource( 4 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-toggle_mode = true
-text = "Supermassive Spacedive"
-script = ExtResource( 22 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-diff_desc = "Basic+"
-chart_key = "spacedive"
-timestamp = 32
-
-[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_03"]
-reset_on_save = false
-anims/RESET = SubResource( 65 )
-anims/notice = SubResource( 56 )
-
-[node name="Track_04" type="Button" parent="TrackList/TrackList"]
-margin_top = 408.0
-margin_right = 448.0
-margin_bottom = 472.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -3962,9 +3884,35 @@ anims/RESET = SubResource( 66 )
 anims/notice = SubResource( 57 )
 
 [node name="Track_05" type="Button" parent="TrackList/TrackList"]
-margin_top = 476.0
+margin_top = 272.0
 margin_right = 448.0
-margin_bottom = 540.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+toggle_mode = true
+text = "Supermassive Spacedive"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+diff_desc = "Basic+"
+chart_key = "spacedive"
+timestamp = 32
+
+[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_05"]
+reset_on_save = false
+anims/RESET = SubResource( 65 )
+anims/notice = SubResource( 56 )
+
+[node name="Track_06" type="Button" parent="TrackList/TrackList"]
+margin_top = 340.0
+margin_right = 448.0
+margin_bottom = 404.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -3973,24 +3921,24 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "The Legend of Musashi"
+text = "Battle Atop the Isle of Clouds"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 diff_desc = "Advanced"
-chart_key = "musashi"
-timestamp = 38
+chart_key = "isle"
+timestamp = 31
 
-[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_05"]
+[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_06"]
 reset_on_save = false
-anims/RESET = SubResource( 72 )
-anims/notice = SubResource( 73 )
+anims/RESET = SubResource( 75 )
+anims/notice = SubResource( 76 )
 
-[node name="Track_06" type="Button" parent="TrackList/TrackList"]
-margin_top = 544.0
+[node name="Track_07" type="Button" parent="TrackList/TrackList"]
+margin_top = 408.0
 margin_right = 448.0
-margin_bottom = 608.0
+margin_bottom = 472.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -3999,7 +3947,7 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "It's Brighter on the Other Side"
+text = "Brighter on the Other Side"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -4008,15 +3956,15 @@ diff_desc = "Advanced"
 chart_key = "brighter"
 timestamp = 53
 
-[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_06"]
+[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_07"]
 reset_on_save = false
 anims/RESET = SubResource( 67 )
 anims/notice = SubResource( 58 )
 
-[node name="Track_07" type="Button" parent="TrackList/TrackList"]
-margin_top = 612.0
+[node name="Track_08" type="Button" parent="TrackList/TrackList"]
+margin_top = 476.0
 margin_right = 448.0
-margin_bottom = 676.0
+margin_bottom = 540.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -4034,15 +3982,15 @@ diff_desc = "Advanced+"
 chart_key = "scarlet"
 timestamp = 70
 
-[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_07"]
+[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_08"]
 reset_on_save = false
 anims/RESET = SubResource( 68 )
 anims/notice = SubResource( 59 )
 
-[node name="Track_08" type="Button" parent="TrackList/TrackList"]
-margin_top = 680.0
+[node name="Track_09" type="Button" parent="TrackList/TrackList"]
+margin_top = 544.0
 margin_right = 448.0
-margin_bottom = 744.0
+margin_bottom = 608.0
 rect_min_size = Vector2( 448, 64 )
 theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 1 )
@@ -4057,12 +4005,63 @@ diff_desc = "Advanced+"
 chart_key = "devilcat"
 timestamp = 29
 
-[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_08"]
+[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_09"]
 reset_on_save = false
 anims/RESET = SubResource( 69 )
 anims/notice = SubResource( 60 )
 
-[node name="Track_09" type="Button" parent="TrackList/TrackList"]
+[node name="Track_10" type="Button" parent="TrackList/TrackList"]
+margin_top = 612.0
+margin_right = 448.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+toggle_mode = true
+text = "The Legend of Musashi"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+diff_desc = "Advanced+"
+chart_key = "musashi"
+timestamp = 38
+
+[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_10"]
+reset_on_save = false
+anims/RESET = SubResource( 72 )
+anims/notice = SubResource( 73 )
+
+[node name="Track_11" type="Button" parent="TrackList/TrackList"]
+margin_top = 680.0
+margin_right = 448.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 448, 64 )
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+toggle_mode = true
+text = "Catch the Stratosphere"
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+diff_desc = "Sadistic"
+chart_key = "strato"
+
+[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_11"]
+reset_on_save = false
+anims/RESET = SubResource( 71 )
+anims/notice = SubResource( 62 )
+
+[node name="Track_12" type="Button" parent="TrackList/TrackList"]
 margin_top = 748.0
 margin_right = 448.0
 margin_bottom = 812.0
@@ -4083,12 +4082,12 @@ diff_desc = "Sadistic"
 chart_key = "baroque"
 timestamp = 70
 
-[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_09"]
+[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_12"]
 reset_on_save = false
 anims/RESET = SubResource( 70 )
 anims/notice = SubResource( 61 )
 
-[node name="Track_10" type="Button" parent="TrackList/TrackList"]
+[node name="Track_13" type="Button" parent="TrackList/TrackList"]
 margin_top = 816.0
 margin_right = 448.0
 margin_bottom = 880.0
@@ -4100,18 +4099,19 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "Catch the Stratosphere"
+text = "Cirrus Streaks"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 diff_desc = "Sadistic"
-chart_key = "strato"
+chart_key = "cirrus"
+timestamp = 50
 
-[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_10"]
+[node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_13"]
 reset_on_save = false
-anims/RESET = SubResource( 71 )
-anims/notice = SubResource( 62 )
+anims/RESET = SubResource( 79 )
+anims/notice = SubResource( 80 )
 
 [node name="SpeedLabel" type="Label" parent="."]
 margin_left = 812.0
@@ -4150,7 +4150,8 @@ shortcut_in_tooltip = false
 group = SubResource( 10 )
 text = "Faster"
 script = ExtResource( 1 )
-body = "- The track will play at 110 percent speed."
+body = "- The track will play at 110 percent speed.
+- Unlocks after player earns five trophies."
 
 [node name="locked" type="Button" parent="SpeedLabel"]
 margin_left = 20.0
@@ -4164,7 +4165,8 @@ shortcut_in_tooltip = false
 text = "Faster"
 align = 0
 script = ExtResource( 3 )
-body = "- The track will play at 110 percent speed."
+body = "- The track will play at 110 percent speed.
+- Unlocks after player earns five trophies."
 
 [node name="DifLabel1" type="Label" parent="."]
 margin_left = 512.0
@@ -4184,7 +4186,7 @@ group = SubResource( 11 )
 text = "Underclock"
 script = ExtResource( 1 )
 body = "- Tracks will have increased paddle size.
-- Recommended for new and casual players."
+- New players should start on this mode!"
 
 [node name="overdrive" type="CheckBox" parent="DifLabel1"]
 margin_top = 88.0
@@ -4196,7 +4198,7 @@ group = SubResource( 11 )
 text = "Overdrive"
 script = ExtResource( 1 )
 body = "- Tracks will have standard paddle size.
-- Recommended for intermediate players."
+- Be warned, this mode is challenging!"
 
 [node name="segfault" type="CheckBox" parent="DifLabel1"]
 visible = false
@@ -4227,9 +4229,9 @@ shortcut_in_tooltip = false
 group = SubResource( 12 )
 text = "Classic"
 script = ExtResource( 1 )
-body = "- There is no penalty for missing notes.
-- You cannot fail a track in Classic mode.
-- Recommended for new and casual players."
+body = "- New players should start on Classic!
+- There is no penalty for missing notes.
+- You cannot fail a track on Classic mode."
 
 [node name="arcade" type="CheckBox" parent="DifLabel2"]
 margin_top = 88.0
@@ -4254,8 +4256,9 @@ shortcut_in_tooltip = false
 group = SubResource( 12 )
 text = "Ironbit"
 script = ExtResource( 1 )
-body = "- The track ends if you miss a note.
-- Recommended for adept players only."
+body = "- Track ends as soon as you miss a note.
+- Unlocks after player earns ten trophies.
+- Warning! This mode is extremely punishing!"
 
 [node name="locked" type="Button" parent="DifLabel2"]
 margin_left = 20.0
@@ -4270,8 +4273,9 @@ shortcut_in_tooltip = false
 text = "Ironbit"
 align = 0
 script = ExtResource( 3 )
-body = "- The track ends if you miss a note.
-- Recommended for adept players only."
+body = "- Track ends as soon as you miss a note.
+- Unlocks after player earns ten trophies.
+- Warning! This mode is extremely punishing!"
 
 [node name="GameHub" type="ColorRect" parent="."]
 margin_left = 1016.0
@@ -5076,8 +5080,8 @@ current = true
 [node name="CRT" parent="." instance=ExtResource( 13 )]
 visible = false
 
-[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer1" to="TrackList/TrackList/Track_03" method="_on_PreviewTimer1_timeout"]
-[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer2" to="TrackList/TrackList/Track_03" method="_on_PreviewTimer2_timeout"]
+[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer1" to="TrackList/TrackList/Track_05" method="_on_PreviewTimer1_timeout"]
+[connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer2" to="TrackList/TrackList/Track_05" method="_on_PreviewTimer2_timeout"]
 [connection signal="timeout" from="TrackList/TrackList/TrackListTimer" to="TrackList/TrackList/TrackListTimer" method="_on_TrackListTimer_timeout"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_01" to="TrackList/TrackList/Track_01" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_01" to="GameHub" method="_on_new_active_track"]
@@ -5087,18 +5091,6 @@ visible = false
 [connection signal="new_active_track" from="TrackList/TrackList/Track_02" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_02" to="TrackList/TrackList/Track_02" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_02/NoticeAnim" to="TrackList/TrackList/Track_02" method="_on_NoticeAnim_animation_finished"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_11" to="TrackList/TrackList/Track_11" method="_on_ChartButton_mouse_entered"]
-[connection signal="new_active_track" from="TrackList/TrackList/Track_11" to="GameHub" method="_on_new_active_track"]
-[connection signal="pressed" from="TrackList/TrackList/Track_11" to="TrackList/TrackList/Track_11" method="_on_ChartButton_pressed"]
-[connection signal="animation_finished" from="TrackList/TrackList/Track_11/NoticeAnim" to="TrackList/TrackList/Track_11" method="_on_NoticeAnim_animation_finished"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_12" to="TrackList/TrackList/Track_12" method="_on_ChartButton_mouse_entered"]
-[connection signal="new_active_track" from="TrackList/TrackList/Track_12" to="GameHub" method="_on_new_active_track"]
-[connection signal="pressed" from="TrackList/TrackList/Track_12" to="TrackList/TrackList/Track_12" method="_on_ChartButton_pressed"]
-[connection signal="animation_finished" from="TrackList/TrackList/Track_12/NoticeAnim" to="TrackList/TrackList/Track_12" method="_on_NoticeAnim_animation_finished"]
-[connection signal="mouse_entered" from="TrackList/TrackList/Track_13" to="TrackList/TrackList/Track_13" method="_on_ChartButton_mouse_entered"]
-[connection signal="new_active_track" from="TrackList/TrackList/Track_13" to="GameHub" method="_on_new_active_track"]
-[connection signal="pressed" from="TrackList/TrackList/Track_13" to="TrackList/TrackList/Track_13" method="_on_ChartButton_pressed"]
-[connection signal="animation_finished" from="TrackList/TrackList/Track_13/NoticeAnim" to="TrackList/TrackList/Track_13" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_03" to="TrackList/TrackList/Track_03" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_03" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_03" to="TrackList/TrackList/Track_03" method="_on_ChartButton_pressed"]
@@ -5131,6 +5123,18 @@ visible = false
 [connection signal="new_active_track" from="TrackList/TrackList/Track_10" to="GameHub" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_10" to="TrackList/TrackList/Track_10" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_10/NoticeAnim" to="TrackList/TrackList/Track_10" method="_on_NoticeAnim_animation_finished"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_11" to="TrackList/TrackList/Track_11" method="_on_ChartButton_mouse_entered"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_11" to="GameHub" method="_on_new_active_track"]
+[connection signal="pressed" from="TrackList/TrackList/Track_11" to="TrackList/TrackList/Track_11" method="_on_ChartButton_pressed"]
+[connection signal="animation_finished" from="TrackList/TrackList/Track_11/NoticeAnim" to="TrackList/TrackList/Track_11" method="_on_NoticeAnim_animation_finished"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_12" to="TrackList/TrackList/Track_12" method="_on_ChartButton_mouse_entered"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_12" to="GameHub" method="_on_new_active_track"]
+[connection signal="pressed" from="TrackList/TrackList/Track_12" to="TrackList/TrackList/Track_12" method="_on_ChartButton_pressed"]
+[connection signal="animation_finished" from="TrackList/TrackList/Track_12/NoticeAnim" to="TrackList/TrackList/Track_12" method="_on_NoticeAnim_animation_finished"]
+[connection signal="mouse_entered" from="TrackList/TrackList/Track_13" to="TrackList/TrackList/Track_13" method="_on_ChartButton_mouse_entered"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_13" to="GameHub" method="_on_new_active_track"]
+[connection signal="pressed" from="TrackList/TrackList/Track_13" to="TrackList/TrackList/Track_13" method="_on_ChartButton_pressed"]
+[connection signal="animation_finished" from="TrackList/TrackList/Track_13/NoticeAnim" to="TrackList/TrackList/Track_13" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_pressed"]
@@ -5164,7 +5168,7 @@ visible = false
 [connection signal="mouse_entered" from="DifLabel2/locked" to="DifLabel2/locked" method="_on_GenericButton_mouse_entered"]
 [connection signal="mouse_exited" from="DifLabel2/locked" to="DifLabel2/locked" method="_on_GenericButton_mouse_exited"]
 [connection signal="pressed" from="DifLabel2/locked" to="DifLabel2/locked" method="_on_GenericButton_pressed"]
-[connection signal="trophy_anims_finished" from="GameHub" to="TrackList/TrackList/Track_03" method="_on_GameHub_trophy_anims_finished"]
+[connection signal="trophy_anims_finished" from="GameHub" to="TrackList/TrackList/Track_05" method="_on_GameHub_trophy_anims_finished"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy1/TrophyTimer1" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyTimer1_timeout"]
 [connection signal="timeout" from="GameHub/TrophyCase/Trophy1/TrophyTimer2" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyTimer2_timeout"]
 [connection signal="mouse_entered" from="GameHub/TrophyCase/Trophy1/TrophyArea" to="GameHub/TrophyCase/Trophy1" method="_on_TrophyArea_mouse_entered"]
