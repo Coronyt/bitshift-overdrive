@@ -3798,6 +3798,7 @@ __meta__ = {
 }
 diff_desc = "Basic"
 chart_key = "breeze"
+timestamp = 60
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_01"]
 reset_on_save = false
@@ -3823,6 +3824,7 @@ __meta__ = {
 }
 diff_desc = "Basic"
 chart_key = "moonlight"
+timestamp = 34
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_02"]
 reset_on_save = false
@@ -3848,6 +3850,7 @@ __meta__ = {
 }
 diff_desc = "? ? ?"
 chart_key = "isle"
+timestamp = 31
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_11"]
 reset_on_save = false
@@ -3873,6 +3876,7 @@ __meta__ = {
 }
 diff_desc = "? ? ?"
 chart_key = "kraken"
+timestamp = 5
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_12"]
 reset_on_save = false
@@ -3898,6 +3902,7 @@ __meta__ = {
 }
 diff_desc = "? ? ?"
 chart_key = "cirrus"
+timestamp = 45
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_13"]
 reset_on_save = false
@@ -3923,6 +3928,7 @@ __meta__ = {
 }
 diff_desc = "Basic+"
 chart_key = "spacedive"
+timestamp = 30
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_03"]
 reset_on_save = false
@@ -3948,6 +3954,7 @@ __meta__ = {
 }
 diff_desc = "Basic+"
 chart_key = "coy_glance"
+timestamp = 40
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_04"]
 reset_on_save = false
@@ -3973,6 +3980,7 @@ __meta__ = {
 }
 diff_desc = "Advanced"
 chart_key = "musashi"
+timestamp = 38
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_05"]
 reset_on_save = false
@@ -3998,6 +4006,7 @@ __meta__ = {
 }
 diff_desc = "Advanced"
 chart_key = "brighter"
+timestamp = 53
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_06"]
 reset_on_save = false
@@ -4023,6 +4032,7 @@ __meta__ = {
 }
 diff_desc = "Advanced+"
 chart_key = "scarlet"
+timestamp = 70
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_07"]
 reset_on_save = false
@@ -4045,6 +4055,7 @@ text = "[ cat-eared devil ]"
 script = ExtResource( 22 )
 diff_desc = "Advanced+"
 chart_key = "devilcat"
+timestamp = 29
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_08"]
 reset_on_save = false
@@ -4070,6 +4081,7 @@ __meta__ = {
 }
 diff_desc = "Sadistic"
 chart_key = "baroque"
+timestamp = 70
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_09"]
 reset_on_save = false

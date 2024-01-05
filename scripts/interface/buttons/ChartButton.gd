@@ -2,6 +2,7 @@ extends Button
 
 export(String) var diff_desc
 export(String) var chart_key
+export(int) var timestamp = 35
 
 signal new_active_track
 var bgm_playing
@@ -91,7 +92,7 @@ func fade_in_track():
 	fade_tween.interpolate_property(to_play, 
 		"volume_db", -80, UserPreferences.prefs["music_vol"] - 2, 0.50, 1, Tween.EASE_IN, 0)
 	fade_tween.start()
-	to_play.play(35)
+	to_play.play(timestamp)
 	var preview_timer = self.get_parent().get_child(0).get_child(0)
 	# this is the problem ... this is getting called and starting the timer
 		# the timer is starting BEFORE the next chart is selected ()
