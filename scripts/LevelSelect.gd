@@ -1,5 +1,7 @@
 extends Control
 
+# Starting to clean up directories and scripts
+
 const SCORE_PATH = "res://data1.bso"
 const TROPHY_PATH = "res://data2.bso"
 
