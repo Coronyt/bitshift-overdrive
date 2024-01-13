@@ -47,7 +47,6 @@ func sum_trophies():
 	return trophy_sum
 
 func award_trophy_1():
-	# Trophy Criteria:
 	# Complete track with any difficulty settings
 	if trophy_dict[Active.chart][0] == 0:
 		# Awarding trophies
@@ -56,7 +55,6 @@ func award_trophy_1():
 	else: pass
 
 func award_trophy_2():
-	# Trophy Criteria:
 	# Complete track on at least arcade mode
 	if trophy_dict[Active.chart][1] == 0:
 		# Check active chart parameters
@@ -68,7 +66,6 @@ func award_trophy_2():
 	else: pass
 
 func award_trophy_3():
-	# Trophy Criteria:
 	# Complete track on ironbit mode
 	if trophy_dict[Active.chart][2] == 0:
 		# Check active chart parameters
@@ -81,7 +78,6 @@ func award_trophy_3():
 	else: pass
 
 func award_trophy_4():
-	# Trophy Criteria:
 	# Complete track on arcade, and on at least overdrive and at least on speed 100%
 	if trophy_dict[Active.chart][3] == 0:
 		# Check active chart parameters
@@ -94,7 +90,6 @@ func award_trophy_4():
 	else: pass
 
 func award_trophy_5():
-	# Trophy Criteria:
 	# Complete track on ironbit, and on at least overdrive and at least on speed 100%
 	if trophy_dict[Active.chart][4] == 0:
 		if (Active.mod_dif_2 == "ironbit") and (Active.mod_dif_1 == "overdrive"

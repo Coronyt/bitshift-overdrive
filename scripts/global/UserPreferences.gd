@@ -28,8 +28,6 @@ func _ready():
 	else:
 		print("User preferences detected, loading from config.cfg ...")
 		load_prefs()
-	# Activating preferences
-	# Volume settings
 	var bus = AudioServer.get_bus_index("Master")
 	AudioServer.set_bus_volume_db(bus, UserPreferences.prefs["master_vol"])
 	print("Master bus levels at " + str(AudioServer.get_bus_volume_db(bus)))

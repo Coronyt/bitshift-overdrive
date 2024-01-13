@@ -58,6 +58,3 @@ func refresh():
 	last_milestone = 0
 	track_ref = null
 	diff_desc = ""
-	
-func _process(_delta):
-	print(str(Engine.get_frames_per_second()))

@@ -76,7 +76,6 @@ func play_sound(target_audio):
 	for s in sounds:
 		if s.name == target_audio:
 			s.volume_db = UserPreferences.prefs["SFX_vol"]
-			# Exceptions (BGMs + others ...)
 			if s.name == "flair1":
 				if UserPreferences.prefs["disable_combo_SFX"] == true:
 					return

@@ -47,9 +47,6 @@ var chart_tscn_dict = {
 }
 
 func fetch_chart(chart_ID):
-	if Active.is_easy == true:
-		# return chart_easy_dict[chart_ID].chart
-		pass
 	return chart_dict[chart_ID].chart
 	
 func fetch_chart_tscn(chart_tscn_ID):
