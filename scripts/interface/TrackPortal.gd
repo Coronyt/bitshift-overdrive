@@ -1,8 +1,5 @@
 extends Button
 
-func _ready():
-	pass
-
 func _physics_process(_delta):
 	if Active.chart != "":
 		self.disabled = false
