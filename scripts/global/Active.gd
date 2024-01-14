@@ -32,8 +32,10 @@ var progress = 0.0
 var track_ref : AudioStreamPlayer = null
 
 var diff_desc = ""
+var final_db
 
 func _ready():
+	final_db = SoundManager.fetch_audio_stream("track_select").volume_db
 	mod_dif_1 = UserPreferences.prefs["diff_1"]
 	mod_dif_2 = UserPreferences.prefs["diff_2"]
 	mod_speed = UserPreferences.prefs["speed"]

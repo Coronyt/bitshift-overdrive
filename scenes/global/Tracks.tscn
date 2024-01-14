@@ -56,159 +56,159 @@
 
 [node name="spacedive_075" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="spacedive_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 19 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="spacedive_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="spacedive_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="spacedive_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="baroque_075" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="baroque_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 23 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="baroque_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="baroque_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 22 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="baroque_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="coy_glance_075" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="coy_glance_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 24 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="coy_glance_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="coy_glance_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 27 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="coy_glance_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="strato_075" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 17 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="strato_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 25 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="strato_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="strato_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="strato_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 18 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="brighter_075" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="brighter_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 26 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="brighter_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="brighter_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 28 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="brighter_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="breeze_075" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="breeze_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 29 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="breeze_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="breeze_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 30 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="breeze_125" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="devilcat_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 38 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="devilcat_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 31 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="devilcat_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 39 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="moonlight_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 36 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="moonlight_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 33 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="moonlight_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 34 )
-volume_db = -10.0
+volume_db = -2.0
 
 [node name="scarlet_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 37 )
-volume_db = -12.0
+volume_db = -2.5
 
 [node name="scarlet_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 32 )
-volume_db = -12.0
+volume_db = -2.5
 
 [node name="scarlet_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 35 )
-volume_db = -12.0
+volume_db = -2.5
 
 [node name="musashi_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 41 )
@@ -221,15 +221,15 @@ stream = ExtResource( 42 )
 
 [node name="isle_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 43 )
-volume_db = -12.0
+volume_db = -2.5
 
 [node name="isle_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 44 )
-volume_db = -12.0
+volume_db = -2.5
 
 [node name="isle_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 45 )
-volume_db = -12.0
+volume_db = -2.5
 
 [node name="kraken_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 46 )
@@ -242,9 +242,12 @@ stream = ExtResource( 47 )
 
 [node name="cirrus_090" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 49 )
+volume_db = -1.25
 
 [node name="cirrus_100" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 50 )
+volume_db = -1.25
 
 [node name="cirrus_110" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 51 )
+volume_db = -1.25

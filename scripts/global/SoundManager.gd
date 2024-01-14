@@ -75,14 +75,10 @@ func play_sound(target_audio):
 	var sounds = Sounds.get_children()
 	for s in sounds:
 		if s.name == target_audio:
-			s.volume_db = UserPreferences.prefs["SFX_vol"]
+			s.volume_db = s.volume_db + UserPreferences.prefs["SFX_vol"]
 			if s.name == "flair1":
 				if UserPreferences.prefs["disable_combo_SFX"] == true:
 					return
-			if s.name == "title_track":
-				s.volume_db = UserPreferences.prefs["music_vol"]
-			if s.name == "track_select":
-				s.volume_db = UserPreferences.prefs["music_vol"] - 2
 			s.play()
 
 func stop_sound(target_audio):
@@ -96,6 +92,6 @@ func play_combo(pitch):
 	for s in sounds:
 		if s.name == "combo":
 			if !UserPreferences.prefs["disable_combo_SFX"]:
-				s.volume_db = UserPreferences.prefs["SFX_vol"]
+				s.volume_db = s.volume_db + UserPreferences.prefs["SFX_vol"]
 				s.pitch_scale = pitch
 				s.play()

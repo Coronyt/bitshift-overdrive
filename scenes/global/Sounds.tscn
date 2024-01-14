@@ -22,29 +22,35 @@
 
 [node name="click1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+volume_db = -4.0
 
 [node name="click2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+volume_db = -4.0
 
 [node name="count1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -4.0
 
 [node name="count2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -4.0
 
 [node name="hover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = -6.0
+volume_db = -4.0
 
 [node name="miss" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
+volume_db = -4.0
 
 [node name="score1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+volume_db = -4.0
 
 [node name="score2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-volume_db = -6.0
+volume_db = -4.0
 
 [node name="track_select" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
@@ -52,6 +58,7 @@ volume_db = -2.0
 
 [node name="title1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
+volume_db = -4.0
 
 [node name="title2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
@@ -65,20 +72,24 @@ pitch_scale = 0.75
 
 [node name="title_track" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
+volume_db = -2.0
 
 [node name="flair1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
-volume_db = -2.0
+volume_db = -4.0
 
 [node name="combo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
-volume_db = -2.0
+volume_db = -4.0
 
 [node name="trophy1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 17 )
+volume_db = -4.0
 
 [node name="trophy2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
+volume_db = -4.0
 
 [node name="trophy3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
+volume_db = -4.0

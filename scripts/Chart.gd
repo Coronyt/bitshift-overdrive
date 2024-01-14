@@ -19,17 +19,17 @@ func play_track():
 	if Active.speed == "speed_090":
 		speed = speed * 0.90
 		Active.track_ref = SoundManager.track_dict_090[Active.chart]
-		SoundManager.track_dict_090[Active.chart].volume_db = UserPreferences.prefs["music_vol"]
+		SoundManager.track_dict_090[Active.chart].volume_db = SoundManager.track_dict_090[Active.chart].volume_db + UserPreferences.prefs["music_vol"]
 		SoundManager.track_dict_090[Active.chart].play()
 	if Active.speed == "speed_100":
 		speed = speed * 1.00
 		Active.track_ref = SoundManager.track_dict_100[Active.chart]
-		SoundManager.track_dict_100[Active.chart].volume_db = UserPreferences.prefs["music_vol"]
+		SoundManager.track_dict_100[Active.chart].volume_db = SoundManager.track_dict_100[Active.chart].volume_db + UserPreferences.prefs["music_vol"]
 		SoundManager.track_dict_100[Active.chart].play()
 	if Active.speed == "speed_110":
 		speed = speed * 1.10
 		Active.track_ref = SoundManager.track_dict_110[Active.chart]
-		SoundManager.track_dict_110[Active.chart].volume_db = UserPreferences.prefs["music_vol"]
+		SoundManager.track_dict_110[Active.chart].volume_db = SoundManager.track_dict_110[Active.chart].volume_db + UserPreferences.prefs["music_vol"]
 		SoundManager.track_dict_110[Active.chart].play()
 
 func fetch_track():

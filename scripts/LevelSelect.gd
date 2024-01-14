@@ -12,6 +12,8 @@ func _ready():
 	save_trophies()
 	load_last_modifiers()
 	SoundManager.play_sound("track_select")
+	var bgm = SoundManager.fetch_audio_stream("track_select")
+	bgm.volume_db = Active.final_db
 	if cinematic == true:
 		for element in self.get_children():
 			if element.name == "VaporCam":

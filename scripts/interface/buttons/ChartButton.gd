@@ -6,12 +6,15 @@ export(int) var timestamp = 35
 
 signal new_active_track
 var bgm_playing
+var last_bgm_db
 
 func _ready():
 	bgm_playing = true
 	SoundManager.preview_playing = false
+	var bgm = SoundManager.fetch_audio_stream("track_select")
 	if TrophyManager.trophy_queues[chart_key].size() > 0:
 		$NoticeAnim.play("notice")
+	last_bgm_db = bgm.volume_db
 
 func _on_ChartButton_pressed():
 	self.get_parent().get_parent().get_parent().preview_playing = true
@@ -45,7 +48,7 @@ func fade_in_bgm():
 	var fade_tween = self.get_parent().get_child(0)
 	audio_stream.play(SoundManager.track_select_last_pos)
 	fade_tween.interpolate_property(audio_stream, 
-		"volume_db", -80, UserPreferences.prefs["music_vol"] - 2, 1, 1, Tween.EASE_IN, 0)
+		"volume_db", -80, Active.final_db + UserPreferences.prefs["music_vol"], 1, 1, Tween.EASE_IN, 0)
 	fade_tween.start()
 	self.get_parent().get_parent().get_parent().preview_playing = false
 	bgm_playing = true
@@ -55,7 +58,7 @@ func fade_out_bgm():
 	var fade_tween = self.get_parent().get_child(0)
 	SoundManager.track_select_last_pos = audio_stream.get_playback_position()
 	fade_tween.interpolate_property(audio_stream, 
-		"volume_db", UserPreferences.prefs["music_vol"] - 2, -80, 0.50, 1, Tween.EASE_IN, 0)
+		"volume_db", audio_stream.volume_db + UserPreferences.prefs["music_vol"], -80, 0.50, 1, Tween.EASE_IN, 0)
 	fade_tween.start()
 	audio_stream.stop()
 	bgm_playing = false
@@ -65,7 +68,7 @@ func fade_in_track():
 	var to_play = SoundManager.track_dict_100[Active.chart]
 	var fade_tween = self.get_parent().get_child(0)
 	fade_tween.interpolate_property(to_play, 
-		"volume_db", -80, UserPreferences.prefs["music_vol"] - 2, 0.50, 1, Tween.EASE_IN, 0)
+		"volume_db", -80, to_play.volume_db + UserPreferences.prefs["music_vol"], 0.50, 1, Tween.EASE_IN, 0)
 	fade_tween.start()
 	to_play.play(timestamp)
 	var preview_timer = self.get_parent().get_child(0).get_child(0)
@@ -75,7 +78,7 @@ func fade_out_track():
 	var to_stop = SoundManager.track_dict_100[Active.chart]
 	var fade_tween = self.get_parent().get_child(0)
 	fade_tween.interpolate_property(to_stop, 
-		"volume_db", UserPreferences.prefs["music_vol"] - 2, -80, 1, 1, Tween.EASE_IN, 0)
+		"volume_db", to_stop.volume_db + UserPreferences.prefs["music_vol"], -80, 1, 1, Tween.EASE_IN, 0)
 	fade_tween.start()
 	var preview_timer = self.get_parent().get_child(0).get_child(1)
 	preview_timer.start()

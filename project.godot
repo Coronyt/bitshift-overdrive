@@ -184,9 +184,9 @@ config/icon="res://icon.png"
 [autoload]
 
 UserPreferences="*res://scripts/global/UserPreferences.gd"
-Active="*res://scripts/global/Active.gd"
-Tracks="*res://scenes/global/Tracks.tscn"
 Sounds="*res://scenes/global/Sounds.tscn"
+Tracks="*res://scenes/global/Tracks.tscn"
+Active="*res://scripts/global/Active.gd"
 ChartManager="*res://scripts/global/ChartManager.gd"
 ScoreManager="*res://scripts/global/ScoreManager.gd"
 SoundManager="*res://scripts/global/SoundManager.gd"

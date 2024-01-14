@@ -3869,14 +3869,14 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 8 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "A Coy Glance in Winter"
+text = "Coy Glance in Winter"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 diff_desc = "Basic+"
 chart_key = "coy_glance"
-timestamp = 40
+timestamp = 26
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_04"]
 reset_on_save = false
