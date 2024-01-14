@@ -6,9 +6,8 @@ const paddle_XL = preload("res://assets/sprites/paddle_XL.stex")
 var locked = false
 
 func _ready():
-	# Calculating puck offset.
-	offset = 5.30 # Fullscreen offset (HD).
-	# TODO - This method probably won't work for any resolution above HD. (?)
+	# Calculating puck offset
+	offset = 5.30
 	if OS.window_fullscreen:
 		offset = offset * (float(1920) / OS.get_screen_size().x)
 	else:
@@ -29,7 +28,7 @@ func _physics_process(delta):
 		var new_pos = get_global_mouse_position() - self.global_position
 		new_pos.x = get_local_mouse_position().x
 		move_and_slide(Vector2((new_pos.x + offset) * 50, 0))
-		# '(new_pos.x + offset) * sense' where 'sense' is mouse sensitivity.
+		# '(new_pos.x + offset) * sense' where 'sense' is mouse sensitivity
 		self.get_parent().get_parent().get_parent().paddle_pos_y = self.global_position.y
 		if self.get_parent().get_parent().get_parent().cinematic == false:
 			get_viewport().warp_mouse(Vector2(get_global_mouse_position().x, self.global_position.y + 10))

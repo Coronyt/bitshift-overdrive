@@ -1,7 +1,5 @@
 extends Control
 
-# Starting to clean up directories and scripts
-
 const SCORE_PATH = "res://data1.bso"
 const TROPHY_PATH = "res://data2.bso"
 
@@ -48,7 +46,7 @@ func load_into_active():
 	var to_load_speed = $SpeedLabel/speed_100.group.get_pressed_button().name
 	var to_load_dif1 = $DifLabel1/underclock.group.get_pressed_button().name
 	var to_load_dif2 = $DifLabel2/classic.group.get_pressed_button().name
-	# Storing last used modifiers.
+	# Storing last used modifiers
 	Active.mod_speed = to_load_speed
 	Active.mod_dif_1 = to_load_dif1
 	Active.mod_dif_2 = to_load_dif2

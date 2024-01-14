@@ -8,4 +8,4 @@ func _physics_process(_delta):
 		self.get_parent().get_parent().get_parent().check_health()
 		Active.combo = 0
 		Active.last_milestone = 0
-		coll.queue_free() # Missed note delay currently disabled
+		coll.queue_free()

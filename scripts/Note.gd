@@ -38,7 +38,7 @@ func milestone_check():
 
 func tick():
 	var tick = ComboTick.instance()
-	# Alternate combo tick spawns from right to left.
+	# Alternate combo tick spawns from right to left
 	if Active.combo_LR == false:
 		tick.global_position = Vector2(self.global_position.x + 97.5, self.global_position.y - 25)
 		Active.combo_LR = true

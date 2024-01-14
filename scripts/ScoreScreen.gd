@@ -31,12 +31,7 @@ func _on_ScoreTimer_timeout():
 	elif dif1_checked == false:
 		SoundManager.play_sound("score1")
 		dif1_checked = true
-		if Active.mod_dif_1 == "hibernate":
-			Active.score = int(Active.score * 1)
-			var init_label = TextNode.instance()
-			init_label.text = "Hibernate\n" + "1x     " + str(Active.score) + "\n"
-			$ScoreBox.add_child(init_label)
-		elif Active.mod_dif_1 == "underclock":
+		if Active.mod_dif_1 == "underclock":
 			Active.score = int(Active.score * 1)
 			var init_label = TextNode.instance()
 			init_label.text = "Underclock\n" + "1x     " + str(Active.score) + "\n"
@@ -46,11 +41,6 @@ func _on_ScoreTimer_timeout():
 			var init_label = TextNode.instance()
 			init_label.text = "Overdrive\n" + "2x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
-		elif Active.mod_dif_1 == "segfault":
-			Active.score = int(Active.score * 4)
-			var init_label = TextNode.instance()
-			init_label.text = "Segfault\n" + "4x     " + str(Active.score) + "\n"
-			$ScoreBox.add_child(init_label)
 	elif dif2_checked == false:
 		SoundManager.play_sound("score1")
 		dif2_checked = true
@@ -59,15 +49,10 @@ func _on_ScoreTimer_timeout():
 			var init_label = TextNode.instance()
 			init_label.text = "Arcade\n" + "2x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
-		elif Active.is_nybl == true:
+		elif Active.is_iron == true:
 			Active.score = int(Active.score * 4)
 			var init_label = TextNode.instance()
-			init_label.text = "Nybble\n" + "4x     " + str(Active.score) + "\n"
-			$ScoreBox.add_child(init_label)
-		elif Active.is_iron == true:
-			Active.score = int(Active.score * 8)
-			var init_label = TextNode.instance()
-			init_label.text = "Ironbit\n" + "8x     " + str(Active.score) + "\n"
+			init_label.text = "Ironbit\n" + "4x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 		else:
 			Active.score = int(Active.score * 1)
@@ -77,12 +62,7 @@ func _on_ScoreTimer_timeout():
 	elif speed_checked == false:
 		SoundManager.play_sound("score1")
 		speed_checked = true
-		if Active.is_075 == true:
-			Active.score = int(Active.score * 1)
-			var init_label = TextNode.instance()
-			init_label.text = "Speed 75%\n" + "1x     " + str(Active.score) + "\n"
-			$ScoreBox.add_child(init_label)
-		elif Active.is_090 == true:
+		if Active.is_090 == true:
 			Active.score = int(Active.score * 1)
 			var init_label = TextNode.instance()
 			init_label.text = "Speed 90%\n" + "1x     " + str(Active.score) + "\n"
@@ -91,11 +71,6 @@ func _on_ScoreTimer_timeout():
 			Active.score = int(Active.score * 2)
 			var init_label = TextNode.instance()
 			init_label.text = "Speed 110%\n" + "2x     " + str(Active.score) + "\n"
-			$ScoreBox.add_child(init_label)
-		elif Active.is_125 == true:
-			Active.score = int(Active.score * 4)
-			var init_label = TextNode.instance()
-			init_label.text = "Speed 125%\n" + "4x     " + str(Active.score) + "\n"
 			$ScoreBox.add_child(init_label)
 		else:
 			Active.score = int(Active.score * 1)

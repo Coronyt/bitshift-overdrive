@@ -4,12 +4,12 @@ func _physics_process(_delta):
 	for coll in self.get_overlapping_bodies():
 		coll.shatter()
 		coll.get_child(1).set_disabled(true)
-		coll.get_child(4).queue_free() # Deleting light node.
-		coll.get_child(0).get_child(0).queue_free() # Deleting outline.
-		coll.get_child(0).get_child(1).emitting = false # Stopping particles.
+		coll.get_child(4).queue_free() # Deleting light node
+		coll.get_child(0).get_child(0).queue_free() # Deleting outline
+		coll.get_child(0).get_child(1).emitting = false # Stopping particles
 		Active.active.erase(coll)
 		score_flair()
-		self.get_parent().transform.origin.y = 280 # To negate paddle pushing.
+		self.get_parent().transform.origin.y = 280 # To negate paddle pushing
 		
 func score_flair():
 	var score_label = self.get_parent().get_parent().get_child(3).get_child(2)
