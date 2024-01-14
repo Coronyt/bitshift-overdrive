@@ -16,11 +16,6 @@ var track_cache = 0.0
 var cam_cache = 0.0
 
 func play_track():
-	if Active.speed == "speed_075":
-		speed = speed * 0.75
-		Active.track_ref = SoundManager.track_dict_075[Active.chart]
-		SoundManager.track_dict_075[Active.chart].volume_db = UserPreferences.prefs["music_vol"]
-		SoundManager.track_dict_075[Active.chart].play()
 	if Active.speed == "speed_090":
 		speed = speed * 0.90
 		Active.track_ref = SoundManager.track_dict_090[Active.chart]
@@ -36,28 +31,16 @@ func play_track():
 		Active.track_ref = SoundManager.track_dict_110[Active.chart]
 		SoundManager.track_dict_110[Active.chart].volume_db = UserPreferences.prefs["music_vol"]
 		SoundManager.track_dict_110[Active.chart].play()
-	if Active.speed == "speed_125":
-		speed = speed * 1.25
-		Active.track_ref = SoundManager.track_dict_125[Active.chart]
-		SoundManager.track_dict_125[Active.chart].volume_db = UserPreferences.prefs["music_vol"]
-		SoundManager.track_dict_125[Active.chart].play()
 
 func fetch_track():
-	if Active.speed == "speed_075":
-		return SoundManager.track_dict_075[Active.chart].get_playback_position()
 	if Active.speed == "speed_090":
 		return SoundManager.track_dict_090[Active.chart].get_playback_position()
 	if Active.speed == "speed_100":
 		return SoundManager.track_dict_100[Active.chart].get_playback_position()
 	if Active.speed == "speed_110":
 		return SoundManager.track_dict_110[Active.chart].get_playback_position()
-	if Active.speed == "speed_125":
-		return SoundManager.track_dict_125[Active.chart].get_playback_position()
-		
+
 func seek_track(pos):
-	if Active.speed == "speed_075":
-		SoundManager.track_dict_075[Active.chart].play()
-		SoundManager.track_dict_075[Active.chart].seek(pos)
 	if Active.speed == "speed_090":
 		SoundManager.track_dict_090[Active.chart].play()
 		SoundManager.track_dict_090[Active.chart].seek(pos)
@@ -67,21 +50,14 @@ func seek_track(pos):
 	if Active.speed == "speed_110":
 		SoundManager.track_dict_110[Active.chart].play()
 		SoundManager.track_dict_110[Active.chart].seek(pos)
-	if Active.speed == "speed_125":
-		SoundManager.track_dict_125[Active.chart].play()
-		SoundManager.track_dict_125[Active.chart].seek(pos)
-		
+
 func stop_track():
-	if Active.speed == "speed_075":
-		SoundManager.track_dict_075[Active.chart].stop()
 	if Active.speed == "speed_090":
 		SoundManager.track_dict_090[Active.chart].stop()
 	if Active.speed == "speed_100":
 		SoundManager.track_dict_100[Active.chart].stop()
 	if Active.speed == "speed_110":
 		SoundManager.track_dict_110[Active.chart].stop()
-	if Active.speed == "speed_125":
-		SoundManager.track_dict_125[Active.chart].stop()
 
 func _ready():
 	if cinematic == true:

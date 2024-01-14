@@ -40,7 +40,6 @@ func display_trophies():
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			$TrophyCase/Trophy1.texture = trophy_0_sprite
 			$TrophyCase/TrophyAnim1.play("award")
-			# TrophyManager.trophy_queues[Active.chart].remove(0)
 		else:
 			$TrophyCase/Trophy1.texture = trophy_1_sprite
 	else: $TrophyCase/Trophy1.texture = trophy_0_sprite
@@ -49,19 +48,17 @@ func display_trophies():
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			$TrophyCase/Trophy2.texture = trophy_0_sprite
 			$TrophyCase/TrophyAnim2.play("award")
-			# TrophyManager.trophy_queues[Active.chart].remove(0)
 		else:
 			if TrophyManager.trophy_queues[Active.chart].has(3):
-				pass # so that this doesn't show up when awarding gold trophy
+				pass
 			else: $TrophyCase/Trophy2.texture = trophy_2_sprite
 	else: $TrophyCase/Trophy2.texture = trophy_0_sprite
 	if TrophyManager.trophy_dict[Active.chart][2] == 1:
 		if TrophyManager.trophy_queues[Active.chart].has(3):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			$TrophyCase/Trophy3.texture = trophy_0_sprite
-			$TrophyCase/TrophyAnim2.play("award") # awarding silver and gold
+			$TrophyCase/TrophyAnim2.play("award")
 			$TrophyCase/TrophyAnim3.play("award")
-			# TrophyManager.trophy_queues[Active.chart].remove(0)
 		else:
 			$TrophyCase/Trophy3.texture = trophy_3_sprite
 	else: $TrophyCase/Trophy3.texture = trophy_0_sprite
@@ -70,7 +67,6 @@ func display_trophies():
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			$TrophyCase/Trophy4.texture = trophy_0_sprite
 			$TrophyCase/TrophyAnim4.play("award")
-			# TrophyManager.trophy_queues[Active.chart].remove(0)
 		else:
 			$TrophyCase/Trophy4.texture = trophy_4_sprite
 	else: $TrophyCase/Trophy4.texture = trophy_0_sprite
@@ -79,7 +75,6 @@ func display_trophies():
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			$TrophyCase/Trophy5.texture = trophy_0_sprite
 			$TrophyCase/TrophyAnim5.play("award")
-			# TrophyManager.trophy_queues[Active.chart].remove(0)
 		else:
 			$TrophyCase/Trophy5.texture = trophy_5_sprite
 	else: $TrophyCase/Trophy5.texture = trophy_0_sprite
@@ -91,8 +86,6 @@ func _on_TrophyAnim1_animation_finished(anim_name):
 	SoundManager.play_sound("trophy2")
 	if TrophyManager.trophy_queues[Active.chart].size() == 1:
 		SoundManager.play_sound("trophy3")
-		# emit signal here to fade in BGM
-		# remember to delete tracktimer if i end up not needing it
 		emit_signal("trophy_anims_finished")
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	TrophyManager.trophy_queues[Active.chart].remove(0)

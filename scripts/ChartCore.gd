@@ -17,18 +17,12 @@ var last_note = 0.0
 var curr_note = 0
 
 func fetch_speed():
-	if Active.speed == "speed_075":
-		speed_mult_1 = 0.75
-		speed_mult_2 = 1.25
 	if Active.speed == "speed_090":
 		speed_mult_1 = 0.90
 		speed_mult_2 = 1.10
 	if Active.speed == "speed_110":
 		speed_mult_1 = 1.10
 		speed_mult_2 = 0.90
-	if Active.speed == "speed_125":
-		speed_mult_1 = 1.25
-		speed_mult_2 = 0.75
 
 func spawn_note(axis):
 	if self.get_parent().cinematic == false:
@@ -65,7 +59,6 @@ func _physics_process(_delta):
 			elif chart[index][0] == "END":
 				if self.get_parent().cinematic == false:
 					self.get_parent().play_fade_anim()
-		# For the progress bar.
 		var curr_pos = Active.track_ref.get_playback_position()
 		var len_total = Active.track_ref.stream.get_length()
 		Active.progress = curr_pos / len_total
