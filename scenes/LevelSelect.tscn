@@ -58,93 +58,6 @@ texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 448, 64 )
 modulate_color = Color( 1, 1, 1, 0.784314 )
 
-[sub_resource type="Animation" id=77]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:modulate:b")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath(".:modulate:g")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath(".:modulate:r")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-
-[sub_resource type="Animation" id=78]
-resource_name = "notice"
-length = 0.6
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:modulate:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.941176, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:modulate:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath(".:modulate:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.196078, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath(".:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3, 0.6 )
-}
-
 [sub_resource type="Animation" id=63]
 length = 0.001
 tracks/0/type = "bezier"
@@ -189,6 +102,93 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=54]
+resource_name = "notice"
+length = 0.6
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.941176, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.196078, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6 )
+}
+
+[sub_resource type="Animation" id=77]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:modulate:b")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:modulate:r")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=78]
 resource_name = "notice"
 length = 0.6
 tracks/0/type = "bezier"
@@ -3791,19 +3791,19 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "Last Voyage of the Kraken"
+text = "Breeze in the Blackest Forest"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 diff_desc = "Basic"
-chart_key = "kraken"
-timestamp = 5
+chart_key = "breeze"
+timestamp = 55
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_01"]
 reset_on_save = false
-anims/RESET = SubResource( 77 )
-anims/notice = SubResource( 78 )
+anims/RESET = SubResource( 63 )
+anims/notice = SubResource( 54 )
 
 [node name="Track_02" type="Button" parent="TrackList/TrackList"]
 margin_top = 68.0
@@ -3817,19 +3817,19 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 9 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
-text = "Breeze in the Blackest Forest"
+text = "Last Voyage of the Kraken"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 diff_desc = "Basic"
-chart_key = "breeze"
-timestamp = 60
+chart_key = "kraken"
+timestamp = 5
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_02"]
 reset_on_save = false
-anims/RESET = SubResource( 63 )
-anims/notice = SubResource( 54 )
+anims/RESET = SubResource( 77 )
+anims/notice = SubResource( 78 )
 
 [node name="Track_03" type="Button" parent="TrackList/TrackList"]
 margin_top = 136.0
@@ -3980,7 +3980,7 @@ __meta__ = {
 }
 diff_desc = "Advanced+"
 chart_key = "scarlet"
-timestamp = 70
+timestamp = 75
 
 [node name="NoticeAnim" type="AnimationPlayer" parent="TrackList/TrackList/Track_08"]
 reset_on_save = false
