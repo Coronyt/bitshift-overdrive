@@ -7,8 +7,14 @@ export(int) var timestamp = 35
 signal new_active_track
 var bgm_playing
 var last_bgm_db
+var this_track
+var this_vol
 
 func _ready():
+	#TEMP
+	this_track = SoundManager.track_dict_100[self.chart_key]
+	this_vol = this_track.volume_db
+	# TEMP
 	bgm_playing = true
 	SoundManager.preview_playing = false
 	var bgm = SoundManager.fetch_audio_stream("track_select")
@@ -66,6 +72,20 @@ func fade_out_bgm():
 func fade_in_track():
 	SoundManager.preview_playing = true
 	var to_play = SoundManager.track_dict_100[Active.chart]
+	# TEMP
+	print(to_play.volume_db)
+	# pseudo:
+	# before playing preview for the first time, vol_db is accurate
+	#self.get_parent().last_preview = to_play
+	#self.get_parent().vol_snapshot = to_play.volume_db
+	# SO ... get a snapshot of vol_db here and cast to a local var outside the func
+		# will also have to do the same for the track itself it seems, but that should be fine
+	# then ... when the preview timer expires, have it pull from that var and assign
+	#if self.get_parent().vol_snapshot:
+		#to_play.volume_db = self.get_parent().vol_snapshot
+		# will try assigning vol first instead
+	print(to_play.volume_db + UserPreferences.prefs["music_vol"])
+	to_play.volume_db = this_vol
 	var fade_tween = self.get_parent().get_child(0)
 	fade_tween.interpolate_property(to_play, 
 		"volume_db", -80, to_play.volume_db + UserPreferences.prefs["music_vol"], 0.50, 1, Tween.EASE_IN, 0)
@@ -76,6 +96,9 @@ func fade_in_track():
 
 func fade_out_track():
 	var to_stop = SoundManager.track_dict_100[Active.chart]
+	# TEMP
+	#self.get_parent().last_preview = to_stop
+	#self.get_parent().vol_snapshot = to_stop.volume_db
 	var fade_tween = self.get_parent().get_child(0)
 	fade_tween.interpolate_property(to_stop, 
 		"volume_db", to_stop.volume_db + UserPreferences.prefs["music_vol"], -80, 1, 1, Tween.EASE_IN, 0)
