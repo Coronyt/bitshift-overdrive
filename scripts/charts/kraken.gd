@@ -405,7 +405,7 @@ const chart = [
 	["NOTE", 16, AXIS_05],
 	
 	# Measure 27
-	["NOTE", 8, AXIS_15],
+	["REST", 8],
 	["NOTE", 16, AXIS_15],
 	["NOTE", 16, AXIS_15],
 	
