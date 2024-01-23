@@ -75,7 +75,9 @@ func play_sound(target_audio):
 	var sounds = Sounds.get_children()
 	for s in sounds:
 		if s.name == target_audio:
-			s.volume_db = s.volume_db + UserPreferences.prefs["SFX_vol"]
+			if s.name != "track_select":
+				s.volume_db = s.volume_db + UserPreferences.prefs["SFX_vol"]
+			else: s.volume_db = UserPreferences.prefs["music_vol"] - 2
 			if s.name == "flair1":
 				if UserPreferences.prefs["disable_combo_SFX"] == true:
 					return

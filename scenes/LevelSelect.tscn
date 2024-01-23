@@ -4967,7 +4967,6 @@ position = Vector2( 640, 360 )
 current = true
 
 [node name="CRT" parent="." instance=ExtResource( 13 )]
-visible = false
 
 [connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer1" to="TrackList/TrackList/Track_04" method="_on_PreviewTimer1_timeout"]
 [connection signal="timeout" from="TrackList/TrackList/TrackListTween/PreviewTimer2" to="TrackList/TrackList/Track_04" method="_on_PreviewTimer2_timeout"]
