@@ -54,7 +54,7 @@ func fade_in_bgm():
 	var fade_tween = self.get_parent().get_child(0)
 	audio_stream.play(SoundManager.track_select_last_pos)
 	fade_tween.interpolate_property(audio_stream, 
-		"volume_db", -80, Active.final_db + UserPreferences.prefs["music_vol"], 1, 1, Tween.EASE_IN, 0)
+		"volume_db", -80, Active.final_db, 1, 1, Tween.EASE_IN, 0)
 	fade_tween.start()
 	self.get_parent().get_parent().get_parent().preview_playing = false
 	bgm_playing = true
@@ -64,7 +64,7 @@ func fade_out_bgm():
 	var fade_tween = self.get_parent().get_child(0)
 	SoundManager.track_select_last_pos = audio_stream.get_playback_position()
 	fade_tween.interpolate_property(audio_stream, 
-		"volume_db", audio_stream.volume_db + UserPreferences.prefs["music_vol"], -80, 0.50, 1, Tween.EASE_IN, 0)
+		"volume_db", Active.final_db, -80, 0.50, 1, Tween.EASE_IN, 0)
 	fade_tween.start()
 	audio_stream.stop()
 	bgm_playing = false
@@ -101,7 +101,7 @@ func fade_out_track():
 	#self.get_parent().vol_snapshot = to_stop.volume_db
 	var fade_tween = self.get_parent().get_child(0)
 	fade_tween.interpolate_property(to_stop, 
-		"volume_db", to_stop.volume_db + UserPreferences.prefs["music_vol"], -80, 1, 1, Tween.EASE_IN, 0)
+		"volume_db", to_stop.volume_db, -80, 1, 1, Tween.EASE_IN, 0)
 	fade_tween.start()
 	var preview_timer = self.get_parent().get_child(0).get_child(1)
 	preview_timer.start()
