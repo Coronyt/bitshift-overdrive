@@ -21,6 +21,7 @@ func _ready():
 	last_bgm_db = bgm.volume_db
 
 func _on_ChartButton_pressed():
+	this_track.volume_db = this_vol
 	self.get_parent().get_parent().get_parent().preview_playing = true
 	SoundManager.play_sound("click1")
 	if SoundManager.preview_playing:
@@ -31,6 +32,7 @@ func _on_ChartButton_pressed():
 	Active.chart = self.chart_key
 	Active.chart_name = self.text
 	Active.diff_desc = self.diff_desc
+	Active.vol_cache[self.chart_key] = this_vol
 	if !SoundManager.preview_playing:
 		if TrophyManager.trophy_queues[Active.chart].size() == 0:
 			fade_in_track()
