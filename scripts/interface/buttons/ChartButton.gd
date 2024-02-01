@@ -12,7 +12,10 @@ var this_vol
 
 func _ready():
 	this_track = SoundManager.track_dict_100[self.chart_key]
-	this_vol = this_track.volume_db
+	if self.chart_key in Active.vol_cache.keys():
+		this_vol = Active.vol_cache[self.chart_key]
+	else:
+		this_vol = this_track.volume_db
 	bgm_playing = true
 	SoundManager.preview_playing = false
 	var bgm = SoundManager.fetch_audio_stream("track_select")
