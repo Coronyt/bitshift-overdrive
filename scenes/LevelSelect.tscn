@@ -4847,6 +4847,7 @@ text = "Music Volume"
 valign = 1
 
 [node name="VolSlider3" type="HSlider" parent="Options"]
+visible = false
 margin_left = -800.0
 margin_top = 768.0
 margin_right = -392.0
