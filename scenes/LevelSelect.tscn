@@ -4531,9 +4531,9 @@ __meta__ = {
 
 [node name="CreditsLabel1" type="Label" parent="OptionsHub"]
 margin_left = 992.0
-margin_top = 56.0
+margin_top = 64.0
 margin_right = 1120.0
-margin_bottom = 104.0
+margin_bottom = 112.0
 theme = ExtResource( 4 )
 text = "CREDITS"
 align = 2
@@ -4541,9 +4541,9 @@ valign = 1
 
 [node name="CreditsLabel2" type="Label" parent="OptionsHub"]
 margin_left = 768.0
-margin_top = 106.0
+margin_top = 114.0
 margin_right = 1120.0
-margin_bottom = 154.0
+margin_bottom = 198.0
 theme = ExtResource( 4 )
 text = "
 \"BITSHIFT OVERDRIVE\"
@@ -4553,9 +4553,9 @@ valign = 1
 
 [node name="CreditsLabel3" type="Label" parent="OptionsHub"]
 margin_left = 768.0
-margin_top = 200.0
+margin_top = 208.0
 margin_right = 1120.0
-margin_bottom = 351.0
+margin_bottom = 359.0
 theme = ExtResource( 4 )
 custom_fonts/font = SubResource( 51 )
 text = "\"C-64\" font by Jamie Cross
@@ -4827,6 +4827,7 @@ text = "Master Volume"
 valign = 1
 
 [node name="VolSlider2" type="HSlider" parent="Options"]
+visible = false
 margin_left = -800.0
 margin_top = 696.0
 margin_right = -392.0
