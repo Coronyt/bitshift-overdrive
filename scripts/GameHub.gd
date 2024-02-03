@@ -50,14 +50,13 @@ func display_trophies():
 			$TrophyCase/TrophyAnim2.play("award")
 		else:
 			if TrophyManager.trophy_queues[Active.chart].has(3):
-				pass
+				$TrophyCase/Trophy2.texture = trophy_2_sprite
 			else: $TrophyCase/Trophy2.texture = trophy_2_sprite
 	else: $TrophyCase/Trophy2.texture = trophy_0_sprite
 	if TrophyManager.trophy_dict[Active.chart][2] == 1:
 		if TrophyManager.trophy_queues[Active.chart].has(3):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			$TrophyCase/Trophy3.texture = trophy_0_sprite
-			$TrophyCase/TrophyAnim2.play("award")
 			$TrophyCase/TrophyAnim3.play("award")
 		else:
 			$TrophyCase/Trophy3.texture = trophy_3_sprite
