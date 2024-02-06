@@ -4286,7 +4286,8 @@ scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 32 )
 script = ExtResource( 36 )
 trophy_name = "Diamond Trophy"
-trophy_desc = "- Complete a track on Arcade w/ Overdrive."
+trophy_desc = "- Complete a track on Arcade w/ Overdrive.
+- Track speed must be at least 100 percent."
 
 [node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy4"]
 wait_time = 3.0
@@ -4316,7 +4317,8 @@ scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 32 )
 script = ExtResource( 36 )
 trophy_name = "Bizarre Trophy"
-trophy_desc = "- Complete a track on Ironbit w/ Overdrive."
+trophy_desc = "- Complete a track on Ironbit w/ Overdrive.
+- Track speed must be at least 100 percent."
 
 [node name="TrophyTimer1" type="Timer" parent="GameHub/TrophyCase/Trophy5"]
 wait_time = 3.0
