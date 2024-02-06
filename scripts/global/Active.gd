@@ -35,6 +35,7 @@ var diff_desc = ""
 var final_db
 
 var vol_cache = {}
+var bgm_cache
 
 func _ready():
 	final_db = UserPreferences.prefs["music_vol"] - 2

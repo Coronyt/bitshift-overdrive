@@ -72,9 +72,10 @@ func award_trophy_3():
 		if Active.mod_dif_2 == "ironbit":
 			# Awarding trophies
 			trophy_dict[Active.chart][0] = 1
+			if trophy_dict[Active.chart][1] != 1:
+				trophy_queues[Active.chart].append(2)
 			trophy_dict[Active.chart][1] = 1
 			trophy_dict[Active.chart][2] = 1
-			trophy_queues[Active.chart].append(2)
 			trophy_queues[Active.chart].append(3)
 	else: pass
 
@@ -98,9 +99,10 @@ func award_trophy_5():
 			trophy_dict[Active.chart][0] = 1
 			trophy_dict[Active.chart][1] = 1
 			trophy_dict[Active.chart][2] = 1
+			if trophy_dict[Active.chart][3] != 1:
+				trophy_queues[Active.chart].append(4)
 			trophy_dict[Active.chart][3] = 1
 			trophy_dict[Active.chart][4] = 1
-			trophy_queues[Active.chart].append(4)
 			trophy_queues[Active.chart].append(5)
 		pass
 	else: pass

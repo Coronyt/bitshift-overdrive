@@ -14,6 +14,7 @@ func _ready():
 	SoundManager.play_sound("track_select")
 	var bgm = SoundManager.fetch_audio_stream("track_select")
 	bgm.volume_db = Active.final_db
+	Active.bgm_cache = bgm
 	if cinematic == true:
 		for element in self.get_children():
 			if element.name == "VaporCam":

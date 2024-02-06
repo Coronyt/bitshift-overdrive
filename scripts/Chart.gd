@@ -63,6 +63,7 @@ func stop_track():
 		SoundManager.track_dict_110[Active.chart].stop()
 
 func _ready():
+	Active.bgm_cache.stop()
 	if cinematic == true:
 		$ChartTracker/ChartCamera/Paddle.hide()
 		$ChartTracker/ChartCamera/ScoreCounter.hide()
@@ -79,6 +80,7 @@ func _ready():
 	$CountdownTimer.start()
 
 func _on_Countdown_timeout():
+	Active.bgm_cache.stop()
 	if countdown > 0:
 		if cinematic == false:
 			SoundManager.play_sound("count1")
