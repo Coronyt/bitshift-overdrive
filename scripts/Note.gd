@@ -16,6 +16,8 @@ onready var flair_label = self.get_parent().get_parent().get_node(
 
 onready var combo_spin = self.get_parent().get_parent().get_node(
 	"ChartTracker/ChartCamera/ComboLabel/ComboSpin")
+	
+var shattered = false
 
 func fade():
 	$NoteColl.disabled = true
@@ -60,6 +62,8 @@ func tick():
 		prog_bar.set_milestone(milestone_check_res)
 
 func shatter():
+	shattered = true
+	$NoteColl.disabled = true
 	var shatter = NoteShatter.instance()
 	shatter.global_position = self.global_position
 	self.get_parent().add_child(shatter)

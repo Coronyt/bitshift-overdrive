@@ -2,10 +2,11 @@ extends Area2D
 
 func _physics_process(_delta):
 	for coll in self.get_overlapping_bodies():
-		SoundManager.play_sound("miss")
-		if Active.is_byte or Active.is_nybl:
-			Active.health -= 1
-		self.get_parent().get_parent().get_parent().check_health()
-		Active.combo = 0
-		Active.last_milestone = 0
-		coll.queue_free()
+		if not coll.shattered:
+			SoundManager.play_sound("miss")
+			if Active.is_byte or Active.is_nybl:
+				Active.health -= 1
+			self.get_parent().get_parent().get_parent().check_health()
+			Active.combo = 0
+			Active.last_milestone = 0
+			coll.queue_free()
