@@ -119,7 +119,7 @@ func play_fade_anim():
 func _on_FadeOut_animation_finished(_anim_name):
 	get_tree().change_scene("res://scenes/ScoreScreen.tscn")
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("pause") and tracking == true:
 		if paused == false:
 			track_cache = fetch_track()

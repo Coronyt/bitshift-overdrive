@@ -23,7 +23,7 @@ func _ready():
 
 var offset = 0.0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if locked == false:
 		var new_pos = get_global_mouse_position() - self.global_position
 		new_pos.x = get_local_mouse_position().x

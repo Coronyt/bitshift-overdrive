@@ -108,5 +108,5 @@ func _on_GameHub_trophy_anims_finished():
 	fade_in_bgm()
 	preview_timer.stop()
 
-func _on_NoticeAnim_animation_finished(anim_name):
+func _on_NoticeAnim_animation_finished(_anim_name):
 	$NoticeAnim.play("notice")

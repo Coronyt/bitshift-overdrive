@@ -19,6 +19,19 @@ onready var combo_spin = self.get_parent().get_parent().get_node(
 	
 var shattered = false
 
+var _timer: Timer
+
+var _particle_emitters: Array = []
+var _deleted_emitters: Array = []
+
+func _ready():
+	_timer = Timer.new()
+	# add_child(_timer)
+	_timer.connect("timeout", self, "_on_Timer_timeout")
+	_timer.set_wait_time(2.0)
+	_timer.set_one_shot(false)
+	# _timer.start()
+
 func fade():
 	$NoteColl.disabled = true
 	$NoteSprite.hide()
@@ -63,11 +76,13 @@ func tick():
 
 func shatter():
 	shattered = true
-	$NoteColl.disabled = true
+	# $NoteColl.disabled = true
+	$NoteColl.set_deferred("disabled", true)
 	var shatter = NoteShatter.instance()
 	shatter.global_position = self.global_position
 	self.get_parent().add_child(shatter)
 	shatter.get_child(0).emitting = true
+	_particle_emitters.append([shatter, shatter.get_child(0)])
 	$NoteShader/SSDissolveBurn.play(0.1)
 	Active.combo += 1
 	tick()
@@ -81,6 +96,23 @@ func shatter():
 		Active.score += (50 * 8)
 	elif Active.last_milestone == 200:
 		Active.score += (50 * 16)
+	shatter.add_child(_timer)
+	_timer.start()
+
+func _on_Timer_timeout():
+	if len(_particle_emitters) == 0:
+		return
+	for emitter in _particle_emitters:
+		if not emitter[1].emitting:
+			print("Deleting shatter object " + emitter[0].name + " ...")
+			self.get_parent().remove_child(emitter[0])
+			emitter[0].queue_free()
+			_deleted_emitters.append(emitter)
+	if len(_deleted_emitters) == 0:
+		return
+	for emitter in _deleted_emitters:
+		_particle_emitters.erase(emitter)
+	_deleted_emitters.clear()
 
 func _physics_process(_delta):
 	if self.get_parent().get_parent().tracking == false:

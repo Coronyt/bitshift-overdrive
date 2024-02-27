@@ -17,7 +17,7 @@ func _on_TrackPortal_pressed():
 	SoundManager.play_sound("title2")
 	$PortalPeelAnim.play("peel")
 
-func _on_PortalPeelAnim_animation_finished(anim_name):
+func _on_PortalPeelAnim_animation_finished(_anim_name):
 	SoundManager.stop_sound("title2")
 	self.get_parent().load_into_active()
 	get_tree().change_scene(ChartManager.fetch_chart_tscn(Active.chart))
