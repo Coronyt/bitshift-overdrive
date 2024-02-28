@@ -151,7 +151,7 @@ func cursor_to_puck():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 
 func puck_to_cursor():
-	var cursor_str_tex = load("res://assets/sprites/cursor.png")
+	var cursor_str_tex = load("res://assets/sprites/cursor-slim.png")
 	var cursor_img_obj  = Image.new()
 	var cursor_img_tex = ImageTexture.new()
 	cursor_img_obj = cursor_str_tex.get_data()
