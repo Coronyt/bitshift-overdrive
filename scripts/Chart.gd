@@ -69,8 +69,8 @@ func _ready():
 		$ChartTracker/ChartCamera/ScoreCounter.hide()
 		var new_cinematic_label = cinematic_label.instance()
 		self.add_child(new_cinematic_label)
-	cam_cache = $VaporCam.speed
-	$VaporCam.speed = 0.015
+	# cam_cache = $VaporCam.speed
+	# $VaporCam.speed = 0.015
 	speed = $ChartCore.BPM * 5
 	if cinematic == false:
 		SoundManager.play_sound("click2")
@@ -90,7 +90,7 @@ func _on_Countdown_timeout():
 		play_track()
 		if cinematic == false:
 			SoundManager.play_sound("count2")
-		$VaporCam.speed = cam_cache
+		# $VaporCam.speed = cam_cache
 		$CountdownTimer.queue_free()
 
 func check_health():
@@ -123,9 +123,9 @@ func _input(_event):
 	if Input.is_action_just_pressed("pause") and tracking == true:
 		if paused == false:
 			track_cache = fetch_track()
-			cam_cache = $VaporCam.speed
+			# cam_cache = $VaporCam.speed
 			stop_track()
-			$VaporCam.speed = 0
+			# $VaporCam.speed = 0
 			$PauseScreen.show()
 			$ChartTracker/ChartCamera/Paddle.locked = true
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -135,7 +135,7 @@ func _input(_event):
 			if cinematic == false:
 				cursor_to_puck()
 			$PauseScreen.hide()
-			$VaporCam.speed = cam_cache
+			# $VaporCam.speed = cam_cache
 			$ChartTracker/ChartCamera/Paddle.locked = false
 			seek_track(track_cache)
 			paused = false
