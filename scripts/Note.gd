@@ -104,7 +104,7 @@ func _on_Timer_timeout():
 		return
 	for emitter in _particle_emitters:
 		if not emitter[1].emitting:
-			print("Deleting shatter object " + emitter[0].name + " ...")
+			# print("Deleting shatter object " + emitter[0].name + " ...")
 			self.get_parent().remove_child(emitter[0])
 			emitter[0].queue_free()
 			_deleted_emitters.append(emitter)
