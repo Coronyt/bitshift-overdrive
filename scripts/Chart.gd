@@ -4,6 +4,9 @@ const cinematic_label = preload("res://scenes/cinematic/LabelOST.tscn")
 export var cinematic = false
 
 onready var combo_spin = self.get_node("ChartTracker/ChartCamera/ComboLabel/ComboSpin")
+onready var this_prog_bar = $ChartTracker/ProgressBar
+
+var len_total = 0.0
 
 var countdown = 3
 var tracking = false
@@ -34,6 +37,7 @@ func play_track():
 		SoundManager.track_dict_110[Active.chart].volume_db = Active.vol_cache[Active.chart]
 		SoundManager.track_dict_110[Active.chart].volume_db = SoundManager.track_dict_110[Active.chart].volume_db + UserPreferences.prefs["music_vol"]
 		SoundManager.track_dict_110[Active.chart].play()
+	len_total = Active.track_ref.stream.get_length()
 
 func fetch_track():
 	if Active.speed == "speed_090":
@@ -92,6 +96,8 @@ func _on_Countdown_timeout():
 			SoundManager.play_sound("count2")
 		# $VaporCam.speed = cam_cache
 		$CountdownTimer.queue_free()
+		$ChartCore.track_milestones()
+		# len_total = Active.track_ref.stream.get_length()
 
 func check_health():
 	if Active.last_milestone != 0:
