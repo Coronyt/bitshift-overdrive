@@ -101,10 +101,14 @@ func check_health():
 		combo_spin.play("spin")
 	if Active.is_iron == true:
 		game_over()
-	if Active.is_byte and Active.health <= 0:
-		game_over()
-	if Active.is_nybl and Active.health <= 0:
-		game_over()
+	if Active.is_byte:
+		if Active.health <= 0:
+			game_over()
+		this_prog_bar.get_child(4).value = Active.health
+	if Active.is_nybl:
+		if Active.health <= 0:
+			game_over()
+		this_prog_bar.get_child(5).value = Active.health
 
 func game_over():
 	tracking = false

@@ -59,8 +59,10 @@ func _on_FlairSFX_Timer2_timeout():
 		SoundManager.play_combo(1.45)
 	if Active.is_byte and Active.health < 5:
 		Active.health += 1
+		$HealthBar5.value = Active.health
 	elif Active.is_nybl and Active.health < 3:
 		Active.health += 1
+		$HealthBar3.value = Active.health
 
 func _on_ComboAnimTimer_timeout():
 	if milestone_cooldown == false:
