@@ -71,7 +71,6 @@ func track_milestones():
 	var len_total = self.get_parent().len_total
 	quarter_mile = len_total / 4.0
 	this_miletimer.wait_time = quarter_mile
-	print("quarter_mile = " + str(quarter_mile))
 	this_miletimer.start()
 
 var local_miles = 0

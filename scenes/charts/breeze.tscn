@@ -342,6 +342,8 @@ BPM = 90
 reset_on_save = false
 anims/drop = SubResource( 16 )
 
+[node name="MileTimer" type="Timer" parent="ChartCore"]
+
 [node name="NoteContainer" type="Node2D" parent="."]
 
 [node name="RailCanvas" parent="NoteContainer" instance=ExtResource( 13 )]
@@ -527,5 +529,6 @@ visible = false
 
 [node name="CRT" parent="." instance=ExtResource( 8 )]
 
+[connection signal="timeout" from="ChartCore/MileTimer" to="ChartCore" method="_on_MileTimer_timeout"]
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_Countdown_timeout"]
 [connection signal="animation_finished" from="ChartTracker/ChartCamera/FadeOut" to="." method="_on_FadeOut_animation_finished"]
