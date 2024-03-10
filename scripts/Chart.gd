@@ -95,6 +95,7 @@ func _on_Countdown_timeout():
 			SoundManager.play_sound("count2")
 		$CountdownTimer.queue_free()
 		$ChartCore.track_milestones()
+		$ChartCore.speed = speed
 
 func check_health():
 	if Active.last_milestone != 0:
@@ -136,6 +137,8 @@ func _input(_event):
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			puck_to_cursor()
 			paused = true
+			for note in Active.active:
+				if note: note.note_speed = 0.0
 		else:
 			if cinematic == false:
 				cursor_to_puck()
@@ -143,6 +146,8 @@ func _input(_event):
 			$ChartTracker/ChartCamera/Paddle.locked = false
 			seek_track(track_cache)
 			paused = false
+			for note in Active.active:
+				if note: note.note_speed = speed
 
 func cursor_to_puck():
 	var puck_str_tex = load("res://assets/sprites/paddle_puck.png")

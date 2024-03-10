@@ -16,6 +16,8 @@ var quarter = 0.0
 var last_note = 0.0
 var curr_note = 0
 
+var speed = 0.0
+
 func fetch_speed():
 	if Active.speed == "speed_090":
 		speed_mult_1 = 0.90
@@ -31,6 +33,7 @@ func spawn_note(axis):
 		self.get_parent().get_child(1).add_child(new_note)
 		var note_light = NoteLight.instance()
 		new_note.add_child(note_light)
+		new_note.note_speed = speed
 
 func _ready():
 	fetch_speed()

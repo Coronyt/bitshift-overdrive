@@ -125,8 +125,7 @@ func _on_Timer_timeout():
 		_particle_emitters.erase(emitter)
 	_deleted_emitters.clear()
 
+var note_speed
+
 func _physics_process(_delta):
-	if self.get_parent().get_parent().tracking == false:
-		self.queue_free()
-	if self.get_parent().get_parent().paused == false:
-		self.move_and_slide(Vector2(0, 1) * self.get_parent().get_parent().speed)
+	self.move_and_slide(Vector2(0, 1) * note_speed)
