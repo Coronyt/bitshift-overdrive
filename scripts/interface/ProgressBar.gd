@@ -17,30 +17,6 @@ func _ready():
 	if Active.is_nybl:
 		$HealthBar3.show()
 
-#  _physics_process(_delta):
-# 	self.value = Active.progress
-# 	# 'Quarter' landmark.
-# 	if stepify(Active.progress, 0.01) == 0.25:
-# 		if landmark_25per == false:
-# 			landmark_25per = true
-# 			flair_label.text = "25% COMPLETE!"
-# 			flair_anims.play("landmark")
-# 			$FlairSFX_Timer1.start()
-# 	# 'Halfway' landmark.
-# 	if stepify(Active.progress, 0.01) == 0.50:
-# 		if landmark_50per == false:
-# 			landmark_50per = true
-# 			flair_label.text = "50% COMPLETE!"
-# 			flair_anims.play("landmark")
-# 			$FlairSFX_Timer1.start()
-# 	# 'Almost' landmark.
-# 	if stepify(Active.progress, 0.01) == 0.75:
-# 		if landmark_75per == false:
-# 			landmark_75per = true
-# 			flair_label.text = "ALMOST THERE!"
-# 			flair_anims.play("landmark")
-# 			$FlairSFX_Timer1.start()
-
 func mile_25():
 	if landmark_25per == false:
 		landmark_25per = true
