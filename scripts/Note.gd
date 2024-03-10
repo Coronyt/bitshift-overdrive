@@ -16,6 +16,8 @@ onready var flair_label = self.get_parent().get_parent().get_node(
 
 onready var combo_spin = self.get_parent().get_parent().get_node(
 	"ChartTracker/ChartCamera/ComboLabel/ComboSpin")
+onready var combo_label = self.get_parent().get_parent().get_node(
+	"ChartTracker/ChartCamera/ComboLabel")
 	
 var shattered = false
 
@@ -26,11 +28,9 @@ var _deleted_emitters: Array = []
 
 func _ready():
 	_timer = Timer.new()
-	# add_child(_timer)
 	_timer.connect("timeout", self, "_on_Timer_timeout")
 	_timer.set_wait_time(2.0)
 	_timer.set_one_shot(false)
-	# _timer.start()
 
 func fade():
 	$NoteColl.disabled = true
@@ -76,7 +76,6 @@ func tick():
 
 func shatter():
 	shattered = true
-	# $NoteColl.disabled = true
 	$NoteColl.set_deferred("disabled", true)
 	var shatter = NoteShatter.instance()
 	shatter.global_position = self.global_position
@@ -85,6 +84,7 @@ func shatter():
 	_particle_emitters.append([shatter, shatter.get_child(0)])
 	$NoteShader/SSDissolveBurn.play(0.1)
 	Active.combo += 1
+	update_combo_label(Active.combo)
 	tick()
 	if Active.last_milestone == 0:
 		Active.score += (50 * 1)
@@ -99,12 +99,23 @@ func shatter():
 	shatter.add_child(_timer)
 	_timer.start()
 
+func update_combo_label(combo):
+	if combo < 25:
+		combo_label.text = "1x"
+	elif combo < 50:
+		combo_label.text = "2x"
+	elif combo < 100:
+		combo_label.text = "4x"
+	elif combo < 200:
+		combo_label.text = "8x"
+	else: # >= 200
+		combo_label.text = "16x"
+
 func _on_Timer_timeout():
 	if len(_particle_emitters) == 0:
 		return
 	for emitter in _particle_emitters:
 		if not emitter[1].emitting:
-			# print("Deleting shatter object " + emitter[0].name + " ...")
 			self.get_parent().remove_child(emitter[0])
 			emitter[0].queue_free()
 			_deleted_emitters.append(emitter)

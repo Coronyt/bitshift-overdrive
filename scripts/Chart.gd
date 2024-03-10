@@ -4,6 +4,7 @@ const cinematic_label = preload("res://scenes/cinematic/LabelOST.tscn")
 export var cinematic = false
 
 onready var combo_spin = self.get_node("ChartTracker/ChartCamera/ComboLabel/ComboSpin")
+
 onready var this_prog_bar = $ChartTracker/ProgressBar
 
 var len_total = 0.0
