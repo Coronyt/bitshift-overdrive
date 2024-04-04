@@ -11,8 +11,10 @@ export(float) var offset_2 = 0 # Note spawn pos. offset.
 var speed_mult_1 = 1.00
 var speed_mult_2 = 1.00
 
+var local_dict = {}
 export var BPM = 0
-var quarter = 0.0
+
+var quarter_note = 0.0
 var last_note = 0.0
 var curr_note = 0
 
@@ -38,33 +40,49 @@ func spawn_note(axis):
 func _ready():
 	fetch_speed()
 	chart = ChartManager.fetch_chart(Active.chart)
-	quarter = float(60) / (float(BPM) * speed_mult_1)
+	quarter_note = float(60) / (float(BPM) * speed_mult_1)
+	# Initializing note lengths from BPM
+	local_dict[1] = quarter_note * 4.0
+	local_dict[2] = quarter_note * 2.0
+	local_dict[4] = quarter_note
+	local_dict[8] = quarter_note / 2.0
+	local_dict[16] = quarter_note / 4.0
+	local_dict[32] = quarter_note / 8.0
 	curr_note = chart[index][1]
+	# Applying offset_1 to local DelayTimer
+	# $DelayTimer.wait_time = offset_1 * speed_mult_2
 
-var index = 0
+var index = 1
+var this_note_len
+
+func chart_core_cycle():
+	this_note_len = local_dict[chart[index][1]]
+	if chart[index][0] == "NOTE":
+		print("cc_cycle just read a " + chart[index][0] + " ...")
+		print("Spawning a note on " + str(chart[index][2]) + " ...")
+		spawn_note(chart[index][2])
+		curr_note = chart[index][1]
+	elif chart[index][0] == "REST":
+		print("cc_cycle just read a " + chart[index][0] + " ...")
+		print("Waiting for " + str(this_note_len) + " seconds ...")
+		curr_note = chart[index][1]
+	elif chart[index][0] == "END":
+		print("cc_cycle just read a " + chart[index][0] + " ...")
+		self.get_parent().play_fade_anim()
+	$CoreTimer.wait_time = this_note_len
+	$CoreTimer.start()
+	index += 1
+
+var curr_pos
+var len_total
+var this_prog_bar
 
 func _physics_process(_delta):
-	if start == false:
-		index += 1
-		start = true
-	elif Active.track_ref != null:
-		var since : float = (last_note + quarter * float(4) / float(curr_note)) - offset_1 * speed_mult_2
-		if Active.track_ref.get_playback_position() > since:
-			if chart[index][0] == "NOTE":
-				spawn_note(chart[index][2])
-				last_note += quarter * float(4) / float(curr_note)
-				curr_note = chart[index][1]
-				index += 1
-			elif chart[index][0] == "REST":
-				last_note += quarter * float(4) / float(curr_note)
-				curr_note = chart[index][1]
-				index += 1
-			elif chart[index][0] == "END":
-				if self.get_parent().cinematic == false:
-					self.get_parent().play_fade_anim()
-		var curr_pos = Active.track_ref.get_playback_position()
-		var this_prog_bar = self.get_parent().this_prog_bar
-		var len_total = self.get_parent().len_total
+	# TODO - Refactor the below code
+	if self.get_parent().tracking:
+		curr_pos = Active.track_ref.get_playback_position()
+		this_prog_bar = self.get_parent().this_prog_bar
+		len_total = self.get_parent().len_total
 		this_prog_bar.value = curr_pos / len_total
 
 onready var this_miletimer = $MileTimer

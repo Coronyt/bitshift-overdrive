@@ -333,8 +333,7 @@ script = ExtResource( 2 )
 
 [node name="ChartCore" type="Node" parent="."]
 script = ExtResource( 5 )
-offset_1 = 1.25
-offset_2 = 650.0
+offset_2 = 1200.0
 BPM = 110
 
 [node name="ScoreDrop" type="AnimationPlayer" parent="ChartCore"]
@@ -342,6 +341,11 @@ reset_on_save = false
 anims/drop = SubResource( 20 )
 
 [node name="MileTimer" type="Timer" parent="ChartCore"]
+
+[node name="CoreTimer" type="Timer" parent="ChartCore"]
+
+[node name="DelayTimer" type="Timer" parent="ChartCore"]
+one_shot = true
 
 [node name="NoteContainer" type="Node2D" parent="."]
 
@@ -525,5 +529,7 @@ visible = false
 [node name="CRT" parent="." instance=ExtResource( 20 )]
 
 [connection signal="timeout" from="ChartCore/MileTimer" to="ChartCore" method="_on_MileTimer_timeout"]
+[connection signal="timeout" from="ChartCore/CoreTimer" to="ChartCore" method="chart_core_cycle"]
+[connection signal="timeout" from="ChartCore/DelayTimer" to="ChartCore" method="chart_core_cycle"]
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_Countdown_timeout"]
 [connection signal="animation_finished" from="ChartTracker/ChartCamera/FadeOut" to="." method="_on_FadeOut_animation_finished"]

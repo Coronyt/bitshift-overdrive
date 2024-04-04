@@ -93,9 +93,11 @@ func _on_Countdown_timeout():
 		play_track()
 		if cinematic == false:
 			SoundManager.play_sound("count2")
-		$CountdownTimer.queue_free()
-		$ChartCore.track_milestones()
 		$ChartCore.speed = speed
+		$ChartCore.track_milestones()
+		# $ChartCore/DelayTimer.start()
+		$ChartCore.chart_core_cycle()
+		$CountdownTimer.queue_free()
 
 func check_health():
 	if Active.last_milestone != 0:
