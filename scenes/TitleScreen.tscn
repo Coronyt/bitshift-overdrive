@@ -51,7 +51,6 @@ sun_energy = 5.0
 background_mode = 2
 background_sky = SubResource( 10 )
 background_color = Color( 0.980392, 0.529412, 1, 1 )
-fog_enabled = true
 fog_color = Color( 0.764706, 0.509804, 0, 1 )
 fog_sun_color = Color( 0.764706, 0.509804, 0, 1 )
 fog_sun_amount = 0.25
@@ -60,7 +59,6 @@ fog_depth_end = 300.0
 tonemap_mode = 2
 ss_reflections_enabled = true
 ss_reflections_fade_in = 0.35
-dof_blur_far_enabled = true
 dof_blur_far_distance = 40.0
 dof_blur_far_amount = 0.05
 

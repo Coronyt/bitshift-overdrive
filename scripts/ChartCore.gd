@@ -41,31 +41,35 @@ func _ready():
 	quarter = float(60) / (float(BPM) * speed_mult_1)
 	curr_note = chart[index][1]
 
-var index = 0
+var index = 1
+var since : float
+var curr_len : float
+
+var stream
+var next_pos = 0.0
+var stream_cached = false
 
 func _physics_process(_delta):
-	if start == false:
-		index += 1
-		start = true
-	elif Active.track_ref != null:
-		var since : float = (last_note + quarter * float(4) / float(curr_note)) - offset_1 * speed_mult_2
-		if Active.track_ref.get_playback_position() > since:
-			if chart[index][0] == "NOTE":
-				spawn_note(chart[index][2])
+	if Active.track_ref != null:
+		if not stream_cached:
+			stream = Active.track_ref # .get_stream_playback()
+			stream_cached = true # Storing reference to stream obj
+		if stream.get_playback_position() > since:
+			if chart[index][0] != "END":
+				if chart[index][0] == "NOTE":
+					spawn_note(chart[index][2])
 				last_note += quarter * float(4) / float(curr_note)
 				curr_note = chart[index][1]
 				index += 1
-			elif chart[index][0] == "REST":
-				last_note += quarter * float(4) / float(curr_note)
-				curr_note = chart[index][1]
-				index += 1
-			elif chart[index][0] == "END":
-				if self.get_parent().cinematic == false:
-					self.get_parent().play_fade_anim()
-		var curr_pos = Active.track_ref.get_playback_position()
-		var this_prog_bar = self.get_parent().this_prog_bar
-		var len_total = self.get_parent().len_total
-		this_prog_bar.value = curr_pos / len_total
+				since()
+			else: self.get_parent().play_fade_anim()
+	# var curr_pos = Active.track_ref.get_playback_position()
+	# var this_prog_bar = self.get_parent().this_prog_bar
+	# var len_total = self.get_parent().len_total
+	# this_prog_bar.value = curr_pos / len_total
+
+func since():
+	since = (last_note + quarter * float(4) / float(curr_note)) - offset_1 * speed_mult_2
 
 onready var this_miletimer = $MileTimer
 var quarter_mile
