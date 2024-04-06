@@ -1,11 +1,14 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://scenes/ScreenBar_Top.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Chart.gd" type="Script" id=2]
 [ext_resource path="res://scenes/ScreenBar_Bot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/ParallaxLayer.gd" type="Script" id=4]
 [ext_resource path="res://scripts/ChartCore.gd" type="Script" id=5]
+[ext_resource path="res://assets/para_bgs/coy_glance/para_layer.png" type="Texture" id=6]
 [ext_resource path="res://assets/bitshift.tres" type="Theme" id=7]
 [ext_resource path="res://assets/MatchupPro.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://assets/para_bgs/coy_glance/bg_layer.png" type="Texture" id=9]
 [ext_resource path="res://scenes/PauseScreen.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/objects/RailCanvas.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/ScoreCounter.tscn" type="PackedScene" id=13]
@@ -344,6 +347,34 @@ anims/drop = SubResource( 20 )
 visible = false
 
 [node name="Parallax_BG" type="Node2D" parent="NoteContainer"]
+
+[node name="bg_layer_1" type="Sprite" parent="NoteContainer/Parallax_BG"]
+position = Vector2( 640, 360 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 9 )
+script = ExtResource( 4 )
+speed = 2.0
+orig_x = 640
+orig_y = 360
+
+[node name="bg_layer_2" type="Sprite" parent="NoteContainer/Parallax_BG/bg_layer_1"]
+position = Vector2( 256, 0 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 9 )
+
+[node name="para_layer_1" type="Sprite" parent="NoteContainer/Parallax_BG"]
+position = Vector2( 640, 360 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 6 )
+script = ExtResource( 4 )
+speed = 3.0
+orig_x = 640
+orig_y = 360
+
+[node name="para_layer_2" type="Sprite" parent="NoteContainer/Parallax_BG/para_layer_1"]
+position = Vector2( 256, 0 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 6 )
 
 [node name="Visualizer" parent="NoteContainer" instance=ExtResource( 17 )]
 

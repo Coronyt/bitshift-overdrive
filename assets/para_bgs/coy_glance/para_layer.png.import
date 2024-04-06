@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2.png-27bf6e3d6f61d5e858672c26653ef9e6.stex"
+path="res://.import/para_layer.png-debd847df99e081138ca274aa630e591.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/para_bgs/isle/2.png"
-dest_files=[ "res://.import/2.png-27bf6e3d6f61d5e858672c26653ef9e6.stex" ]
+source_file="res://assets/para_bgs/coy_glance/para_layer.png"
+dest_files=[ "res://.import/para_layer.png-debd847df99e081138ca274aa630e591.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
