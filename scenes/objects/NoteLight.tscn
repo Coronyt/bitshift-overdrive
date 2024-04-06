@@ -3,6 +3,7 @@
 [ext_resource path="res://assets/sprites/light_1.png" type="Texture" id=1]
 
 [node name="Light2D" type="Light2D"]
+visible = false
 show_behind_parent = true
 texture = ExtResource( 1 )
 energy = 0.8

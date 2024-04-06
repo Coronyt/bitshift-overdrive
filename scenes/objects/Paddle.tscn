@@ -34,6 +34,7 @@ position = Vector2( 0, -16 )
 shape = SubResource( 6 )
 
 [node name="PaddleLight" type="Light2D" parent="."]
+visible = false
 position = Vector2( 0, -2.72285e-05 )
 scale = Vector2( 1.13778, 1.13778 )
 texture = ExtResource( 2 )

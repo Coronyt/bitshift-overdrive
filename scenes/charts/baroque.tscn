@@ -341,12 +341,14 @@ anims/drop = SubResource( 16 )
 [node name="NoteContainer" type="Node2D" parent="."]
 
 [node name="RailCanvas" parent="NoteContainer" instance=ExtResource( 13 )]
+visible = false
 
 [node name="Parallax_BG" type="Node2D" parent="NoteContainer"]
 
 [node name="Visualizer" parent="NoteContainer" instance=ExtResource( 25 )]
 
 [node name="LightCanvas" type="ColorRect" parent="NoteContainer"]
+visible = false
 margin_right = 1280.0
 margin_bottom = 720.0
 color = Color( 0.313726, 0.313726, 0.313726, 0.0980392 )
