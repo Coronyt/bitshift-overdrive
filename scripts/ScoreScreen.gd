@@ -11,7 +11,7 @@ var dif2_checked = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	var cursor_str_tex = load("res://assets/sprites/cursor.png")
+	var cursor_str_tex = load("cursor-slim.png")
 	var cursor_img_obj  = Image.new()
 	var cursor_img_tex = ImageTexture.new()
 	cursor_img_obj = cursor_str_tex.get_data()
