@@ -359,7 +359,6 @@ orig_y = 360
 
 [node name="bg_layer_2" type="Sprite" parent="NoteContainer/Parallax_BG/bg_layer_1"]
 position = Vector2( 256, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 
 [node name="para_layer_1" type="Sprite" parent="NoteContainer/Parallax_BG"]
@@ -373,7 +372,6 @@ orig_y = 360
 
 [node name="para_layer_2" type="Sprite" parent="NoteContainer/Parallax_BG/para_layer_1"]
 position = Vector2( 256, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 6 )
 
 [node name="Visualizer" parent="NoteContainer" instance=ExtResource( 17 )]
