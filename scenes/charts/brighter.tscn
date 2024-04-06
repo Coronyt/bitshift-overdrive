@@ -345,10 +345,11 @@ anims/drop = SubResource( 16 )
 [node name="NoteContainer" type="Node2D" parent="."]
 
 [node name="RailCanvas" parent="NoteContainer" instance=ExtResource( 13 )]
+visible = false
 
 [node name="Parallax_BG" type="Node2D" parent="NoteContainer"]
 
-[node name="bg_layer_1" type="Sprite" parent="NoteContainer/Parallax_BG"]
+[node name="bg_layer" type="Sprite" parent="NoteContainer/Parallax_BG"]
 position = Vector2( 640, 360 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 3 )
