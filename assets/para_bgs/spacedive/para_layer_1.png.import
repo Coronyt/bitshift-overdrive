@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/para_layer.png-9d3546c2c61176d32199ae3d7b4d3ce4.stex"
+path="res://.import/para_layer_1.png-53e3556cc71e7e4eba746f58e4f8111c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/para_bgs/spacedive/para_layer.png"
-dest_files=[ "res://.import/para_layer.png-9d3546c2c61176d32199ae3d7b4d3ce4.stex" ]
+source_file="res://assets/para_bgs/spacedive/para_layer_1.png"
+dest_files=[ "res://.import/para_layer_1.png-53e3556cc71e7e4eba746f58e4f8111c.stex" ]
 
 [params]
 
