@@ -4541,9 +4541,9 @@ valign = 1
 
 [node name="CreditsLabel2" type="Label" parent="OptionsHub"]
 margin_left = 768.0
-margin_top = 112.0
+margin_top = 107.0
 margin_right = 1120.0
-margin_bottom = 196.0
+margin_bottom = 191.0
 theme = ExtResource( 4 )
 text = "
 \"BITSHIFT OVERDRIVE\"
@@ -4553,18 +4553,26 @@ valign = 1
 
 [node name="CreditsLabel3" type="Label" parent="OptionsHub"]
 margin_left = 768.0
-margin_top = 196.0
+margin_top = 213.0
 margin_right = 1120.0
-margin_bottom = 347.0
+margin_bottom = 523.0
 theme = ExtResource( 4 )
 custom_fonts/font = SubResource( 51 )
 text = "\"C-64\" font by Jamie Cross
 \"Matchup Pro\" font by somepx
 
 Trophy sprites by Kanomwan
-Parallax backgrounds by RauszyK"
+Devilcat sprite by Mirquiso
+
+Parallax BGs (v1.0) by ...
+RauszyK
+
+Parallax BGs (v1.1) by ...
+Arludus
+ansimuz
+Digital Moons
+Misoshiru Studio"
 align = 2
-valign = 1
 
 [node name="AuxiliaryHub" type="ColorRect" parent="."]
 margin_left = 504.0
@@ -4744,9 +4752,9 @@ anims/to_options = SubResource( 22 )
 
 [node name="PrefButton1" type="CheckBox" parent="Options"]
 margin_left = -816.0
-margin_top = 404.0
+margin_top = 412.0
 margin_right = -272.0
-margin_bottom = 438.0
+margin_bottom = 446.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
@@ -4757,9 +4765,9 @@ pref_key = "disable_screen_curve"
 
 [node name="PrefButton2" type="CheckBox" parent="Options"]
 margin_left = -816.0
-margin_top = 444.0
+margin_top = 452.0
 margin_right = -272.0
-margin_bottom = 478.0
+margin_bottom = 486.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
@@ -4770,9 +4778,9 @@ pref_key = "disable_scrolling"
 
 [node name="PrefButton3" type="CheckBox" parent="Options"]
 margin_left = -816.0
-margin_top = 484.0
+margin_top = 492.0
 margin_right = -272.0
-margin_bottom = 518.0
+margin_bottom = 526.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
@@ -4783,9 +4791,9 @@ pref_key = "disable_visualizer"
 
 [node name="PrefButton4" type="CheckBox" parent="Options"]
 margin_left = -816.0
-margin_top = 524.0
+margin_top = 532.0
 margin_right = -272.0
-margin_bottom = 558.0
+margin_bottom = 566.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
@@ -4796,9 +4804,9 @@ pref_key = "disable_combo_SFX"
 
 [node name="PrefButton5" type="CheckBox" parent="Options"]
 margin_left = -816.0
-margin_top = 564.0
+margin_top = 572.0
 margin_right = -272.0
-margin_bottom = 598.0
+margin_bottom = 606.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
@@ -4809,9 +4817,9 @@ pref_key = "disable_tooltips"
 
 [node name="VolSlider1" type="HSlider" parent="Options"]
 margin_left = -800.0
-margin_top = 376.0
+margin_top = 384.0
 margin_right = -392.0
-margin_bottom = 392.0
+margin_bottom = 400.0
 theme = ExtResource( 4 )
 min_value = -30.0
 max_value = 0.0
