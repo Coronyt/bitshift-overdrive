@@ -349,25 +349,20 @@ visible = false
 
 [node name="Parallax_BG" type="Node2D" parent="NoteContainer"]
 
-[node name="bg_layer" type="Sprite" parent="NoteContainer/Parallax_BG"]
+[node name="bg_layer_1" type="Sprite" parent="NoteContainer/Parallax_BG"]
 position = Vector2( 640, 360 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 3 )
-
-[node name="para_layer_1" type="Sprite" parent="NoteContainer/Parallax_BG"]
-position = Vector2( 640, 360 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 5 )
 script = ExtResource( 2 )
 speed = 2.0
 orig_x = 640
 orig_y = 360
 
-[node name="para_layer_2" type="Sprite" parent="NoteContainer/Parallax_BG/para_layer_1"]
+[node name="bg_layer_2" type="Sprite" parent="NoteContainer/Parallax_BG/bg_layer_1"]
 position = Vector2( 320, 0 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
-[node name="para_layer_3" type="Sprite" parent="NoteContainer/Parallax_BG"]
+[node name="para_layer_1" type="Sprite" parent="NoteContainer/Parallax_BG"]
 position = Vector2( 640, 360 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 4 )
@@ -376,9 +371,22 @@ speed = 1.0
 orig_x = 640
 orig_y = 360
 
-[node name="para_layer_4" type="Sprite" parent="NoteContainer/Parallax_BG/para_layer_3"]
+[node name="para_layer_2" type="Sprite" parent="NoteContainer/Parallax_BG/para_layer_1"]
 position = Vector2( 320, 0 )
 texture = ExtResource( 4 )
+
+[node name="para_layer_3" type="Sprite" parent="NoteContainer/Parallax_BG"]
+position = Vector2( 640, 360 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+script = ExtResource( 2 )
+speed = 1.0
+orig_x = 640
+orig_y = 360
+
+[node name="para_layer_4" type="Sprite" parent="NoteContainer/Parallax_BG/para_layer_3"]
+position = Vector2( 320, 0 )
+texture = ExtResource( 5 )
 
 [node name="Visualizer" parent="NoteContainer" instance=ExtResource( 25 )]
 
