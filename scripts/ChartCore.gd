@@ -49,11 +49,18 @@ var stream
 var next_pos = 0.0
 var stream_cached = false
 
+var curr_pos : float
+var len_total : float
+
+var this_prog_bar : TextureProgress
+
 func _physics_process(_delta):
 	if Active.track_ref != null:
 		if not stream_cached:
-			stream = Active.track_ref # .get_stream_playback()
-			stream_cached = true # Storing reference to stream obj
+			stream = Active.track_ref
+			stream_cached = true
+			len_total = self.get_parent().len_total
+			this_prog_bar = self.get_parent().this_prog_bar
 		if stream.get_playback_position() > since:
 			if chart[index][0] != "END":
 				if chart[index][0] == "NOTE":
@@ -63,10 +70,8 @@ func _physics_process(_delta):
 				index += 1
 				since()
 			else: self.get_parent().play_fade_anim()
-	# var curr_pos = Active.track_ref.get_playback_position()
-	# var this_prog_bar = self.get_parent().this_prog_bar
-	# var len_total = self.get_parent().len_total
-	# this_prog_bar.value = curr_pos / len_total
+		curr_pos = Active.track_ref.get_playback_position()
+		this_prog_bar.value = curr_pos / len_total
 
 func since():
 	since = (last_note + quarter * float(4) / float(curr_note)) - offset_1 * speed_mult_2
