@@ -120,6 +120,7 @@ func game_over():
 	SoundManager.play_sound("score2")
 	$ChartTracker/ChartCamera/Paddle.locked = true
 	$ChartTracker/ChartCamera/GameOver.show()
+	$ChartCore/MileTimer.paused = true
 	Active.active = []
 
 func play_fade_anim():
