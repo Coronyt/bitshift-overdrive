@@ -4541,9 +4541,9 @@ valign = 1
 
 [node name="CreditsLabel2" type="Label" parent="OptionsHub"]
 margin_left = 768.0
-margin_top = 107.0
+margin_top = 105.0
 margin_right = 1120.0
-margin_bottom = 191.0
+margin_bottom = 189.0
 theme = ExtResource( 4 )
 text = "
 \"BITSHIFT OVERDRIVE\"
@@ -4553,16 +4553,15 @@ valign = 1
 
 [node name="CreditsLabel3" type="Label" parent="OptionsHub"]
 margin_left = 768.0
-margin_top = 213.0
+margin_top = 211.0
 margin_right = 1120.0
-margin_bottom = 523.0
+margin_bottom = 521.0
 theme = ExtResource( 4 )
 custom_fonts/font = SubResource( 51 )
 text = "\"C-64\" font by Jamie Cross
 \"Matchup Pro\" font by somepx
 
 Trophy sprites by Kanomwan
-Devilcat sprite by Mirquiso
 
 Parallax BGs (v1.0) by ...
 RauszyK
