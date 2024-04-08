@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg_layer_1.png-9b2aa74637b4567d8a2166fe81aa7c76.stex"
+path="res://.import/para_layer_1.png-babf438ed694bf025060fb4796abd7b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/para_bgs/scarlet/bg_layer_1.png"
-dest_files=[ "res://.import/bg_layer_1.png-9b2aa74637b4567d8a2166fe81aa7c76.stex" ]
+source_file="res://assets/para_bgs/scarlet/para_layer_1.png"
+dest_files=[ "res://.import/para_layer_1.png-babf438ed694bf025060fb4796abd7b3.stex" ]
 
 [params]
 
