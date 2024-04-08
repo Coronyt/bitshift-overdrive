@@ -348,7 +348,7 @@ visible = false
 
 [node name="Parallax_BG" type="Node2D" parent="NoteContainer"]
 
-[node name="bg_layer" type="Sprite" parent="NoteContainer/Parallax_BG"]
+[node name="bg_layer_1" type="Sprite" parent="NoteContainer/Parallax_BG"]
 position = Vector2( 640, 360 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 4 )
@@ -357,7 +357,7 @@ speed = 1.0
 orig_x = 640
 orig_y = 360
 
-[node name="bg_layer_2" type="Sprite" parent="NoteContainer/Parallax_BG/bg_layer"]
+[node name="bg_layer_2" type="Sprite" parent="NoteContainer/Parallax_BG/bg_layer_1"]
 position = Vector2( 320, 0 )
 texture = ExtResource( 4 )
 
