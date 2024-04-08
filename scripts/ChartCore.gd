@@ -6,6 +6,8 @@ onready var NoteLight = preload("res://scenes/objects/NoteLight.tscn")
 var start = false
 var chart = []
 
+var parent : Node2D
+
 export(float) var offset_1 = 0 # Note spawn time offset.
 export(float) var offset_2 = 0 # Note spawn pos. offset.
 var speed_mult_1 = 1.00
@@ -40,6 +42,7 @@ func _ready():
 	chart = ChartManager.fetch_chart(Active.chart)
 	quarter = float(60) / (float(BPM) * speed_mult_1)
 	curr_note = chart[index][1]
+	parent = self.get_parent()
 
 var index = 1
 var since : float
@@ -70,8 +73,9 @@ func _physics_process(_delta):
 				index += 1
 				since()
 			else: self.get_parent().play_fade_anim()
-		curr_pos = Active.track_ref.get_playback_position()
-		this_prog_bar.value = curr_pos / len_total
+		if not parent.paused:
+			curr_pos = Active.track_ref.get_playback_position()
+			this_prog_bar.value = curr_pos / len_total
 
 func since():
 	since = (last_note + quarter * float(4) / float(curr_note)) - offset_1 * speed_mult_2

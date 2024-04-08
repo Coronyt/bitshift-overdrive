@@ -138,7 +138,8 @@ func _input(_event):
 			puck_to_cursor()
 			paused = true
 			for note in Active.active:
-				if note: note.note_speed = 0.0
+				if is_instance_valid(note):
+					note.note_speed = 0.0
 		else:
 			if cinematic == false:
 				cursor_to_puck()
@@ -147,7 +148,8 @@ func _input(_event):
 			seek_track(track_cache)
 			paused = false
 			for note in Active.active:
-				if note: note.note_speed = speed
+				if is_instance_valid(note):
+					note.note_speed = speed
 
 func cursor_to_puck():
 	var puck_str_tex = load("res://assets/sprites/paddle_puck.png")
