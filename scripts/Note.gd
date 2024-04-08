@@ -18,7 +18,9 @@ onready var combo_spin = self.get_parent().get_parent().get_node(
 	"ChartTracker/ChartCamera/ComboLabel/ComboSpin")
 onready var combo_label = self.get_parent().get_parent().get_node(
 	"ChartTracker/ChartCamera/ComboLabel")
-	
+
+var this_chart : Node2D
+
 var shattered = false
 
 var _timer: Timer
@@ -31,6 +33,7 @@ func _ready():
 	_timer.connect("timeout", self, "_on_Timer_timeout")
 	_timer.set_wait_time(2.0)
 	_timer.set_one_shot(false)
+	this_chart = self.get_parent().get_parent()
 
 func fade():
 	$NoteColl.disabled = true
@@ -128,4 +131,5 @@ func _on_Timer_timeout():
 var note_speed
 
 func _physics_process(_delta):
-	self.move_and_slide(Vector2(0, 1) * note_speed)
+	if not this_chart.paused:
+		self.move_and_slide(Vector2(0, 1) * note_speed)

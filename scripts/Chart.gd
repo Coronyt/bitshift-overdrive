@@ -112,6 +112,7 @@ func check_health():
 		this_prog_bar.get_child(5).value = Active.health
 
 func game_over():
+	paused = true
 	tracking = false
 	puck_to_cursor()
 	Active.track_ref.stop()
@@ -137,9 +138,9 @@ func _input(_event):
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			puck_to_cursor()
 			paused = true
-			for note in Active.active:
-				if is_instance_valid(note):
-					note.note_speed = 0.0
+			# for note in Active.active:
+				# if is_instance_valid(note):
+					# note.note_speed = 0.0
 		else:
 			if cinematic == false:
 				cursor_to_puck()
@@ -147,9 +148,9 @@ func _input(_event):
 			$ChartTracker/ChartCamera/Paddle.locked = false
 			seek_track(track_cache)
 			paused = false
-			for note in Active.active:
-				if is_instance_valid(note):
-					note.note_speed = speed
+			# for note in Active.active:
+				# if is_instance_valid(note):
+					# note.note_speed = speed
 
 func cursor_to_puck():
 	var puck_str_tex = load("res://assets/sprites/paddle_puck.png")
