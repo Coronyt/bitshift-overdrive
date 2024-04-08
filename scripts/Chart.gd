@@ -141,6 +141,7 @@ func _input(_event):
 			# for note in Active.active:
 				# if is_instance_valid(note):
 					# note.note_speed = 0.0
+			$ChartCore/MileTimer.paused = true
 		else:
 			if cinematic == false:
 				cursor_to_puck()
@@ -151,6 +152,7 @@ func _input(_event):
 			# for note in Active.active:
 				# if is_instance_valid(note):
 					# note.note_speed = speed
+			$ChartCore/MileTimer.paused = false
 
 func cursor_to_puck():
 	var puck_str_tex = load("res://assets/sprites/paddle_puck.png")
