@@ -22,10 +22,6 @@ func _on_PaddleArea_body_entered(coll):
 				if coll.get_child(0):
 					if coll.get_child(0).get_child(1):
 						coll.get_child(0).get_child(1).emitting = false # Stopping particles
-			# if coll:
-				# if coll.get_child(0):
-					# if coll.get_child(0).get_child(2):
-						# coll.get_child(0).get_child(2).play("fade") # Fading out particles
 			Active.active.erase(coll)
 			score_flair()
 			self.get_parent().transform.origin.y = 280 # To negate paddle pushing
