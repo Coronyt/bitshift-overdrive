@@ -34,6 +34,9 @@ func _ready():
 	_timer.set_wait_time(2.0)
 	_timer.set_one_shot(false)
 	this_chart = self.get_parent().get_parent()
+	# Creating unique process material for this instance
+	var new_material = $NoteSprite/NoteTrail.process_material.duplicate()
+	$NoteSprite/NoteTrail.process_material = new_material
 
 func fade():
 	$NoteColl.disabled = true
@@ -79,6 +82,7 @@ func tick():
 
 func shatter():
 	shattered = true
+	$NoteSprite/FadeAnim.play("fade")
 	$NoteColl.set_deferred("disabled", true)
 	var shatter = NoteShatter.instance()
 	shatter.global_position = self.global_position
