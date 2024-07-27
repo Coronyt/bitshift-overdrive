@@ -44,7 +44,6 @@ func load_scores():
 		scoresheet.close()
 	else:
 		ScoreManager.score_dict["baroque"] = str2var(scoresheet.get_line())
-		ScoreManager.score_dict["breeze"] = str2var(scoresheet.get_line())
 		ScoreManager.score_dict["brighter"] = str2var(scoresheet.get_line())
 		ScoreManager.score_dict["coy_glance"] = str2var(scoresheet.get_line())
 		ScoreManager.score_dict["devilcat"] = str2var(scoresheet.get_line())
@@ -65,7 +64,6 @@ func load_trophies():
 		trophycase.close()
 	else:
 		TrophyManager.trophy_dict["baroque"] = str2var(trophycase.get_line())
-		TrophyManager.trophy_dict["breeze"] = str2var(trophycase.get_line())
 		TrophyManager.trophy_dict["brighter"] = str2var(trophycase.get_line())
 		TrophyManager.trophy_dict["coy_glance"] = str2var(trophycase.get_line())
 		TrophyManager.trophy_dict["devilcat"] = str2var(trophycase.get_line())
@@ -78,7 +76,6 @@ func load_trophies():
 		TrophyManager.trophy_dict["kraken"] = str2var(trophycase.get_line())
 		TrophyManager.trophy_dict["cirrus"] = str2var(trophycase.get_line())
 		TrophyManager.trophy_queues["baroque"] = str2var(trophycase.get_line())
-		TrophyManager.trophy_queues["breeze"] = str2var(trophycase.get_line())
 		TrophyManager.trophy_queues["brighter"] = str2var(trophycase.get_line())
 		TrophyManager.trophy_queues["coy_glance"] = str2var(trophycase.get_line())
 		TrophyManager.trophy_queues["devilcat"] = str2var(trophycase.get_line())
