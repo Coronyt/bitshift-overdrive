@@ -176,7 +176,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="BITSHIFT OVERDRIVE 1.1"
+config/name="BITSHIFT OVERDRIVE 1.2"
 run/main_scene="res://scenes/TitleScreen.tscn"
 boot_splash/image="res://assets/splash.png"
 config/icon="res://icon.png"

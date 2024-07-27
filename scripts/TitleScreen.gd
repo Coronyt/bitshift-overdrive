@@ -1,6 +1,6 @@
 extends Control
 
-# BITSHIFT OVERDRIVE 1.1.0
+# BITSHIFT OVERDRIVE 1.2.0
 
 const SCORE_PATH = "res://data1.bso"
 const TROPHY_PATH = "res://data2.bso"

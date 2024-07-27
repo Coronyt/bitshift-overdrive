@@ -4,7 +4,7 @@ const PREF_PATH = "res://config.cfg"
 
 var pref_cfg = ConfigFile.new()
 var prefs = {
-	"disable_screen_curve":		true,
+	"disable_screen_curve":		false,
 	"disable_visualizer":		true,
 	"disable_combo_SFX":		false,
 	"disable_scrolling":		false,
