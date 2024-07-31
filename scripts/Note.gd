@@ -91,7 +91,6 @@ func shatter():
 	_particle_emitters.append([shatter, shatter.get_child(0)])
 	$NoteShader/SSDissolveBurn.play(0.1)
 	Active.combo += 1
-	# update_combo_label(Active.combo)
 	tick()
 	if Active.last_milestone == 0:
 		Active.score += (50 * 1)

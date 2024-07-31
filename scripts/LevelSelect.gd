@@ -3,8 +3,6 @@ extends Control
 const SCORE_PATH = "res://data1.bso"
 const TROPHY_PATH = "res://data2.bso"
 
-const cinematic_label = preload("res://scenes/cinematic/LabelTitle.tscn")
-export var cinematic = false
 var preview_playing = false
 
 func _ready():
@@ -15,14 +13,7 @@ func _ready():
 	var bgm = SoundManager.fetch_audio_stream("track_select")
 	bgm.volume_db = Active.final_db
 	Active.bgm_cache = bgm
-	if cinematic == true:
-		for element in self.get_children():
-			if element.name == "VaporCam":
-				break
-			element.hide()
-		# var new_cinematic_label = cinematic_label.instance()
-		# self.add_child(new_cinematic_label)
-	
+
 func load_last_modifiers():
 	for mod in $SpeedLabel.get_children():
 		if mod.name != Active.mod_speed:

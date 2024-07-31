@@ -1,8 +1,5 @@
 extends Node2D
 
-const cinematic_label = preload("res://scenes/cinematic/LabelOST.tscn")
-export var cinematic = false
-
 onready var combo_spin = self.get_node("ChartTracker/ChartCamera/ComboLabel/ComboSpin")
 
 onready var this_prog_bar = $ChartTracker/ProgressBar
@@ -69,15 +66,9 @@ func stop_track():
 
 func _ready():
 	Active.bgm_cache.stop()
-	if cinematic == true:
-		$ChartTracker/ChartCamera/Paddle.hide()
-		$ChartTracker/ChartCamera/ScoreCounter.hide()
-		var new_cinematic_label = cinematic_label.instance()
-		self.add_child(new_cinematic_label)
 	speed = $ChartCore.BPM * 5
-	if cinematic == false:
-		SoundManager.play_sound("click2")
-		cursor_to_puck()
+	SoundManager.play_sound("click2")
+	cursor_to_puck()
 	self.get_child(0).get_child(0).play("drop")
 	self.get_child(1).get_child(0).rise_seq()
 	$CountdownTimer.start()
@@ -85,14 +76,12 @@ func _ready():
 func _on_Countdown_timeout():
 	Active.bgm_cache.stop()
 	if countdown > 0:
-		if cinematic == false:
-			SoundManager.play_sound("count1")
+		SoundManager.play_sound("count1")
 		countdown -= 1
 	else:
 		tracking = true
 		play_track()
-		if cinematic == false:
-			SoundManager.play_sound("count2")
+		SoundManager.play_sound("count2")
 		$CountdownTimer.queue_free()
 		$ChartCore.track_milestones()
 		$ChartCore.speed = speed
@@ -139,20 +128,13 @@ func _input(_event):
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			puck_to_cursor()
 			paused = true
-			# for note in Active.active:
-				# if is_instance_valid(note):
-					# note.note_speed = 0.0
 			$ChartCore/MileTimer.paused = true
 		else:
-			if cinematic == false:
-				cursor_to_puck()
+			cursor_to_puck()
 			$PauseScreen.hide()
 			$ChartTracker/ChartCamera/Paddle.locked = false
 			seek_track(track_cache)
 			paused = false
-			# for note in Active.active:
-				# if is_instance_valid(note):
-					# note.note_speed = speed
 			$ChartCore/MileTimer.paused = false
 
 func cursor_to_puck():

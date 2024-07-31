@@ -29,13 +29,12 @@ func fetch_speed():
 		speed_mult_2 = 0.90
 
 func spawn_note(axis):
-	if self.get_parent().cinematic == false:
-		var new_note = note.instance()
-		new_note.global_position = Vector2(axis, self.get_parent().paddle_pos_y - offset_2)
-		self.get_parent().get_child(1).add_child(new_note)
-		var note_light = NoteLight.instance()
-		new_note.add_child(note_light)
-		new_note.note_speed = speed
+	var new_note = note.instance()
+	new_note.global_position = Vector2(axis, self.get_parent().paddle_pos_y - offset_2)
+	self.get_parent().get_child(1).add_child(new_note)
+	var note_light = NoteLight.instance()
+	new_note.add_child(note_light)
+	new_note.note_speed = speed
 
 func _ready():
 	fetch_speed()
