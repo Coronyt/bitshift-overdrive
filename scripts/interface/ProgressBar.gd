@@ -17,29 +17,26 @@ func _ready():
 	if Active.is_nybl:
 		$HealthBar3.show()
 
-func _physics_process(_delta):
-	self.value = Active.progress
-	# 'Quarter' landmark.
-	if stepify(Active.progress, 0.01) == 0.25:
-		if landmark_25per == false:
-			landmark_25per = true
-			flair_label.text = "25% COMPLETE!"
-			flair_anims.play("landmark")
-			$FlairSFX_Timer1.start()
-	# 'Halfway' landmark.
-	if stepify(Active.progress, 0.01) == 0.50:
-		if landmark_50per == false:
-			landmark_50per = true
-			flair_label.text = "50% COMPLETE!"
-			flair_anims.play("landmark")
-			$FlairSFX_Timer1.start()
-	# 'Almost' landmark.
-	if stepify(Active.progress, 0.01) == 0.75:
-		if landmark_75per == false:
-			landmark_75per = true
-			flair_label.text = "ALMOST THERE!"
-			flair_anims.play("landmark")
-			$FlairSFX_Timer1.start()
+func mile_25():
+	if landmark_25per == false:
+		landmark_25per = true
+		flair_label.text = "25% COMPLETE!"
+		flair_anims.play("landmark")
+		$FlairSFX_Timer1.start()
+
+func mile_50():
+	if landmark_50per == false:
+		landmark_50per = true
+		flair_label.text = "50% COMPLETE!"
+		flair_anims.play("landmark")
+		$FlairSFX_Timer1.start()
+
+func mile_75():
+	if landmark_75per == false:
+		landmark_75per = true
+		flair_label.text = "ALMOST THERE!"
+		flair_anims.play("landmark")
+		$FlairSFX_Timer1.start()
 
 func set_milestone(to_milestone):
 	milestone = to_milestone
@@ -62,8 +59,10 @@ func _on_FlairSFX_Timer2_timeout():
 		SoundManager.play_combo(1.45)
 	if Active.is_byte and Active.health < 5:
 		Active.health += 1
+		$HealthBar5.value = Active.health
 	elif Active.is_nybl and Active.health < 3:
 		Active.health += 1
+		$HealthBar3.value = Active.health
 
 func _on_ComboAnimTimer_timeout():
 	if milestone_cooldown == false:

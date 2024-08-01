@@ -5,7 +5,7 @@ export(String) var pref_key
 func _ready():
 	self.value = UserPreferences.prefs[pref_key]
 
-func adjust_vol(value):
+func adjust_vol(_value):
 	UserPreferences.prefs[pref_key] = self.value
 	if pref_key == "music_vol":
 		Active.final_db = self.value - 2

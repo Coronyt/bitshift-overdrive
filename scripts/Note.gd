@@ -16,6 +16,27 @@ onready var flair_label = self.get_parent().get_parent().get_node(
 
 onready var combo_spin = self.get_parent().get_parent().get_node(
 	"ChartTracker/ChartCamera/ComboLabel/ComboSpin")
+onready var combo_label = self.get_parent().get_parent().get_node(
+	"ChartTracker/ChartCamera/ComboLabel")
+
+var this_chart : Node2D
+
+var shattered = false
+
+var _timer: Timer
+
+var _particle_emitters: Array = []
+var _deleted_emitters: Array = []
+
+func _ready():
+	_timer = Timer.new()
+	_timer.connect("timeout", self, "_on_Timer_timeout")
+	_timer.set_wait_time(2.0)
+	_timer.set_one_shot(false)
+	this_chart = self.get_parent().get_parent()
+	# Creating unique process material for this instance
+	var new_material = $NoteSprite/NoteTrail.process_material.duplicate()
+	$NoteSprite/NoteTrail.process_material = new_material
 
 func fade():
 	$NoteColl.disabled = true
@@ -60,10 +81,14 @@ func tick():
 		prog_bar.set_milestone(milestone_check_res)
 
 func shatter():
+	shattered = true
+	$NoteSprite/FadeAnim.play("fade")
+	$NoteColl.set_deferred("disabled", true)
 	var shatter = NoteShatter.instance()
 	shatter.global_position = self.global_position
 	self.get_parent().add_child(shatter)
 	shatter.get_child(0).emitting = true
+	_particle_emitters.append([shatter, shatter.get_child(0)])
 	$NoteShader/SSDissolveBurn.play(0.1)
 	Active.combo += 1
 	tick()
@@ -77,9 +102,37 @@ func shatter():
 		Active.score += (50 * 8)
 	elif Active.last_milestone == 200:
 		Active.score += (50 * 16)
+	shatter.add_child(_timer)
+	_timer.start()
+
+func update_combo_label(combo):
+	if combo < 25:
+		combo_label.text = "1x"
+	elif combo < 50:
+		combo_label.text = "2x"
+	elif combo < 100:
+		combo_label.text = "4x"
+	elif combo < 200:
+		combo_label.text = "8x"
+	else: # >= 200
+		combo_label.text = "16x"
+
+func _on_Timer_timeout():
+	if len(_particle_emitters) == 0:
+		return
+	for emitter in _particle_emitters:
+		if not emitter[1].emitting:
+			self.get_parent().remove_child(emitter[0])
+			emitter[0].queue_free()
+			_deleted_emitters.append(emitter)
+	if len(_deleted_emitters) == 0:
+		return
+	for emitter in _deleted_emitters:
+		_particle_emitters.erase(emitter)
+	_deleted_emitters.clear()
+
+var note_speed
 
 func _physics_process(_delta):
-	if self.get_parent().get_parent().tracking == false:
-		self.queue_free()
-	if self.get_parent().get_parent().paused == false:
-		self.move_and_slide(Vector2(0, 1) * self.get_parent().get_parent().speed)
+	if not this_chart.paused:
+		self.move_and_slide(Vector2(0, 1) * note_speed)

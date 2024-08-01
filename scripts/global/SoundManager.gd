@@ -13,7 +13,6 @@ func _ready():
 	var tracks = Tracks.get_children()
 	track_dict_090 = {
 		"spacedive" : fetch_track("spacedive_090"),
-		"breeze" : fetch_track("breeze_090"),
 		"coy_glance" : fetch_track("coy_glance_090"),
 		"brighter" : fetch_track("brighter_090"),
 		"baroque" : fetch_track("baroque_090"),
@@ -28,7 +27,6 @@ func _ready():
 	}
 	track_dict_100 = {
 		"spacedive" : fetch_track("spacedive_100"),
-		"breeze" : fetch_track("breeze_100"),
 		"coy_glance" : fetch_track("coy_glance_100"),
 		"brighter" : fetch_track("brighter_100"),
 		"baroque" : fetch_track("baroque_100"),
@@ -43,7 +41,6 @@ func _ready():
 	}
 	track_dict_110 = {
 		"spacedive" : fetch_track("spacedive_110"),
-		"breeze" : fetch_track("breeze_110"),
 		"coy_glance" : fetch_track("coy_glance_110"),
 		"brighter" : fetch_track("brighter_110"),
 		"baroque" : fetch_track("baroque_110"),

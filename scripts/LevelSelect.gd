@@ -3,8 +3,6 @@ extends Control
 const SCORE_PATH = "res://data1.bso"
 const TROPHY_PATH = "res://data2.bso"
 
-const cinematic_label = preload("res://scenes/cinematic/LabelTitle.tscn")
-export var cinematic = false
 var preview_playing = false
 
 func _ready():
@@ -15,14 +13,7 @@ func _ready():
 	var bgm = SoundManager.fetch_audio_stream("track_select")
 	bgm.volume_db = Active.final_db
 	Active.bgm_cache = bgm
-	if cinematic == true:
-		for element in self.get_children():
-			if element.name == "VaporCam":
-				break
-			element.hide()
-		# var new_cinematic_label = cinematic_label.instance()
-		# self.add_child(new_cinematic_label)
-	
+
 func load_last_modifiers():
 	for mod in $SpeedLabel.get_children():
 		if mod.name != Active.mod_speed:
@@ -73,7 +64,6 @@ func save_scores():
 	var new_scoresheet = File.new()
 	new_scoresheet.open(SCORE_PATH, File.WRITE)
 	new_scoresheet.store_line(var2str(ScoreManager.score_dict["baroque"]))
-	new_scoresheet.store_line(var2str(ScoreManager.score_dict["breeze"]))
 	new_scoresheet.store_line(var2str(ScoreManager.score_dict["brighter"]))
 	new_scoresheet.store_line(var2str(ScoreManager.score_dict["coy_glance"]))
 	new_scoresheet.store_line(var2str(ScoreManager.score_dict["devilcat"]))
@@ -91,7 +81,6 @@ func save_trophies():
 	var new_trophycase = File.new()
 	new_trophycase.open(TROPHY_PATH, File.WRITE)
 	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["baroque"]))
-	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["breeze"]))
 	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["brighter"]))
 	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["coy_glance"]))
 	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["devilcat"]))
@@ -104,7 +93,6 @@ func save_trophies():
 	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["kraken"]))
 	new_trophycase.store_line(var2str(TrophyManager.trophy_dict["cirrus"]))
 	new_trophycase.store_line(var2str(TrophyManager.trophy_queues["baroque"]))
-	new_trophycase.store_line(var2str(TrophyManager.trophy_queues["breeze"]))
 	new_trophycase.store_line(var2str(TrophyManager.trophy_queues["brighter"]))
 	new_trophycase.store_line(var2str(TrophyManager.trophy_queues["coy_glance"]))
 	new_trophycase.store_line(var2str(TrophyManager.trophy_queues["devilcat"]))

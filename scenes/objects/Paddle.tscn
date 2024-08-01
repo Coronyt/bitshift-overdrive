@@ -24,6 +24,7 @@ texture = ExtResource( 1 )
 [node name="PaddleColl" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 32 )
 shape = SubResource( 5 )
+disabled = true
 
 [node name="PaddleArea" type="Area2D" parent="."]
 script = ExtResource( 4 )
@@ -33,11 +34,11 @@ position = Vector2( 0, -16 )
 shape = SubResource( 6 )
 
 [node name="PaddleLight" type="Light2D" parent="."]
+visible = false
 position = Vector2( 0, -2.72285e-05 )
-scale = Vector2( 1.13778, 1.13778 )
+scale = Vector2( 1.4, 1.138 )
 texture = ExtResource( 2 )
 texture_scale = 0.15
-energy = 0.75
 shadow_enabled = true
 
 [node name="PaddleBeam_1" type="ColorRect" parent="."]
@@ -57,3 +58,5 @@ margin_right = 28.0
 margin_bottom = 160.0
 rect_pivot_offset = Vector2( 2, 1424 )
 color = Color( 1, 1, 1, 0.196078 )
+
+[connection signal="body_entered" from="PaddleArea" to="PaddleArea" method="_on_PaddleArea_body_entered"]

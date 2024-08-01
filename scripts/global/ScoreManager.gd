@@ -10,7 +10,6 @@ func update_score(track_key, new_score):
 
 var score_dict = {
 	"spacedive" : 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	"breeze" : 		[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	"coy_glance" : 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	"brighter" : 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	"baroque" : 	[0, 0, 0, 0, 0, 0, 0, 0, 0],

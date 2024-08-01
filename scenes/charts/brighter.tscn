@@ -1,34 +1,28 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://scenes/objects/Paddle.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/vapor/vapor_bg_2.glb" type="PackedScene" id=2]
-[ext_resource path="res://assets/vapor/vapor_bg_3.glb" type="PackedScene" id=3]
-[ext_resource path="res://assets/vapor/vapor_bg_1.glb" type="PackedScene" id=4]
-[ext_resource path="res://assets/vapor/vapor_bg_4.glb" type="PackedScene" id=5]
+[ext_resource path="res://scripts/ParallaxLayer.gd" type="Script" id=2]
+[ext_resource path="res://assets/para_bgs/brighter/bg_layer.png" type="Texture" id=3]
+[ext_resource path="res://assets/para_bgs/brighter/para_layer_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/para_bgs/brighter/para_layer_1.png" type="Texture" id=5]
 [ext_resource path="res://scripts/ChartCore.gd" type="Script" id=6]
-[ext_resource path="res://scripts/VaporCam.gd" type="Script" id=7]
+[ext_resource path="res://scripts/interface/ComboLabel.gd" type="Script" id=7]
 [ext_resource path="res://scenes/CRT.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/bitshift.tres" type="Theme" id=9]
 [ext_resource path="res://assets/MatchupPro.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://scenes/ScoreCounter.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scripts/ScreenBar_Bot.gd" type="Script" id=12]
+[ext_resource path="res://scenes/ScreenBar_Top.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/objects/RailCanvas.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/GameOver.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/ProgressBar.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scripts/Chart.gd" type="Script" id=16]
-[ext_resource path="res://scripts/ScreenBar_Top.gd" type="Script" id=17]
+[ext_resource path="res://scenes/ScreenBar_Bot.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/sprites/light_1.png" type="Texture" id=18]
 [ext_resource path="res://scenes/PauseScreen.tscn" type="PackedScene" id=19]
-[ext_resource path="res://scripts/ParallaxLayer.gd" type="Script" id=20]
-[ext_resource path="res://assets/para_bgs/brighter/1.png" type="Texture" id=21]
-[ext_resource path="res://assets/para_bgs/brighter/4.png" type="Texture" id=22]
-[ext_resource path="res://assets/para_bgs/brighter/3.png" type="Texture" id=23]
-[ext_resource path="res://assets/para_bgs/brighter/2.png" type="Texture" id=24]
 [ext_resource path="res://scenes/Visualizer.tscn" type="PackedScene" id=25]
 [ext_resource path="res://assets/sprites/sundial_1.png" type="Texture" id=26]
 [ext_resource path="res://addons/godot_sprite_shader/assets/shader/pingpong_rotate.shader" type="Shader" id=27]
 [ext_resource path="res://assets/c-64.ttf" type="DynamicFontData" id=28]
-[ext_resource path="res://scripts/interface/ComboLabel.gd" type="Script" id=29]
 [ext_resource path="res://addons/godot_sprite_shader/src/core/SShaderContainer.gd" type="Script" id=30]
 [ext_resource path="res://addons/godot_sprite_shader/src/sshader/SSPingPongRotate.gd" type="Script" id=31]
 
@@ -61,12 +55,6 @@ size = 32
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 10 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 640, 10 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 640, 10 )
 
 [sub_resource type="Animation" id=13]
 length = 0.001
@@ -340,37 +328,6 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[sub_resource type="ProceduralSky" id=9]
-sky_top_color = Color( 0.0392157, 0.0392157, 0.117647, 1 )
-sky_horizon_color = Color( 0.882353, 0.470588, 0.196078, 1 )
-sky_energy = 2.0
-ground_bottom_color = Color( 0.737255, 0.517647, 0, 1 )
-ground_horizon_color = Color( 0.882353, 0.470588, 0.196078, 1 )
-sun_color = Color( 0.94902, 1, 0, 1 )
-sun_latitude = 0.0
-sun_longitude = 180.0
-sun_energy = 2.5
-
-[sub_resource type="Environment" id=10]
-background_mode = 2
-background_sky = SubResource( 9 )
-background_color = Color( 0.980392, 0.529412, 1, 1 )
-fog_enabled = true
-fog_color = Color( 0.176471, 0.0235294, 0, 1 )
-fog_sun_color = Color( 0.176471, 0.0235294, 0, 1 )
-fog_sun_amount = 0.25
-fog_depth_begin = 50.0
-fog_depth_end = 300.0
-tonemap_mode = 2
-ss_reflections_enabled = true
-ss_reflections_fade_in = 0.35
-dof_blur_far_enabled = true
-dof_blur_far_distance = 40.0
-dof_blur_far_amount = 0.05
-dof_blur_near_distance = 500.0
-dof_blur_near_amount = 0.25
-dof_blur_near_quality = 2
-
 [node name="Chart" type="Node2D"]
 script = ExtResource( 16 )
 
@@ -384,71 +341,58 @@ BPM = 130
 reset_on_save = false
 anims/drop = SubResource( 16 )
 
+[node name="MileTimer" type="Timer" parent="ChartCore"]
+
 [node name="NoteContainer" type="Node2D" parent="."]
 
 [node name="RailCanvas" parent="NoteContainer" instance=ExtResource( 13 )]
+visible = false
 
 [node name="Parallax_BG" type="Node2D" parent="NoteContainer"]
 
-[node name="Layer1" type="Sprite" parent="NoteContainer/Parallax_BG"]
-position = Vector2( 0, -88 )
-scale = Vector2( 0.75, 0.75 )
-texture = ExtResource( 22 )
-centered = false
-script = ExtResource( 20 )
-speed = 3.0
-orig_y = -88
-
-[node name="Layer1_Tiled" type="Sprite" parent="NoteContainer/Parallax_BG/Layer1"]
-position = Vector2( 1920, 0 )
-texture = ExtResource( 22 )
-centered = false
-
-[node name="Layer2" type="Sprite" parent="NoteContainer/Parallax_BG"]
-position = Vector2( 0, 104 )
-scale = Vector2( 0.75, 0.75 )
-texture = ExtResource( 23 )
-centered = false
-script = ExtResource( 20 )
-speed = 2.5
-orig_y = 104
-
-[node name="Layer2_Tiled" type="Sprite" parent="NoteContainer/Parallax_BG/Layer2"]
-position = Vector2( 1920, 0 )
-texture = ExtResource( 23 )
-centered = false
-
-[node name="Layer3" type="Sprite" parent="NoteContainer/Parallax_BG"]
-position = Vector2( 0, 272 )
-scale = Vector2( 0.75, 0.75 )
-texture = ExtResource( 24 )
-centered = false
-script = ExtResource( 20 )
+[node name="bg_layer_1" type="Sprite" parent="NoteContainer/Parallax_BG"]
+position = Vector2( 640, 360 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
 speed = 2.0
-orig_y = 272
+orig_x = 640
+orig_y = 360
 
-[node name="Layer3_Tiled" type="Sprite" parent="NoteContainer/Parallax_BG/Layer3"]
-position = Vector2( 1920, 0 )
-texture = ExtResource( 24 )
-centered = false
+[node name="bg_layer_2" type="Sprite" parent="NoteContainer/Parallax_BG/bg_layer_1"]
+position = Vector2( 320, 0 )
+texture = ExtResource( 3 )
 
-[node name="Layer4" type="Sprite" parent="NoteContainer/Parallax_BG"]
-position = Vector2( 0, 456 )
-scale = Vector2( 0.75, 0.75 )
-texture = ExtResource( 21 )
-centered = false
-script = ExtResource( 20 )
-speed = 1.5
-orig_y = 456
+[node name="para_layer_1" type="Sprite" parent="NoteContainer/Parallax_BG"]
+position = Vector2( 640, 360 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+script = ExtResource( 2 )
+speed = 1.0
+orig_x = 640
+orig_y = 360
 
-[node name="Layer4_Tiled" type="Sprite" parent="NoteContainer/Parallax_BG/Layer4"]
-position = Vector2( 1920, 0 )
-texture = ExtResource( 21 )
-centered = false
+[node name="para_layer_2" type="Sprite" parent="NoteContainer/Parallax_BG/para_layer_1"]
+position = Vector2( 320, 0 )
+texture = ExtResource( 4 )
+
+[node name="para_layer_3" type="Sprite" parent="NoteContainer/Parallax_BG"]
+position = Vector2( 640, 360 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+script = ExtResource( 2 )
+speed = 1.0
+orig_x = 640
+orig_y = 360
+
+[node name="para_layer_4" type="Sprite" parent="NoteContainer/Parallax_BG/para_layer_3"]
+position = Vector2( 320, 0 )
+texture = ExtResource( 5 )
 
 [node name="Visualizer" parent="NoteContainer" instance=ExtResource( 25 )]
 
 [node name="LightCanvas" type="ColorRect" parent="NoteContainer"]
+visible = false
 margin_right = 1280.0
 margin_bottom = 720.0
 color = Color( 0.254902, 0.196078, 0, 0.254902 )
@@ -474,21 +418,9 @@ position = Vector2( 640, 360 )
 current = true
 smoothing_speed = 100.0
 
-[node name="ScreenBar_Top" type="Area2D" parent="ChartTracker/ChartCamera"]
-position = Vector2( -640, -360 )
-script = ExtResource( 17 )
+[node name="ScreenBar_Top" parent="ChartTracker/ChartCamera" instance=ExtResource( 12 )]
 
-[node name="BarShape" type="CollisionShape2D" parent="ChartTracker/ChartCamera/ScreenBar_Top"]
-position = Vector2( 640, -8 )
-shape = SubResource( 2 )
-
-[node name="ScreenBar_Bot" type="Area2D" parent="ChartTracker/ChartCamera"]
-position = Vector2( -640, -360 )
-script = ExtResource( 12 )
-
-[node name="BarShape" type="CollisionShape2D" parent="ChartTracker/ChartCamera/ScreenBar_Bot"]
-position = Vector2( 640, 728 )
-shape = SubResource( 3 )
+[node name="ScreenBar_Bot" parent="ChartTracker/ChartCamera" instance=ExtResource( 17 )]
 
 [node name="Paddle" parent="ChartTracker/ChartCamera" instance=ExtResource( 1 )]
 
@@ -554,7 +486,7 @@ custom_fonts/font = SubResource( 18 )
 text = "1x"
 align = 1
 valign = 1
-script = ExtResource( 29 )
+script = ExtResource( 7 )
 
 [node name="ComboSpin" type="AnimationPlayer" parent="ChartTracker/ChartCamera/ComboLabel"]
 anims/RESET = SubResource( 19 )
@@ -576,75 +508,11 @@ __meta__ = {
 
 [node name="ProgressBar" parent="ChartTracker" instance=ExtResource( 15 )]
 
-[node name="VaporCam" type="Camera" parent="."]
-transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 1, 0 )
-script = ExtResource( 7 )
-speed = -0.25
-
-[node name="VaporSky" type="WorldEnvironment" parent="."]
-environment = SubResource( 10 )
-
-[node name="VaporScape" type="Spatial" parent="."]
-
-[node name="vapor_chunk_1" type="Spatial" parent="VaporScape"]
-
-[node name="vapor_bg_1" parent="VaporScape/vapor_chunk_1" instance=ExtResource( 4 )]
-
-[node name="vapor_bg_2" parent="VaporScape/vapor_chunk_1" instance=ExtResource( 2 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 20 )
-
-[node name="vapor_bg_3" parent="VaporScape/vapor_chunk_1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40 )
-
-[node name="vapor_bg_4" parent="VaporScape/vapor_chunk_1" instance=ExtResource( 5 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 60 )
-
-[node name="vapor_chunk_2" type="Spatial" parent="VaporScape"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 80 )
-
-[node name="vapor_bg_1" parent="VaporScape/vapor_chunk_2" instance=ExtResource( 4 )]
-
-[node name="vapor_bg_2" parent="VaporScape/vapor_chunk_2" instance=ExtResource( 2 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 20 )
-
-[node name="vapor_bg_3" parent="VaporScape/vapor_chunk_2" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40 )
-
-[node name="vapor_bg_4" parent="VaporScape/vapor_chunk_2" instance=ExtResource( 5 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 60 )
-
-[node name="vapor_chunk_3" type="Spatial" parent="VaporScape"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 160 )
-
-[node name="vapor_bg_1" parent="VaporScape/vapor_chunk_3" instance=ExtResource( 4 )]
-
-[node name="vapor_bg_2" parent="VaporScape/vapor_chunk_3" instance=ExtResource( 2 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 20 )
-
-[node name="vapor_bg_3" parent="VaporScape/vapor_chunk_3" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40 )
-
-[node name="vapor_bg_4" parent="VaporScape/vapor_chunk_3" instance=ExtResource( 5 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 60 )
-
-[node name="vapor_chunk_4" type="Spatial" parent="VaporScape"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 240 )
-
-[node name="vapor_bg_1" parent="VaporScape/vapor_chunk_4" instance=ExtResource( 4 )]
-
-[node name="vapor_bg_2" parent="VaporScape/vapor_chunk_4" instance=ExtResource( 2 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 20 )
-
-[node name="vapor_bg_3" parent="VaporScape/vapor_chunk_4" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40 )
-
-[node name="vapor_bg_4" parent="VaporScape/vapor_chunk_4" instance=ExtResource( 5 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 60 )
-
 [node name="PauseScreen" parent="." instance=ExtResource( 19 )]
 visible = false
 
 [node name="CRT" parent="." instance=ExtResource( 8 )]
 
+[connection signal="timeout" from="ChartCore/MileTimer" to="ChartCore" method="_on_MileTimer_timeout"]
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_Countdown_timeout"]
 [connection signal="animation_finished" from="ChartTracker/ChartCamera/FadeOut" to="." method="_on_FadeOut_animation_finished"]

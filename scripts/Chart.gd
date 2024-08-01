@@ -1,9 +1,10 @@
 extends Node2D
 
-const cinematic_label = preload("res://scenes/cinematic/LabelOST.tscn")
-export var cinematic = false
-
 onready var combo_spin = self.get_node("ChartTracker/ChartCamera/ComboLabel/ComboSpin")
+
+onready var this_prog_bar = $ChartTracker/ProgressBar
+
+var len_total = 0.0
 
 var countdown = 3
 var tracking = false
@@ -34,6 +35,7 @@ func play_track():
 		SoundManager.track_dict_110[Active.chart].volume_db = Active.vol_cache[Active.chart]
 		SoundManager.track_dict_110[Active.chart].volume_db = SoundManager.track_dict_110[Active.chart].volume_db + UserPreferences.prefs["music_vol"]
 		SoundManager.track_dict_110[Active.chart].play()
+	len_total = Active.track_ref.stream.get_length()
 
 func fetch_track():
 	if Active.speed == "speed_090":
@@ -64,17 +66,9 @@ func stop_track():
 
 func _ready():
 	Active.bgm_cache.stop()
-	if cinematic == true:
-		$ChartTracker/ChartCamera/Paddle.hide()
-		$ChartTracker/ChartCamera/ScoreCounter.hide()
-		var new_cinematic_label = cinematic_label.instance()
-		self.add_child(new_cinematic_label)
-	cam_cache = $VaporCam.speed
-	$VaporCam.speed = 0.015
 	speed = $ChartCore.BPM * 5
-	if cinematic == false:
-		SoundManager.play_sound("click2")
-		cursor_to_puck()
+	SoundManager.play_sound("click2")
+	cursor_to_puck()
 	self.get_child(0).get_child(0).play("drop")
 	self.get_child(1).get_child(0).rise_seq()
 	$CountdownTimer.start()
@@ -82,28 +76,32 @@ func _ready():
 func _on_Countdown_timeout():
 	Active.bgm_cache.stop()
 	if countdown > 0:
-		if cinematic == false:
-			SoundManager.play_sound("count1")
+		SoundManager.play_sound("count1")
 		countdown -= 1
 	else:
 		tracking = true
 		play_track()
-		if cinematic == false:
-			SoundManager.play_sound("count2")
-		$VaporCam.speed = cam_cache
+		SoundManager.play_sound("count2")
 		$CountdownTimer.queue_free()
+		$ChartCore.track_milestones()
+		$ChartCore.speed = speed
 
 func check_health():
 	if Active.last_milestone != 0:
 		combo_spin.play("spin")
 	if Active.is_iron == true:
 		game_over()
-	if Active.is_byte and Active.health <= 0:
-		game_over()
-	if Active.is_nybl and Active.health <= 0:
-		game_over()
+	if Active.is_byte:
+		if Active.health <= 0:
+			game_over()
+		this_prog_bar.get_child(4).value = Active.health
+	if Active.is_nybl:
+		if Active.health <= 0:
+			game_over()
+		this_prog_bar.get_child(5).value = Active.health
 
 func game_over():
+	paused = true
 	tracking = false
 	puck_to_cursor()
 	Active.track_ref.stop()
@@ -111,6 +109,7 @@ func game_over():
 	SoundManager.play_sound("score2")
 	$ChartTracker/ChartCamera/Paddle.locked = true
 	$ChartTracker/ChartCamera/GameOver.show()
+	$ChartCore/MileTimer.paused = true
 	Active.active = []
 
 func play_fade_anim():
@@ -119,26 +118,24 @@ func play_fade_anim():
 func _on_FadeOut_animation_finished(_anim_name):
 	get_tree().change_scene("res://scenes/ScoreScreen.tscn")
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("pause") and tracking == true:
 		if paused == false:
 			track_cache = fetch_track()
-			cam_cache = $VaporCam.speed
 			stop_track()
-			$VaporCam.speed = 0
 			$PauseScreen.show()
 			$ChartTracker/ChartCamera/Paddle.locked = true
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			puck_to_cursor()
 			paused = true
+			$ChartCore/MileTimer.paused = true
 		else:
-			if cinematic == false:
-				cursor_to_puck()
+			cursor_to_puck()
 			$PauseScreen.hide()
-			$VaporCam.speed = cam_cache
 			$ChartTracker/ChartCamera/Paddle.locked = false
 			seek_track(track_cache)
 			paused = false
+			$ChartCore/MileTimer.paused = false
 
 func cursor_to_puck():
 	var puck_str_tex = load("res://assets/sprites/paddle_puck.png")
@@ -151,7 +148,7 @@ func cursor_to_puck():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 
 func puck_to_cursor():
-	var cursor_str_tex = load("res://assets/sprites/cursor.png")
+	var cursor_str_tex = load("res://assets/sprites/cursor-slim.png")
 	var cursor_img_obj  = Image.new()
 	var cursor_img_tex = ImageTexture.new()
 	cursor_img_obj = cursor_str_tex.get_data()

@@ -3646,7 +3646,6 @@ sun_energy = 5.0
 background_mode = 2
 background_sky = SubResource( 23 )
 background_color = Color( 0.980392, 0.529412, 1, 1 )
-fog_enabled = true
 fog_color = Color( 0.764706, 0.509804, 0, 1 )
 fog_sun_color = Color( 0.764706, 0.509804, 0, 1 )
 fog_sun_amount = 0.25
@@ -3655,7 +3654,6 @@ fog_depth_end = 300.0
 tonemap_mode = 2
 ss_reflections_enabled = true
 ss_reflections_fade_in = 0.35
-dof_blur_far_enabled = true
 dof_blur_far_distance = 40.0
 dof_blur_far_amount = 0.05
 
@@ -4543,9 +4541,9 @@ valign = 1
 
 [node name="CreditsLabel2" type="Label" parent="OptionsHub"]
 margin_left = 768.0
-margin_top = 112.0
+margin_top = 105.0
 margin_right = 1120.0
-margin_bottom = 196.0
+margin_bottom = 189.0
 theme = ExtResource( 4 )
 text = "
 \"BITSHIFT OVERDRIVE\"
@@ -4555,18 +4553,25 @@ valign = 1
 
 [node name="CreditsLabel3" type="Label" parent="OptionsHub"]
 margin_left = 768.0
-margin_top = 196.0
+margin_top = 211.0
 margin_right = 1120.0
-margin_bottom = 347.0
+margin_bottom = 521.0
 theme = ExtResource( 4 )
 custom_fonts/font = SubResource( 51 )
 text = "\"C-64\" font by Jamie Cross
 \"Matchup Pro\" font by somepx
 
 Trophy sprites by Kanomwan
-Parallax backgrounds by RauszyK"
+
+Parallax BGs (v1.0) by ...
+RauszyK
+
+Parallax BGs (v1.1) by ...
+Arludus
+ansimuz
+Digital Moons
+Misoshiru Studio"
 align = 2
-valign = 1
 
 [node name="AuxiliaryHub" type="ColorRect" parent="."]
 margin_left = 504.0
@@ -4746,9 +4751,9 @@ anims/to_options = SubResource( 22 )
 
 [node name="PrefButton1" type="CheckBox" parent="Options"]
 margin_left = -816.0
-margin_top = 404.0
+margin_top = 412.0
 margin_right = -272.0
-margin_bottom = 438.0
+margin_bottom = 446.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
@@ -4759,9 +4764,9 @@ pref_key = "disable_screen_curve"
 
 [node name="PrefButton2" type="CheckBox" parent="Options"]
 margin_left = -816.0
-margin_top = 444.0
+margin_top = 452.0
 margin_right = -272.0
-margin_bottom = 478.0
+margin_bottom = 486.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
@@ -4772,9 +4777,9 @@ pref_key = "disable_scrolling"
 
 [node name="PrefButton3" type="CheckBox" parent="Options"]
 margin_left = -816.0
-margin_top = 484.0
+margin_top = 492.0
 margin_right = -272.0
-margin_bottom = 518.0
+margin_bottom = 526.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
@@ -4785,9 +4790,9 @@ pref_key = "disable_visualizer"
 
 [node name="PrefButton4" type="CheckBox" parent="Options"]
 margin_left = -816.0
-margin_top = 524.0
+margin_top = 532.0
 margin_right = -272.0
-margin_bottom = 558.0
+margin_bottom = 566.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
@@ -4798,9 +4803,9 @@ pref_key = "disable_combo_SFX"
 
 [node name="PrefButton5" type="CheckBox" parent="Options"]
 margin_left = -816.0
-margin_top = 564.0
+margin_top = 572.0
 margin_right = -272.0
-margin_bottom = 598.0
+margin_bottom = 606.0
 theme = ExtResource( 4 )
 toggle_mode = false
 group = SubResource( 12 )
@@ -4811,9 +4816,9 @@ pref_key = "disable_tooltips"
 
 [node name="VolSlider1" type="HSlider" parent="Options"]
 margin_left = -800.0
-margin_top = 376.0
+margin_top = 384.0
 margin_right = -392.0
-margin_bottom = 392.0
+margin_bottom = 400.0
 theme = ExtResource( 4 )
 min_value = -30.0
 max_value = 0.0
@@ -4975,50 +4980,74 @@ current = true
 [connection signal="timeout" from="TrackList/TrackList/TrackListTimer" to="TrackList/TrackList/TrackListTimer" method="_on_TrackListTimer_timeout"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_01" to="TrackList/TrackList/Track_01" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_01" to="GameHub" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_01" to="TrackPortal" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_01" to="TrackPortal/PreviewLabel" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_01" to="TrackList/TrackList/Track_01" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_01/NoticeAnim" to="TrackList/TrackList/Track_01" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_02" to="TrackList/TrackList/Track_02" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_02" to="GameHub" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_02" to="TrackPortal" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_02" to="TrackPortal/PreviewLabel" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_02" to="TrackList/TrackList/Track_02" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_02/NoticeAnim" to="TrackList/TrackList/Track_02" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_03" to="TrackList/TrackList/Track_03" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_03" to="GameHub" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_03" to="TrackPortal" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_03" to="TrackPortal/PreviewLabel" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_03" to="TrackList/TrackList/Track_03" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_03/NoticeAnim" to="TrackList/TrackList/Track_03" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_04" to="TrackList/TrackList/Track_04" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_04" to="GameHub" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_04" to="TrackPortal" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_04" to="TrackPortal/PreviewLabel" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_04" to="TrackList/TrackList/Track_04" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_04/NoticeAnim" to="TrackList/TrackList/Track_04" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_05" to="TrackList/TrackList/Track_05" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_05" to="GameHub" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_05" to="TrackPortal" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_05" to="TrackPortal/PreviewLabel" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_05" to="TrackList/TrackList/Track_05" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_05/NoticeAnim" to="TrackList/TrackList/Track_05" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_06" to="TrackList/TrackList/Track_06" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_06" to="GameHub" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_06" to="TrackPortal" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_06" to="TrackPortal/PreviewLabel" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_06" to="TrackList/TrackList/Track_06" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_06/NoticeAnim" to="TrackList/TrackList/Track_06" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_07" to="TrackList/TrackList/Track_07" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_07" to="GameHub" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_07" to="TrackPortal" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_07" to="TrackPortal/PreviewLabel" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_07" to="TrackList/TrackList/Track_07" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_07/NoticeAnim" to="TrackList/TrackList/Track_07" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_08" to="TrackList/TrackList/Track_08" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_08" to="GameHub" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_08" to="TrackPortal" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_08" to="TrackPortal/PreviewLabel" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_08" to="TrackList/TrackList/Track_08" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_08/NoticeAnim" to="TrackList/TrackList/Track_08" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_09" to="TrackList/TrackList/Track_09" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_09" to="GameHub" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_09" to="TrackPortal" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_09" to="TrackPortal/PreviewLabel" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_09" to="TrackList/TrackList/Track_09" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_09/NoticeAnim" to="TrackList/TrackList/Track_09" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_10" to="TrackList/TrackList/Track_10" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_10" to="GameHub" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_10" to="TrackPortal" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_10" to="TrackPortal/PreviewLabel" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_10" to="TrackList/TrackList/Track_10" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_10/NoticeAnim" to="TrackList/TrackList/Track_10" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_11" to="TrackList/TrackList/Track_11" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_11" to="GameHub" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_11" to="TrackPortal" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_11" to="TrackPortal/PreviewLabel" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_11" to="TrackList/TrackList/Track_11" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_11/NoticeAnim" to="TrackList/TrackList/Track_11" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="TrackList/TrackList/Track_12" to="TrackList/TrackList/Track_12" method="_on_ChartButton_mouse_entered"]
 [connection signal="new_active_track" from="TrackList/TrackList/Track_12" to="GameHub" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_12" to="TrackPortal" method="_on_new_active_track"]
+[connection signal="new_active_track" from="TrackList/TrackList/Track_12" to="TrackPortal/PreviewLabel" method="_on_new_active_track"]
 [connection signal="pressed" from="TrackList/TrackList/Track_12" to="TrackList/TrackList/Track_12" method="_on_ChartButton_pressed"]
 [connection signal="animation_finished" from="TrackList/TrackList/Track_12/NoticeAnim" to="TrackList/TrackList/Track_12" method="_on_NoticeAnim_animation_finished"]
 [connection signal="mouse_entered" from="SpeedLabel/speed_090" to="SpeedLabel/speed_090" method="_on_GenericButton_mouse_entered"]

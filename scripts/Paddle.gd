@@ -18,17 +18,15 @@ func _ready():
 	if Active.mod_dif_1 == "segfault":
 		$PaddleIcon.texture = paddle_XS
 		$PaddleArea/TopColl.scale = Vector2(0.35, 1)
-	if self.get_parent().get_parent().get_parent().cinematic == false:
-		get_viewport().warp_mouse(Vector2(self.global_position.x, self.global_position.y))
+	get_viewport().warp_mouse(Vector2(self.global_position.x, self.global_position.y))
 
 var offset = 0.0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if locked == false:
 		var new_pos = get_global_mouse_position() - self.global_position
 		new_pos.x = get_local_mouse_position().x
 		move_and_slide(Vector2((new_pos.x + offset) * 50, 0))
 		# '(new_pos.x + offset) * sense' where 'sense' is mouse sensitivity
 		self.get_parent().get_parent().get_parent().paddle_pos_y = self.global_position.y
-		if self.get_parent().get_parent().get_parent().cinematic == false:
-			get_viewport().warp_mouse(Vector2(get_global_mouse_position().x, self.global_position.y + 10))
+		get_viewport().warp_mouse(Vector2(get_global_mouse_position().x, self.global_position.y + 10))
